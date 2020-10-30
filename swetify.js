@@ -165,7 +165,7 @@ const pausemusic = () =>{
 const loadSong = (song) =>{
     
     console.log(song);
-	title.textContent = song.title;
+	title.textContent = song.title;console.log(title.textContent);
 	artist.innerHTML = `<marquee>${song.artist}</marquee>`;
 	music.src = "songs-images/" + category + "/" + song.name +".mp3";console.log(music.src);
 	songimg.src = "songs-images/" + category + "/" + song.name + ".jpg";console.log(songimg.src);
