@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   	     <title> Let's Play On Swetify </title>
+   	     <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+         <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+          <link href="swetify.css" type= "text/css" rel="stylesheet">
+    </head>
+    <body>  
+    	<header>
+          <nav id="header-nav" class="navbar navbar-default">
+       	     	<div class="container">
+       	     		   <div class="navbar-header">
+                       <a href="index.html" class="pull-left visible-md visible-lg">
+                           <div id="logo-img" alt="Logo img"></div>
+                        </a>
+                    
+                    <div class="navbar-brand">
+                      <a href="index.html"><h1>Swetify</h1></a>
+                      
+                       <span class="glyphicon glyphicon-headphones" id="headphones"></span>
+                         <span id="PlaySing"> Play and Sing with us Now !</span>
+                       
+                    </div> 
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                    </button>
+                  </div>
+                          <div class="collapse navbar-collapse" id="collapsable-nav">
+                           <ul id="nav-list" class="nav navbar-nav navbar-right" >
+                              <li onclick="hidevisible()">
+                                <a href="#">
+                                  <span class="glyphicon glyphicon-home "></span><br class="hidden-xs">Home
+                                </a>
+                              </li>
+                              <li onclick="hidevisible()">
+                                  <a href="#popular categories"><span class="glyphicon glyphicon-music "></span><br class="hidden-xs">Popular Categories
+                                </a>
+                              </li>
+                              <li onclick="hidevisible()">
+                                <a href="#best of artists"><i class="fa fa-thumbs-up " aria-hidden="true"></i><br class="hidden-xs">Best of Artists
+                                </a>
+                              </li>
+                          
+                            </ul>
+                        </div>
+       	     	    </div>
+       	     </nav>
+           </header>
+
+        <div class="" id="homepage_content">
+
+       <img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive">
+
+       <div class="container categories-heading" id="top-picks">
+       	<span> Top Picks For You </span>
+       </div>
+
+       <div id="main-content" class="container">
+        <section class="row">
+        	<div class="col-md-1"></div>
+           <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 " >
+             <a href="#"  id="top-holly" >
+                <div class="category-title small-category" onclick="loadfirstsong(0)">
+                	<img src="homepage/TopHollywoodHits.jpg" alt="TopHollywoodHits" width="350" height="350" class="image">
+                  <span>Top Hollywood Hits </span>
+                </div>
+              </a>
+           </div>
+           <div class="col-md-2"></div>
+           <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 " >
+             <a href="#" id="top-bolly">
+                <div class="category-title small-category" onclick="loadfirstsong(1)">
+                  <img src="homepage/TopBollywoodHits.jpg" alt="TopBollywoodHits" width="350" height="350" class="image">
+                  <span>Top Bollywood Hits</span>
+                </div>
+              </a>
+           </div>
+           
+           
+         </section>
+       </div>
+
+         <div class="container categories-heading" id="popular categories">
+       	<span> Poplular Categories </span>
+       </div>
+
+       <div class="slider_div">
+            <div class="center_div" id="centerdiv">
+            	<div class="category-slider small-category" onclick="loadfirstsong(2)">
+            		<a href="#">
+            		  <img src="homepage/RockOn.jpg" width="350" height="350" class="category-img image" onclick="loadfirstsong(6)">
+            		  <span class="slider-title">Rock On</span>
+            	    </a>
+            	</div>
+            	<div class="category-slider small-category" onclick="loadfirstsong(3)">
+            		<a href="#">
+            		  <img src="homepage/DanceHits.jpg" width="350" height="350" class="category-img image">
+            		  <span class="slider-title">Dance Hits</span>
+            	    </a>
+            	</div>
+            	<div class="category-slider small-category" onclick="loadfirstsong(4)">
+            		<a href="#" >
+            		  <img src="homepage/CollegeDeYaar.jpg" width="350" height="350" class="category-img image">
+            		  <span class="slider-title">College De Yaar</span>
+            	    </a>
+            	</div>
+            	<div class="category-slider small-category" onclick="loadfirstsong(5)">
+            		<a href="#">
+            		  <img src="homepage/GujjuGarba.jpg" width="350" height="350" class="category-img image">
+            		  <span class="slider-title">Gujju Garba</span>
+            	    </a>
+            	</div>
+            </div>
+       </div>
+        
+       <div class="container categories-heading" id="best of artists">
+       	<span> Best of Artists </span>
+       </div>
+
+       <div class="container-fluid">
+       	    <div class="row">
+       	    	
+       	    	<div class="col-md-4  col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
+       	    		<a href="#">		
+       	    			<div class="artist-details" onclick="loadfirstsong(6)">
+       	    			<img src="homepage/NehaKakkar.jpg" width="300" height="300" class="artist-img">
+                        <span class="artist-title">Neha Kakkar</span>  
+                        </div>  
+
+       	    		</a>
+       	    	</div>
+       	    	
+       	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
+       	    		<a href ="#">
+       	    			<div class="artist-details" onclick="loadfirstsong(7)">
+       	    			<img src="homepage/ArijitSingh.jpg" width="300" height="300" class="artist-img">
+                        <span class="artist-title">Arijit Singh</span>
+                        </div>
+       	    		</a>
+       	    	</div>
+       	        
+       	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
+       	    		<a href ="#">
+       	    			<div class="artist-details" onclick="loadfirstsong(8)">
+       	    			<img src="homepage/Ritviz.jpg" width="300" height="300" class="artist-img">
+                        <span class="artist-title">Ritviz</span>
+                        </div>
+       	    		</a>
+       	    	</div>
+       	        <div class="col-md-2 "></div>
+       	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
+       	    		<a href ="#">
+       	    			<div class="artist-details" onclick="loadfirstsong(9)">
+       	    			<img src="homepage/JubinNautiyal.jpg" width="300" height="300" class="artist-img">
+                        <span class="artist-title">Jubin Nautiyal</span>
+                        </div>
+       	    		</a>
+       	    	</div>
+                
+       	    	<div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 text-center artist-container">
+       	    		<a href ="#">
+       	    			<div class="artist-details" onclick="loadfirstsong(10)">
+       	    			<img src="homepage/AtifAslam.jpg" width="300" height="300" class="artist-img">
+                        <span class="artist-title">Atif Aslam</span>
+                        </div>
+       	    		</a>
+       	    	</div>
+       	    	
+       	    </div>
+
+       	</div>
+       </div>
+
+       <div class="main_div hidden" id="main_div">
+         	<div class="music_container">
+         		<h2 id="title">songtitle</h2>
+         		<h3 ><marquee id="artist">artists</marquee></h3>
+         		<div class="img_container" id="songimage">
+         			<img src="songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg">
+         		</div>
+         		<audio src="songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
+
+                <!-- progress-bar -->
+                <div class="progress_container" id="progress_container">
+                	<div class="progress_duration_meter">
+                         <div id="current_time">0:00</div>
+                         <div id="duration">4:16</div>
+                	</div>
+                	<div class="progress_div" id="progress_div">
+                		<div class="progress" id="progress">
+                		</div>
+                	</div>
+                </div>
+
+         		<!-- controls -->
+         	    <div class="music_controls">
+         	    	<i class="fa fa-step-backward " id="prev" title="Previous"></i>
+         	    	<i class="fa fa-play main_button" id="play" title="Play"></i>
+         	    	<i class="fa fa-step-forward" id="next" title="Next"></i>
+         	    </div>
+            </div>
+         </div>		
+
+
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="swetify.js"></script>
+    </body>
+</html>
+
+   
