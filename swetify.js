@@ -34,7 +34,7 @@ const arijitsongs=[
 
 const nehasongs=[
 {name : "Dilbar",title : "Dilbar",artist : "Neha Kakkar, Dhvani Bhanushali, Ikka, Tanishk Bagchi"},
-{ name: "TuhiYaarMera",title : "Tu Hi Yaar Mera",artist : "Neha Kakkar, Arijit Singh, Rochak Kohli"},
+{ name: "TuHiYaarMera",title : "Tu Hi Yaar Mera",artist : "Neha Kakkar, Arijit Singh, Rochak Kohli"},
 {name: "YaadPiyaKiAaneLagi",title : "Yaad Piya Ki Aane Lagi",artist : "Neha Kakkar, Tanishk Bagchi, Lalit Sen"},
 {name: "Garmi",title : "Garmi",artist : "Neha Kakkar, Badshah"},
 {name: "LaLaLa",title : "La La La",artist : "Neha Kakkar, Arjun Kanungo"},
@@ -164,11 +164,11 @@ const pausemusic = () =>{
 
 const loadSong = (song) =>{
     
-    console.log(song);console.log(title.textContent);
-	title.textContent = song.title;console.log(title.textContent);
+    console.log(song);
+	title.textContent = song.title;
 	artist.innerHTML = `<marquee>${song.artist}</marquee>`;
-	music.src = "songs-images/" + category + "/" + song.name +".mp3";console.log(music.src);
-	songimg.src = "songs-images/" + category + "/" + song.name + ".jpg";console.log(songimg.src);
+	music.src = "songs-images/" + category + "/" + song.name +".mp3";
+	songimg.src = "songs-images/" + category + "/" + song.name + ".jpg";
 }
 
 const nextSong = () =>{
