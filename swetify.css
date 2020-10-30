@@ -1,0 +1,577 @@
+
+*, * ::before , * :: after{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #3333ff;
+}
+html{
+	font-size:62.5%;
+    font-family: 'Jost', sans-serif;
+}
+
+/********* Home Page styles **********/
+/******* header *******/
+
+#header-nav{
+	background-color:#000000;
+	border-radius:0;
+	border:0;
+	margin-bottom:0;
+	font-family: 'Lobster', cursive;
+}
+
+#logo-img{
+	background:url("homepage/swetifylogo.jpg") no-repeat;
+	width:150px;
+	height: 150px;
+	margin: 10px 15px 10px 0px;
+}
+
+#PlaySing{
+	margin-top: 50px;
+}
+#headphones{
+	margin-top:20px;
+	font-size:30px;
+}
+
+.navbar-brand{
+	height:80px;
+	padding-top: 25px;
+}
+
+
+.navbar-brand h1{/*Music Website Name*/
+	color:#3333ff;
+	font-weight:bold;
+	font-size:2.2em;
+	text-shadow: 1px 1.5px 0 white;
+	margin-top:0;
+	margin-bottom:0;
+	 line-height:.75;
+
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus{
+	text-decoration : none;
+}
+.navbar-brand span{ /*Play and Sing with us noe*/
+  color : white;
+  margin-top: 0;
+  font-style: bold;
+  
+}
+
+
+
+#nav-list{
+	margin-top:10px;
+}
+
+#nav-list a{
+	color:#3333ff;
+	text-align:center;
+	font-size: 1.6em;
+	text-shadow: .5px 1px 0 white;
+}
+.topicons{
+	color:white;
+	text-shadow: .5px 1px 0 #3333ff;
+}
+
+#navlist span{
+	margin-bottom:2px;
+}
+#nav-list a:hover , .topicons:hover{
+background-color:white;
+color:black;
+text-shadow: 1px 1px 0 #3333ff;
+}
+
+
+
+
+.navbar-header button.navbar-toggle{
+	border :1px solid white;
+}
+
+.navbar-header .icon-bar{
+	border :1px solid #3333ff;
+}
+
+.navbar-header button.navbar-toggle{
+	clear:both;
+	margin-top:-30px;
+}
+
+.navbar-header button.navbar-toggle:hover{
+
+	background-color: white;
+}
+
+/******** Home Page Main Content Styles ***********/
+
+
+.categories-heading{
+	font-family: 'Lobster', cursive;
+	font-size:2.5em;
+	background-color:#000000;
+	width:60%;
+	color: white;
+	opacity:.8;
+	transition: width 2s,opacity 2s;
+	border:2px solid #3F0C1F;
+	margin: 15px auto 15px;
+	text-align:center;
+}
+
+.categories-heading:hover{
+   width:95%;
+   opacity:1;
+}
+
+
+
+.category-title{
+	font-family: 'Lobster', cursive;
+	border-radius: 10%;
+	position: relative;
+	border:2px solid #3F0C1F;
+    overflow:hidden;
+    width:350px;
+    height:350px;
+    margin: 15px auto 15px;
+
+}
+
+.category-title span{
+	height:100%;
+	position:absolute;
+	top:50%;
+	right:0;
+	width:100%;
+	text-align:center;
+	align-items: center;
+	font-size:2.5em;
+	background-color: #000000;
+	color:white;
+	opacity:.7;
+	transition: height 2s, opacity 2s , top 2s;
+
+}
+
+.category-title:hover span{
+	top : 85%;
+	opacity : 1;
+	
+}
+
+
+.category-title:hover{
+	box-shadow:1px 2px 5px 5px #ffffff;
+	background-color: none;
+}
+
+
+
+/******** Home Page Slider *********/
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .slider_div {
+        display: grid;
+        place-items: center;
+      }
+
+      .center_div {
+        width: 100%;
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+      }
+       
+       .category-slider{
+          position:relative;
+           transition: transform 0.3s ease-in;
+       }
+
+      .category-img {
+        padding: 20px;
+        border-radius: 10%;
+        
+      }
+       
+        .slider-title{
+       	 font-family: 'Lobster', cursive;
+       	 border-radius: 30px;
+	     position:absolute;
+	     bottom:8%;
+	     right:10%;
+	     width:80%;
+	     text-align:center;
+	     align-items: center;
+	     font-size:2.5em;
+	     background-color: #000000;
+	     color:white;
+	     opacity:.7;
+	     overflow: hidden;
+	     transition: height 2s, opacity 1s;
+       }
+
+      .category-slider:hover{
+        transform: scale(1.1);
+      }
+
+      .category-slider:hover .slider-title{
+         opacity:1;
+         
+      }
+
+      .center_div::-webkit-scrollbar {
+        overflow: hidden;
+      }
+
+ /********* popular artists styles *************/     
+
+ .artist-container{
+ 	transition: transform 0.3s ease-in;
+ 	border-radius:50%;
+	margin:15px auto 20px;
+	box-sizing: border-box;
+	
+ }
+ .artist-details{
+ 	position:relative;
+ 	justify-content: center;
+ }
+
+ .artist-img{
+ 	border-radius: 50%;
+ 	vertical-align: center;
+ }
+
+ .artist-title{
+ 	text-transform: translate(0,100px);
+ 	padding:80px;
+ 	padding-top:100px;
+ 	box-sizing: border-box;
+ 	font-family: 'Lobster', cursive;
+ 	display:none;
+ 	position:absolute;
+ 	height:100%;
+ 	width:300px;
+ 	margin-left:-300px;
+ 	border-radius:50%;
+ 	overflow: hidden;
+ 	text-align:center;
+	align-items: center;
+	font-size:2.5em;
+	 overflow: hidden;
+	 transition: height 2s, opacity 1s;
+
+ }
+
+ 
+
+ .artist-details:hover .artist-title{
+ 	display:inline;
+ 	color:#ffffff;
+ 	background-color:rgba(0,0,0,.8);
+ }
+
+/********** main and music containers styles ***********/
+
+
+
+
+.main_div{
+	font-family: 'Jost', sans-serif;
+	width:96vw;
+	height:96vh;
+	display:grid;
+	place-items: center;
+}
+
+.music_container{
+	width:40rem;
+	height:63rem;
+	background-color: #000000;
+	border-radius:2rem;
+	box-shadow:0 1.2rem 3rem 0.5rem rgba(0,0,0,0.2);
+	padding:2rem;
+	text-align: center;
+}
+
+.music_container #title{
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	word-spacing: 0.5rem;
+	color: #3333ff;
+	margin:  2rem 0 0.5rem 0;
+	font-size : 2.3rem;
+	font-weight : bold;
+	text-shadow: 0 0.3rem 0 2.5rem rgba(0,0,0,0.7);
+}
+
+.music_container #artist{
+	color: white;
+	text-transform : capitalize;
+	letter-spacing: 0.1rem;
+	font-size: 2rem;
+	margin-bottom: 4rem;
+	font-weight:300;
+}
+
+
+.img_container{
+	width: 28rem;
+	height: 28rem;
+	margin: auto;
+	
+	
+}
+
+.songimg{
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+	position:relative;
+	
+}
+
+/******* controls styles ********/
+.music_controls{
+    width:20rem;
+    display: flex;
+    margin: auto;
+    margin-top:2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music_controls .fa{
+     color: #3333ff;
+     font-size:2rem;
+     cursor:pointer;
+     filter:drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+}
+
+.music_controls .fa:hover{
+	color: white;
+}
+
+.music_controls .main_button{
+	width : 5rem;
+	height: 5rem;
+	border-radius: 50% ;
+	background-color: #3333ff;
+	color : #000000;
+    font-size : 1.4rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_controls .main_button:hover{
+	background-color: white;
+	color : #3333ff;
+	box-shadow: 0 0.5rem 2rem 0.2rem rgba(0,0,0,0.4);
+}
+
+
+.anime{
+       animation : rotateplayer 3s linear infinite;
+}
+
+@keyframes  rotateplayer {
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+
+}
+
+
+/******** progressive bar styles ********/
+
+
+
+.progress_container{
+	width:100%;
+	height:auto;
+	padding:1rem;
+	margin-top: 1rem;
+}
+
+.progress_div{
+	width:100%;
+	height : 0.5rem;
+	box-shadow : 0 1px 2px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.7), 0 4px 8px rgba(0,0,0,0.7), 0 8px 16px rgba(0,0,0,0.07), 
+	           0 16px 32px rgba(0,0,0,0.7),0 32px 64px rgba(0,0,0,0.07);
+	 border-radius: 4rem;
+	 background-color: white;
+	 position:relative;
+	 margin-top: 1.2rem;
+     transition : width 1s linear;
+     -moz-transition: width 1s linear;
+     -o-transition: width 1s linear;
+     -webkit-transition:width 1s linear;
+     cursor:pointer;
+     -webkit-appearance : none;
+     appearance :none;
+
+}
+
+.progress{
+	position:absolute;
+	left:0;
+	top:0;
+	width:0%;
+	height:100%;
+	background-color: #3333ff;
+	border-radius: 4rem;
+     cursor:pointer;
+     -webkit-appearance : none;
+     appearance :none;
+
+}
+
+
+
+.progress_duration_meter{
+	display:flex;
+	color:white;
+	justify-content: space-between;
+	font-size:1.3rem;
+}
+
+
+
+
+
+ /*******Large Devices only********/
+@media (min-width: 1200px)
+{
+
+  
+}
+/*******Medium Devices only********/
+@media (min-width:992px) and (max-width:1199px)
+{
+   #logo-img{
+   	background:url("homepage/swetifylogo-medium.jpg") no-repeat;
+	width:120px;
+	height: 120px;
+	margin: 5px 15px 5px 0px;
+   }
+
+
+
+}
+/*******Small Devices only********/
+@media (min-width:768px) and (max-width:991px)
+{
+  #header-nav{
+  	font-size:0.9em;
+  	height:100px;
+  }
+  .navbar-brand h1{
+  	font-size:1.7em;
+  }
+
+  #headphones , #PlaySing{
+  	font-size:0.9em;
+  	margin-top:8px;
+  }
+
+  
+  .container .photo{
+  	background:url('images/ABOUT/shwetsofa_small.jpg') no-repeat;
+  	height:454px;width:238px;
+  	box-shadow:0 0 50px #3F0C1F;
+  	border:5px solid #e6e6e6;
+  	border-radius: 25px;
+  	vertical-align : center;
+  }
+  .container .message-box{
+  	margin-top: 15px;
+  	margin-bottom: 10px;
+  	margin-left:-15px;
+  }
+
+
+}
+/*******Extra small Devices only********/
+@media(max-width:767px)
+{
+	
+
+	.navbar-brand h1{
+       font-size:1.7em;
+	}
+	#headphones , #PlaySing{
+  	font-size:0.9em;
+  	margin-top:8px;
+  }
+
+	#collapsable-nav a{
+		font-size:1.2em;
+	}
+
+	#collapsable-nav a span{
+		font-size:1em;
+	}
+	.categories-heading{
+		width:95%;opacity:1;
+	}
+
+	.music_container{
+	width:30rem;
+	height:53rem;
+	background-color: #000000;
+}
+
+.music_container #title{
+	color: #3333ff;
+	margin:  1rem 0 0.5rem 0;
+	font-size : 2rem;
+	font-weight : bold;
+	text-shadow: 0 0.3rem 0 2.5rem rgba(0,0,0,0.7);
+}
+
+.music_container #artist{
+	color: white;
+	text-transform : capitalize;
+	letter-spacing: 0.1rem;
+	font-size: 1.7rem;
+	margin-bottom: 3rem;
+	font-weight:300;
+}
+
+
+.img_container{
+	width: 20rem;
+	height: 20rem;
+}
+
+
+
+
+
+
+/******Super Extra Small Devices Only*****/
+@media (max-width: 479px)
+{
+   .navbar-h1{
+      padding:5px;
+      font-size:6vw;
+    }
+}
