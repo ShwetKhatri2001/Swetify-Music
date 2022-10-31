@@ -30,7 +30,8 @@ const arijitsongs=[
 {name: "Qaafirana",title : "Qaafirana",artist : "Arijit Singh, Nikita Ganndhi"},
 {name: "TeraYaarHoonMain",title : "Tera Yaar Hoon Main",artist : "Arijit Singh"},
 {name: "TujheKitnaChahneLage",title : "Tujhe Kitna Chahne Lage",artist : "Arijit Singh"},
-{name: "Naina",title : "Naina",artist : "Arijit Singh"}];
+{name: "Naina",title : "Naina",artist : "Arijit Singh"},
+{name: "Kesariya",title : "Kesariya",artist : "Arijit Singh"}];
 
 const nehasongs=[
 {name : "Dilbar",title : "Dilbar",artist : "Neha Kakkar, Dhvani Bhanushali, Ikka, Tanishk Bagchi"},
@@ -43,6 +44,7 @@ const nehasongs=[
 const jubinsongs=[
 {name : "GazabKaHaiDin",title : "Gazab Ka Hai Din",artist : "Jubin Nautiyal, Prakriti Kakkar, Tanishk Bagchi"},
 {name: "TujheKitnaChaheinAur",title : "Tujhe Kitna Chahein Aur",artist : "Jubin Nautiyal"},
+{name: "Manike",title: "Manike" ,artist : "Jubin Nautiyal, Yohani, Surya Ragunnathan"},
 {name: "TumHiAana",title : "Tum Hi Aana",artist : "Jubin Nautiyal, Payal Dev"},
 {name: "LoSafar",title : "Lo Safar",artist : "Jubin Nautiyal, Mithoon"},
 {name: "ZindagiKuchTohBata",title : "Zindagi Kuch Toh Bata",artist : "Jubin Nautiyal"}];
