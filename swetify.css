@@ -196,11 +196,12 @@ text-shadow: 1px 1px 0 #3333ff;
         display: flex;
         overflow-y: hidden;
         overflow-x: scroll;
+		padding: 5% 2% 5% 2%;
       }
        
        .category-slider{
           position:relative;
-           transition: transform 0.3s ease-in;
+		  transition: transform 0.3s ease-in;
        }
 
       .category-img {
@@ -234,10 +235,32 @@ text-shadow: 1px 1px 0 #3333ff;
          opacity:1;
          
       }
-
+	  /*
       .center_div::-webkit-scrollbar {
         overflow: hidden;
-      }
+      }*/
+	  .center_div::-webkit-scrollbar {
+		width: 5px; /* Set the width of the scrollbar */
+		height: 15px; /* Set the height of the scrollbar */
+	  }
+	  
+	  /* Track (the area on which the scrollbar is displayed) */
+	  .center_div::-webkit-scrollbar-track {
+		background: #3333ff; /* Set a background color for the track */
+		border-radius: 5px;
+	  }
+	  
+	  /* Thumb (the draggable part of the scrollbar) */
+	  .center_div::-webkit-scrollbar-thumb {
+		background: #090808; /* Set a background color for the thumb */
+		border-radius: 50px; /* Add rounded corners to the thumb */
+		
+	  }
+	  
+	  /* On hover, style the thumb */
+	  .center_div::-webkit-scrollbar-thumb:hover {
+		background: #471042; /* Change the thumb color on hover */
+	  }
 
  /********* popular artists styles *************/     
 
