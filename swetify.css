@@ -186,9 +186,10 @@ text-shadow: 1px 1px 0 #3333ff;
         box-sizing: border-box;
       }
 
-      .slider_div {
+      .slider_div, .slider-wrapper{
         display: grid;
         place-items: center;
+		width: 100%;
       }
 
       .center_div {
@@ -235,33 +236,58 @@ text-shadow: 1px 1px 0 #3333ff;
          opacity:1;
          
       }
-	  /*
-      .center_div::-webkit-scrollbar {
-        overflow: hidden;
-      }*/
-	  .center_div::-webkit-scrollbar {
-		width: 5px; /* Set the width of the scrollbar */
-		height: 15px; /* Set the height of the scrollbar */
-	  }
 	  
-	  /* Track (the area on which the scrollbar is displayed) */
-	  .center_div::-webkit-scrollbar-track {
-		background: #3333ff; /* Set a background color for the track */
-		border-radius: 5px;
-	  }
 	  
-	  /* Thumb (the draggable part of the scrollbar) */
-	  .center_div::-webkit-scrollbar-thumb {
-		background: #090808; /* Set a background color for the thumb */
-		border-radius: 50px; /* Add rounded corners to the thumb */
+	  .slider_div .center_div::-webkit-scrollbar{
+		display: none;
+	  }
+      
+	  .slider_div .slider-scrollbar{
+		height: 24px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+	  }
+
+	
+	  .slider-wrapper .slide-button{
+		position: absolute;
+		top: 235%;
+		height: 50px;
+		width: 50px;
+		color: #ffffff;
+		border: none;
+		outline: none;
+		background: #000000;
+		font-size: 2.2rem;
+		cursor: pointer;
+		border-radius: 50%;
+		transform: translateY(-50%);
 		
 	  }
 	  
-	  /* On hover, style the thumb */
-	  .center_div::-webkit-scrollbar-thumb:hover {
-		background: #471042; /* Change the thumb color on hover */
+	    
+	  .slide-button{
+		position: relative;
+	  }
+	  
+	  .slider-wrapper .slide-button:hover{
+		background: #444;
 	  }
 
+	  
+
+	  .slider-wrapper .slide-button#prev-slide{
+		left: 5px;
+
+	  }
+
+	  .slider-wrapper .slide-button#next-slide{
+		right: 5px;
+	  }
+
+
+	  
  /********* popular artists styles *************/     
 
  .artist-container{
