@@ -2,7 +2,8 @@ const initSlider = () => {
   
     const imageList = document.querySelector(".slider-wrapper .center_div");
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-    
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
     
 
     slideButtons.forEach(button => {
