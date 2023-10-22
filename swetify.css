@@ -249,10 +249,13 @@ text-shadow: 1px 1px 0 #3333ff;
 		align-items: center;
 	  }
 
+	  .slider-wrapper{
+		position: relative;
+	  }
 	
-	  .slider-wrapper .slide-button{
+	  .slider-wrapper button{
 		position: absolute;
-		top: 235%;
+		top: 50%;
 		height: 50px;
 		width: 50px;
 		color: #ffffff;
@@ -266,6 +269,7 @@ text-shadow: 1px 1px 0 #3333ff;
 		
 	  }
 	  
+
 	  
 	  .slider-wrapper .slide-button:hover{
 		background: #444;
@@ -273,12 +277,12 @@ text-shadow: 1px 1px 0 #3333ff;
 
 	  
 
-	  .slider-wrapper .slide-button#prev-slide{
+	  .slider-wrapper button#prev-slide{
 		left: 5px;
 
 	  }
 
-	  .slider-wrapper .slide-button#next-slide{
+	  .slider-wrapper button#next-slide{
 		right: 5px;
 	  }
 
