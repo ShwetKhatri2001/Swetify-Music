@@ -9,6 +9,8 @@
          <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet">
          <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
           <link href="swetify.css" type= "text/css" rel="stylesheet">
+		  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+		  <script src="script.js"></script>
     </head>
     <body>  
     	<header>
@@ -94,33 +96,57 @@
        </div>
 
        <div class="slider_div">
-            <div class="center_div" id="centerdiv">
-            	<div class="category-slider small-category" onclick="loadfirstsong(2)">
-            		<a href="#">
-            		  <img src="homepage/RockOn.jpg" width="350" height="350" class="category-img image" onclick="loadfirstsong(6)">
-            		  <span class="slider-title">Rock On</span>
-            	    </a>
-            	</div>
-            	<div class="category-slider small-category" onclick="loadfirstsong(3)">
-            		<a href="#">
-            		  <img src="homepage/DanceHits.jpg" width="350" height="350" class="category-img image">
-            		  <span class="slider-title">Dance Hits</span>
-            	    </a>
-            	</div>
-            	<div class="category-slider small-category" onclick="loadfirstsong(4)">
-            		<a href="#" >
-            		  <img src="homepage/CollegeDeYaar.jpg" width="350" height="350" class="category-img image">
-            		  <span class="slider-title">College De Yaar</span>
-            	    </a>
-            	</div>
-            	<div class="category-slider small-category" onclick="loadfirstsong(5)">
-            		<a href="#">
-            		  <img src="homepage/GujjuGarba.jpg" width="350" height="350" class="category-img image">
-            		  <span class="slider-title">Gujju Garba</span>
-            	    </a>
-            	</div>
-            </div>
-       </div>
+			<div class="slider-wrapper">
+				
+            	<div class="center_div" id="centerdiv">
+					<div class="category-slider small-category" onclick="loadfirstsong(2)">
+						<a href="#">
+						<img src="homepage/RockOn.jpg" width="350" height="350" class="category-img image" onclick="loadfirstsong(6)">
+						<span class="slider-title">Rock On</span>
+						</a>
+					</div>
+					<div class="category-slider small-category" onclick="loadfirstsong(3)">
+						<a href="#">
+						<img src="homepage/DanceHits.jpg" width="350" height="350" class="category-img image">
+						<span class="slider-title">Dance Hits</span>
+						</a>
+					</div>
+					<div class="category-slider small-category" onclick="loadfirstsong(4)">
+						<a href="#" >
+						<img src="homepage/CollegeDeYaar.jpg" width="350" height="350" class="category-img image">
+						<span class="slider-title">College De Yaar</span>
+						</a>
+					</div>
+					<div class="category-slider small-category" onclick="loadfirstsong(5)">
+						<a href="#">
+						<img src="homepage/GujjuGarba.jpg" width="350" height="350" class="category-img image">
+						<span class="slider-title">Gujju Garba</span>
+						</a>
+					</div>
+					<div class="category-slider small-category" onclick="loadfirstsong(6)">
+							<a href="#">
+							<img src="homepage/90'sHits.jpg" width="350" height="350" class="category-img image">
+							<span class="slider-title">90's Hits</span>
+							</a>
+					</div>
+					<div class="category-slider small-category" onclick="loadfirstsong(7)">
+							<a href="#">
+							<img src="homepage/PatrioticBollywood.jpg" width="350" height="350" class="category-img image">
+							<span class="slider-title">Patriotic Bollywood</span>
+							</a>
+					</div>
+					<div class="category-slider small-category" onclick="loadfirstsong(8)">
+							<a href="#">
+							<img src="homepage/HoliSpecial.jpg" width="350" height="350" class="category-img image">
+							<span class="slider-title">Holi Special</span>
+							</a>
+					</div>
+				</div>
+				<button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
+				<button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
+			</div>
+		</div>
+			
         
        <div class="container categories-heading" id="best of artists">
        	<span> Best of Artists </span>
@@ -131,7 +157,7 @@
        	    	
        	    	<div class="col-md-4  col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
        	    		<a href="#">		
-       	    			<div class="artist-details" onclick="loadfirstsong(6)">
+       	    			<div class="artist-details" onclick="loadfirstsong(9)">
        	    			<img src="homepage/NehaKakkar.jpg" width="300" height="300" class="artist-img">
                         <span class="artist-title">Neha Kakkar</span>  
                         </div>  
@@ -141,7 +167,7 @@
        	    	
        	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
        	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(7)">
+       	    			<div class="artist-details" onclick="loadfirstsong(10)">
        	    			<img src="homepage/ArijitSingh.jpg" width="300" height="300" class="artist-img">
                         <span class="artist-title">Arijit Singh</span>
                         </div>
@@ -150,7 +176,7 @@
        	        
        	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
        	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(8)">
+       	    			<div class="artist-details" onclick="loadfirstsong(11)">
        	    			<img src="homepage/Ritviz.jpg" width="300" height="300" class="artist-img">
                         <span class="artist-title">Ritviz</span>
                         </div>
@@ -159,7 +185,7 @@
        	        <div class="col-md-2 "></div>
        	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
        	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(9)">
+       	    			<div class="artist-details" onclick="loadfirstsong(12)">
        	    			<img src="homepage/JubinNautiyal.jpg" width="300" height="300" class="artist-img">
                         <span class="artist-title">Jubin Nautiyal</span>
                         </div>
@@ -168,7 +194,7 @@
                 
        	    	<div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 text-center artist-container">
        	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(10)">
+       	    			<div class="artist-details" onclick="loadfirstsong(13)">
        	    			<img src="homepage/AtifAslam.jpg" width="300" height="300" class="artist-img">
                         <span class="artist-title">Atif Aslam</span>
                         </div>
@@ -210,11 +236,13 @@
             </div>
          </div>		
 
-
+	    
        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="swetify.js"></script>
+		
+
     </body>
 </html>
 

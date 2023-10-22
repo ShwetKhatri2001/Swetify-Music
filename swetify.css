@@ -186,9 +186,10 @@ text-shadow: 1px 1px 0 #3333ff;
         box-sizing: border-box;
       }
 
-      .slider_div {
+      .slider_div, .slider-wrapper{
         display: grid;
         place-items: center;
+		width: 100%;
       }
 
       .center_div {
@@ -196,11 +197,12 @@ text-shadow: 1px 1px 0 #3333ff;
         display: flex;
         overflow-y: hidden;
         overflow-x: scroll;
+		padding: 5% 2% 5% 2%;
       }
        
        .category-slider{
           position:relative;
-           transition: transform 0.3s ease-in;
+		  transition: transform 0.3s ease-in;
        }
 
       .category-img {
@@ -234,11 +236,58 @@ text-shadow: 1px 1px 0 #3333ff;
          opacity:1;
          
       }
+	  
+	  
+	  .slider_div .center_div::-webkit-scrollbar{
+		display: none;
+	  }
+      
+	  .slider_div .slider-scrollbar{
+		height: 24px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+	  }
 
-      .center_div::-webkit-scrollbar {
-        overflow: hidden;
-      }
+	  .slider-wrapper{
+		position: relative;
+	  }
+	
+	  .slider-wrapper button{
+		position: absolute;
+		top: 50%;
+		height: 50px;
+		width: 50px;
+		color: #ffffff;
+		border: none;
+		outline: none;
+		background: #000000;
+		font-size: 2.2rem;
+		cursor: pointer;
+		border-radius: 50%;
+		transform: translateY(-50%);
+		
+	  }
+	  
 
+	  
+	  .slider-wrapper .slide-button:hover{
+		background: #444;
+	  }
+
+	  
+
+	  .slider-wrapper button#prev-slide{
+		left: 5px;
+
+	  }
+
+	  .slider-wrapper button#next-slide{
+		right: 5px;
+	  }
+
+
+	  
  /********* popular artists styles *************/     
 
  .artist-container{

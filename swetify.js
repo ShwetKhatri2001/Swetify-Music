@@ -204,6 +204,75 @@ const garbasongs = [
   { name: "FullNightTrack", title: "Full Night Track", artist: "Ae Halo" },
 ];
 
+// Below is the array of songs for 90's Bollywood songs, in which each song is an object with the name, title and artist properties.
+const Hits90s = [
+  {
+    name: "ChuraKeDilMera",
+    title: "Chura Ke Dil Mera",
+    artist: "Alka Yagnik and Kumar Sanu",
+  },
+  { name: "BaazigarOBaazigar", title: "Baazigar O Baazigar", artist: "Alka Yagnik and Kumar Sanu" },
+  {
+    name: "ChandChhupaBadalMein",
+    title: "Chand Chhupa Badal Mein",
+    artist: "Udit Narayan and Alka Yagnik",
+  },
+  {
+    name: "AeMereHumsafar",
+    title: "Ae Mere Humsafar",
+    artist: "Udit Narayan and Alka Yagnik",
+  },
+  {
+    name: "AisiDeewangi",
+    title: "Aisi Deewangi",
+    artist: "Alka Yagnik and Vinod Rathod",
+  },
+  { name: "ChhupanaBhiNahinAata", title: "Chhupana Bhi Nahin Aata", artist: "Pankaj Udhas" },
+];
+
+// Below is the array of Bollywood patriotic songs , in which each song is an object with the name, title and artist properties.
+const patriotic = [
+  {
+    name: "SareJahanSeAchha",
+    title: "Sare Jahan Se Achha",
+    artist: "Seema Mishra",
+  },
+  { name: "SarfaroshiKiTamanna", title: "Sarfaroshi Ki Tamanna", artist: "Sonu Nigam" },
+  {
+    name: "DesMereDes",
+    title: "Des Mere Des",
+    artist: "A.R. Rahman, Sukhwinder Singh",
+  },
+  { name: "MaaTujheSalaam", title: "Maa Tujhe Salaam", artist: "A.R. Rahman" },
+  {
+    name: "MeraRangDeBasanti",
+    title: "Mera Rang De Basanti",
+    artist: "Sonu Nigam, Manmohan Waris",
+  },
+  
+];
+
+// Below is the array of Holi special songs , in which each song is an object with the name, title and artist properties.
+const holispecial = [
+  {
+    name: "BalamPichkari",
+    title: "Balam Pichkari",
+    artist: "Pritam, Vishal Dadlani, Shalmali Kholgade",
+  },
+  { name: "HoliKeDin", title: "Holi Ke Din", artist: "Lata Mangeshkar, Kishore Kumar, R. D. Burman" },
+  {
+    name: "BadriKiDulhaniya",
+    title: "Badri Ki Dulhaniya",
+    artist: "Dev Negi, Neha Kakkar, Monali Thakur, Ikka",
+  },
+  { name: "AngSeAngLagana", title: "Ang Se Ang Lagana", artist: "Alka Yagnik, Sudesh Bhosle, Vinod Rathod" },
+  {
+    name: "RangBaraseBheegeChunarwali",
+    title: "Rang Barase Bheege Chunarwali",
+    artist: "Amitabh Bachchan",
+  },
+];
+
 // Array of Bollywood songs, in which each song is an object with the name, title and artist properties.
 const bollywoodsongs = [
   { name: "Bekhayali", title: "Bekhayali", artist: "Sachet Tandon" },
@@ -271,6 +340,9 @@ const allsongs = [
   dancesongs,
   collegesongs,
   garbasongs,
+  Hits90s,
+  patriotic,
+  holispecial,
   nehasongs,
   arijitsongs,
   ritvizsongs,
@@ -285,6 +357,9 @@ const allcategories = [
   "DanceHits",
   "CollegeDeYaar",
   "GujjuGarba",
+  "90'sHits",
+  "PatrioticBollywood",
+  "HoliSpecial",
   "NehaKakkar",
   "ArijitSingh",
   "Ritviz",
