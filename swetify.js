@@ -6,6 +6,7 @@ const artist = document.getElementById("artist");
 const title = document.getElementById("title");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
+const shuffle = document.getElementById("shuffle");
 let progress = document.getElementById("progress");
 let song_duration = document.getElementById("duration");
 let current_time = document.getElementById("current_time");
@@ -430,6 +431,13 @@ const prevSong = () => {
   playmusic();
 };
 
+const shuffleSong = () => {
+  console.log(songs[currSong]);
+  currSong = (currSong+ Math.floor(Math.random() * (songs.length + 1)))%songs.length;
+  loadSong(songs[currSong]); 
+  playmusic();
+}
+
 play.addEventListener("click", () => {
   // event listener to play or pause the song.
 
@@ -482,3 +490,5 @@ music.addEventListener("ended", nextSong); // Event listener to play the next so
 next.addEventListener("click", nextSong); // Event listener to play the next song when the next button is clicked.
 
 prev.addEventListener("click", prevSong); // Event listener to play the previous song when the previous button is clicked.
+
+shuffle.addEventListener("click", shuffleSong)
