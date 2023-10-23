@@ -432,8 +432,13 @@ const prevSong = () => {
 };
 
 const shuffleSong = () => {
-  console.log(songs[currSong]);
-  currSong = (currSong+ Math.floor(Math.random() * (songs.length + 1)))%songs.length;
+  console.log(currSong);
+  prevsong = currSong;
+  currSong = (currSong+ Math.floor((Math.random()+1) * (songs.length + 1)))%songs.length;
+  if (currSong == prevsong){
+    shuffleSong();
+  }
+  console.log(currSong);
   loadSong(songs[currSong]); 
   playmusic();
 }
