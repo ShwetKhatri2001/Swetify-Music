@@ -1,5 +1,5 @@
 
-*, * ::before , * :: after{
+*, * ::before , * ::after{
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
@@ -333,7 +333,7 @@ text-shadow: 1px 1px 0 #3333ff;
  .artist-details:hover .artist-title{
  	display:inline;
  	color:#ffffff;
- 	background-color:rgba(0,0,0,.8);
+ 	background-color:rgba(2, 2, 2, 0.8);
  }
 
 /********** main and music containers styles ***********/
@@ -351,7 +351,7 @@ text-shadow: 1px 1px 0 #3333ff;
 
 .music_container{
 	width:40rem;
-	height:63rem;
+	height:60rem;
 	background-color: #000000;
 	border-radius:2rem;
 	box-shadow:0 1.2rem 3rem 0.5rem rgba(0,0,0,0.2);
@@ -610,9 +610,7 @@ text-shadow: 1px 1px 0 #3333ff;
 	width: 20rem;
 	height: 20rem;
 }
-
-
-
+}
 
 
 
