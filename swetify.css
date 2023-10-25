@@ -404,7 +404,7 @@ text-shadow: 1px 1px 0 #3333ff;
     display: flex;
     margin: auto;
     margin-top:2rem;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
