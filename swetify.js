@@ -19,6 +19,8 @@ let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
 
+
+
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
   {
