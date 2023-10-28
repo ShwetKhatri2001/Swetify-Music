@@ -15,6 +15,11 @@ const homepage_content = document.getElementById("homepage_content");
 const main_div = document.getElementById("main_div");
 let cat_images = document.getElementsByClassName("image");
 let category_title = document.getElementsByClassName("small-category");
+let home = document.getElementById("home");
+let categories = document.getElementById("popular-categories");
+let artists = document.getElementById("artists");
+
+
 
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
@@ -450,6 +455,22 @@ play.addEventListener("click", () => {
   else playmusic();
 });
 
+home.onclick = function(){
+    if(isplaying)
+      pausemusic();
+}
+
+categories.onclick = function(){
+  if(isplaying)
+    pausemusic();
+}
+
+artists.onclick = function(){
+  if(isplaying)
+    pausemusic();
+}
+
+
 music.addEventListener("timeupdate", (event) => {
   // event listener to update the progress bar of the song.
   const { currentTime, duration } = event.srcElement; // getting the current time and duration of the song.
@@ -489,6 +510,8 @@ progress_div.addEventListener("click", (event) => {
   console.log(move_progress);
   music.currentTime = move_progress; // changing the current time of the song.
 });
+
+
 
 music.addEventListener("ended", nextSong); // Event listener to play the next song when the current song ends.
 

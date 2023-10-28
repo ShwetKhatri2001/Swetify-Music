@@ -39,16 +39,16 @@
                           <div class="collapse navbar-collapse" id="collapsable-nav">
                            <ul id="nav-list" class="nav navbar-nav navbar-right" >
                               <li onclick="hidevisible()">
-                                <a href="#">
-                                  <span class="glyphicon glyphicon-home "></span><br class="hidden-xs">Home
+                                <a href="#" id="home">
+                                  <span class="glyphicon glyphicon-home " ></span><br class="hidden-xs">Home
                                 </a>
                               </li>
                               <li onclick="hidevisible()">
-                                  <a href="#popular categories"><span class="glyphicon glyphicon-music "></span><br class="hidden-xs">Popular Categories
+                                  <a href="#popular categories" id="popular-categories"><span class="glyphicon glyphicon-music " ></span><br class="hidden-xs">Popular Categories
                                 </a>
                               </li>
                               <li onclick="hidevisible()">
-                                <a href="#best of artists"><i class="fa fa-thumbs-up " aria-hidden="true"></i><br class="hidden-xs">Best of Artists
+                                <a href="#best of artists" id="artists"><i class="fa fa-thumbs-up " aria-hidden="true"></i><br class="hidden-xs">Best of Artists
                                 </a>
                               </li>
                           
@@ -229,6 +229,7 @@
 
          		<!-- controls -->
          	    <div class="music_controls">
+					
          	    	<i class="fa fa-step-backward " id="prev" title="Previous"></i>
          	    	<i class="fa fa-play main_button" id="play" title="Play"></i>
          	    	<i class="fa fa-step-forward" id="next" title="Next"></i>
