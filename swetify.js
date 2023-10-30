@@ -6,6 +6,7 @@ const artist = document.getElementById("artist");
 const title = document.getElementById("title");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
+const back = document.getElementById("back");
 const shuffle = document.getElementById("shuffle");
 let progress = document.getElementById("progress");
 let song_duration = document.getElementById("duration");
@@ -18,7 +19,6 @@ let category_title = document.getElementsByClassName("small-category");
 let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
-
 
 
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
@@ -470,6 +470,14 @@ artists.onclick = function(){
     pausemusic();
 }
 
+const skipback = () => {
+  if (music.currentTime >= 10) {
+    music.currentTime -= 10; // Skip back 5 seconds
+  } else {
+    music.currentTime = 0; // If less than 5 seconds have passed, set currentTime to 0
+  }
+}
+
 
 music.addEventListener("timeupdate", (event) => {
   // event listener to update the progress bar of the song.
@@ -502,6 +510,7 @@ music.addEventListener("timeupdate", (event) => {
   } // changing the current time of the song.
 });
 
+
 progress_div.addEventListener("click", (event) => {
   // event listener to change the progress bar of the song.
 
@@ -519,4 +528,6 @@ next.addEventListener("click", nextSong); // Event listener to play the next son
 
 prev.addEventListener("click", prevSong); // Event listener to play the previous song when the previous button is clicked.
 
-shuffle.addEventListener("click", shuffleSong)
+shuffle.addEventListener("click", shuffleSong);
+
+back.addEventListener("click", skipback);
