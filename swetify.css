@@ -355,7 +355,7 @@ text-shadow: 1px 1px 0 #3333ff;
 	height:63rem;
 	background-color: #000000;
 	border-radius:2rem;
-	box-shadow:1.2rem rgba(0,0,0,0.2);
+	box-shadow:1.2rem 1.2rem rgba(0,0,0,0.2);
 	padding:2rem;
 	text-align: center;
 }
