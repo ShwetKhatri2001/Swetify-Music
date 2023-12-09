@@ -47,7 +47,7 @@ html{
 
 
 .navbar-brand h1{/*Music Website Name*/
-	color:#3333ff;
+	color:#1e70e3;
 	font-weight:bold;
 	font-size:2.2em;
 	text-shadow: 1px 1.5px 0 white;
@@ -74,10 +74,13 @@ html{
 }
 
 #nav-list a{
-	color:#3333ff;
+	color:white;
 	text-align:center;
 	font-size: 1.6em;
 	text-shadow: .5px 1px 0 white;
+	border: 1px solid grey;
+	margin-left: 0.25rem;
+	box-shadow: 0 0 0 2px rgb(160, 148, 148);
 }
 .topicons{
 	color:white;
