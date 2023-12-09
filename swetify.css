@@ -6,7 +6,7 @@
 }
 
 body{
-	background-color: #3333ff;
+	background-image: linear-gradient(to left bottom, #f265b5, #df75cb, #c984dc, #b291e6, #9c9cea, #8c98ed, #7994f1, #6191f4, #477efb, #316aff, #2852ff, #3333ff);
 }
 html{
 	font-size:62.5%;
