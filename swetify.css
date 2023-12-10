@@ -22,7 +22,7 @@ html{
 	border-radius:0;
 	border:0;
 	margin-bottom:0;
-	font-family: 'Lobster', cursive;
+	font-family: 'Montserrat', sans-serif;
 }
 
 #logo-img{
@@ -78,9 +78,9 @@ html{
 	text-align:center;
 	font-size: 1.6em;
 	text-shadow: .5px 1px 0 white;
-	border: 1px solid grey;
+	/* border: 1px solid grey; */
 	margin-left: 0.25rem;
-	box-shadow: 0 0 0 2px rgb(160, 148, 148);
+	/* box-shadow: 0 0 0 2px rgb(160, 148, 148); */
 }
 .topicons{
 	color:white;
@@ -121,7 +121,7 @@ text-shadow: 1px 1px 0 #3333ff;
 
 
 .categories-heading{
-	font-family: 'Lobster', cursive;
+	font-family: 'Montserrat', sans-serif;
 	font-size:2.5em;
 	background-color:#000000;
 	width:60%;
@@ -141,7 +141,7 @@ text-shadow: 1px 1px 0 #3333ff;
 
 
 .category-title{
-	font-family: 'Lobster', cursive;
+	font-family: 'Montserrat', sans-serif;
 	border-radius: 10%;
 	position: relative;
 	border:2px solid #3F0C1F;
@@ -216,7 +216,7 @@ text-shadow: 1px 1px 0 #3333ff;
       }
        
         .slider-title{
-       	 font-family: 'Lobster', cursive;
+       	 font-family: 'Montserrat', sans-serif;
        	 border-radius: 30px;
 	     position:absolute;
 	     bottom:8%;
@@ -316,7 +316,7 @@ text-shadow: 1px 1px 0 #3333ff;
  	padding:80px;
  	padding-top:100px;
  	box-sizing: border-box;
- 	font-family: 'Lobster', cursive;
+ 	font-family: 'Montserrat', sans-serif;
  	display:none;
  	position:absolute;
  	height:100%;
