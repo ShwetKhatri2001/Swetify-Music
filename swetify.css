@@ -188,7 +188,7 @@ text-shadow: 1px 1px 0 #3333ff;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
+}
 
       .slider_div, .slider-wrapper{
         display: grid;
@@ -450,8 +450,73 @@ text-shadow: 1px 1px 0 #3333ff;
 	to{transform: rotate(360deg);}
 
 }
+/******** like button styles ********/
+.like_button {
+    position: relative;
+	/* margin-bottom: 0px; */
+}
 
+input[type="checkbox"] {
+    display: none;
+}
 
+.like_icon {
+    width: 25px;
+    height: 25px;
+	margin-bottom: 0px;
+    background-image: url('icons/likeBefore.png'); 
+    background-size: cover;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .like_icon {
+    background-image: url('icons/likeAfter.png');
+}
+
+/******** toast message styles ********/
+
+#snackbar {
+	visibility: hidden; 
+	min-width: 250px; 
+	margin-left: -125px; 
+	background-color: #333;
+	color: #fff; 
+	text-align: center; 
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1; 
+	left: 50%;
+	bottom: 30px;
+  }
+  
+  
+  #snackbar.show {
+	visibility: visible; 
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
 /******** progressive bar styles ********/
 
 
@@ -496,18 +561,12 @@ text-shadow: 1px 1px 0 #3333ff;
 
 }
 
-
-
 .progress_duration_meter{
 	display:flex;
 	color:white;
 	justify-content: space-between;
 	font-size:1.3rem;
 }
-
-
-
-
 
  /*******Large Devices only********/
 @media (min-width: 1200px)
@@ -589,6 +648,7 @@ text-shadow: 1px 1px 0 #3333ff;
 	width:30rem;
 	height:53rem;
 	background-color: #000000;
+	}
 }
 
 .music_container #title{
@@ -614,11 +674,6 @@ text-shadow: 1px 1px 0 #3333ff;
 	height: 20rem;
 }
 
-
-
-
-
-
 /******Super Extra Small Devices Only*****/
 @media (max-width: 479px)
 {
@@ -626,4 +681,55 @@ text-shadow: 1px 1px 0 #3333ff;
       padding:5px;
       font-size:6vw;
     }
+}
+
+/* liked song list */
+
+  .container-liked-list {
+	margin: 20px;
+  }
+
+
+  .container-scroll {
+	background: linear-gradient(to right, #9c9df1, #9db6f0, #D2DAFF, #EEF1FF); 
+	
+	margin: auto;
+	box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
+	border: 10px solid whitesmoke;
+	font-family: 'Arial', sans-serif;
+	height: 200px;
+	width: 90%;
+	overflow-y: auto;
+	border-radius: 10px;
+  }
+table{
+	width: 100%;
+	font-family: Verdana;
+}
+.headT{
+	color: black;
+	font-family:Arial,  sans-serif;
+	font-size: large;
+	font-weight: lighter;
+	position: sticky;
+	border-bottom: 4px solid #7576c4;	
+}
+td,th{
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #555;
+}
+  tr {
+	width:100%;
+	line-height: 40px;
+	padding: 10px;
+	/* background: linear-gradient(to right, #9c9df1, #9db6f0, #D2DAFF, #EEF1FF); */
+	border-bottom: 1px solid #555;
+	transition: background 1s,box-shadow 0.3s;
+	cursor: pointer;
+  }
+  tr:hover{
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
+  background: linear-gradient(to right, #bfc3f7, #9c9df1, #9ab6f5, #EEF1FF);
+
 }

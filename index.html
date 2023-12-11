@@ -17,6 +17,7 @@
 		  <script src="script.js"></script>
     </head>
     <body>  
+		<div id="snackbar">Some text some message..</div>
     	<header>
           <nav id="header-nav" class="navbar navbar-default">
        	     	<div class="container">
@@ -63,13 +64,11 @@
            </header>
 
         <div class="" id="homepage_content">
-
-       <img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive">
-
-       <div class="container categories-heading" id="top-picks">
-       	<span> Top Picks For You </span>
-       </div>
-
+			<img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive">
+			<div class="container categories-heading" id="top-picks">
+				<span> Top Picks For You </span>
+			</div>
+	   
        <div id="main-content" class="container">
         <section class="row">
         	<div class="col-md-1"></div>
@@ -155,9 +154,8 @@
        <div class="container categories-heading" id="best of artists">
        	<span> Best of Artists </span>
        </div>
-
-       <div class="container-fluid">
-       	    <div class="row">
+	   <div class="container-fluid">
+       	    <div style="margin-bottom: 60px;" class="row">
        	    	
        	    	<div class="col-md-4  col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
        	    		<a href="#">		
@@ -188,28 +186,79 @@
        	    	</div>
        	        <div class="col-md-2 "></div>
        	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
-       	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(12)">
+					<a href ="#">
+						<div class="artist-details" onclick="loadfirstsong(12)">
        	    			<img src="homepage/JubinNautiyal.jpg" width="300" height="300" class="artist-img">
                         <span class="artist-title">Jubin Nautiyal</span>
                         </div>
        	    		</a>
        	    	</div>
-                
-       	    	<div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 text-center artist-container">
-       	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(13)">
-       	    			<img src="homepage/AtifAslam.jpg" width="300" height="300" class="artist-img">
-                        <span class="artist-title">Atif Aslam</span>
-                        </div>
+				<div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 text-center artist-container">
+					<a href ="#">
+						<div class="artist-details" onclick="loadfirstsong(13)">
+							<img src="homepage/AtifAslam.jpg" width="300" height="300" class="artist-img">
+							<span class="artist-title">Atif Aslam</span>
+						</div>
        	    		</a>
-       	    	</div>
-       	    	
-       	    </div>
+				</div>
+			</div>
+		</div>
+		
 
-       	</div>
-       </div>
+	   <!-- the liked list -->
+	   <div class="container categories-heading">
+		  <span> Your favourite music</span>
+	   </div>
 
+		   
+			<div class="container-liked-list" id="container-liked-list">
+				
+					<div class="container-scroll">
+
+						<table>
+							<tr class="headT">
+							  <th>#</th>
+							  <th>Title</th>
+							  <th>Artist</th>
+							</tr>
+							<tr>
+							  <td>Alfreds </td>
+							  <td>Maria Anders</td>
+							  <td>Germany</td>
+							</tr>
+							<tr>
+							  <td>Centro </td>
+							  <td>Francisco </td>
+							  <td>Mexico</td>
+							</tr>
+							<tr>
+								<td>Alfreds </td>
+								<td>Maria Anders</td>
+								<td>Germany</td>
+							  </tr>
+							  <tr>
+								<td>Centro </td>
+								<td>Francisco </td>
+								<td>Mexico</td>
+							  </tr>
+							  <tr>
+								<td>Alfreds </td>
+								<td>Maria Anders</td>
+								<td>Germany</td>
+							  </tr>
+							  <tr>
+								<td>Centro </td>
+								<td>Francisco </td>
+								<td>Mexico</td>
+							  </tr>
+						  </table>
+					</div>
+				
+				
+			</div>
+
+			<!-- code for table ended -->
+		</div>
        <div class="main_div hidden" id="main_div">
          	<div class="music_container">
          		<h2 id="title">songtitle</h2>
@@ -238,6 +287,10 @@
          	    	<i class="fa fa-play main_button" id="play" title="Play"></i>
          	    	<i class="fa fa-step-forward" id="next" title="Next"></i>
 					<i class="fa fa-random shuffle_button" id="shuffle" title="Shuffle Music"></i>
+					<div class="like_button" id="likeBtn">
+						<input type="checkbox" id="likeToggle">
+						<label for="likeToggle" class="like_icon"></label>
+					</div>
 				
          	    </div>
             </div>

@@ -4,6 +4,7 @@ const songimg = document.getElementById("songimg");
 const play = document.getElementById("play");
 const artist = document.getElementById("artist");
 const title = document.getElementById("title");
+const likeToggle = document.getElementById('likeToggle');
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const back = document.getElementById("back");
@@ -13,6 +14,7 @@ let song_duration = document.getElementById("duration");
 let current_time = document.getElementById("current_time");
 const progress_div = document.getElementById("progress_div");
 const homepage_content = document.getElementById("homepage_content");
+// const liked_div = document.getElementById("liked_div");
 const main_div = document.getElementById("main_div");
 let cat_images = document.getElementsByClassName("image");
 let category_title = document.getElementsByClassName("small-category");
@@ -314,7 +316,65 @@ const hollywoodsongs = [
   },
   { name: "I'mMess", title: "I'm a Mess", artist: "Bebe Rexha" },
 ];
+const globalSong=[hollywoodsongs,holispecial,bollywoodsongs,patriotic,Hits90s,garbasongs,dancesongs,arijitsongs,atifsongs,nehasongs,jubinsongs,ritvizsongs,rocksongs,collegesongs]
+function toastMessage(msg) {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  x.innerHTML=msg;
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+const refreshLikedList=()=>{
+const container_liked_list = document.getElementById("container-liked-list");
+  let count=0;
+  for(var i in localStorage){
+    console.log(i,"   ",localStorage.getItem(i))
+  }
+  for(var i in localStorage){
+    if(localStorage.getItem(i)=="true")count++;
+  }
+  console.log(count)
+  if(count==0){
+    container_liked_list.remove();
+  }else{
+    if(container_liked_list)container_liked_list.remove();
+    let no=1;
+    var containerLL=document.createElement('div');
+        containerLL.id="container-liked-list"
+        containerLL.className="container-liked-list"
+        var containerScroll=document.createElement('div');
+        containerScroll.className="container-scroll"
+        var table=document.createElement('table')
+        var headerRow = table.insertRow();
+        headerRow.className="headT"
+        var headers = ['#', 'Title', 'Artist']; 
+        headers.forEach(function(headerText) {
+          var th = document.createElement('th');
+          th.appendChild(document.createTextNode(headerText));
+          headerRow.appendChild(th);
+        });
+    for(var i in localStorage){
+      if(localStorage.getItem(i)=="true"){
+        var searchTerm=i;
+        console.log(i)
+        var results = globalSong.flat().find((obj) => obj.title === searchTerm);
+        console.log(results)
+        var row=table.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
 
+        // Add some text to the new cells:
+        cell1.innerHTML = no;
+        cell2.innerHTML = i;
+        cell3.innerHTML = results.artist;
+        no++;
+      }
+    }
+    containerScroll.appendChild(table)
+    containerLL.appendChild(containerScroll)
+    homepage_content.appendChild(containerLL)
+  }
+}
 changeimagewidth(); // calling the function to change the width of the images according to the screen size.
 function changeimagewidth() {
   var w =
@@ -417,8 +477,16 @@ const loadSong = (song) => {
   music.src = "songs-images/" + category + "/" + song.name + ".mp3";
   console.log(music.src); // changing the source of the song.
   songimg.src = "songs-images/" + category + "/" + song.name + ".jpg";
-  console.log(songimg.src); // changing the source of the image.
+  console.log(songimg.src); // changing the source of the image.    
+    const likedState = localStorage.getItem(song.title);
+    if (likedState === null) {
+        likeToggle.checked = false;
+    }else if(likedState === 'true'){
+      likeToggle.checked = true;
+    }
+  
 };
+
 
 const nextSong = () => {
   // function to play the next song.
@@ -478,6 +546,19 @@ const skipback = () => {
   }
 }
 
+// Add event listener for the like toggle button
+likeToggle.addEventListener('change', function () {
+  song=title.textContent;
+      // Update the liked state in local storage
+      localStorage.setItem(song, this.checked);
+      if(this.checked){
+        toastMessage(song+" added in Liked list");
+      }else{
+        toastMessage(song+" removed from Liked list");
+      }
+    refreshLikedList()
+
+  });
 
 music.addEventListener("timeupdate", (event) => {
   // event listener to update the progress bar of the song.
@@ -511,6 +592,10 @@ music.addEventListener("timeupdate", (event) => {
 });
 
 
+
+window.addEventListener("load",()=>{
+  refreshLikedList();
+})
 progress_div.addEventListener("click", (event) => {
   // event listener to change the progress bar of the song.
 
