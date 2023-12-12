@@ -18,14 +18,9 @@ const initSlider = () => {
         slideButtons[0].style.display = imageList.scrollLeft <= 0? "none" : "block";
         slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft? "none" : "block";
     }
-
-    
-
     imageList.addEventListener("scroll", () => {
-        handleSlideButtons();
-        
+        handleSlideButtons();  
     });
-   
 }
 
 window.addEventListener("load",initSlider);
