@@ -8,12 +8,16 @@
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
          <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet">
          <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		 <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
           <link href="swetify.css" type= "text/css" rel="stylesheet">
 		  <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg">
 		  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
 		  <script src="script.js"></script>
     </head>
     <body>  
+		<div id="snackbar">Some text some message..</div>
     	<header>
           <nav id="header-nav" class="navbar navbar-default">
        	     	<div class="container">
@@ -41,7 +45,7 @@
                            <ul id="nav-list" class="nav navbar-nav navbar-right" >
                               <li onclick="hidevisible()">
                                 <a href="#" id="home">
-                                  <span class="glyphicon glyphicon-home " ></span><br class="hidden-xs">Home
+									<span class="glyphicon glyphicon-home " ></span><br class="hidden-xs">Home
                                 </a>
                               </li>
                               <li onclick="hidevisible()">
@@ -60,13 +64,11 @@
            </header>
 
         <div class="" id="homepage_content">
-
-       <img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive">
-
-       <div class="container categories-heading" id="top-picks">
-       	<span> Top Picks For You </span>
-       </div>
-
+			<img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive">
+			<div class="container categories-heading" id="top-picks">
+				<span> Top Picks For You </span>
+			</div>
+	   
        <div id="main-content" class="container">
         <section class="row">
         	<div class="col-md-1"></div>
@@ -152,9 +154,8 @@
        <div class="container categories-heading" id="best of artists">
        	<span> Best of Artists </span>
        </div>
-
-       <div class="container-fluid">
-       	    <div class="row">
+	   <div class="container-fluid">
+       	    <div style="margin-bottom: 60px;" class="row">
        	    	
        	    	<div class="col-md-4  col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
        	    		<a href="#">		
@@ -185,28 +186,79 @@
        	    	</div>
        	        <div class="col-md-2 "></div>
        	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
-       	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(12)">
+					<a href ="#">
+						<div class="artist-details" onclick="loadfirstsong(12)">
        	    			<img src="homepage/JubinNautiyal.jpg" width="300" height="300" class="artist-img">
                         <span class="artist-title">Jubin Nautiyal</span>
                         </div>
        	    		</a>
        	    	</div>
-                
-       	    	<div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 text-center artist-container">
-       	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(13)">
-       	    			<img src="homepage/AtifAslam.jpg" width="300" height="300" class="artist-img">
-                        <span class="artist-title">Atif Aslam</span>
-                        </div>
+				<div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 text-center artist-container">
+					<a href ="#">
+						<div class="artist-details" onclick="loadfirstsong(13)">
+							<img src="homepage/AtifAslam.jpg" width="300" height="300" class="artist-img">
+							<span class="artist-title">Atif Aslam</span>
+						</div>
        	    		</a>
-       	    	</div>
-       	    	
-       	    </div>
+				</div>
+			</div>
+		</div>
+		
 
-       	</div>
-       </div>
+	   <!-- the liked list -->
+	   <div class="container categories-heading">
+		  <span> Your favourite music</span>
+	   </div>
 
+		   
+			<div class="container-liked-list" id="container-liked-list">
+				
+					<div class="container-scroll">
+
+						<table>
+							<tr class="headT">
+							  <th>#</th>
+							  <th>Title</th>
+							  <th>Artist</th>
+							</tr>
+							<tr>
+							  <td>Alfreds </td>
+							  <td>Maria Anders</td>
+							  <td>Germany</td>
+							</tr>
+							<tr>
+							  <td>Centro </td>
+							  <td>Francisco </td>
+							  <td>Mexico</td>
+							</tr>
+							<tr>
+								<td>Alfreds </td>
+								<td>Maria Anders</td>
+								<td>Germany</td>
+							  </tr>
+							  <tr>
+								<td>Centro </td>
+								<td>Francisco </td>
+								<td>Mexico</td>
+							  </tr>
+							  <tr>
+								<td>Alfreds </td>
+								<td>Maria Anders</td>
+								<td>Germany</td>
+							  </tr>
+							  <tr>
+								<td>Centro </td>
+								<td>Francisco </td>
+								<td>Mexico</td>
+							  </tr>
+						  </table>
+					</div>
+				
+				
+			</div>
+
+			<!-- code for table ended -->
+		</div>
        <div class="main_div hidden" id="main_div">
          	<div class="music_container">
          		<h2 id="title">songtitle</h2>
@@ -235,7 +287,13 @@
          	    	<i class="fa fa-play main_button" id="play" title="Play"></i>
          	    	<i class="fa fa-step-forward" id="next" title="Next"></i>
 					<i class="fa fa-random shuffle_button" id="shuffle" title="Shuffle Music"></i>
-				
+					<div class="like_button" id="likeBtn">
+						<input type="checkbox" id="likeToggle">
+						<label for="likeToggle" class="like_icon"></label>
+					</div>
+					<div class="download_controls">
+						<div class="fa fa-download download_button" id="download" title="Download Music"></div>
+					 </div>
          	    </div>
             </div>
          </div>		
