@@ -9,6 +9,7 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const back = document.getElementById("back");
 const shuffle = document.getElementById("shuffle");
+const download = document.getElementById("download");
 let progress = document.getElementById("progress");
 let song_duration = document.getElementById("duration");
 let current_time = document.getElementById("current_time");
@@ -606,6 +607,26 @@ const shuffleSong = () => {
   }
 };
 
+const downloadCurrentSong = () => {
+  const currentSong = songs[currSong];
+  const downloadUrl = `songs-images/${category}/${currentSong.name}.mp3`;
+
+  fetch(downloadUrl)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const blobUrl = window.URL.createObjectURL(blob);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = blobUrl;
+      downloadLink.download = `${currentSong.title}.mp3`;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    })
+    .catch((error) => {
+      console.error('Error fetching the file:', error);
+    });
+};
+
 play.addEventListener("click", () => {
   // event listener to play or pause the song.
 
@@ -701,3 +722,5 @@ prev.addEventListener("click", prevSong); // Event listener to play the previous
 shuffle.addEventListener("click", shuffleSong);
 
 back.addEventListener("click", skipback);
+
+download.addEventListener('click', downloadCurrentSong); // Adding an event listener to the download button

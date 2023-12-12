@@ -1,5 +1,5 @@
 
-*, * ::before , * :: after{
+*, * ::before , * ::after{
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
@@ -361,6 +361,7 @@ text-shadow: 1px 1px 0 #3333ff;
 	box-shadow:1.2rem 1.2rem rgba(0,0,0,0.2);
 	padding:2rem;
 	text-align: center;
+	position: relative;
 }
 
 .music_container #title{
@@ -411,18 +412,31 @@ text-shadow: 1px 1px 0 #3333ff;
     justify-content: space-around;
     align-items: center;
 }
-
+.download_controls{
+	position: absolute;
+    bottom: 7px;
+    right: 10px;
+    padding: 1rem;
+}
 .music_controls .fa{
      color: #3333ff;
      font-size:2rem;
      cursor:pointer;
      filter:drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
 }
+.download_controls .fa{
+	color: #3333ff;
+	font-size:2rem;
+	cursor:pointer;
+	filter:drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+}
 
 .music_controls .fa:hover{
 	color: white;
 }
-
+.download_controls .fa:hover{
+	color: white;
+}
 .music_controls .main_button{
 	width : 5rem;
 	height: 5rem;
