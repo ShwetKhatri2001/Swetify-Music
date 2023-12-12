@@ -652,11 +652,14 @@ input[type="checkbox"]:checked + .like_icon {
 }
 
 .music_container #title{
-	color: #3333ff;
-	margin:  1rem 0 0.5rem 0;
-	font-size : 2rem;
-	font-weight : bold;
-	text-shadow: 0 0.3rem 0 2.5rem rgba(0,0,0,0.7);
+	text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: #3333ff;
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-shadow: 0 0.3rem 0 2.5rem rgba(0,0,0,0.7);
 }
 
 .music_container #artist{
@@ -670,8 +673,9 @@ input[type="checkbox"]:checked + .like_icon {
 
 
 .img_container{
-	width: 20rem;
-	height: 20rem;
+	width: 28rem;
+    height: 28rem;
+    margin: auto;
 }
 
 /******Super Extra Small Devices Only*****/

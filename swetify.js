@@ -4,7 +4,7 @@ const songimg = document.getElementById("songimg");
 const play = document.getElementById("play");
 const artist = document.getElementById("artist");
 const title = document.getElementById("title");
-const likeToggle = document.getElementById('likeToggle');
+const likeToggle = document.getElementById("likeToggle");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const back = document.getElementById("back");
@@ -21,7 +21,6 @@ let category_title = document.getElementsByClassName("small-category");
 let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
-
 
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
@@ -219,7 +218,11 @@ const Hits90s = [
     title: "Chura Ke Dil Mera",
     artist: "Alka Yagnik and Kumar Sanu",
   },
-  { name: "BaazigarOBaazigar", title: "Baazigar O Baazigar", artist: "Alka Yagnik and Kumar Sanu" },
+  {
+    name: "BaazigarOBaazigar",
+    title: "Baazigar O Baazigar",
+    artist: "Alka Yagnik and Kumar Sanu",
+  },
   {
     name: "ChandChhupaBadalMein",
     title: "Chand Chhupa Badal Mein",
@@ -235,7 +238,11 @@ const Hits90s = [
     title: "Aisi Deewangi",
     artist: "Alka Yagnik and Vinod Rathod",
   },
-  { name: "ChhupanaBhiNahinAata", title: "Chhupana Bhi Nahin Aata", artist: "Pankaj Udhas" },
+  {
+    name: "ChhupanaBhiNahinAata",
+    title: "Chhupana Bhi Nahin Aata",
+    artist: "Pankaj Udhas",
+  },
 ];
 
 // Below is the array of Bollywood patriotic songs , in which each song is an object with the name, title and artist properties.
@@ -245,7 +252,11 @@ const patriotic = [
     title: "Sare Jahan Se Achha",
     artist: "Seema Mishra",
   },
-  { name: "SarfaroshiKiTamanna", title: "Sarfaroshi Ki Tamanna", artist: "Sonu Nigam" },
+  {
+    name: "SarfaroshiKiTamanna",
+    title: "Sarfaroshi Ki Tamanna",
+    artist: "Sonu Nigam",
+  },
   {
     name: "DesMereDes",
     title: "Des Mere Des",
@@ -257,7 +268,6 @@ const patriotic = [
     title: "Mera Rang De Basanti",
     artist: "Sonu Nigam, Manmohan Waris",
   },
-  
 ];
 
 // Below is the array of Holi special songs , in which each song is an object with the name, title and artist properties.
@@ -267,13 +277,21 @@ const holispecial = [
     title: "Balam Pichkari",
     artist: "Pritam, Vishal Dadlani, Shalmali Kholgade",
   },
-  { name: "HoliKeDin", title: "Holi Ke Din", artist: "Lata Mangeshkar, Kishore Kumar, R. D. Burman" },
+  {
+    name: "HoliKeDin",
+    title: "Holi Ke Din",
+    artist: "Lata Mangeshkar, Kishore Kumar, R. D. Burman",
+  },
   {
     name: "BadriKiDulhaniya",
     title: "Badri Ki Dulhaniya",
     artist: "Dev Negi, Neha Kakkar, Monali Thakur, Ikka",
   },
-  { name: "AngSeAngLagana", title: "Ang Se Ang Lagana", artist: "Alka Yagnik, Sudesh Bhosle, Vinod Rathod" },
+  {
+    name: "AngSeAngLagana",
+    title: "Ang Se Ang Lagana",
+    artist: "Alka Yagnik, Sudesh Bhosle, Vinod Rathod",
+  },
   {
     name: "RangBaraseBheegeChunarwali",
     title: "Rang Barase Bheege Chunarwali",
@@ -316,65 +334,91 @@ const hollywoodsongs = [
   },
   { name: "I'mMess", title: "I'm a Mess", artist: "Bebe Rexha" },
 ];
-const globalSong=[hollywoodsongs,holispecial,bollywoodsongs,patriotic,Hits90s,garbasongs,dancesongs,arijitsongs,atifsongs,nehasongs,jubinsongs,ritvizsongs,rocksongs,collegesongs]
+const globalSong = [
+  hollywoodsongs,
+  holispecial,
+  bollywoodsongs,
+  patriotic,
+  Hits90s,
+  garbasongs,
+  dancesongs,
+  arijitsongs,
+  atifsongs,
+  nehasongs,
+  jubinsongs,
+  ritvizsongs,
+  rocksongs,
+  collegesongs,
+];
+let likedSongs = [];
 function toastMessage(msg) {
   var x = document.getElementById("snackbar");
   x.className = "show";
-  x.innerHTML=msg;
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  x.innerHTML = msg;
+  setTimeout(function () {
+    x.className = x.className.replace("show", "");
+  }, 3000);
 }
-const refreshLikedList=()=>{
-const container_liked_list = document.getElementById("container-liked-list");
-  let count=0;
-  for(var i in localStorage){
-    console.log(i,"   ",localStorage.getItem(i))
+
+//code for dynamic table
+const refreshLikedList = () => {
+  const container_liked_list = document.getElementById("container-liked-list");
+  let count = 0;
+  // for(var i in localStorage){
+  // console.log(i,"   ",localStorage.getItem(i))
+  // }
+  for (var i in localStorage) {
+    if (localStorage.getItem(i) == "true") count++;
   }
-  for(var i in localStorage){
-    if(localStorage.getItem(i)=="true")count++;
-  }
-  console.log(count)
-  if(count==0){
+  // console.log(count)
+  if (count == 0) {
     container_liked_list.remove();
-  }else{
-    if(container_liked_list)container_liked_list.remove();
-    let no=1;
-    var containerLL=document.createElement('div');
-        containerLL.id="container-liked-list"
-        containerLL.className="container-liked-list"
-        var containerScroll=document.createElement('div');
-        containerScroll.className="container-scroll"
-        var table=document.createElement('table')
-        var headerRow = table.insertRow();
-        headerRow.className="headT"
-        var headers = ['#', 'Title', 'Artist']; 
-        headers.forEach(function(headerText) {
-          var th = document.createElement('th');
-          th.appendChild(document.createTextNode(headerText));
-          headerRow.appendChild(th);
-        });
-    for(var i in localStorage){
-      if(localStorage.getItem(i)=="true"){
-        var searchTerm=i;
-        console.log(i)
+  } else {
+    if (container_liked_list) container_liked_list.remove();
+    let no = 1;
+    var containerLL = document.createElement("div");
+    containerLL.id = "container-liked-list";
+    containerLL.className = "container-liked-list";
+    var containerScroll = document.createElement("div");
+    containerScroll.className = "container-scroll";
+    var table = document.createElement("table");
+    var headerRow = table.insertRow();
+    headerRow.className = "headT";
+    var headers = ["#", "Title", "Artist"];
+    headers.forEach(function (headerText) {
+      var th = document.createElement("th");
+      th.appendChild(document.createTextNode(headerText));
+      headerRow.appendChild(th);
+    });
+    for (var i in localStorage) {
+      if (localStorage.getItem(i) == "true") {
+        var searchTerm = i;
+        // console.log(i)
         var results = globalSong.flat().find((obj) => obj.title === searchTerm);
-        console.log(results)
-        var row=table.insertRow();
+        var name = results.name;
+        var title = i;
+        var artist = results.artist;
+        var newSong = { name, title, artist };
+        likedSongs.push(newSong);
+        // console.log(newSong)
+        var row = table.insertRow();
+        row.setAttribute("id", "likelist");
+        row.setAttribute("onclick", "loadlikedsong(this)");
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
 
-        // Add some text to the new cells:
         cell1.innerHTML = no;
         cell2.innerHTML = i;
         cell3.innerHTML = results.artist;
         no++;
       }
     }
-    containerScroll.appendChild(table)
-    containerLL.appendChild(containerScroll)
-    homepage_content.appendChild(containerLL)
+    containerScroll.appendChild(table);
+    containerLL.appendChild(containerScroll);
+    homepage_content.appendChild(containerLL);
   }
-}
+};
 changeimagewidth(); // calling the function to change the width of the images according to the screen size.
 function changeimagewidth() {
   var w =
@@ -435,13 +479,34 @@ const allcategories = [
 
 let songs = [];
 let category;
-
+let islikedplaying = false;
 const loadfirstsong = (
   arrno // function to load the first song of the category.
 ) => {
   songs = allsongs[arrno];
   category = allcategories[arrno];
   loadSong(songs[0]);
+  homepage_content.classList.add("hidden");
+  main_div.classList.remove("hidden");
+
+  playmusic();
+};
+function findSongCategory(songTitle) {
+  // Loop through each category in the globalSongs array
+  for (var i = 0; i < allsongs.length; i++) {
+    for (const song of allsongs[i]) {
+      if (song.title === songTitle) {
+        return allcategories[i];
+      }
+    }
+  }
+}
+const loadlikedsong = (obj, i = 0) => {
+  console.log(obj);
+  var index = obj.children[0].innerHTML;
+  category = findSongCategory(obj.children[1].innerHTML);
+  islikedplaying = true;
+  loadSong(likedSongs[index - 1]);
   homepage_content.classList.add("hidden");
   main_div.classList.remove("hidden");
 
@@ -470,51 +535,76 @@ currSong = 0; // variable to store the current song number.
 
 const loadSong = (song) => {
   // function to load the song.
-  console.log(song);
+  // console.log(song);
   title.textContent = song.title;
-  console.log(title.textContent); // changing the title of the song.
+  category  = findSongCategory(title.innerHTML);
+  // console.log(title.textContent); // changing the title of the song.
   artist.innerHTML = `<marquee>${song.artist}</marquee>`; // changing the artist of the song.
   music.src = "songs-images/" + category + "/" + song.name + ".mp3";
   console.log(music.src); // changing the source of the song.
   songimg.src = "songs-images/" + category + "/" + song.name + ".jpg";
-  console.log(songimg.src); // changing the source of the image.    
-    const likedState = localStorage.getItem(song.title);
-    if (likedState === null) {
-        likeToggle.checked = false;
-    }else if(likedState === 'true'){
-      likeToggle.checked = true;
-    }
-  
+  // console.log(songimg.src); // changing the source of the image.
+  const likedState = localStorage.getItem(song.title);
+  if (likedState === null) {
+    likeToggle.checked = false;
+  } else if (likedState === "true") {
+    likeToggle.checked = true;
+  }
 };
-
 
 const nextSong = () => {
   // function to play the next song.
-  console.log(songs[currSong]);
-  currSong = (currSong + 1) % songs.length; // changing the current song number.
-  loadSong(songs[currSong]); // calling the loadSong function to load the next song.
-  playmusic(); // calling the playmusic function to play the next song.
+  if (islikedplaying) {
+    currSong = (currSong + 1) % likedSongs.length;
+    category  = findSongCategory(title.innerHTML);
+    console.log(category);
+
+    loadSong(likedSongs[currSong]);
+    playmusic();
+  } else {
+    currSong = (currSong + 1) % songs.length; // changing the current song number.
+    loadSong(songs[currSong]); // calling the loadSong function to load the next song.
+    playmusic(); // calling the playmusic function to play the next song.
+  }
 };
 
 const prevSong = () => {
   // function to play the previous song.
   console.log(songs[currSong]);
-  currSong = (currSong - 1 + songs.length) % songs.length; // changing the current song number.
-  loadSong(songs[currSong]); // calling the loadSong function to load the previous song.
-  playmusic();
+  if (islikedplaying) {
+    currSong = (currSong - 1 + likedSongs.length) % likedSongs.length;
+    category  = findSongCategory(title.innerHTML);
+    loadSong(likedSongs[currSong]);
+    playmusic();
+  } else {
+    currSong = (currSong - 1 + songs.length) % songs.length; // changing the current song number.
+    loadSong(songs[currSong]); // calling the loadSong function to load the previous song.
+    playmusic();
+  }
 };
 
 const shuffleSong = () => {
   console.log(currSong);
   prevsong = currSong;
-  currSong = (currSong+ Math.floor((Math.random()+1) * (songs.length + 1)))%songs.length;
-  if (currSong == prevsong){
-    shuffleSong();
+  if (islikedplaying) {
+    currSong =(currSong + Math.floor((Math.random() + 1) * (likedSongs.length + 1))) %likedSongs.length;
+    if (currSong == prevsong) {
+      shuffleSong();
+    }
+    console.log(currSong);
+    category  = findSongCategory(title.innerHTML);
+    loadSong(likedSongs[currSong]);
+    playmusic();
+  } else {
+    currSong =(currSong + Math.floor((Math.random() + 1) * (songs.length + 1))) %songs.length;
+    if (currSong == prevsong) {
+      shuffleSong();
+    }
+    console.log(currSong);
+    loadSong(songs[currSong]);
+    playmusic();
   }
-  console.log(currSong);
-  loadSong(songs[currSong]); 
-  playmusic();
-}
+};
 
 play.addEventListener("click", () => {
   // event listener to play or pause the song.
@@ -523,20 +613,20 @@ play.addEventListener("click", () => {
   else playmusic();
 });
 
-home.onclick = function(){
-    if(isplaying)
-      pausemusic();
-}
+home.onclick = function () {
+  if (isplaying) pausemusic();
+  islikedplaying=false
+};
 
-categories.onclick = function(){
-  if(isplaying)
-    pausemusic();
-}
+categories.onclick = function () {
+  if (isplaying) pausemusic();
+  islikedplaying=false
+};
 
-artists.onclick = function(){
-  if(isplaying)
-    pausemusic();
-}
+artists.onclick = function () {
+  if (isplaying) pausemusic();
+  islikedplaying=false
+};
 
 const skipback = () => {
   if (music.currentTime >= 10) {
@@ -544,21 +634,20 @@ const skipback = () => {
   } else {
     music.currentTime = 0; // If less than 5 seconds have passed, set currentTime to 0
   }
-}
+};
 
 // Add event listener for the like toggle button
-likeToggle.addEventListener('change', function () {
-  song=title.textContent;
-      // Update the liked state in local storage
-      localStorage.setItem(song, this.checked);
-      if(this.checked){
-        toastMessage(song+" added in Liked list");
-      }else{
-        toastMessage(song+" removed from Liked list");
-      }
-    refreshLikedList()
-
-  });
+likeToggle.addEventListener("change", function () {
+  song = title.textContent;
+  // Update the liked state in local storage
+  localStorage.setItem(song, this.checked);
+  if (this.checked) {
+    toastMessage(song + " added in Liked list");
+  } else {
+    toastMessage(song + " removed from Liked list");
+  }
+  refreshLikedList();
+});
 
 music.addEventListener("timeupdate", (event) => {
   // event listener to update the progress bar of the song.
@@ -591,11 +680,9 @@ music.addEventListener("timeupdate", (event) => {
   } // changing the current time of the song.
 });
 
-
-
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
   refreshLikedList();
-})
+});
 progress_div.addEventListener("click", (event) => {
   // event listener to change the progress bar of the song.
 
@@ -604,8 +691,6 @@ progress_div.addEventListener("click", (event) => {
   console.log(move_progress);
   music.currentTime = move_progress; // changing the current time of the song.
 });
-
-
 
 music.addEventListener("ended", nextSong); // Event listener to play the next song when the current song ends.
 
