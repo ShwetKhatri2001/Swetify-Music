@@ -291,7 +291,7 @@ html {
   background-color: black;
 }
 .footer p {
-  font-family: "Lobster", cursive;
+  font-family: "Montserrat", sans-serif;
   color: white;
   font-size: 3rem;
   text-align: center;
@@ -321,13 +321,15 @@ html {
   text-shadow: 0.5px 0.5px 0 rgb(176, 155, 215);
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: bold;
   line-height: 0.75;
   cursor: pointer;
   text-decoration: none;
 }
 .footer ul {
   color: white;
-  font-family: "Lobster", cursive;
+  /* font-family: "Lobster", cursive; */
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   list-style: disc;
 }
@@ -992,7 +994,6 @@ input[type="checkbox"]:checked + .like_icon {
 
 .container-scroll {
   background: linear-gradient(to right, #9c9df1, #9db6f0, #d2daff, #eef1ff);
-
   margin: auto;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   border: 10px solid whitesmoke;
