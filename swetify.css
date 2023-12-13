@@ -740,14 +740,14 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
-  footer .top a { 
-    font-size:25px;
-	color: white;
-	padding: 0;
+  footer .top a {
+    font-size: 25px;
+    color: white;
+    padding: 0;
   }
   footer .top a:hover {
     font-size: 28px;
-	padding: 0;
+    padding: 0;
   }
 }
 /*******Small Devices only********/
@@ -785,7 +785,7 @@ input[type="checkbox"]:checked + .like_icon {
     background-color: black;
     position: relative;
     bottom: 0;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .footer p {
     font-size: 25px;
@@ -824,14 +824,14 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
-  footer .top a { 
-    font-size:25px;
-	color: white;
-	padding: 0;
+  footer .top a {
+    font-size: 25px;
+    color: white;
+    padding: 0;
   }
   footer .top a:hover {
     font-size: 28px;
-	padding: 0;
+    padding: 0;
   }
 }
 /*******Extra small Devices only********/
@@ -867,7 +867,7 @@ input[type="checkbox"]:checked + .like_icon {
     background-color: black;
     position: relative;
     bottom: 0;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .footer p {
     font-size: 25px;
@@ -906,14 +906,14 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
-  footer .top a { 
-    font-size:25px;
-	color: white;
-	padding: 0;
+  footer .top a {
+    font-size: 25px;
+    color: white;
+    padding: 0;
   }
   footer .top a:hover {
     font-size: 28px;
-	padding: 0;
+    padding: 0;
   }
 }
 
