@@ -1,311 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-   	     <title> Let's Play On Swetify </title>
-   	     <meta charset="utf-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-         <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet">
-         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-		 <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-          <link href="swetify.css" type= "text/css" rel="stylesheet">
-		  <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg">
-		  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
-		  <script src="script.js"></script>
-    </head>
-    <body>  
-		<div id="snackbar">Some text some message..</div>
-    	<header>
-          <nav id="header-nav" class="navbar navbar-default">
-       	     	<div class="container">
-       	     		   <div class="navbar-header">
-                       <a href="index.html" class="pull-left visible-md visible-lg">
-                           <div id="logo-img" alt="Logo img"></div>
-                        </a>
-                    
-                    <div class="navbar-brand">
-                      <a href="index.html"><h1>Swetify</h1></a>
-                      
-                       <span class="glyphicon glyphicon-headphones" id="headphones"></span>
-                         <span id="PlaySing"> Play and Sing with us Now !</span>
-                       
-                    </div> 
+  <head>
+    <title>Let's Play On Swetify</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="swetify.css" type="text/css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+	<script src="https://kit.fontawesome.com/32ceed9cc4.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="snackbar">Some text some message..</div>
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="index.html" class="pull-left visible-md visible-lg">
+              <div id="logo-img" alt="Logo img"></div>
+            </a>
 
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-                          <span class="sr-only">Toggle navigation</span>
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                    </button>
-                  </div>
-                          <div class="collapse navbar-collapse" id="collapsable-nav">
-                           <ul id="nav-list" class="nav navbar-nav navbar-right" >
-                              <li onclick="hidevisible()">
-                                <a href="#" id="home">
-									<span class="glyphicon glyphicon-home " ></span><br class="hidden-xs">Home
-                                </a>
-                              </li>
-                              <li onclick="hidevisible()">
-                                  <a href="#popular categories" id="popular-categories"><span class="glyphicon glyphicon-music " ></span><br class="hidden-xs">Popular Categories
-                                </a>
-                              </li>
-                              <li onclick="hidevisible()">
-                                <a href="#best of artists" id="artists"><i class="fa fa-thumbs-up " aria-hidden="true"></i><br class="hidden-xs">Best of Artists
-                                </a>
-                              </li>
-                          
-                            </ul>
-                        </div>
-       	     	    </div>
-       	     </nav>
-           </header>
+            <div class="navbar-brand">
+              <a href="index.html"><h1>Swetify</h1></a>
 
-        <div class="" id="homepage_content">
-			<img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive">
-			<div class="container categories-heading" id="top-picks">
-				<span> Top Picks For You </span>
-			</div>
-	   
-       <div id="main-content" class="container">
-        <section class="row">
-        	<div class="col-md-1"></div>
-           <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 " >
-             <a href="#"  id="top-holly" >
-                <div class="category-title small-category" onclick="loadfirstsong(0)">
-                	<img src="homepage/TopHollywoodHits.jpg" alt="TopHollywoodHits" width="350" height="350" class="image">
-                  <span>Top Hollywood Hits </span>
-                </div>
-              </a>
-           </div>
-           <div class="col-md-2"></div>
-           <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 " >
-             <a href="#" id="top-bolly">
-                <div class="category-title small-category" onclick="loadfirstsong(1)">
-                  <img src="homepage/TopBollywoodHits.jpg" alt="TopBollywoodHits" width="350" height="350" class="image">
-                  <span>Top Bollywood Hits</span>
-                </div>
-              </a>
-           </div>
-           
-           
-         </section>
-       </div>
-
-         <div class="container categories-heading" id="popular categories">
-       	<span> Poplular Categories </span>
-       </div>
-
-       <div class="slider_div">
-			<div class="slider-wrapper">
-				
-            	<div class="center_div" id="centerdiv">
-					<div class="category-slider small-category" onclick="loadfirstsong(2)">
-						<a href="#">
-						<img src="homepage/RockOn.jpg" width="350" height="350" class="category-img image" onclick="loadfirstsong(6)">
-						<span class="slider-title">Rock On</span>
-						</a>
-					</div>
-					<div class="category-slider small-category" onclick="loadfirstsong(3)">
-						<a href="#">
-						<img src="homepage/DanceHits.jpg" width="350" height="350" class="category-img image">
-						<span class="slider-title">Dance Hits</span>
-						</a>
-					</div>
-					<div class="category-slider small-category" onclick="loadfirstsong(4)">
-						<a href="#" >
-						<img src="homepage/CollegeDeYaar.jpg" width="350" height="350" class="category-img image">
-						<span class="slider-title">College De Yaar</span>
-						</a>
-					</div>
-					<div class="category-slider small-category" onclick="loadfirstsong(5)">
-						<a href="#">
-						<img src="homepage/GujjuGarba.jpg" width="350" height="350" class="category-img image">
-						<span class="slider-title">Gujju Garba</span>
-						</a>
-					</div>
-					<div class="category-slider small-category" onclick="loadfirstsong(6)">
-							<a href="#">
-							<img src="homepage/90'sHits.jpg" width="350" height="350" class="category-img image">
-							<span class="slider-title">90's Hits</span>
-							</a>
-					</div>
-					<div class="category-slider small-category" onclick="loadfirstsong(7)">
-							<a href="#">
-							<img src="homepage/PatrioticBollywood.jpg" width="350" height="350" class="category-img image">
-							<span class="slider-title">Patriotic Bollywood</span>
-							</a>
-					</div>
-					<div class="category-slider small-category" onclick="loadfirstsong(8)">
-							<a href="#">
-							<img src="homepage/HoliSpecial.jpg" width="350" height="350" class="category-img image">
-							<span class="slider-title">Holi Special</span>
-							</a>
-					</div>
-				</div>
-				<button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
-				<button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
-			</div>
-		</div>
-			
-        
-       <div class="container categories-heading" id="best of artists">
-       	<span> Best of Artists </span>
-       </div>
-	   <div class="container-fluid">
-       	    <div style="margin-bottom: 60px;" class="row">
-       	    	
-       	    	<div class="col-md-4  col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
-       	    		<a href="#">		
-       	    			<div class="artist-details" onclick="loadfirstsong(9)">
-       	    			<img src="homepage/NehaKakkar.jpg" width="300" height="300" class="artist-img">
-                        <span class="artist-title">Neha Kakkar</span>  
-                        </div>  
-
-       	    		</a>
-       	    	</div>
-       	    	
-       	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
-       	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(10)">
-       	    			<img src="homepage/ArijitSingh.jpg" width="300" height="300" class="artist-img">
-                        <span class="artist-title">Arijit Singh</span>
-                        </div>
-       	    		</a>
-       	    	</div>
-       	        
-       	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
-       	    		<a href ="#">
-       	    			<div class="artist-details" onclick="loadfirstsong(11)">
-       	    			<img src="homepage/Ritviz.jpg" width="300" height="300" class="artist-img">
-                        <span class="artist-title">Ritviz</span>
-                        </div>
-       	    		</a>
-       	    	</div>
-       	        <div class="col-md-2 "></div>
-       	    	<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
-					<a href ="#">
-						<div class="artist-details" onclick="loadfirstsong(12)">
-       	    			<img src="homepage/JubinNautiyal.jpg" width="300" height="300" class="artist-img">
-                        <span class="artist-title">Jubin Nautiyal</span>
-                        </div>
-       	    		</a>
-       	    	</div>
-				<div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 text-center artist-container">
-					<a href ="#">
-						<div class="artist-details" onclick="loadfirstsong(13)">
-							<img src="homepage/AtifAslam.jpg" width="300" height="300" class="artist-img">
-							<span class="artist-title">Atif Aslam</span>
-						</div>
-       	    		</a>
-				</div>
-			</div>
-		</div>
-		
-
-	   <!-- the liked list -->
-	   <div class="container categories-heading">
-		  <span> Your favourite music</span>
-	   </div>
-
-		   
-			<div class="container-liked-list" id="container-liked-list">
-				
-					<div class="container-scroll">
-
-						<table>
-							<tr class="headT">
-							  <th>#</th>
-							  <th>Title</th>
-							  <th>Artist</th>
-							</tr>
-							<tr>
-							  <td>Alfreds </td>
-							  <td>Maria Anders</td>
-							  <td>Germany</td>
-							</tr>
-							<tr>
-							  <td>Centro </td>
-							  <td>Francisco </td>
-							  <td>Mexico</td>
-							</tr>
-							<tr>
-								<td>Alfreds </td>
-								<td>Maria Anders</td>
-								<td>Germany</td>
-							  </tr>
-							  <tr>
-								<td>Centro </td>
-								<td>Francisco </td>
-								<td>Mexico</td>
-							  </tr>
-							  <tr>
-								<td>Alfreds </td>
-								<td>Maria Anders</td>
-								<td>Germany</td>
-							  </tr>
-							  <tr>
-								<td>Centro </td>
-								<td>Francisco </td>
-								<td>Mexico</td>
-							  </tr>
-						  </table>
-					</div>
-				
-				
-			</div>
-
-			<!-- code for table ended -->
-		</div>
-       <div class="main_div hidden" id="main_div">
-         	<div class="music_container">
-         		<h2 id="title">songtitle</h2>
-         		<h3 ><marquee id="artist">artists</marquee></h3>
-         		<div class="img_container" id="songimage">
-         			<img src="songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg">
-         		</div>
-         		<audio src="songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
-
-                <!-- progress-bar -->
-                <div class="progress_container" id="progress_container">
-                	<div class="progress_duration_meter">
-                         <div id="current_time">0:00</div>
-                         <div id="duration">4:16</div>
-                	</div>
-                	<div class="progress_div" id="progress_div">
-                		<div class="progress" id="progress">
-                		</div>
-                	</div>
-                </div>
-
-         		<!-- controls -->
-         	    <div class="music_controls">
-					<i class="fa fa-backward" id="back" title="Previous"></i>
-         	    	<i class="fa fa-step-backward " id="prev" title="Previous"></i>
-         	    	<i class="fa fa-play main_button" id="play" title="Play"></i>
-         	    	<i class="fa fa-step-forward" id="next" title="Next"></i>
-					<i class="fa fa-random shuffle_button" id="shuffle" title="Shuffle Music"></i>
-					<div class="like_button" id="likeBtn">
-						<input type="checkbox" id="likeToggle">
-						<label for="likeToggle" class="like_icon"></label>
-					</div>
-					<div class="download_controls">
-						<div class="fa fa-download download_button" id="download" title="Download Music"></div>
-					 </div>
-         	    </div>
+              <span
+                class="glyphicon glyphicon-headphones"
+                id="headphones"
+              ></span>
+              <span id="PlaySing"> Play and Sing with us Now !</span>
             </div>
-         </div>		
 
-	    
-       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script src="swetify.js"></script>
-		
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#collapsable-nav"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="collapsable-nav">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <li onclick="hidevisible()">
+                <a href="#" id="home">
+                  <span class="glyphicon glyphicon-home"></span
+                  ><br class="hidden-xs" />Home
+                </a>
+              </li>
+              <li onclick="hidevisible()">
+                <a href="#popular categories" id="popular-categories"
+                  ><span class="glyphicon glyphicon-music"></span
+                  ><br class="hidden-xs" />Popular Categories
+                </a>
+              </li>
+              <li onclick="hidevisible()">
+                <a href="#best of artists" id="artists"
+                  ><i class="fa fa-thumbs-up" aria-hidden="true"></i
+                  ><br class="hidden-xs" />Best of Artists
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    </body>
+    <div class="" id="homepage_content">
+      <img
+        src="homepage/homemusic.jpg"
+        alt="HomeMusic picture"
+        class="img-responsive"
+      />
+      <div class="container categories-heading" id="top-picks">
+        <span> Top Picks For You </span>
+      </div>
+
+      <div id="main-content" class="container">
+        <section class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12">
+            <a href="#" id="top-holly">
+              <div
+                class="category-title small-category"
+                onclick="loadfirstsong(0)"
+              >
+                <img
+                  src="homepage/TopHollywoodHits.jpg"
+                  alt="TopHollywoodHits"
+                  width="350"
+                  height="350"
+                  class="image"
+                />
+                <span>Top Hollywood Hits </span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12">
+            <a href="#" id="top-bolly">
+              <div
+                class="category-title small-category"
+                onclick="loadfirstsong(1)"
+              >
+                <img
+                  src="homepage/TopBollywoodHits.jpg"
+                  alt="TopBollywoodHits"
+                  width="350"
+                  height="350"
+                  class="image"
+                />
+                <span>Top Bollywood Hits</span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="container categories-heading" id="popular categories">
+        <span> Poplular Categories </span>
+      </div>
+
+      <div class="slider_div">
+        <div class="slider-wrapper">
+          <div class="center_div" id="centerdiv">
+            <div
+              class="category-slider small-category"
+              onclick="loadfirstsong(2)"
+            >
+              <a href="#">
+                <img
+                  src="homepage/RockOn.jpg"
+                  width="350"
+                  height="350"
+                  class="category-img image"
+                  onclick="loadfirstsong(6)"
+                />
+                <span class="slider-title">Rock On</span>
+              </a>
+            </div>
+            <div
+              class="category-slider small-category"
+              onclick="loadfirstsong(3)"
+            >
+              <a href="#">
+                <img
+                  src="homepage/DanceHits.jpg"
+                  width="350"
+                  height="350"
+                  class="category-img image"
+                />
+                <span class="slider-title">Dance Hits</span>
+              </a>
+            </div>
+            <div
+              class="category-slider small-category"
+              onclick="loadfirstsong(4)"
+            >
+              <a href="#">
+                <img
+                  src="homepage/CollegeDeYaar.jpg"
+                  width="350"
+                  height="350"
+                  class="category-img image"
+                />
+                <span class="slider-title">College De Yaar</span>
+              </a>
+            </div>
+            <div
+              class="category-slider small-category"
+              onclick="loadfirstsong(5)"
+            >
+              <a href="#">
+                <img
+                  src="homepage/GujjuGarba.jpg"
+                  width="350"
+                  height="350"
+                  class="category-img image"
+                />
+                <span class="slider-title">Gujju Garba</span>
+              </a>
+            </div>
+            <div
+              class="category-slider small-category"
+              onclick="loadfirstsong(6)"
+            >
+              <a href="#">
+                <img
+                  src="homepage/90'sHits.jpg"
+                  width="350"
+                  height="350"
+                  class="category-img image"
+                />
+                <span class="slider-title">90's Hits</span>
+              </a>
+            </div>
+            <div
+              class="category-slider small-category"
+              onclick="loadfirstsong(7)"
+            >
+              <a href="#">
+                <img
+                  src="homepage/PatrioticBollywood.jpg"
+                  width="350"
+                  height="350"
+                  class="category-img image"
+                />
+                <span class="slider-title">Patriotic Bollywood</span>
+              </a>
+            </div>
+            <div
+              class="category-slider small-category"
+              onclick="loadfirstsong(8)"
+            >
+              <a href="#">
+                <img
+                  src="homepage/HoliSpecial.jpg"
+                  width="350"
+                  height="350"
+                  class="category-img image"
+                />
+                <span class="slider-title">Holi Special</span>
+              </a>
+            </div>
+          </div>
+          <button id="prev-slide" class="slide-button material-symbols-rounded">
+            chevron_left
+          </button>
+          <button id="next-slide" class="slide-button material-symbols-rounded">
+            chevron_right
+          </button>
+        </div>
+      </div>
+
+      <div class="container categories-heading" id="best of artists">
+        <span> Best of Artists </span>
+      </div>
+      <div class="container-fluid">
+        <div style="margin-bottom: 60px" class="row">
+          <div
+            class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container"
+          >
+            <a href="#">
+              <div class="artist-details" onclick="loadfirstsong(9)">
+                <img
+                  src="homepage/NehaKakkar.jpg"
+                  width="300"
+                  height="300"
+                  class="artist-img"
+                />
+                <span class="artist-title">Neha Kakkar</span>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container"
+          >
+            <a href="#">
+              <div class="artist-details" onclick="loadfirstsong(10)">
+                <img
+                  src="homepage/ArijitSingh.jpg"
+                  width="300"
+                  height="300"
+                  class="artist-img"
+                />
+                <span class="artist-title">Arijit Singh</span>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container"
+          >
+            <a href="#">
+              <div class="artist-details" onclick="loadfirstsong(11)">
+                <img
+                  src="homepage/Ritviz.jpg"
+                  width="300"
+                  height="300"
+                  class="artist-img"
+                />
+                <span class="artist-title">Ritviz</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-2"></div>
+          <div
+            class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container"
+          >
+            <a href="#">
+              <div class="artist-details" onclick="loadfirstsong(12)">
+                <img
+                  src="homepage/JubinNautiyal.jpg"
+                  width="300"
+                  height="300"
+                  class="artist-img"
+                />
+                <span class="artist-title">Jubin Nautiyal</span>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 text-center artist-container"
+          >
+            <a href="#">
+              <div class="artist-details" onclick="loadfirstsong(13)">
+                <img
+                  src="homepage/AtifAslam.jpg"
+                  width="300"
+                  height="300"
+                  class="artist-img"
+                />
+                <span class="artist-title">Atif Aslam</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- the liked list -->
+      <div class="container categories-heading">
+        <span> Your favourite music</span>
+      </div>
+
+      <div class="container-liked-list" id="container-liked-list">
+        <div class="container-scroll">
+          <table>
+            <tr class="headT">
+              <th>#</th>
+              <th>Title</th>
+              <th>Artist</th>
+            </tr>
+            <tr>
+              <td>Alfreds</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro</td>
+              <td>Francisco</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Alfreds</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro</td>
+              <td>Francisco</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Alfreds</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro</td>
+              <td>Francisco</td>
+              <td>Mexico</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- code for table ended -->
+
+	  <!-- footer section  -->
+	  <footer>
+		<div class="footer">
+		  <p>Made with ❤️ by <span class="title"><a href="#">Swetify 
+		  </a></span>Music Contributors 
+			<br>
+			<span class="smallp">Make sure to star the repo</span> 
+      <a href="https://github.com/ShwetKhatri2001/Swetify-Music" class="fa-brands fa-github icon"></a></p>
+		  <ul>
+			<li ><a href="#">Home</a></li>
+			<li><a href="#popular categories">Popular Categories</a></li>
+			<li><a href="#best of artists">Best Of Artists</a></li>
+			<li><a href="#">Sign In/Sign Up</a></li>
+		  </ul>
+		</div>
+		<button class="top" id="topbutton">
+			<a href="#" class="to-top">
+				<i class="fas fa-chevron-up"></i>
+			</a>
+		</button>
+	  </footer>
+	  
+    </div>
+
+
+    <div class="main_div hidden" id="main_div">
+      <div class="music_container">
+        <h2 id="title">songtitle</h2>
+        <h3><marquee id="artist">artists</marquee></h3>
+        <div class="img_container" id="songimage">
+          <img
+            src="songs-images/AtifAslam/DekhteDekhte.jpg"
+            class="songimg"
+            id="songimg"
+          />
+        </div>
+        <audio src="songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
+
+        <!-- progress-bar -->
+        <div class="progress_container" id="progress_container">
+          <div class="progress_duration_meter">
+            <div id="current_time">0:00</div>
+            <div id="duration">4:16</div>
+          </div>
+          <div class="progress_div" id="progress_div">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+
+        <!-- controls -->
+        <div class="music_controls">
+          <i class="fa fa-backward" id="back" title="Previous"></i>
+          <i class="fa fa-step-backward" id="prev" title="Previous"></i>
+          <i class="fa fa-play main_button" id="play" title="Play"></i>
+          <i class="fa fa-step-forward" id="next" title="Next"></i>
+          <i
+            class="fa fa-random shuffle_button"
+            id="shuffle"
+            title="Shuffle Music"
+          ></i>
+          <div class="like_button" id="likeBtn">
+            <input type="checkbox" id="likeToggle" />
+            <label for="likeToggle" class="like_icon"></label>
+          </div>
+          <div class="download_controls">
+            <div
+              class="fa fa-download download_button"
+              id="download"
+              title="Download Music"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="swetify.js"></script>
+  </body>
 </html>
-
-   
