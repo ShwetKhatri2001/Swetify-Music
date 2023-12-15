@@ -1,0 +1,133 @@
+body::-webkit-scrollbar {
+   display: none;
+}
+body{
+   background: black;
+}
+
+.header {
+   height: 60px;
+   font-size: 25px;
+   font-weight: 800;
+   display: flex;
+   align-items: center;
+   padding: 40px;
+   border-bottom: 2px solid #bababa;
+}
+
+.header h2 {
+   padding-left: 10px;
+}
+
+.profile-logo {
+   color: #fff;
+   position: absolute;
+   right: 40px;
+   top: 30px;
+}
+
+svg {
+   width: 30px;
+   height: 30px;
+}
+
+.profile-data {
+   position: fixed;
+   top: 60px;
+   right: 70px;
+   border-radius: 5px;
+   display: none;
+   padding: 10px 10px;
+   width: 350px;
+   height: 180px;
+   padding: 20px 25px;
+   background: #fff;
+   overflow: hidden;
+   -webkit-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+   -moz-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+   box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+}
+
+
+.container {
+   border: 3px solid #bababa;
+   border-radius: 5px;
+   -webkit-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+   -moz-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+   box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+}
+
+.list-displayer {
+   display: flex;
+   margin: 10px;
+   padding: 10px 10px;
+   border: 1px solid pink;
+}
+
+img {
+   border-radius: 10px;
+}
+
+.textdiv {
+   margin: 10px;
+}
+
+label {
+   display: block;
+   font-size: 17px;
+}
+ran{
+   font-weight: 800;
+}
+
+.footer {
+   height: 80px;
+   font-size: 16px;
+   font-weight: 600;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#display-container {
+   margin-top: 40px;
+   background:#fff;
+}
+h2{
+   color: #fff;
+}
+
+#logout-icon {
+   width: 20px;
+   height: 30px;
+
+}
+
+.logout {
+   background: #fff;
+   border: none;
+   width: 350px;
+   height: 30px;
+   display: flex;
+}
+
+.logout span {
+   font-size: 17px;
+   height: 30px;
+   position: absolute;
+   left: 60px;
+   bottom: 8px;
+}
+#logo-inner{
+   width: 60px;
+   height: 60px;
+}
+img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.innerimage{
+   height: 150px;
+   width: 200px;
+}

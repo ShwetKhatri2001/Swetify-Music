@@ -44,6 +44,15 @@ html{
 	height:80px;
 	padding-top: 25px;
 }
+.navbar-collapse{
+	margin-top: 30px;
+}
+.navbar-collapse li{
+	transition: ease-in-out 3ms;
+}
+.navbar-collapse li:hover {
+	background-color: #fff;
+}
 
 
 .navbar-brand h1{/*Music Website Name*/
@@ -750,4 +759,30 @@ td,th{
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); 
   background: linear-gradient(to right, #bfc3f7, #9c9df1, #9ab6f5, #EEF1FF);
 
+}
+
+.login-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.welcome-text{
+	color: white;
+	font-size: 25px;
+	font-weight: 600;
+}
+.button-log{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.button-log button{
+	font-size: 20px;
+	font-weight: 600;
+	width: 190px;
+	height: 50px;
+	border: none;
+	border-radius: 5px;
 }
