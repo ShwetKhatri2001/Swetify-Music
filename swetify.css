@@ -1,48 +1,63 @@
-
-*, * ::before , * ::after{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
+*,
+* ::before,
+* ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-	background-image: linear-gradient(to left bottom, #f265b5, #df75cb, #c984dc, #b291e6, #9c9cea, #8c98ed, #7994f1, #6191f4, #477efb, #316aff, #2852ff, #3333ff);
+body {
+  background-image: linear-gradient(
+    to left bottom,
+    #f265b5,
+    #df75cb,
+    #c984dc,
+    #b291e6,
+    #9c9cea,
+    #8c98ed,
+    #7994f1,
+    #6191f4,
+    #477efb,
+    #316aff,
+    #2852ff,
+    #3333ff
+  );
 }
-html{
-	font-size:62.5%;
-    font-family: 'Jost', sans-serif;
-	scroll-behavior: smooth;
+html {
+  font-size: 62.5%;
+  font-family: "Jost", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /********* Home Page styles **********/
 /******* header *******/
 
-#header-nav{
-	background-color:#000000;
-	border-radius:0;
-	border:0;
-	margin-bottom:0;
-	font-family: 'Montserrat', sans-serif;
+#header-nav {
+  background-color: #000000;
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
-#logo-img{
-	background:url("homepage/swetifylogo.jpg") no-repeat;
-	width:150px;
-	height: 150px;
-	margin: 10px 15px 10px 0px;
+#logo-img {
+  background: url("homepage/swetifylogo.jpg") no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0px;
 }
 
-#PlaySing{
-	margin-top: 50px;
+#PlaySing {
+  margin-top: 50px;
 }
-#headphones{
-	margin-top:20px;
-	font-size:30px;
+#headphones {
+  margin-top: 20px;
+  font-size: 30px;
 }
 
-.navbar-brand{
-	height:80px;
-	padding-top: 25px;
+.navbar-brand {
+  height: 80px;
+  padding-top: 25px;
 }
 .navbar-collapse{
 	margin-top: 30px;
@@ -54,660 +69,925 @@ html{
 	background-color: #fff;
 }
 
-
-.navbar-brand h1{/*Music Website Name*/
-	color:#1e70e3;
-	font-weight:bold;
-	font-size:2.2em;
-	text-shadow: 1px 1.5px 0 white;
-	margin-top:0;
-	margin-bottom:0;
-	 line-height:.75;
-
+.navbar-brand h1 {
+  /*Music Website Name*/
+  color: #1e70e3;
+  font-weight: bold;
+  font-size: 2.2em;
+  text-shadow: 1px 1.5px 0 white;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0.75;
 }
 
-.navbar-brand a:hover, .navbar-brand a:focus{
-	text-decoration : none;
+.navbar-brand a:hover,
+.navbar-brand a:focus {
+  text-decoration: none;
 }
-.navbar-brand span{ /*Play and Sing with us noe*/
-  color : white;
+.navbar-brand span {
+  /*Play and Sing with us noe*/
+  color: white;
   margin-top: 0;
   font-style: bold;
-  
 }
 
-
-
-#nav-list{
-	margin-top:10px;
+#nav-list {
+  margin-top: 10px;
 }
 
-#nav-list a{
-	color:white;
-	text-align:center;
-	font-size: 1.6em;
-	text-shadow: .5px 1px 0 white;
-	/* border: 1px solid grey; */
-	margin-left: 0.25rem;
-	/* box-shadow: 0 0 0 2px rgb(160, 148, 148); */
+#nav-list a {
+  color: white;
+  text-align: center;
+  font-size: 1.6em;
+  text-shadow: 0.5px 1px 0 white;
+  /* border: 1px solid grey; */
+  margin-left: 0.25rem;
+  /* box-shadow: 0 0 0 2px rgb(160, 148, 148); */
 }
-.topicons{
-	color:white;
-	text-shadow: .5px 1px 0 #3333ff;
-}
-
-#navlist span{
-	margin-bottom:2px;
-}
-#nav-list a:hover , .topicons:hover{
-background-color:white;
-color:black;
-text-shadow: 1px 1px 0 #3333ff;
+.topicons {
+  color: white;
+  text-shadow: 0.5px 1px 0 #3333ff;
 }
 
-
-
-
-.navbar-header button.navbar-toggle{
-	border :1px solid white;
+#navlist span {
+  margin-bottom: 2px;
+}
+#nav-list a:hover,
+.topicons:hover {
+  background-color: white;
+  color: black;
+  text-shadow: 1px 1px 0 #3333ff;
 }
 
-.navbar-header .icon-bar{
-	border :1px solid #3333ff;
+.navbar-header button.navbar-toggle {
+  border: 1px solid white;
 }
 
-.navbar-header button.navbar-toggle{
-	clear:both;
-	margin-top:-30px;
+.navbar-header .icon-bar {
+  border: 1px solid #3333ff;
 }
 
-.navbar-header button.navbar-toggle:hover{
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
 
-	background-color: white;
+.navbar-header button.navbar-toggle:hover {
+  background-color: white;
 }
 
 /******** Home Page Main Content Styles ***********/
 
-
-.categories-heading{
-	font-family: 'Montserrat', sans-serif;
-	font-size:2.5em;
-	background-color:#000000;
-	width:60%;
-	color: white;
-	opacity:.8;
-	transition: width 2s,opacity 2s;
-	border:2px solid #3F0C1F;
-	margin: 15px auto 15px;
-	text-align:center;
+.categories-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5em;
+  background-color: #000000;
+  width: 60%;
+  color: white;
+  opacity: 0.8;
+  transition: width 2s, opacity 2s;
+  border: 2px solid #3f0c1f;
+  margin: 15px auto 15px;
+  text-align: center;
 }
 
-.categories-heading:hover{
-   width:95%;
-   opacity:1;
+.categories-heading:hover {
+  width: 95%;
+  opacity: 1;
 }
 
-
-
-.category-title{
-	font-family: 'Montserrat', sans-serif;
-	border-radius: 10%;
-	position: relative;
-	border:2px solid #3F0C1F;
-    overflow:hidden;
-    width:350px;
-    height:350px;
-    margin: 15px auto 15px;
-
+.category-title {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10%;
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  margin: 15px auto 15px;
 }
 
-.category-title span{
-	height:100%;
-	position:absolute;
-	top:50%;
-	right:0;
-	width:100%;
-	text-align:center;
-	align-items: center;
-	font-size:2.5em;
-	background-color: #000000;
-	color:white;
-	opacity:.7;
-	transition: height 2s, opacity 2s , top 2s;
-
+.category-title span {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  font-size: 2.5em;
+  background-color: #000000;
+  color: white;
+  opacity: 0.7;
+  transition: height 2s, opacity 2s, top 2s;
 }
 
-.category-title:hover span{
-	top : 85%;
-	opacity : 1;
-	
+.category-title:hover span {
+  top: 85%;
+  opacity: 1;
 }
 
-
-.category-title:hover{
-	box-shadow:1px 2px 5px 5px #ffffff;
-	background-color: none;
+.category-title:hover {
+  box-shadow: 1px 2px 5px 5px #ffffff;
+  background-color: none;
 }
-
-
 
 /******** Home Page Slider *********/
 
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-      .slider_div, .slider-wrapper{
-        display: grid;
-        place-items: center;
-		width: 100%;
-      }
+.slider_div,
+.slider-wrapper {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
 
-      .center_div {
-        width: 100%;
-        display: flex;
-        overflow-y: hidden;
-        overflow-x: scroll;
-		padding: 5% 2% 5% 2%;
-      }
-       
-       .category-slider{
-          position:relative;
-		  transition: transform 0.3s ease-in;
-       }
+.center_div {
+  width: 100%;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 5% 2% 5% 2%;
+}
 
-      .category-img {
-        padding: 20px;
-        border-radius: 10%;
-        
-      }
-       
-        .slider-title{
-       	 font-family: 'Montserrat', sans-serif;
-       	 border-radius: 30px;
-	     position:absolute;
-	     bottom:8%;
-	     right:10%;
-	     width:80%;
-	     text-align:center;
-	     align-items: center;
-	     font-size:2.5em;
-	     background-color: #000000;
-	     color:white;
-	     opacity:.7;
-	     overflow: hidden;
-	     transition: height 2s, opacity 1s;
-       }
+.category-slider {
+  position: relative;
+  transition: transform 0.3s ease-in;
+}
 
-      .category-slider:hover{
-        transform: scale(1.1);
-      }
+.category-img {
+  padding: 20px;
+  border-radius: 10%;
+}
 
-      .category-slider:hover .slider-title{
-         opacity:1;
-         
-      }
-	  
-	  
-	  .slider_div .center_div::-webkit-scrollbar{
-		display: none;
-	  }
-      
-	  .slider_div .slider-scrollbar{
-		height: 24px;
-		width: 100%;
-		display: flex;
-		align-items: center;
-	  }
+.slider-title {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 8%;
+  right: 10%;
+  width: 80%;
+  text-align: center;
+  align-items: center;
+  font-size: 2.5em;
+  background-color: #000000;
+  color: white;
+  opacity: 0.7;
+  overflow: hidden;
+  transition: height 2s, opacity 1s;
+}
 
-	  .slider-wrapper{
-		position: relative;
-	  }
-	
-	  .slider-wrapper button{
-		position: absolute;
-		top: 50%;
-		height: 50px;
-		width: 50px;
-		color: #ffffff;
-		border: none;
-		outline: none;
-		background: #000000;
-		font-size: 2.2rem;
-		cursor: pointer;
-		border-radius: 50%;
-		transform: translateY(-50%);
-		
-	  }
-	  
+.category-slider:hover {
+  transform: scale(1.1);
+}
 
-	  
-	  .slider-wrapper .slide-button:hover{
-		background: #444;
-	  }
+.category-slider:hover .slider-title {
+  opacity: 1;
+}
 
-	  
+.slider_div .center_div::-webkit-scrollbar {
+  display: none;
+}
 
-	  .slider-wrapper button#prev-slide{
-		left: 5px;
+.slider_div .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 
-	  }
+.slider-wrapper {
+  position: relative;
+}
 
-	  .slider-wrapper button#next-slide{
-		right: 5px;
-	  }
+.slider-wrapper button {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background: #000000;
+  font-size: 2.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
 
+.slider-wrapper .slide-button:hover {
+  background: #444;
+}
 
-	  
- /********* popular artists styles *************/     
+.slider-wrapper button#prev-slide {
+  left: 5px;
+}
 
- .artist-container{
- 	transition: transform 0.3s ease-in;
- 	border-radius:50%;
-	margin:15px auto 20px;
-	box-sizing: border-box;
-	
- }
- .artist-details{
- 	position:relative;
- 	justify-content: center;
- }
+.slider-wrapper button#next-slide {
+  right: 5px;
+}
 
- .artist-img{
- 	border-radius: 50%;
- 	vertical-align: center;
- }
+.footer {
+  height: 35vh;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  background-color: black;
+}
+.footer p {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.footer p .icon {
+  color: white;
+}
+.footer p .icon:hover {
+  color: rgb(255, 223, 44);
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer p .icon:active {
+  color: rgb(255, 223, 44);
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer .smallp {
+  font-size: 2rem;
+  color: rgb(163, 142, 142);
+}
+.footer .title a {
+  color: #ffffff;
+  font-weight: normal;
+  text-shadow: 0.5px 0.5px 0 rgb(176, 155, 215);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  line-height: 0.75;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer ul {
+  color: white;
+  /* font-family: "Lobster", cursive; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  list-style: disc;
+}
+.footer ul li {
+  margin: 5px;
+}
+.footer ul li a {
+  color: #a7c5ff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer ul li a:hover {
+  color: white;
+  text-decoration: underline;
+  transition: 0.5s;
+  font-size: 20.5px;
+}
 
- .artist-title{
- 	text-transform: translate(0,100px);
- 	padding:80px;
- 	padding-top:100px;
- 	box-sizing: border-box;
- 	font-family: 'Montserrat', sans-serif;
- 	display:none;
- 	position:absolute;
- 	height:100%;
- 	width:300px;
- 	margin-left:-300px;
- 	border-radius:50%;
- 	overflow: hidden;
- 	text-align:center;
-	align-items: center;
-	font-size:2.5em;
-	 overflow: hidden;
-	 transition: height 2s, opacity 1s;
+footer .top {
+  border-radius: 80px;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 8px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 19px;
+  justify-content: center;
+  background-color: #000000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.4);
+}
+footer .top:active {
+  pointer-events: auto;
+  opacity: 1;
+}
 
- }
+footer .top a {
+  color: rgb(229, 211, 211);
+  padding: 14px;
+}
+footer .top a:hover {
+  color: white;
+  font-size: 22px;
+  padding: 14px;
+  justify-content: center;
+}
+footer .top:hover {
+  border-radius: 80px;
+  height: 52px;
+  width: 50px;
+  position: fixed;
+  bottom: 14px;
+  right: 10px;
+  justify-content: center;
+  font-weight: bold;
+  padding: 0;
+  box-shadow: 0 5px 0 0 rgba(255, 255, 255, 0.4);
+}
 
- 
+/********* popular artists styles *************/
 
- .artist-details:hover .artist-title{
- 	display:inline;
- 	color:#ffffff;
- 	background-color:rgba(0,0,0,.8);
- }
+.artist-container {
+  transition: transform 0.3s ease-in;
+  border-radius: 50%;
+  margin: 15px auto 20px;
+  box-sizing: border-box;
+}
+.artist-details {
+  position: relative;
+  justify-content: center;
+}
+
+.artist-img {
+  border-radius: 50%;
+  vertical-align: center;
+}
+
+.artist-title {
+  text-transform: translate(0, 100px);
+  padding: 80px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  margin-left: -300px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  font-size: 2.5em;
+  overflow: hidden;
+  transition: height 2s, opacity 1s;
+}
+
+.artist-details:hover .artist-title {
+  display: inline;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 /********** main and music containers styles ***********/
 
-
-
-
-.main_div{
-	font-family: 'Jost', sans-serif;
-	width:96vw;
-	height:96vh;
-	display:grid;
-	place-items: center;
+.main_div {
+  font-family: "Jost", sans-serif;
+  width: 96vw;
+  height: 96vh;
+  display: grid;
+  place-items: center;
 }
 
-.music_container{
-	width:40rem;
-	height:63rem;
-	background-color: #000000;
-	border-radius:2rem;
-	box-shadow:1.2rem 1.2rem rgba(0,0,0,0.2);
-	padding:2rem;
-	text-align: center;
-	position: relative;
+.music_container {
+  width: 40rem;
+  height: 63rem;
+  background-color: #000000;
+  border-radius: 2rem;
+  box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
 }
 
-.music_container #title{
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	word-spacing: 0.5rem;
-	color: #3333ff;
-	margin:  2rem 0 0.5rem 0;
-	font-size : 2.3rem;
-	font-weight : bold;
-	text-shadow: 0 0.3rem 0 2.5rem rgba(0,0,0,0.7);
+.music_container #title {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  color: #3333ff;
+  margin: 2rem 0 0.5rem 0;
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-shadow: 0 0.3rem 0 2.5rem rgba(0, 0, 0, 0.7);
 }
 
-.music_container #artist{
-	color: white;
-	text-transform : capitalize;
-	letter-spacing: 0.1rem;
-	font-size: 2rem;
-	margin-bottom: 4rem;
-	font-weight:300;
+.music_container #artist {
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  font-weight: 300;
 }
 
-
-.img_container{
-	width: 28rem;
-	height: 28rem;
-	margin: auto;
-	
-	
+.img_container {
+  width: 28rem;
+  height: 28rem;
+  margin: auto;
 }
 
-.songimg{
-	width:100%;
-	height:100%;
-	border-radius: 50%;
-	object-fit: cover;
-	box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
-	position:relative;
-	
+.songimg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 
 /******* controls styles ********/
-.music_controls{
-    width:20rem;
-    display: flex;
-    margin: auto;
-    margin-top:2rem;
-    justify-content: space-around;
-    align-items: center;
+.music_controls {
+  width: 20rem;
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  justify-content: space-around;
+  align-items: center;
 }
-.download_controls{
-	position: absolute;
-    bottom: 7px;
-    right: 10px;
-    padding: 1rem;
+.download_controls {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  padding: 1rem;
 }
-.music_controls .fa{
-     color: #3333ff;
-     font-size:2rem;
-     cursor:pointer;
-     filter:drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+.music_controls .fa {
+  color: #3333ff;
+  font-size: 2rem;
+  cursor: pointer;
+  filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
 }
-.download_controls .fa{
-	color: #3333ff;
-	font-size:2rem;
-	cursor:pointer;
-	filter:drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
-}
-
-.music_controls .fa:hover{
-	color: white;
-}
-.download_controls .fa:hover{
-	color: white;
-}
-.music_controls .main_button{
-	width : 5rem;
-	height: 5rem;
-	border-radius: 50% ;
-	background-color: #3333ff;
-	color : #000000;
-    font-size : 1.4rem;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.download_controls .fa {
+  color: #3333ff;
+  font-size: 2rem;
+  cursor: pointer;
+  filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
 }
 
-.music_controls .main_button:hover{
-	background-color: white;
-	color : #3333ff;
-	box-shadow: 0 0.5rem 2rem 0.2rem rgba(0,0,0,0.4);
+.music_controls .fa:hover {
+  color: white;
+}
+.download_controls .fa:hover {
+  color: white;
+}
+.music_controls .main_button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #3333ff;
+  color: #000000;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.anime{
-       animation : rotateplayer 3s linear infinite;
+.music_controls .main_button:hover {
+  background-color: white;
+  color: #3333ff;
+  box-shadow: 0 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
 }
 
-@keyframes  rotateplayer {
-	from{transform: rotate(0deg);}
-	to{transform: rotate(360deg);}
+.anime {
+  animation: rotateplayer 3s linear infinite;
+}
 
+@keyframes rotateplayer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 /******** like button styles ********/
 .like_button {
-    position: relative;
-	/* margin-bottom: 0px; */
+  position: relative;
+  /* margin-bottom: 0px; */
 }
 
 input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
 .like_icon {
-    width: 25px;
-    height: 25px;
-	margin-bottom: 0px;
-    background-image: url('icons/likeBefore.png'); 
-    background-size: cover;
-    cursor: pointer;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 0px;
+  background-image: url("icons/likeBefore.png");
+  background-size: cover;
+  cursor: pointer;
 }
 
 input[type="checkbox"]:checked + .like_icon {
-    background-image: url('icons/likeAfter.png');
+  background-image: url("icons/likeAfter.png");
 }
 
 /******** toast message styles ********/
 
 #snackbar {
-	visibility: hidden; 
-	min-width: 250px; 
-	margin-left: -125px; 
-	background-color: #333;
-	color: #fff; 
-	text-align: center; 
-	border-radius: 2px;
-	padding: 16px;
-	position: fixed;
-	z-index: 1; 
-	left: 50%;
-	bottom: 30px;
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
   }
-  
-  
-  #snackbar.show {
-	visibility: visible; 
-	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  to {
+    bottom: 30px;
+    opacity: 1;
   }
-  
-  /* Animations to fade the snackbar in and out */
-  @-webkit-keyframes fadein {
-	from {bottom: 0; opacity: 0;}
-	to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
   }
-  
-  @keyframes fadein {
-	from {bottom: 0; opacity: 0;}
-	to {bottom: 30px; opacity: 1;}
+  to {
+    bottom: 30px;
+    opacity: 1;
   }
-  
-  @-webkit-keyframes fadeout {
-	from {bottom: 30px; opacity: 1;}
-	to {bottom: 0; opacity: 0;}
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
   }
-  
-  @keyframes fadeout {
-	from {bottom: 30px; opacity: 1;}
-	to {bottom: 0; opacity: 0;}
+  to {
+    bottom: 0;
+    opacity: 0;
   }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
 /******** progressive bar styles ********/
 
-
-
-.progress_container{
-	width:100%;
-	height:auto;
-	padding:1rem;
-	margin-top: 1rem;
+.progress_container {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
-.progress_div{
-	width:100%;
-	height : 0.5rem;
-	box-shadow : 0 1px 2px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.7), 0 4px 8px rgba(0,0,0,0.7), 0 8px 16px rgba(0,0,0,0.07), 
-	           0 16px 32px rgba(0,0,0,0.7),0 32px 64px rgba(0,0,0,0.07);
-	 border-radius: 4rem;
-	 background-color: white;
-	 position:relative;
-	 margin-top: 1.2rem;
-     transition : width 1s linear;
-     -moz-transition: width 1s linear;
-     -o-transition: width 1s linear;
-     -webkit-transition:width 1s linear;
-     cursor:pointer;
-     -webkit-appearance : none;
-     appearance :none;
-
+.progress_div {
+  width: 100%;
+  height: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.7),
+    0 4px 8px rgba(0, 0, 0, 0.7), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.7), 0 32px 64px rgba(0, 0, 0, 0.07);
+  border-radius: 4rem;
+  background-color: white;
+  position: relative;
+  margin-top: 1.2rem;
+  transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -o-transition: width 1s linear;
+  -webkit-transition: width 1s linear;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.progress{
-	position:absolute;
-	left:0;
-	top:0;
-	width:0%;
-	height:100%;
-	background-color: #3333ff;
-	border-radius: 4rem;
-     cursor:pointer;
-     -webkit-appearance : none;
-     appearance :none;
-
+.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #3333ff;
+  border-radius: 4rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.progress_duration_meter{
-	display:flex;
-	color:white;
-	justify-content: space-between;
-	font-size:1.3rem;
+.progress_duration_meter {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  font-size: 1.3rem;
 }
 
- /*******Large Devices only********/
-@media (min-width: 1200px)
-{
-
-  
+/*******Large Devices only********/
+@media (min-width: 1200px) {
 }
 /*******Medium Devices only********/
-@media (min-width:992px) and (max-width:1199px)
-{
-   #logo-img{
-   	background:url("homepage/swetifylogo-medium.jpg") no-repeat;
-	width:120px;
-	height: 120px;
-	margin: 5px 15px 5px 0px;
-   }
-
-
-
+@media (min-width: 992px) and (max-width: 1199px) {
+  #logo-img {
+    background: url("homepage/swetifylogo-medium.jpg") no-repeat;
+    width: 120px;
+    height: 120px;
+    margin: 5px 15px 5px 0px;
+  }
+  .footer p {
+    font-size: 25px;
+    display: block;
+  }
+  .footer .smallp {
+    font-size: 24px;
+  }
+  .footer ul {
+    font-size: 23px;
+    list-style: disc;
+  }
+  .footer ul li:active {
+    color: #a7c5ff;
+    font-size: 23px;
+    text-decoration: none;
+  }
+  .footer ul li a:hover {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+  footer .top {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20;
+    right: 20;
+    text-align: center;
+  }
+  footer .top:hover {
+    height: 45px;
+    width: 40px;
+    position: fixed;
+    bottom: 23;
+    right: 20;
+    text-align: center;
+  }
+  footer .top a {
+    font-size: 25px;
+    color: white;
+    padding: 0;
+  }
+  footer .top a:hover {
+    font-size: 28px;
+    padding: 0;
+  }
 }
 /*******Small Devices only********/
-@media (min-width:768px) and (max-width:991px)
-{
-  #header-nav{
-  	font-size:0.9em;
-  	height:100px;
+@media (min-width: 768px) and (max-width: 991px) {
+  #header-nav {
+    font-size: 0.9em;
+    height: 100px;
   }
-  .navbar-brand h1{
-  	font-size:1.7em;
-  }
-
-  #headphones , #PlaySing{
-  	font-size:0.9em;
-  	margin-top:8px;
+  .navbar-brand h1 {
+    font-size: 1.7em;
   }
 
-  
-  .container .photo{
-  	background:url('images/ABOUT/shwetsofa_small.jpg') no-repeat;
-  	height:454px;width:238px;
-  	box-shadow:0 0 50px #3F0C1F;
-  	border:5px solid #e6e6e6;
-  	border-radius: 25px;
-  	vertical-align : center;
-  }
-  .container .message-box{
-  	margin-top: 15px;
-  	margin-bottom: 10px;
-  	margin-left:-15px;
+  #headphones,
+  #PlaySing {
+    font-size: 0.9em;
+    margin-top: 8px;
   }
 
-
+  .container .photo {
+    background: url("images/ABOUT/shwetsofa_small.jpg") no-repeat;
+    height: 454px;
+    width: 238px;
+    box-shadow: 0 0 50px #3f0c1f;
+    border: 5px solid #e6e6e6;
+    border-radius: 25px;
+    vertical-align: center;
+  }
+  .container .message-box {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: -15px;
+  }
+  .footer {
+    height: 300px;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    flex-wrap: wrap;
+  }
+  .footer p {
+    font-size: 25px;
+    display: block;
+  }
+  .footer .smallp {
+    font-size: 24px;
+  }
+  .footer ul {
+    font-size: 23px;
+    list-style: disc;
+  }
+  .footer ul li:active {
+    color: #a7c5ff;
+    font-size: 23px;
+    text-decoration: none;
+  }
+  .footer ul li a:hover {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+  footer .top {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20;
+    right: 20;
+    text-align: center;
+  }
+  footer .top:hover {
+    height: 45px;
+    width: 40px;
+    position: fixed;
+    bottom: 23;
+    right: 20;
+    text-align: center;
+  }
+  footer .top a {
+    font-size: 25px;
+    color: white;
+    padding: 0;
+  }
+  footer .top a:hover {
+    font-size: 28px;
+    padding: 0;
+  }
 }
 /*******Extra small Devices only********/
-@media(max-width:767px)
-{
-	
-
-	.navbar-brand h1{
-       font-size:1.7em;
-	}
-	#headphones , #PlaySing{
-  	font-size:0.9em;
-  	margin-top:8px;
+@media (max-width: 767px) {
+  .navbar-brand h1 {
+    font-size: 1.7em;
+  }
+  #headphones,
+  #PlaySing {
+    font-size: 0.9em;
+    margin-top: 8px;
   }
 
-	#collapsable-nav a{
-		font-size:1.2em;
-	}
+  #collapsable-nav a {
+    font-size: 1.2em;
+  }
 
-	#collapsable-nav a span{
-		font-size:1em;
-	}
-	.categories-heading{
-		width:95%;opacity:1;
-	}
+  #collapsable-nav a span {
+    font-size: 1em;
+  }
+  .categories-heading {
+    width: 95%;
+    opacity: 1;
+  }
 
-	.music_container{
-	width:30rem;
-	height:53rem;
-	background-color: #000000;
-	}
+  .music_container {
+    width: 30rem;
+    height: 53rem;
+    background-color: #000000;
+  }
+  .footer {
+    height: 300px;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    flex-wrap: wrap;
+  }
+  .footer p {
+    font-size: 25px;
+    display: block;
+  }
+  .footer .smallp {
+    font-size: 24px;
+  }
+  .footer ul {
+    font-size: 23px;
+    list-style: disc;
+  }
+  .footer ul li:active {
+    color: #a7c5ff;
+    font-size: 23px;
+    text-decoration: none;
+  }
+  .footer ul li a:hover {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+  footer .top {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20;
+    right: 20;
+    text-align: center;
+  }
+  footer .top:hover {
+    height: 45px;
+    width: 40px;
+    position: fixed;
+    bottom: 23;
+    right: 20;
+    text-align: center;
+  }
+  footer .top a {
+    font-size: 25px;
+    color: white;
+    padding: 0;
+  }
+  footer .top a:hover {
+    font-size: 28px;
+    padding: 0;
+  }
 }
 
-.music_container #title{
-	text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    word-spacing: 0.5rem;
-    color: #3333ff;
-    margin: 2rem 0 0.5rem 0;
-    font-size: 2.3rem;
-    font-weight: bold;
-    text-shadow: 0 0.3rem 0 2.5rem rgba(0,0,0,0.7);
+.music_container #title {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  color: #3333ff;
+  margin: 2rem 0 0.5rem 0;
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-shadow: 0 0.3rem 0 2.5rem rgba(0, 0, 0, 0.7);
 }
 
-.music_container #artist{
-	color: white;
-	text-transform : capitalize;
-	letter-spacing: 0.1rem;
-	font-size: 1.7rem;
-	margin-bottom: 3rem;
-	font-weight:300;
+.music_container #artist {
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
 }
 
-
-.img_container{
-	width: 28rem;
-    height: 28rem;
-    margin: auto;
+.img_container {
+  width: 28rem;
+  height: 28rem;
+  margin: auto;
 }
 
 /******Super Extra Small Devices Only*****/
-@media (max-width: 479px)
-{
-   .navbar-h1{
-      padding:5px;
-      font-size:6vw;
-    }
+@media (max-width: 479px) {
+  .navbar-h1 {
+    padding: 5px;
+    font-size: 6vw;
+  }
+  .footer {
+    height: 400px;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+  }
+  .footer p {
+    font-size: 20px;
+    display: block;
+  }
+  .footer .smallp {
+    font-size: 18px;
+  }
+  .footer ul {
+    font-size: 15px;
+    list-style: none;
+  }
+  .footer ul li:active {
+    color: #a7c5ff;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .footer .top {
+    height: 200px;
+    width: 200px;
+  }
+  .footer .to-top {
+    height: 200px;
+    width: 200px;
+  }
 }
 
 /* liked song list */
