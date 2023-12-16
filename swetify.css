@@ -404,6 +404,7 @@ footer .top:hover {
 }
 
 .artist-img {
+  object-fit: cover;
   border-radius: 50%;
   vertical-align: center;
 }
