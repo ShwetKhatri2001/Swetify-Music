@@ -726,7 +726,7 @@ back.addEventListener("click", skipback);
 download.addEventListener('click', downloadCurrentSong); // Adding an event listener to the download button
 
 
-var redirect_uri = "http://localhost:5501/spotify-login.html";
+var redirect_uri = "https://swetify.netlify.app/spotify-login.html";
 
 var client_id = "e5a392471667465499be5e9bc54c24dc";
 var client_secret = "3a7df71fe8554b5faaa1bd69c11265c9";
