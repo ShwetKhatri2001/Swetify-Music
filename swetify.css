@@ -1065,3 +1065,12 @@ tr:hover {
 .tagline-flex {
   padding: 1.5rem 0px;
 }
+
+.nav-elem {
+  display: grid !important;
+  gap: 1.25rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
