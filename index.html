@@ -43,35 +43,53 @@
     <div id="snackbar">Some text some message..</div>
     <header>
       <nav id="header-nav" class="navbar navbar-default">
-        <div class="container">
+        <div class="container-not-bs">
           <div class="navbar-header">
             <a href="index.html" class="pull-left visible-md visible-lg">
               <div id="logo-img" alt="Logo img"></div>
             </a>
-
             <div class="navbar-brand">
               <a href="index.html"><h1>Swetify</h1></a>
-
-              <span
-                class="glyphicon glyphicon-headphones"
-                id="headphones"
-              ></span>
+              <span class="glyphicon glyphicon-headphones" id="headphones"></span>
               <span id="PlaySing"> Play and Sing with us Now !</span>
             </div>
-
-            <button
-              type="button"
-              class="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#collapsable-nav"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
           </div>
+          <div class="lg-display">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <li onclick="hidevisible()">
+                <a href="#" id="home">
+                  <span class="glyphicon glyphicon-home"></span
+                  ><br class="hidden-xs" />Home
+                </a>
+              </li>
+              <li onclick="hidevisible()">
+                <a href="#popular categories" id="popular-categories"
+                  ><span class="glyphicon glyphicon-music"></span
+                  ><br class="hidden-xs" />Popular Categories
+                </a>
+              </li>
+              <li onclick="hidevisible()">
+                <a href="#best of artists" id="artists"
+                  ><i class="fa fa-thumbs-up" aria-hidden="true"></i
+                  ><br class="hidden-xs" />Best of Artists
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#collapsable-nav"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="max-lg-display">
           <div class="collapse navbar-collapse" id="collapsable-nav">
             <ul id="nav-list" class="nav navbar-nav navbar-right">
               <li onclick="hidevisible()">
