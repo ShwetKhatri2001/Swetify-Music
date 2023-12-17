@@ -22,6 +22,7 @@ let category_title = document.getElementsByClassName("small-category");
 let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
+const favlist = document.getElementById("fav-list");
 
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
@@ -356,7 +357,7 @@ function toastMessage(msg) {
   var x = document.getElementById("snackbar");
   x.className = "show";
   x.innerHTML = msg;
-  setTimeout(function () {
+  setTimeout(function() {
     x.className = x.className.replace("show", "");
   }, 3000);
 }
@@ -386,7 +387,7 @@ const refreshLikedList = () => {
     var headerRow = table.insertRow();
     headerRow.className = "headT";
     var headers = ["#", "Title", "Artist"];
-    headers.forEach(function (headerText) {
+    headers.forEach(function(headerText) {
       var th = document.createElement("th");
       th.appendChild(document.createTextNode(headerText));
       headerRow.appendChild(th);
@@ -417,7 +418,7 @@ const refreshLikedList = () => {
     }
     containerScroll.appendChild(table);
     containerLL.appendChild(containerScroll);
-    homepage_content.appendChild(containerLL);
+    favlist.appendChild(containerLL);
   }
 };
 changeimagewidth(); // calling the function to change the width of the images according to the screen size.
@@ -538,7 +539,7 @@ const loadSong = (song) => {
   // function to load the song.
   // console.log(song);
   title.textContent = song.title;
-  category  = findSongCategory(title.innerHTML);
+  category = findSongCategory(title.innerHTML);
   // console.log(title.textContent); // changing the title of the song.
   artist.innerHTML = `<marquee>${song.artist}</marquee>`; // changing the artist of the song.
   music.src = "songs-images/" + category + "/" + song.name + ".mp3";
@@ -557,7 +558,7 @@ const nextSong = () => {
   // function to play the next song.
   if (islikedplaying) {
     currSong = (currSong + 1) % likedSongs.length;
-    category  = findSongCategory(title.innerHTML);
+    category = findSongCategory(title.innerHTML);
     console.log(category);
 
     loadSong(likedSongs[currSong]);
@@ -574,7 +575,7 @@ const prevSong = () => {
   console.log(songs[currSong]);
   if (islikedplaying) {
     currSong = (currSong - 1 + likedSongs.length) % likedSongs.length;
-    category  = findSongCategory(title.innerHTML);
+    category = findSongCategory(title.innerHTML);
     loadSong(likedSongs[currSong]);
     playmusic();
   } else {
@@ -588,16 +589,16 @@ const shuffleSong = () => {
   console.log(currSong);
   prevsong = currSong;
   if (islikedplaying) {
-    currSong =(currSong + Math.floor((Math.random() + 1) * (likedSongs.length + 1))) %likedSongs.length;
+    currSong = (currSong + Math.floor((Math.random() + 1) * (likedSongs.length + 1))) % likedSongs.length;
     if (currSong == prevsong) {
       shuffleSong();
     }
     console.log(currSong);
-    category  = findSongCategory(title.innerHTML);
+    category = findSongCategory(title.innerHTML);
     loadSong(likedSongs[currSong]);
     playmusic();
   } else {
-    currSong =(currSong + Math.floor((Math.random() + 1) * (songs.length + 1))) %songs.length;
+    currSong = (currSong + Math.floor((Math.random() + 1) * (songs.length + 1))) % songs.length;
     if (currSong == prevsong) {
       shuffleSong();
     }
@@ -634,19 +635,19 @@ play.addEventListener("click", () => {
   else playmusic();
 });
 
-home.onclick = function () {
+home.onclick = function() {
   if (isplaying) pausemusic();
-  islikedplaying=false
+  islikedplaying = false
 };
 
-categories.onclick = function () {
+categories.onclick = function() {
   if (isplaying) pausemusic();
-  islikedplaying=false
+  islikedplaying = false
 };
 
-artists.onclick = function () {
+artists.onclick = function() {
   if (isplaying) pausemusic();
-  islikedplaying=false
+  islikedplaying = false
 };
 
 const skipback = () => {
@@ -658,7 +659,7 @@ const skipback = () => {
 };
 
 // Add event listener for the like toggle button
-likeToggle.addEventListener("change", function () {
+likeToggle.addEventListener("change", function() {
   song = title.textContent;
   // Update the liked state in local storage
   localStorage.setItem(song, this.checked);
