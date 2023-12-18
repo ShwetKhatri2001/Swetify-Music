@@ -651,10 +651,10 @@ input[type="checkbox"]:checked + .like_icon {
   background-color: white;
   position: relative;
   margin-top: 1.2rem;
-  transition: width 1s linear;
+  -webkit-transition: width 1s linear;
   -moz-transition: width 1s linear;
   -o-transition: width 1s linear;
-  -webkit-transition: width 1s linear;
+  transition: width 1s linear;
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
@@ -1036,18 +1036,20 @@ th {
   text-align: left;
   border-bottom: 1px solid #555;
 }
+
 tr {
   width: 100%;
   line-height: 40px;
   padding: 10px;
-  /* background: linear-gradient(to right, #9c9df1, #9db6f0, #D2DAFF, #EEF1FF); */
+  background: linear-gradient(to right, #9c9df1, #9db6f0, #d2daff, #eef1ff);
   border-bottom: 1px solid #555;
-  transition: background 1s, box-shadow 0.3s;
+  transition: background 0.5s, box-shadow 0.3s;
   cursor: pointer;
 }
+
 tr:hover {
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
-  background: linear-gradient(to right, #bfc3f7, #9c9df1, #9ab6f5, #eef1ff);
+  background: linear-gradient(to right, #647dee, #7280e3, #8390e7, #9aa8f2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .container-not-bs {
