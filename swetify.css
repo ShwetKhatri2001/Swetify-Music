@@ -1,20 +1,21 @@
 body {
-  background-image: linear-gradient(
-    to left bottom,
-    #f265b5,
-    #df75cb,
-    #c984dc,
-    #b291e6,
-    #9c9cea,
-    #8c98ed,
-    #7994f1,
-    #6191f4,
-    #477efb,
-    #316aff,
-    #2852ff,
-    #3333ff
-  );
+  background-image: linear-gradient(to left bottom,
+      #f265b5,
+      #df75cb,
+      #c984dc,
+      #b291e6,
+      #9c9cea,
+      #8c98ed,
+      #7994f1,
+      #6191f4,
+      #477efb,
+      #316aff,
+      #2852ff,
+      #3333ff);
+
+  overflow-x: hidden;
 }
+
 html {
   font-size: 62.5%;
   font-family: "Jost", sans-serif;
@@ -41,6 +42,7 @@ html {
 #PlaySing {
   margin-top: 50px;
 }
+
 #headphones {
   margin-top: 20px;
   font-size: 30px;
@@ -66,6 +68,7 @@ html {
 .navbar-brand a:focus {
   text-decoration: none;
 }
+
 .navbar-brand span {
   /*Play and Sing with us noe*/
   color: white;
@@ -82,6 +85,7 @@ html {
   margin-left: 0.25rem;
   /* box-shadow: 0 0 0 2px rgb(160, 148, 148); */
 }
+
 .topicons {
   color: white;
   text-shadow: 0.5px 1px 0 #3333ff;
@@ -90,6 +94,7 @@ html {
 #navlist span {
   margin-bottom: 2px;
 }
+
 #nav-list a:hover,
 .topicons:hover {
   background-color: white;
@@ -113,6 +118,14 @@ html {
 .navbar-header button.navbar-toggle:hover {
   background-color: white;
 }
+.navbar-header{
+  position: relative;
+  display: flex;
+  left: -150px;
+}
+.navbar-nav{
+  flex-direction: row;
+} 
 
 /******** Home Page Main Content Styles ***********/
 
@@ -277,6 +290,7 @@ html {
   display: flex;
   background-color: black;
 }
+
 .footer p {
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -285,23 +299,28 @@ html {
   align-items: center;
   justify-content: center;
 }
+
 .footer p .icon {
   color: white;
 }
+
 .footer p .icon:hover {
   color: rgb(255, 223, 44);
   cursor: pointer;
   text-decoration: none;
 }
+
 .footer p .icon:active {
   color: rgb(255, 223, 44);
   cursor: pointer;
   text-decoration: none;
 }
+
 .footer .smallp {
   font-size: 2rem;
   color: rgb(163, 142, 142);
 }
+
 .footer .title a {
   color: #ffffff;
   font-weight: normal;
@@ -313,6 +332,7 @@ html {
   cursor: pointer;
   text-decoration: none;
 }
+
 .footer ul {
   color: white;
   /* font-family: "Lobster", cursive; */
@@ -320,14 +340,17 @@ html {
   font-size: 20px;
   list-style: disc;
 }
+
 .footer ul li {
   margin: 5px;
 }
+
 .footer ul li a {
   color: #a7c5ff;
   cursor: pointer;
   text-decoration: none;
 }
+
 .footer ul li a:hover {
   color: white;
   text-decoration: underline;
@@ -349,6 +372,7 @@ footer .top {
   transition: all 0.3s ease;
   box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.4);
 }
+
 footer .top:active {
   pointer-events: auto;
   opacity: 1;
@@ -358,12 +382,14 @@ footer .top a {
   color: rgb(229, 211, 211);
   padding: 14px;
 }
+
 footer .top a:hover {
   color: white;
   font-size: 22px;
   padding: 14px;
   justify-content: center;
 }
+
 footer .top:hover {
   border-radius: 80px;
   height: 52px;
@@ -385,6 +411,7 @@ footer .top:hover {
   margin: 15px auto 20px;
   box-sizing: border-box;
 }
+
 .artist-details {
   position: relative;
   justify-content: center;
@@ -487,18 +514,21 @@ footer .top:hover {
   justify-content: space-around;
   align-items: center;
 }
+
 .download_controls {
   position: absolute;
   bottom: 7px;
   right: 10px;
   padding: 1rem;
 }
+
 .music_controls .fa {
   color: #3333ff;
   font-size: 2rem;
   cursor: pointer;
   filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
 }
+
 .download_controls .fa {
   color: #3333ff;
   font-size: 2rem;
@@ -509,9 +539,11 @@ footer .top:hover {
 .music_controls .fa:hover {
   color: white;
 }
+
 .download_controls .fa:hover {
   color: white;
 }
+
 .music_controls .main_button {
   width: 5rem;
   height: 5rem;
@@ -538,10 +570,12 @@ footer .top:hover {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 /******** like button styles ********/
 .like_button {
   position: relative;
@@ -561,7 +595,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-input[type="checkbox"]:checked + .like_icon {
+input[type="checkbox"]:checked+.like_icon {
   background-image: url("icons/likeAfter.png");
 }
 
@@ -594,6 +628,7 @@ input[type="checkbox"]:checked + .like_icon {
     bottom: 0;
     opacity: 0;
   }
+
   to {
     bottom: 30px;
     opacity: 1;
@@ -605,6 +640,7 @@ input[type="checkbox"]:checked + .like_icon {
     bottom: 0;
     opacity: 0;
   }
+
   to {
     bottom: 30px;
     opacity: 1;
@@ -616,6 +652,7 @@ input[type="checkbox"]:checked + .like_icon {
     bottom: 30px;
     opacity: 1;
   }
+
   to {
     bottom: 0;
     opacity: 0;
@@ -627,11 +664,13 @@ input[type="checkbox"]:checked + .like_icon {
     bottom: 30px;
     opacity: 1;
   }
+
   to {
     bottom: 0;
     opacity: 0;
   }
 }
+
 /******** progressive bar styles ********/
 
 .progress_container {
@@ -685,10 +724,12 @@ input[type="checkbox"]:checked + .like_icon {
   .max-lg-display {
     display: none !important;
   }
+
   .container-not-bs {
     padding: 0 35px 0 0;
   }
 }
+
 /*******Medium Devices only********/
 @media (min-width: 992px) and (max-width: 1199px) {
   .lg-display {
@@ -705,27 +746,33 @@ input[type="checkbox"]:checked + .like_icon {
     height: 120px;
     margin: 5px 15px 5px 0px;
   }
+
   .footer p {
     font-size: 25px;
     display: block;
   }
+
   .footer .smallp {
     font-size: 24px;
   }
+
   .footer ul {
     font-size: 23px;
     list-style: disc;
   }
+
   .footer ul li:active {
     color: #a7c5ff;
     font-size: 23px;
     text-decoration: none;
   }
+
   .footer ul li a:hover {
     color: #ffffff;
     font-size: 24px;
     text-decoration: underline;
   }
+
   footer .top {
     height: 40px;
     width: 40px;
@@ -734,6 +781,7 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
+
   footer .top:hover {
     height: 45px;
     width: 40px;
@@ -742,22 +790,25 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
+
   footer .top a {
     font-size: 25px;
     color: white;
     padding: 0;
   }
+
   footer .top a:hover {
     font-size: 28px;
     padding: 0;
   }
 }
+
 /*******Small Devices only********/
 @media (min-width: 768px) and (max-width: 991px) {
   .lg-display {
     display: flex;
   }
-  
+
   .max-lg-display {
     display: none !important;
   }
@@ -766,6 +817,7 @@ input[type="checkbox"]:checked + .like_icon {
     font-size: 0.9em;
     height: 100px;
   }
+
   .navbar-brand h1 {
     font-size: 1.7em;
   }
@@ -784,11 +836,13 @@ input[type="checkbox"]:checked + .like_icon {
     border-radius: 25px;
     vertical-align: center;
   }
+
   .container .message-box {
     margin-top: 15px;
     margin-bottom: 10px;
     margin-left: -15px;
   }
+
   .footer {
     height: 300px;
     background-color: black;
@@ -796,27 +850,33 @@ input[type="checkbox"]:checked + .like_icon {
     bottom: 0;
     flex-wrap: wrap;
   }
+
   .footer p {
     font-size: 25px;
     display: block;
   }
+
   .footer .smallp {
     font-size: 24px;
   }
+
   .footer ul {
     font-size: 23px;
     list-style: disc;
   }
+
   .footer ul li:active {
     color: #a7c5ff;
     font-size: 23px;
     text-decoration: none;
   }
+
   .footer ul li a:hover {
     color: #ffffff;
     font-size: 24px;
     text-decoration: underline;
   }
+
   footer .top {
     height: 40px;
     width: 40px;
@@ -825,6 +885,7 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
+
   footer .top:hover {
     height: 45px;
     width: 40px;
@@ -833,24 +894,29 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
+
   footer .top a {
     font-size: 25px;
     color: white;
     padding: 0;
   }
+
   footer .top a:hover {
     font-size: 28px;
     padding: 0;
   }
 }
+
 /*******Extra small Devices only********/
 @media (max-width: 767px) {
   .lg-display {
     display: none;
   }
+
   .navbar-brand h1 {
     font-size: 1.7em;
   }
+
   #headphones,
   #PlaySing {
     font-size: 0.9em;
@@ -864,6 +930,7 @@ input[type="checkbox"]:checked + .like_icon {
   #collapsable-nav a span {
     font-size: 1em;
   }
+
   .categories-heading {
     width: 95%;
     opacity: 1;
@@ -874,6 +941,7 @@ input[type="checkbox"]:checked + .like_icon {
     height: 53rem;
     background-color: #000000;
   }
+
   .footer {
     height: 300px;
     background-color: black;
@@ -881,27 +949,33 @@ input[type="checkbox"]:checked + .like_icon {
     bottom: 0;
     flex-wrap: wrap;
   }
+
   .footer p {
     font-size: 25px;
     display: block;
   }
+
   .footer .smallp {
     font-size: 24px;
   }
+
   .footer ul {
     font-size: 23px;
     list-style: disc;
   }
+
   .footer ul li:active {
     color: #a7c5ff;
     font-size: 23px;
     text-decoration: none;
   }
+
   .footer ul li a:hover {
     color: #ffffff;
     font-size: 24px;
     text-decoration: underline;
   }
+
   footer .top {
     height: 40px;
     width: 40px;
@@ -910,6 +984,7 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
+
   footer .top:hover {
     height: 45px;
     width: 40px;
@@ -918,11 +993,13 @@ input[type="checkbox"]:checked + .like_icon {
     right: 20;
     text-align: center;
   }
+
   footer .top a {
     font-size: 25px;
     color: white;
     padding: 0;
   }
+
   footer .top a:hover {
     font-size: 28px;
     padding: 0;
@@ -960,36 +1037,44 @@ input[type="checkbox"]:checked + .like_icon {
   .lg-display {
     display: none;
   }
+
   .navbar-h1 {
     padding: 5px;
     font-size: 6vw;
   }
+
   .footer {
     height: 400px;
     background-color: black;
     position: relative;
     bottom: 0;
   }
+
   .footer p {
     font-size: 20px;
     display: block;
   }
+
   .footer .smallp {
     font-size: 18px;
   }
+
   .footer ul {
     font-size: 15px;
     list-style: none;
   }
+
   .footer ul li:active {
     color: #a7c5ff;
     font-size: 15px;
     text-decoration: none;
   }
+
   .footer .top {
     height: 200px;
     width: 200px;
   }
+
   .footer .to-top {
     height: 200px;
     width: 200px;
@@ -1018,10 +1103,12 @@ input[type="checkbox"]:checked + .like_icon {
   overflow-y: auto;
   border-radius: 10px;
 }
+
 table {
   width: 100%;
   font-family: Verdana;
 }
+
 .headT {
   color: black;
   font-family: Arial, sans-serif;
@@ -1030,12 +1117,14 @@ table {
   position: sticky;
   border-bottom: 4px solid #7576c4;
 }
+
 td,
 th {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #555;
 }
+
 tr {
   width: 100%;
   line-height: 40px;
@@ -1045,6 +1134,7 @@ tr {
   transition: background 1s, box-shadow 0.3s;
   cursor: pointer;
 }
+
 tr:hover {
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
   background: linear-gradient(to right, #bfc3f7, #9c9df1, #9ab6f5, #eef1ff);
@@ -1052,6 +1142,7 @@ tr:hover {
 
 .container-not-bs {
   max-width: 1170px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1073,4 +1164,182 @@ tr:hover {
   align-items: center;
   justify-content: center;
   align-content: center;
+}
+
+/* spotify UI  */
+
+#login_container {
+  display: block;
+}
+
+#spotify-window {
+  display: none;
+}
+
+/* spotify login/authorize container */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.welcome-text {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.welcome-text p {
+  display: flex;
+  justify-content: center;
+}
+
+.button-log {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button-log button {
+  font-size: 20px;
+  font-weight: 600;
+  width: 190px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* spotify songs displayer */
+
+.nav-tabs {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#display-container {
+  margin: 0 auto;
+  width: 80%;
+  border: 3px solid #bababa;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+  box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+  margin-top: 40px;
+  background-image: linear-gradient(to left bottom,
+      #f265b5,
+      #df75cb,
+      #c984dc,
+      #b291e6,
+      #9c9cea,
+      #8c98ed,
+      #7994f1,
+      #6191f4,
+      #477efb,
+      #316aff,
+      #2852ff,
+      #3333ff);
+  ;
+}
+
+.list-displayer {
+  display: flex;
+  margin: 10px;
+  padding: 10px 10px;
+  border: 1px solid pink;
+}
+
+.innerimage img {
+  border-radius: 10px;
+}
+
+.textdiv {
+  margin: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  font-size: 17px;
+}
+
+ran {
+  font-weight: 600;
+}
+
+h2 {
+  color: #fff;
+}
+
+#logout-icon {
+  width: 20px;
+  height: 30px;
+
+}
+
+.logout {
+  background: #fff;
+  border: none;
+  width: 350px;
+  height: 30px;
+  display: flex;
+}
+
+.logout span {
+  font-size: 17px;
+  height: 30px;
+  position: absolute;
+  left: 60px;
+  bottom: 8px;
+}
+
+#logo-inner {
+  width: 60px;
+  height: 60px;
+}
+
+.innerimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.innerimage {
+  height: 150px;
+  width: 200px;
+}
+
+#navs {
+  position: relative;
+}
+
+#navs :nth-child(3) {
+  position: absolute;
+  right: 20px;
+}
+
+#navs :nth-child(3) svg {
+  height: 30px;
+  width: 40px;
+}
+
+.profile-data {
+  position: fixed;
+  top: 85px;
+  right: 205px;
+  border-radius: 5px;
+  display: none;
+  padding: 10px 10px;
+  width: 350px;
+  height: 200px;
+  padding: 20px 25px;
+  background: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+  box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
+  font-size: 16px;
 }
