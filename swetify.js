@@ -373,7 +373,7 @@ const refreshLikedList = () => {
     if (localStorage.getItem(i) == "true") count++;
   }
   // console.log(count)
-  if (count == 0 || container_liked_list != null) {
+  if (count == 0) {
     container_liked_list.remove();
   } else {
     if (container_liked_list) container_liked_list.remove();
@@ -730,7 +730,11 @@ download.addEventListener('click', downloadCurrentSong); // Adding an event list
 // spotify functionality
 
 
-var redirect_uri = "https://deploy-preview-40--swetify.netlify.app/";
+//var redirect_uri = "https://deploy-preview-40--swetify.netlify.app/";
+
+var redirect_uri="https://swetify.netlify.app/";
+
+//var redirect_uri= 'http://localhost:5501/';
 
 var client_id = "e5a392471667465499be5e9bc54c24dc";
 var client_secret = "3a7df71fe8554b5faaa1bd69c11265c9";
