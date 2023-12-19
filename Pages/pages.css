@@ -1,0 +1,90 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(
+      to left bottom,
+      #f265b5,
+      #df75cb,
+      #c984dc,
+      #b291e6,
+      #9c9cea,
+      #8c98ed,
+      #7994f1,
+      #6191f4,
+      #477efb,
+      #316aff,
+      #2852ff,
+      #3333ff
+    );
+    
+  }
+
+  html {
+    font-size: 62.5%;
+    font-family: "Jost", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .top{
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+  header{
+    
+    height: 300px;
+    margin: 0;
+    background-image: url("../homepage/TopHollywoodHits.jpg");
+    
+  }
+
+  .songs-list{
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+  }
+
+  .song-container{
+    flex: 0 0 33.3%;
+    box-sizing: border-box;
+    margin: 20px;
+    background-color: rgb(0, 0, 0);
+    opacity: 2s;
+    color: white;
+    border-radius: 20px;
+  }
+
+  .image_container{
+    border-radius: 20px;
+    padding-top: 20px;
+  }
+
+  .image_container img{
+    width: 150px;
+    height: 225px;
+    border-radius: 20px;
+  }
+
+  .hidden
+  {
+    display: none;
+  }
+
+  .name
+  {
+    cursor:pointer;
+  }

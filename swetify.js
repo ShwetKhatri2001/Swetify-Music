@@ -554,6 +554,39 @@ const loadSong = (song) => {
   }
 };
 
+
+const loadsong = (
+  arrno,song
+) => {
+  songs = allsongs[arrno];
+  category = allcategories[arrno];
+  loadcurrSong(songs[song],category);
+  homepage_content.classList.add("hidden");
+  main_div.classList.remove("hidden");
+
+  playmusic();
+};  
+
+//function to load songs from playlist
+const loadcurrSong = (song,category) => {
+  // function to load the song.
+  // console.log(song);
+  title.textContent = song.title;
+  // category  = findSongCategory(title.innerHTML);
+  // console.log(title.textContent); // changing the title of the song.
+  artist.innerHTML = `<marquee>${song.artist}</marquee>`; // changing the artist of the song.
+  music.src = "../songs-images/" + category + "/" + song.name + ".mp3";
+  console.log(music.src); // changing the source of the song.
+  songimg.src = "../songs-images/" + category + "/" + song.name + ".jpg";
+  // console.log(songimg.src); // changing the source of the image.
+  const likedState = localStorage.getItem(song.title);
+  if (likedState === null) {
+    likeToggle.checked = false;
+  } else if (likedState === "true") {
+    likeToggle.checked = true;
+  }
+};
+
 const nextSong = () => {
   // function to play the next song.
   if (islikedplaying) {
