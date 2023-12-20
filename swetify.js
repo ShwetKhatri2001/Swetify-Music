@@ -9,6 +9,7 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const back = document.getElementById("back");
 const shuffle = document.getElementById("shuffle");
+const loop = document.getElementById("loop");
 const download = document.getElementById("download");
 let progress = document.getElementById("progress");
 let song_duration = document.getElementById("duration");
@@ -554,9 +555,13 @@ const loadSong = (song) => {
   }
 };
 
-const nextSong = () => {
+const nextSong = (e) => {
   // function to play the next song.
-  if (islikedplaying) {
+  if(loopActive && e.type === 'ended'){
+    loadSong(songs[currSong])
+    playmusic();
+  }
+  else if (islikedplaying) {
     currSong = (currSong + 1) % likedSongs.length;
     category = findSongCategory(title.innerHTML);
     console.log(category);
@@ -607,6 +612,18 @@ const shuffleSong = () => {
     playmusic();
   }
 };
+
+let loopActive = false;
+const loopSong = () => {
+  // function to check if the song is looping or not.
+  if (loopActive) {
+    loopActive = false;
+    loop.style.color = '#3333ff';
+  } else {
+    loopActive = true;
+    loop.style.color = 'white';
+  }
+}
 
 const downloadCurrentSong = () => {
   const currentSong = songs[currSong];
@@ -721,6 +738,8 @@ next.addEventListener("click", nextSong); // Event listener to play the next son
 prev.addEventListener("click", prevSong); // Event listener to play the previous song when the previous button is clicked.
 
 shuffle.addEventListener("click", shuffleSong);
+
+loop.addEventListener("click", loopSong);
 
 back.addEventListener("click", skipback);
 
