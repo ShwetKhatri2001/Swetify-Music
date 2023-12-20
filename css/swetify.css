@@ -614,6 +614,61 @@ input[type="checkbox"]:checked+.like_icon {
   .container-not-bs {
     padding: 0 35px 0 0;
   }
+
+  .footer p {
+    font-size: 25px;
+    display: block;
+  }
+
+  .footer .smallp {
+    font-size: 24px;
+  }
+
+  .footer ul {
+    font-size: 23px;
+    list-style: disc;
+  }
+
+  .footer ul li:active {
+    color: #a7c5ff;
+    font-size: 23px;
+    text-decoration: none;
+  }
+
+  .footer ul li a:hover {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+
+  footer .top {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20;
+    right: 20;
+    text-align: center;
+  }
+
+  footer .top:hover {
+    height: 45px;
+    width: 40px;
+    position: fixed;
+    bottom: 23;
+    right: 20;
+    text-align: center;
+  }
+
+  footer .top a {
+    font-size: 25px;
+    color: white;
+    padding: 0;
+  }
+
+  footer .top a:hover {
+    font-size: 28px;
+    padding: 0;
+  }
 }
 
 /*******Medium Devices only********/
