@@ -1,0 +1,123 @@
+.footer {
+    height: 35vh;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    background-color: black;
+  }
+  
+  .footer p {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer p .icon {
+    color: white;
+  }
+  
+  .footer p .icon:hover {
+    color: rgb(255, 223, 44);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .footer p .icon:active {
+    color: rgb(255, 223, 44);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .footer .smallp {
+    font-size: 2rem;
+    color: rgb(163, 142, 142);
+  }
+  
+  .footer .title a {
+    color: #ffffff;
+    font-weight: normal;
+    text-shadow: 0.5px 0.5px 0 rgb(176, 155, 215);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    line-height: 0.75;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .footer ul {
+    color: white;
+    /* font-family: "Lobster", cursive; */
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    list-style: disc;
+  }
+  
+  .footer ul li {
+    margin: 5px;
+  }
+  
+  .footer ul li a {
+    color: #a7c5ff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .footer ul li a:hover {
+    color: white;
+    text-decoration: underline;
+    transition: 0.5s;
+    font-size: 20.5px;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  footer .top {
+    border-radius: 80px;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 19px;
+    justify-content: center;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.4);
+  }
+  
+  footer .top:active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  footer .top a {
+    color: rgb(229, 211, 211);
+    padding: 14px;
+  }
+  
+  footer .top a:hover {
+    color: white;
+    font-size: 22px;
+    padding: 14px;
+    justify-content: center;
+  }
+  
+  footer .top:hover {
+    border-radius: 80px;
+    height: 52px;
+    width: 50px;
+    position: fixed;
+    bottom: 14px;
+    right: 10px;
+    justify-content: center;
+    font-weight: bold;
+    padding: 0;
+    box-shadow: 0 5px 0 0 rgba(255, 255, 255, 0.4);
+  }
+  
