@@ -22,6 +22,7 @@ let category_title = document.getElementsByClassName("small-category");
 let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
+const favlist = document.getElementById("fav-list");
 
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
@@ -417,7 +418,7 @@ const refreshLikedList = () => {
     }
     containerScroll.appendChild(table);
     containerLL.appendChild(containerScroll);
-    homepage_content.appendChild(containerLL);
+    favlist.appendChild(containerLL);
   }
 };
 changeimagewidth(); // calling the function to change the width of the images according to the screen size.
@@ -538,7 +539,7 @@ const loadSong = (song) => {
   // function to load the song.
   // console.log(song);
   title.textContent = song.title;
-  category  = findSongCategory(title.innerHTML);
+  category = findSongCategory(title.innerHTML);
   // console.log(title.textContent); // changing the title of the song.
   artist.innerHTML = `<marquee>${song.artist}</marquee>`; // changing the artist of the song.
   music.src = "songs-images/" + category + "/" + song.name + ".mp3";
@@ -557,7 +558,7 @@ const nextSong = () => {
   // function to play the next song.
   if (islikedplaying) {
     currSong = (currSong + 1) % likedSongs.length;
-    category  = findSongCategory(title.innerHTML);
+    category = findSongCategory(title.innerHTML);
     console.log(category);
 
     loadSong(likedSongs[currSong]);
@@ -574,7 +575,7 @@ const prevSong = () => {
   console.log(songs[currSong]);
   if (islikedplaying) {
     currSong = (currSong - 1 + likedSongs.length) % likedSongs.length;
-    category  = findSongCategory(title.innerHTML);
+    category = findSongCategory(title.innerHTML);
     loadSong(likedSongs[currSong]);
     playmusic();
   } else {
@@ -588,16 +589,16 @@ const shuffleSong = () => {
   console.log(currSong);
   prevsong = currSong;
   if (islikedplaying) {
-    currSong =(currSong + Math.floor((Math.random() + 1) * (likedSongs.length + 1))) %likedSongs.length;
+    currSong = (currSong + Math.floor((Math.random() + 1) * (likedSongs.length + 1))) % likedSongs.length;
     if (currSong == prevsong) {
       shuffleSong();
     }
     console.log(currSong);
-    category  = findSongCategory(title.innerHTML);
+    category = findSongCategory(title.innerHTML);
     loadSong(likedSongs[currSong]);
     playmusic();
   } else {
-    currSong =(currSong + Math.floor((Math.random() + 1) * (songs.length + 1))) %songs.length;
+    currSong = (currSong + Math.floor((Math.random() + 1) * (songs.length + 1))) % songs.length;
     if (currSong == prevsong) {
       shuffleSong();
     }
@@ -636,17 +637,17 @@ play.addEventListener("click", () => {
 
 home.onclick = function () {
   if (isplaying) pausemusic();
-  islikedplaying=false
+  islikedplaying = false
 };
 
 categories.onclick = function () {
   if (isplaying) pausemusic();
-  islikedplaying=false
+  islikedplaying = false
 };
 
 artists.onclick = function () {
   if (isplaying) pausemusic();
-  islikedplaying=false
+  islikedplaying = false
 };
 
 const skipback = () => {
@@ -724,3 +725,227 @@ shuffle.addEventListener("click", shuffleSong);
 back.addEventListener("click", skipback);
 
 download.addEventListener('click', downloadCurrentSong); // Adding an event listener to the download button
+
+
+// spotify functionality
+
+
+//var redirect_uri = "https://deploy-preview-40--swetify.netlify.app/";
+
+var redirect_uri="https://swetify.netlify.app/";
+
+//var redirect_uri= 'http://localhost:5501/';
+
+var client_id = "e5a392471667465499be5e9bc54c24dc";
+var client_secret = "3a7df71fe8554b5faaa1bd69c11265c9";
+
+var stateKey = 'spotify_auth_state';
+
+function generateRandomString(length) {
+  var text = '';
+  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  for (var i = 0; i < length; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return text;
+};
+
+function getHashParams() {
+  var hashParams = {};
+  var e, r = /([^&;=]+)=?([^&;]*)/g,
+    q = window.location.hash.substring(1);
+  while (e = r.exec(q)) {
+    hashParams[e[1]] = decodeURIComponent(e[2]);
+  }
+  return hashParams;
+}
+
+
+function authorize() {
+
+  var params = getHashParams();
+
+  var access_token = params.access_token,
+    state = params.state,
+    storedState = localStorage.getItem(stateKey);
+  if (access_token && (state == null || state !== storedState)) {
+    alert('There was an error during the authentication');
+  } else {
+    console.log("access token recieved");
+  }
+  var state = generateRandomString(16);
+
+  localStorage.setItem(stateKey, state);
+  var scope = 'user-read-private user-read-email user-top-read';
+
+  var url = 'https://accounts.spotify.com/authorize';
+  url += '?response_type=token';
+  url += '&client_id=' + encodeURIComponent(client_id);
+  url += '&scope=' + encodeURIComponent(scope);
+  url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
+  url += '&state=' + encodeURIComponent(state);
+  window.location = url;
+
+}
+
+function scrollToTarget() {
+  var element = document.getElementById('your spotify music');
+  element.scrollIntoView({ behavior: 'smooth' });
+}
+
+function toggleVisibility() {
+  var login_container = document.getElementById('login_container');
+  login_container.style.display = (login_container.style.display === 'none') ? 'block' : 'none';
+  var spotify_window = document.getElementById('spotify-window');
+  spotify_window.style.display = (spotify_window.style.display === 'none' || spotify_window.style.display === '') ? 'block' : 'none';
+}
+
+if (window.location.href.includes('access_token')) {
+  // If it does, call the scrollToTarget function
+  scrollToTarget();
+  toggleVisibility();
+  getProfile();
+  getTopSongs();
+}
+
+async function getProfile() {
+  var params = getHashParams();
+
+  var access_token = params.access_token;
+  const response = await fetch('https://api.spotify.com/v1/me', {
+    headers: {
+      Authorization: 'Bearer ' + access_token
+    }
+  });
+  const data = await response.json();
+  console.log(data)
+  setProfileData(data);
+}
+
+
+async function getTopSongs() {
+  var params = getHashParams();
+
+  var access_token = params.access_token;
+  const response = await fetch('https://api.spotify.com/v1/me/top/tracks?offset=0&limit=10&time_range=long_term', {
+    headers: {
+      Authorization: 'Bearer ' + access_token
+    }
+  });
+  const data = await response.json();
+  renderTopSongs(data);
+}
+
+async function getTopArtists() {
+  var params = getHashParams();
+
+  var access_token = params.access_token;
+  const response = await fetch('https://api.spotify.com/v1/me/top/artists?offset=0&limit=10&time_range=long_term', {
+    headers: {
+      Authorization: 'Bearer ' + access_token
+    }
+  });
+  const data = await response.json();
+  renderTopArtists(data);
+}
+
+function setProfileData(data) {
+  const display_name = document.getElementById('display_name');
+  display_name.innerHTML = data.display_name;
+
+  const user_email = document.getElementById('user-email');
+  user_email.innerHTML = data.email;
+
+  const user_country = document.getElementById('user-country');
+  user_country.innerHTML = data.country;
+
+  const user_external_uri = document.getElementById('user-external-uri');
+  user_external_uri.innerHTML = `<a href="${data.external_urls.spotify}" target="_blank">${data.external_urls.spotify}</a>`;
+}
+
+function renderTopArtists(data) {
+
+  //hide top songs list
+  var topSongsListElement = document.getElementById('top_songs_list');
+  // Remove all child elements (songs) from the top songs list
+  while (topSongsListElement.firstChild) {
+    topSongsListElement.removeChild(topSongsListElement.firstChild);
+  }
+
+  var topSongsListElement = document.getElementById('top_artists_list');
+
+  // Loop through the top songs data and create HTML elements for each song
+  data.items.forEach(function (song) {
+    var songItemElement = document.createElement('div');
+    songItemElement.classList.add('song-item');
+
+    // Add song information to the HTML
+    songItemElement.innerHTML = `
+                   <div class="list-displayer">
+                   <div class="innerimage" >
+                   <img src="${song.images[0].url}" alt="${song.name}" width="200" height="100" >
+                   </div>
+                   <div class="textdiv" >
+                   <label>Artist name: ${song.name}</label>
+                   <label>Popularity: ${song.popularity}</label>
+                   <label>URI: <a href="${song.uri}" target="_blank">${song.uri}</a></label>
+                   </div> 
+                   </div>
+               `;
+
+    // Append the song item to the top songs list
+    topSongsListElement.appendChild(songItemElement);
+  });
+}
+
+function renderTopSongs(data) {
+
+  //hide top artists list
+  var topSongsListElement = document.getElementById('top_artists_list');
+  // Remove all child elements (songs) from the top songs list
+  while (topSongsListElement.firstChild) {
+    topSongsListElement.removeChild(topSongsListElement.firstChild);
+  }
+
+  var topSongsListElement = document.getElementById('top_songs_list');
+
+  // Loop through the top songs data and create HTML elements for each song
+  data.items.forEach(function (song) {
+    var songItemElement = document.createElement('div');
+    songItemElement.classList.add('song-item');
+
+    // Add song information to the HTML
+    songItemElement.innerHTML = `
+                   <div class="list-displayer">
+                   <div class="innerimage" >
+                   <img src="${song.album.images[0].url}" alt="${song.name}" width="200" height="100" >
+                   </div>
+                   <div class="textdiv" >
+                   <label><ran>Song name:</ran> ${song.name}</label>
+                   <label><ran>Popularity:</ran> ${song.popularity}</label>
+                   <label><ran>URI:</ran> <a href="${song.uri}" target="_blank">${song.uri}</a></label>
+                   </div>
+                   </div>  
+               `;
+    topSongsListElement.appendChild(songItemElement);
+  });
+}
+
+
+function userLogout() {
+  let comfirm = confirm("logout??")
+  if (comfirm) {
+    // Redirect the user to the login page or perform any other necessary actions
+    window.location.href = '/';
+  }
+
+}
+
+
+function toggleProfile() {
+
+  var profileData = document.getElementById("profile-data");
+  profileData.style.display = (profileData.style.display === "none") ? "flex" : "none";
+
+}
