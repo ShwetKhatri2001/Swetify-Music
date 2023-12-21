@@ -51,7 +51,7 @@ body {
 
   .songs-list{
     display:flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -59,23 +59,29 @@ body {
   }
 
   .song-container{
-    flex: 0 0 33.3%;
+    display: flex;
     box-sizing: border-box;
-    margin: 20px;
+    margin: 10px 20px;
     background-color: rgb(0, 0, 0);
     opacity: 2s;
     color: white;
     border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    width: 70vw;
+    
   }
 
   .image_container{
     border-radius: 20px;
-    padding-top: 20px;
+    padding:10px 20px;
+    justify-self: flex-start;
   }
 
   .image_container img{
-    width: 150px;
-    height: 225px;
+    width: 20px;
+    height: 30px;
     border-radius: 20px;
   }
 
@@ -88,3 +94,49 @@ body {
   {
     cursor:pointer;
   }
+
+  h2
+  {
+    font-size: 20px;
+    margin: 0 20px;
+  }
+  
+  h3
+  {
+    justify-self: flex-end;
+    font-size: 15px;
+    margin: 0 20px;
+  }
+
+
+  @media screen and (max-width: 500px) {
+    
+    h2
+  {
+    font-size: 15px;
+    margin: 0 20px;
+  }
+  
+  h3
+  {
+    justify-self: flex-end;
+    font-size: 10px;
+    margin: 0 20px;
+  }
+  .songs-container
+  {
+    width: 85vw;
+    margin: 5px 20px;
+  }
+  .image_container
+  {padding: 5px 20px;}
+  header
+  {
+    height: 30vh;
+  }
+  }
+
+  .music_controls{
+    margin-top: 5px;
+  }
+  

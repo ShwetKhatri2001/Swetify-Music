@@ -23,6 +23,7 @@ let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
+const progress_el=document.getElementById("progress-el")
 
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
@@ -555,37 +556,68 @@ const loadSong = (song) => {
 };
 
 
-const loadsong = (
-  arrno,song
+//function to load songs from playlist
+let song=0;
+const loadplaylistsong = (
+  arrno,tsong
 ) => {
   songs = allsongs[arrno];
   category = allcategories[arrno];
-  loadcurrSong(songs[song],category);
+  loadcurrSong(songs[tsong],category);
   homepage_content.classList.add("hidden");
   main_div.classList.remove("hidden");
+  song=tsong;
 
   playmusic();
 };  
 
-//function to load songs from playlist
-const loadcurrSong = (song,category) => {
-  // function to load the song.
-  // console.log(song);
-  title.textContent = song.title;
-  // category  = findSongCategory(title.innerHTML);
-  // console.log(title.textContent); // changing the title of the song.
-  artist.innerHTML = `<marquee>${song.artist}</marquee>`; // changing the artist of the song.
-  music.src = "../songs-images/" + category + "/" + song.name + ".mp3";
+const loadcurrSong = (tsong,category) => {
+  title.textContent = tsong.title;
+  artist.innerHTML = `<marquee>${tsong.artist}</marquee>`; // changing the artist of the song.
+  music.src = "../songs-images/" + category + "/" + tsong.name + ".mp3";
   console.log(music.src); // changing the source of the song.
-  songimg.src = "../songs-images/" + category + "/" + song.name + ".jpg";
-  // console.log(songimg.src); // changing the source of the image.
-  const likedState = localStorage.getItem(song.title);
+  songimg.src = "../songs-images/" + category + "/" + tsong.name + ".jpg";
+  const likedState = localStorage.getItem(tsong.title);
   if (likedState === null) {
     likeToggle.checked = false;
   } else if (likedState === "true") {
     likeToggle.checked = true;
   }
 };
+
+const loadnextsong=(arrno)=>{
+  song+=1;
+  console.log(song);
+  if(song>allsongs[arrno].length)
+  {
+    song=0;
+  }
+  loadplaylistsong(arrno,song);
+}
+
+const loadprevsong=(arrno)=>{
+  song-=1;
+  if(song<0)
+  {
+    song=allsongs[arrno].length;
+  }
+  loadplaylistsong(arrno,song);
+}
+
+progress_el.addEventListener("change",()=>
+{
+    music.currentTime=(progress_el.value*music.duration)/100;
+    console.log("hii");
+})
+
+music.addEventListener("timeupdate",()=>
+{
+    let time =parseInt((music.currentTime/music.duration)*100);
+    progress_el.value=time;
+    const currentTimeMinutes = Math.floor(music.currentTime / 60);
+      const currentTimeSeconds = Math.floor(music.currentTime % 60);
+    current_time.textContent = `${currentTimeMinutes}:${currentTimeSeconds < 10 ? '0' : ''}${currentTimeSeconds}`;
+})
 
 const nextSong = () => {
   // function to play the next song.

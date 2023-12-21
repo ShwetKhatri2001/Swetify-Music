@@ -50,37 +50,54 @@
     <header>
     </header>
       <div class="songs-list" id="homepage_content">
-        <div class="song-container" >
+        <div class="song-container" onclick="loadplaylistsong(0,0)" >
           <div class="image_container">
             <img src="../songs-images/TopHollywoodHits/Faded.jpg" alt="" class="cover">
           </div>
-          <h2 class="name" id="0" onclick="loadsong(0,0)">Faded</h2>
+          <h2 class="name" id="0" >Faded</h2>
           <h3 class="artist">Alan Walker</h3>
         </div>
 
-        <div class="song-container">
+        <div class="song-container" onclick="loadplaylistsong(0,1)">
           <div class="image_container">
             <img src="../songs-images/TopHollywoodHits/Closer.jpg" alt="" class="cover">
           </div>
-          <h2 class="name" id="1" onclick="loadsong(0,1)">Closer</h2>
+          <h2 class="name" id="1" >Closer</h2>
           <h3 class="artist">The Chainsmoker</h3>
         </div>
         
-        <div class="song-container">
+        <div class="song-container" onclick="loadplaylistsong(0,2)">
           <div class="image_container">
             <img src="../songs-images/TopHollywoodHits/CheapThrills.jpg" alt="" class="cover">
           </div>
-          <h2 class="name" id="2" onclick="loadsong(0,2)">Cheap Thrills</h2>
+          <h2 class="name" id="2" >Cheap Thrills</h2>
           <h3 class="artist">Sia</h3>
         </div>
 
-        <div class="song-container">
+        <div class="song-container" onclick="loadplaylistsong(0,3)">
           <div class="image_container">
             <img src="../songs-images/TopHollywoodHits/Friends.jpg" alt="" class="cover">
           </div>
-            <h2 class="name" id="3" onclick="loadsong(0,3)">Friends</h2>
+            <h2 class="name" id="3" >Friends</h2>
           <h3 class="artist">Marshmello, Anne-Marie</h3>
         </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,4)">
+          <div class="image_container">
+            <img src="../songs-images/TopHollywoodHits/Senorita.jpg" alt="" class="cover">
+          </div>
+          <h2 class="name" id="2" >Senorita</h2>
+          <h3 class="artist">Shawn Mendes, Camila Cabello</h3>
+        </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,2)">
+          <div class="image_container">
+            <img src="../songs-images/TopHollywoodHits/CheapThrills.jpg" alt="" class="cover">
+          </div>
+          <h2 class="name" id="2" >I'M Mess</h2>
+          <h3 class="artist">Bebe Rexha</h3>
+        </div>
+
         </div>
 
         ----------------------------------------------------------------------------------------
@@ -104,17 +121,14 @@
                 <div id="current_time">0:00</div>
                 <div id="duration">4:16</div>
               </div>
-              <div class="progress_div" id="progress_div">
-                <div class="progress" id="progress"></div>
-              </div>
+              <input type="range" id="progress-el" min="0" value="0" max="100">
             </div>
     
             <!-- controls -->
             <div class="music_controls">
-              <i class="fa fa-backward" id="back" title="Previous"></i>
-              <i class="fa fa-step-backward" id="prev" title="Previous"></i>
+              <i class="fa fa-step-backward" title="Previous" onclick="loadprevsong(0)"></i>
               <i class="fa fa-play main_button" id="play" title="Play"></i>
-              <i class="fa fa-step-forward" id="next" title="Next"></i>
+              <i class="fa fa-step-forward"  title="Next" onclick="loadnextsong(0)"></i>
               <i
                 class="fa fa-random shuffle_button"
                 id="shuffle"
