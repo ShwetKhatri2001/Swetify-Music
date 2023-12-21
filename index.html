@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Let's Play On Swetify</title>
   
@@ -41,7 +40,6 @@
     <script src="script.js" defer></script>
 
 </head>
-
 <body>
   <div id="snackbar">Some text some message..</div>
   <header>
@@ -123,13 +121,11 @@
       </div>
     </nav>
   </header>
-
   <div class="" id="homepage_content">
     <img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive" />
     <div class="container categories-heading" id="top-picks">
       <span> Top Picks For You </span>
     </div>
-
     <div id="main-content" class="container">
       <section class="row">
         <div class="col-md-1"></div>
@@ -152,11 +148,9 @@
         </div>
       </section>
     </div>
-
     <div class="container categories-heading" id="popular categories">
       <span> Poplular Categories </span>
     </div>
-
     <div class="slider_div">
       <div class="slider-wrapper">
         <div class="center_div" id="centerdiv">
@@ -212,7 +206,6 @@
         </button>
       </div>
     </div>
-
     <div class="container categories-heading" id="best of artists">
       <span> Best of Artists </span>
     </div>
@@ -226,7 +219,6 @@
             </div>
           </a>
         </div>
-
         <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
           <a href="#">
             <div class="artist-details" onclick="loadfirstsong(10)">
@@ -235,7 +227,6 @@
             </div>
           </a>
         </div>
-
         <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 text-center artist-container">
           <a href="#">
             <div class="artist-details" onclick="loadfirstsong(11)">
@@ -263,11 +254,9 @@
         </div>
       </div>
     </div>
-
     <div class="container categories-heading" id="your spotify music">
       <span> Your Spotify Music </span>
     </div>
-
     <div class="login-container" id="login_container">
       <div class="inner-login-container">
         <div class="welcome-text">
@@ -278,7 +267,6 @@
         </div>
       </div>
     </div>
-
     <div class="spotify-window" id="spotify-window">
       <div class="profile-data" id="profile-data">
         <div class="media-body">
@@ -313,20 +301,16 @@
             </svg>
           </li>
         </ul>
-
         <div id="top_songs_list"></div>
         <div id="top_artists_list"></div>
-
       </div>
     </div>
-
     <!-- the liked list -->
     <div class="container categories-heading">
       <span> Your favourite music</span>
     </div>
     <div id="fav-list">
     </div>
-
     <!-- footer section  -->
     <footer>
       <div class="footer">
@@ -349,10 +333,7 @@
         </a>
       </button>
     </footer>
-
   </div>
-
-
   <div class="main_div hidden" id="main_div">
     <div class="music_container">
       <h2 id="title">songtitle</h2>
@@ -363,7 +344,6 @@
         <img src="songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
       </div>
       <audio src="songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
-
       <!-- progress-bar -->
       <div class="progress_container" id="progress_container">
         <div class="progress_duration_meter">
@@ -377,6 +357,7 @@
 
       <!-- controls -->
       <div class="music_controls">
+        <i class="fa fa-repeat loop_button" id="loop" aria-hidden="true" title="Loop"></i>
         <i class="fa fa-backward" id="back" title="Previous"></i>
         <i class="fa fa-step-backward" id="prev" title="Previous"></i>
         <i class="fa fa-play main_button" id="play" title="Play"></i>
@@ -392,7 +373,6 @@
       </div>
     </div>
   </div>
-
   <script>
     function changeTab(clickedTab, functionName) {
       // Remove 'active' class from all tabs
@@ -400,15 +380,12 @@
       tabs.forEach(function (tab) {
         tab.classList.remove('active');
       });
-
       // Add 'active' class to the clicked tab
       clickedTab.classList.add('active');
-
       // Call the corresponding function
       window[functionName]();
     }
   </script>
-
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -423,5 +400,4 @@
     crossorigin="anonymous"></script> -->
   <script src="swetify.js"></script>
 </body>
-
 </html>
