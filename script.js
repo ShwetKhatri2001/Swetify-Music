@@ -1,26 +1,24 @@
 const initSlider = () => {
-  
     const imageList = document.querySelector(".slider-wrapper .center_div");
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    let maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
 
-    
-
-    slideButtons.forEach(button => {
-        button.addEventListener("click",()=>{
-            const direction = button.id === "prev-slide"? -1: 1;
-            const scrollAmount = imageList.clientWidth*direction;
-            imageList.scrollBy({left:scrollAmount, behaviour:"smooth"});
-        })
-    })
+    const scrollAmount = imageList.clientWidth;
 
     const handleSlideButtons = () => {
-        slideButtons[0].style.display = imageList.scrollLeft <= 0? "none" : "block";
-        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft? "none" : "block";
-    }
-    imageList.addEventListener("scroll", () => {
-        handleSlideButtons();  
-    });
-}
+        slideButtons[0].style.visibility = imageList.scrollLeft <= 0 ? "hidden" : "visible";
+        slideButtons[1].style.visibility = imageList.scrollLeft >= maxScrollLeft ? "hidden" : "visible";
+    };
 
-window.addEventListener("load",initSlider);
+    document.querySelector(".slider-wrapper").addEventListener("click", (event) => {
+        const button = event.target.closest(".slide-button");
+        if (button) {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            imageList.scrollBy({ left: scrollAmount * direction, behavior: "smooth" });
+        }
+    });
+
+    imageList.addEventListener("scroll", handleSlideButtons);
+};
+
+window.addEventListener("load", initSlider);
