@@ -9,6 +9,7 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const back = document.getElementById("back");
 const shuffle = document.getElementById("shuffle");
+const loop = document.getElementById("loop");
 const download = document.getElementById("download");
 let progress = document.getElementById("progress");
 let song_duration = document.getElementById("duration");
@@ -23,7 +24,6 @@ let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
-
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
   {
@@ -45,7 +45,6 @@ const atifsongs = [
   { name: "TeresangYaara", title: "Tere Sang Yaara", artist: "Atif Aslam" },
   { name: "JeenaJeena", title: "Jeena Jeena", artist: "Atif Aslam" },
 ];
-
 // Below is the array of songs by Arijit Singh, in which each song is an object with the name, title and artist properties.
 const arijitsongs = [
   { name: "TumHiHo", title: "Tum Hi Ho", artist: "Arijit Singh" },
@@ -69,7 +68,6 @@ const arijitsongs = [
   { name: "Naina", title: "Naina", artist: "Arijit Singh" },
   { name: "Kesariya", title: "Kesariya", artist: "Arijit Singh" },
 ];
-
 // Below is the array of songs by Neha Kakkar, in which each song is an object with the name, title and artist properties.
 const nehasongs = [
   {
@@ -95,7 +93,6 @@ const nehasongs = [
     artist: "Neha Kakkar, Tanishk Bagchi",
   },
 ];
-
 // Below is the array of songs by Jubin Nautiyal, in which each song is an object with the name, title and artist properties.
 const jubinsongs = [
   {
@@ -125,7 +122,6 @@ const jubinsongs = [
     artist: "Jubin Nautiyal",
   },
 ];
-
 // Below is the array of songs by Ritviz, in which each song is an object with the name, title and artist properties.
 const ritvizsongs = [
   { name: "UddGaye", title: "Udd Gaye", artist: "Ritviz" },
@@ -135,7 +131,6 @@ const ritvizsongs = [
   { name: "ThandiHawa", title: "Thandi Hawa", artist: "Ritviz" },
   { name: "Jeet2.0", title: "Jeet 2.0", artist: "Ritviz" },
 ];
-
 // Below is the array of songs in Rock genre, in which each song is an object with the name, title and artist properties.
 const rocksongs = [
   { name: "Beliver", title: "Beliver", artist: "Imagine Dragon" },
@@ -147,7 +142,6 @@ const rocksongs = [
     artist: "Scorpions",
   },
 ];
-
 // Below is the array of songs for dance, in which each song is an object with the name, title and artist properties.
 const dancesongs = [
   { name: "PostMalone", title: "Post Malone", artist: "Sam Feldt" },
@@ -160,7 +154,6 @@ const dancesongs = [
   },
   { name: "ThereForYou", title: "There For You", artist: "Alex Hart" },
 ];
-
 // Below is the array of songs for college, in which each song is an object with the name, title and artist properties.
 const collegesongs = [
   {
@@ -186,7 +179,6 @@ const collegesongs = [
     artist: "Darshan Raval",
   },
 ];
-
 // Below is the array of songs for garba, in which each song is an object with the name, title and artist properties.
 const garbasongs = [
   {
@@ -212,7 +204,6 @@ const garbasongs = [
   },
   { name: "FullNightTrack", title: "Full Night Track", artist: "Ae Halo" },
 ];
-
 // Below is the array of songs for 90's Bollywood songs, in which each song is an object with the name, title and artist properties.
 const Hits90s = [
   {
@@ -246,7 +237,6 @@ const Hits90s = [
     artist: "Pankaj Udhas",
   },
 ];
-
 // Below is the array of Bollywood patriotic songs , in which each song is an object with the name, title and artist properties.
 const patriotic = [
   {
@@ -271,7 +261,6 @@ const patriotic = [
     artist: "Sonu Nigam, Manmohan Waris",
   },
 ];
-
 // Below is the array of Holi special songs , in which each song is an object with the name, title and artist properties.
 const holispecial = [
   {
@@ -300,7 +289,6 @@ const holispecial = [
     artist: "Amitabh Bachchan",
   },
 ];
-
 // Array of Bollywood songs, in which each song is an object with the name, title and artist properties.
 const bollywoodsongs = [
   { name: "Bekhayali", title: "Bekhayali", artist: "Sachet Tandon" },
@@ -322,7 +310,6 @@ const bollywoodsongs = [
   { name: "CocaCola", title: "Coca Cola", artist: "Tony Kakkar, Neha Kakkar" },
   { name: "SaddaHaq", title: "Sadda Haq", artist: "Mohit Chauhan" },
 ];
-
 // Array of Hollywood songs, in which each song is an object with the name, title and artist properties.
 const hollywoodsongs = [
   { name: "Faded", title: "Faded", artist: "Alan Walker" },
@@ -361,7 +348,6 @@ function toastMessage(msg) {
     x.className = x.className.replace("show", "");
   }, 3000);
 }
-
 //code for dynamic table
 const refreshLikedList = () => {
   const container_liked_list = document.getElementById("container-liked-list");
@@ -409,7 +395,6 @@ const refreshLikedList = () => {
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
-
         cell1.innerHTML = no;
         cell2.innerHTML = i;
         cell3.innerHTML = results.artist;
@@ -437,13 +422,11 @@ function changeimagewidth() {
     }
   }
 }
-
 const hidevisible = () => {
   // function to hide the homepage content and show the main content.
   homepage_content.classList.remove("hidden"); // removing the hidden class from the homepage content.
   main_div.classList.add("hidden");
 };
-
 // Wrapping all the songs array in one array by Type of songs.
 const allsongs = [
   hollywoodsongs,
@@ -478,7 +461,6 @@ const allcategories = [
   "JubinNautiyal",
   "AtifAslam",
 ];
-
 let songs = [];
 let category;
 let islikedplaying = false;
@@ -490,7 +472,6 @@ const loadfirstsong = (
   loadSong(songs[0]);
   homepage_content.classList.add("hidden");
   main_div.classList.remove("hidden");
-
   playmusic();
 };
 function findSongCategory(songTitle) {
@@ -511,12 +492,9 @@ const loadlikedsong = (obj, i = 0) => {
   loadSong(likedSongs[index - 1]);
   homepage_content.classList.add("hidden");
   main_div.classList.remove("hidden");
-
   playmusic();
 };
-
 let isplaying = false; // variable to check if the song is playing or not.
-
 const playmusic = () => {
   // function to play the song.
   isplaying = true;
@@ -524,7 +502,6 @@ const playmusic = () => {
   play.classList.replace("fa-play", "fa-pause"); // replacing the play icon with pause icon.
   //songimg.classList.add("anime");
 };
-
 const pausemusic = () => {
   // function to pause the song.
   isplaying = false;
@@ -532,9 +509,7 @@ const pausemusic = () => {
   play.classList.replace("fa-pause", "fa-play"); // replacing the pause icon with play icon.
   //songimg.classList.remove("anime");
 };
-
 currSong = 0; // variable to store the current song number.
-
 const loadSong = (song) => {
   // function to load the song.
   // console.log(song);
@@ -554,13 +529,16 @@ const loadSong = (song) => {
   }
 };
 
-const nextSong = () => {
+const nextSong = (e) => {
   // function to play the next song.
-  if (islikedplaying) {
+  if(loopActive && e.type === 'ended'){
+    loadSong(songs[currSong])
+    playmusic();
+  }
+  else if (islikedplaying) {
     currSong = (currSong + 1) % likedSongs.length;
     category = findSongCategory(title.innerHTML);
     console.log(category);
-
     loadSong(likedSongs[currSong]);
     playmusic();
   } else {
@@ -569,7 +547,6 @@ const nextSong = () => {
     playmusic(); // calling the playmusic function to play the next song.
   }
 };
-
 const prevSong = () => {
   // function to play the previous song.
   console.log(songs[currSong]);
@@ -584,7 +561,6 @@ const prevSong = () => {
     playmusic();
   }
 };
-
 const shuffleSong = () => {
   console.log(currSong);
   prevsong = currSong;
@@ -608,10 +584,21 @@ const shuffleSong = () => {
   }
 };
 
+let loopActive = false;
+const loopSong = () => {
+  // function to check if the song is looping or not.
+  if (loopActive) {
+    loopActive = false;
+    loop.style.color = '#3333ff';
+  } else {
+    loopActive = true;
+    loop.style.color = 'white';
+  }
+}
+
 const downloadCurrentSong = () => {
   const currentSong = songs[currSong];
   const downloadUrl = `songs-images/${category}/${currentSong.name}.mp3`;
-
   fetch(downloadUrl)
     .then((response) => response.blob())
     .then((blob) => {
@@ -627,29 +614,23 @@ const downloadCurrentSong = () => {
       console.error('Error fetching the file:', error);
     });
 };
-
 play.addEventListener("click", () => {
   // event listener to play or pause the song.
-
   if (isplaying) pausemusic();
   else playmusic();
 });
-
 home.onclick = function () {
   if (isplaying) pausemusic();
   islikedplaying = false
 };
-
 categories.onclick = function () {
   if (isplaying) pausemusic();
   islikedplaying = false
 };
-
 artists.onclick = function () {
   if (isplaying) pausemusic();
   islikedplaying = false
 };
-
 const skipback = () => {
   if (music.currentTime >= 10) {
     music.currentTime -= 10; // Skip back 5 seconds
@@ -657,7 +638,6 @@ const skipback = () => {
     music.currentTime = 0; // If less than 5 seconds have passed, set currentTime to 0
   }
 };
-
 // Add event listener for the like toggle button
 likeToggle.addEventListener("change", function () {
   song = title.textContent;
@@ -670,30 +650,23 @@ likeToggle.addEventListener("change", function () {
   }
   refreshLikedList();
 });
-
 music.addEventListener("timeupdate", (event) => {
   // event listener to update the progress bar of the song.
   const { currentTime, duration } = event.srcElement; // getting the current time and duration of the song.
   let progress_time = (currentTime / duration) * 100; // calculating the progress time of the song.
   progress.style.width = `${progress_time}%`; // changing the width of the progress bar.
-
   // updating duration time for each song
-
   let min_duration = Math.floor(duration / 60); // calculating the minutes of the song.
   let sec_duration = Math.floor(duration % 60); // calculating the seconds of the song.
-
   if (sec_duration < 10) {
     sec_duration = `0${sec_duration}`;
   } // adding 0 before the seconds if the seconds are less than 10.
   if (duration) {
     song_duration.textContent = `${min_duration}:${sec_duration}`;
   } // changing the duration of the song.
-
   // updating current time for a song curretly playing
-
   let min_currtime = Math.floor(currentTime / 60); // calculating the minutes of the song.
   let sec_currtime = Math.floor(currentTime % 60); // calculating the seconds of the song.
-
   if (sec_currtime < 10) {
     sec_currtime = `0${sec_currtime}`;
   } // adding 0 before the seconds if the seconds are less than 10.
@@ -701,56 +674,42 @@ music.addEventListener("timeupdate", (event) => {
     current_time.textContent = `${min_currtime}:${sec_currtime}`;
   } // changing the current time of the song.
 });
-
 window.addEventListener("load", () => {
   refreshLikedList();
 });
 progress_div.addEventListener("click", (event) => {
   // event listener to change the progress bar of the song.
-
   const { duration } = music; // getting the duration of the song.
   let move_progress = (event.offsetX / event.srcElement.clientWidth) * duration;
   console.log(move_progress);
   music.currentTime = move_progress; // changing the current time of the song.
 });
-
 music.addEventListener("ended", nextSong); // Event listener to play the next song when the current song ends.
-
 next.addEventListener("click", nextSong); // Event listener to play the next song when the next button is clicked.
-
 prev.addEventListener("click", prevSong); // Event listener to play the previous song when the previous button is clicked.
 
 shuffle.addEventListener("click", shuffleSong);
 
+loop.addEventListener("click", loopSong);
+
 back.addEventListener("click", skipback);
 
 download.addEventListener('click', downloadCurrentSong); // Adding an event listener to the download button
-
-
 // spotify functionality
-
-
 //var redirect_uri = "https://deploy-preview-40--swetify.netlify.app/";
-
 var redirect_uri="https://swetify.netlify.app/";
-
 //var redirect_uri= 'http://localhost:5501/';
-
 var client_id = "e5a392471667465499be5e9bc54c24dc";
 var client_secret = "3a7df71fe8554b5faaa1bd69c11265c9";
-
 var stateKey = 'spotify_auth_state';
-
 function generateRandomString(length) {
   var text = '';
   var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
   for (var i = 0; i < length; i++) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
 };
-
 function getHashParams() {
   var hashParams = {};
   var e, r = /([^&;=]+)=?([^&;]*)/g,
@@ -760,12 +719,8 @@ function getHashParams() {
   }
   return hashParams;
 }
-
-
 function authorize() {
-
   var params = getHashParams();
-
   var access_token = params.access_token,
     state = params.state,
     storedState = localStorage.getItem(stateKey);
@@ -775,10 +730,8 @@ function authorize() {
     console.log("access token recieved");
   }
   var state = generateRandomString(16);
-
   localStorage.setItem(stateKey, state);
   var scope = 'user-read-private user-read-email user-top-read';
-
   var url = 'https://accounts.spotify.com/authorize';
   url += '?response_type=token';
   url += '&client_id=' + encodeURIComponent(client_id);
@@ -786,21 +739,17 @@ function authorize() {
   url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
   url += '&state=' + encodeURIComponent(state);
   window.location = url;
-
 }
-
 function scrollToTarget() {
   var element = document.getElementById('your spotify music');
   element.scrollIntoView({ behavior: 'smooth' });
 }
-
 function toggleVisibility() {
   var login_container = document.getElementById('login_container');
   login_container.style.display = (login_container.style.display === 'none') ? 'block' : 'none';
   var spotify_window = document.getElementById('spotify-window');
   spotify_window.style.display = (spotify_window.style.display === 'none' || spotify_window.style.display === '') ? 'block' : 'none';
 }
-
 if (window.location.href.includes('access_token')) {
   // If it does, call the scrollToTarget function
   scrollToTarget();
@@ -808,10 +757,8 @@ if (window.location.href.includes('access_token')) {
   getProfile();
   getTopSongs();
 }
-
 async function getProfile() {
   var params = getHashParams();
-
   var access_token = params.access_token;
   const response = await fetch('https://api.spotify.com/v1/me', {
     headers: {
@@ -822,11 +769,8 @@ async function getProfile() {
   console.log(data)
   setProfileData(data);
 }
-
-
 async function getTopSongs() {
   var params = getHashParams();
-
   var access_token = params.access_token;
   const response = await fetch('https://api.spotify.com/v1/me/top/tracks?offset=0&limit=10&time_range=long_term', {
     headers: {
@@ -836,10 +780,8 @@ async function getTopSongs() {
   const data = await response.json();
   renderTopSongs(data);
 }
-
 async function getTopArtists() {
   var params = getHashParams();
-
   var access_token = params.access_token;
   const response = await fetch('https://api.spotify.com/v1/me/top/artists?offset=0&limit=10&time_range=long_term', {
     headers: {
@@ -849,37 +791,28 @@ async function getTopArtists() {
   const data = await response.json();
   renderTopArtists(data);
 }
-
 function setProfileData(data) {
   const display_name = document.getElementById('display_name');
   display_name.innerHTML = data.display_name;
-
   const user_email = document.getElementById('user-email');
   user_email.innerHTML = data.email;
-
   const user_country = document.getElementById('user-country');
   user_country.innerHTML = data.country;
-
   const user_external_uri = document.getElementById('user-external-uri');
   user_external_uri.innerHTML = `<a href="${data.external_urls.spotify}" target="_blank">${data.external_urls.spotify}</a>`;
 }
-
 function renderTopArtists(data) {
-
   //hide top songs list
   var topSongsListElement = document.getElementById('top_songs_list');
   // Remove all child elements (songs) from the top songs list
   while (topSongsListElement.firstChild) {
     topSongsListElement.removeChild(topSongsListElement.firstChild);
   }
-
   var topSongsListElement = document.getElementById('top_artists_list');
-
   // Loop through the top songs data and create HTML elements for each song
   data.items.forEach(function (song) {
     var songItemElement = document.createElement('div');
     songItemElement.classList.add('song-item');
-
     // Add song information to the HTML
     songItemElement.innerHTML = `
                    <div class="list-displayer">
@@ -893,28 +826,22 @@ function renderTopArtists(data) {
                    </div> 
                    </div>
                `;
-
     // Append the song item to the top songs list
     topSongsListElement.appendChild(songItemElement);
   });
 }
-
 function renderTopSongs(data) {
-
   //hide top artists list
   var topSongsListElement = document.getElementById('top_artists_list');
   // Remove all child elements (songs) from the top songs list
   while (topSongsListElement.firstChild) {
     topSongsListElement.removeChild(topSongsListElement.firstChild);
   }
-
   var topSongsListElement = document.getElementById('top_songs_list');
-
   // Loop through the top songs data and create HTML elements for each song
   data.items.forEach(function (song) {
     var songItemElement = document.createElement('div');
     songItemElement.classList.add('song-item');
-
     // Add song information to the HTML
     songItemElement.innerHTML = `
                    <div class="list-displayer">
@@ -931,21 +858,14 @@ function renderTopSongs(data) {
     topSongsListElement.appendChild(songItemElement);
   });
 }
-
-
 function userLogout() {
   let comfirm = confirm("logout??")
   if (comfirm) {
     // Redirect the user to the login page or perform any other necessary actions
     window.location.href = '/';
   }
-
 }
-
-
 function toggleProfile() {
-
   var profileData = document.getElementById("profile-data");
   profileData.style.display = (profileData.style.display === "none") ? "flex" : "none";
-
 }
