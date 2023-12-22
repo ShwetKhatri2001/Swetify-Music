@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Let's Play On Swetify</title>
-  
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Open Graph Protocols -->
-    <meta property="og:title" content="Let's Play On Swetify" />
-    <meta property="og:description" content="Play and Sing with us Now !" />
-    <meta property="og:image" content="homepage/swetifylogo.jpg" />
-    <meta property="og:url" content="https://swetify.netlify.app/" />
+  <!-- Open Graph Protocols -->
+  <meta property="og:title" content="Let's Play On Swetify" />
+  <meta property="og:description" content="Play and Sing with us Now !" />
+  <meta property="og:image" content="homepage/swetifylogo.jpg" />
+  <meta property="og:url" content="https://swetify.netlify.app/" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg" />
 
-    <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
 
-    <!-- Custom CSS -->
-    <link href="swetify.css" type="text/css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="swetify.css" type="text/css" rel="stylesheet" />
 
-    <!-- Custom Script -->
-    <script src="script.js" defer></script>
+  <!-- Css file for Get-In-Touch Section -->
+  <link href="getInTouch.css" type="text/css" rel="stylesheet" />
+
+
+  <!-- Custom Script -->
+  <script src="script.js" defer></script>
 
 </head>
+
 <body>
   <div id="snackbar">Some text some message..</div>
   <header>
@@ -306,11 +313,59 @@
       </div>
     </div>
     <!-- the liked list -->
-    <div class="container categories-heading">
+    <div class="container categories-heading" style="margin-bottom:20vh;">
       <span> Your favourite music</span>
     </div>
     <div id="fav-list">
+
     </div>
+
+    <!-- Get In Touch Section -->
+    <div class="container categories-heading">
+      <span> Get In Touch</span>
+    </div>
+    <div class="modal-box">
+      <img class="banner-img-contact" src="homepage/contact4.svg"></img>
+
+      <div class='modal-div'>
+
+        <p class='contact-subheader'>Get In Touch</p>
+        <div class='input-contact-flexbox'>
+          <div style="margin:3vh 4vh">
+            <p class='input-header'>First Name</p>
+            <input class='input-box' style="width:100%; border-radius: none;" type="text" placeholder='Shwet' id="FNAME"
+              required></input>
+
+          </div>
+
+          <div style="margin:3vh 4vh">
+            <p class='input-header'>Last Name</p>
+            <input class='input-box' style="width:100%" type="text" placeholder='Khatri' id="LNAME"></input>
+
+          </div>
+        </div>
+        <div class='input-contact-flexbox'>
+          <div style="margin:3vh 4vh">
+            <p class='input-header'>Email</p>
+            <input class='input-box' style="width:100%" type="text" placeholder='shwet@gmail.com' id="EMAIL"
+              onkeyup="validateEmail()" required></input>
+            <span id="error" style="font-size: 2rem;"></span>
+
+          </div>
+
+
+        </div>
+
+        <div style="margin:4vh">
+          <p class='input-header'>Leave a Message!</p>
+          <textarea class='contact-textarea' cols="43" rows="3" placeholder='Hello!' id="TEXT" required></textarea>
+
+        </div>
+        <button class='contact-btn' id="send_button" onclick="Checkdata()">Send</button>
+      </div>
+    </div>
+
+
     <!-- footer section  -->
     <footer>
       <div class="footer">
@@ -399,5 +454,76 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script> -->
   <script src="swetify.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function validateEmail() {
+      var email = document.getElementById('EMAIL').value;
+      console.log(email);
+      var error = document.getElementById('error');
+      if (!email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        error.innerHTML = "Please Enter a Valid Email Id";
+        error.style.color = "red";
+        return false;
+      }
+      error.innerHTML = "✅ ";
+      return true;
+    }
+
+    function Checkdata() {
+      var fname = document.getElementById("FNAME").value;
+      var lname = document.getElementById("LNAME").value;
+      var email = document.getElementById("EMAIL").value;
+      var text = document.getElementById("TEXT").value;
+      if (!fname || !lname || !email || !text) {
+
+        Swal.fire("Please Fill the data", "", "info");
+      }
+    }
+
+    var btn = document.getElementById("send_button");
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var fname = document.getElementById("FNAME").value;
+      var lname = document.getElementById("LNAME").value;
+      var email = document.getElementById("EMAIL").value;
+      console.log(`${email}`);
+      var text = document.getElementById("TEXT").value;
+      console.log(text.length);
+
+      //Login to EmailJs
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "",
+        Password: "get_from_elstice_mail.com",
+        To: 'your_email_id',
+        From: `${email}`,
+        Subject: `New Contact Enquiry`,
+        Body: `<br>${text} <br><br> Name: ${fname} ${lname} <br> Email: ${email} <br>Contact:${contact}`
+      }).then(
+        async message => {
+          console.log(message);
+          if (message == "OK") {
+            await Swal.fire({
+              title: "Success!",
+              text: "Message Sent Successfully!",
+              icon: "success"
+            });
+
+          }
+          else {
+            await Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Something went wrong!",
+            });
+          }
+
+        }
+      )
+    })
+
+  </script>
 </body>
+
 </html>
