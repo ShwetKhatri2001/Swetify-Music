@@ -26,6 +26,9 @@
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
 
+    <!-- Include Particle.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
       integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
@@ -40,6 +43,7 @@
     <script src="script.js" defer></script>
 
 </head>
+
 <body>
   <div id="snackbar">Some text some message..</div>
   <header>
@@ -121,11 +125,15 @@
       </div>
     </nav>
   </header>
+ 
+
   <div class="" id="homepage_content">
+
     <img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive" />
     <div class="container categories-heading" id="top-picks">
       <span> Top Picks For You </span>
     </div>
+    <div id="particles-js"></div>
     <div id="main-content" class="container">
       <section class="row">
         <div class="col-md-1"></div>
@@ -133,7 +141,12 @@
           <a href="#" id="top-holly">
             <div class="category-title small-category" onclick="loadfirstsong(0)">
               <img src="homepage/TopHollywoodHits.jpg" alt="TopHollywoodHits" width="350" height="350" class="image" />
-              <span>Top Hollywood Hits </span>
+              <span>Top Hollywood Hits
+                <hr>
+                <p>
+                  A Playlist packed with most viral global Hollyood song.
+                </p>
+            </span>
             </div>
           </a>
         </div>
@@ -142,7 +155,12 @@
           <a href="#" id="top-bolly">
             <div class="category-title small-category" onclick="loadfirstsong(1)">
               <img src="homepage/TopBollywoodHits.jpg" alt="TopBollywoodHits" width="350" height="350" class="image" />
-              <span>Top Bollywood Hits</span>
+              <span>Top Bollywood Hits
+                <hr>
+                <p>
+                  A Playlist designed and curated for Top Indian latest Taste for you.
+                </p>
+              </span>
             </div>
           </a>
         </div>
@@ -399,5 +417,119 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script> -->
   <script src="swetify.js"></script>
+
+  <script>
+    particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": false,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "star",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "http://wiki.lexisnexis.com/academic/images/f/fb/Itunes_podcast_icon_300.jpg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 4,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 14,
+      "direction": "left",
+      "random": false,
+      "straight": true,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 200,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+  </script>
+  
 </body>
 </html>

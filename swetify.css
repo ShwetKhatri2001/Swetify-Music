@@ -12,9 +12,15 @@ body {
       #316aff,
       #2852ff,
       #3333ff);
-
+ 
   overflow-x: hidden;
   font-size: 14px;
+}
+#particles-js {
+  position:absolute;
+  width: 100%;
+  height: 100vh;
+  
 }
 
 html {
@@ -134,22 +140,17 @@ html {
 /******** Home Page Main Content Styles ***********/
 
 .categories-heading {
-  border-radius: 30px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.5em;
-  background-color: #000000;
-  width: 60%;
+
+  font-family: sans-serif;
+  font-size: 3em;
   color: white;
   opacity: 0.8;
+  font-weight: 800;
+  margin-top: 20px;
   transition: width 2s, opacity 2s;
-  border: 2px solid #3f0c1f;
-  margin: 15px auto 15px;
+  padding: 40px;
   text-align: center;
-}
-
-.categories-heading:hover {
-  width: 95%;
-  opacity: 1;
+  
 }
 
 .category-title {
@@ -167,21 +168,35 @@ html {
   height: 100%;
   position: absolute;
   top: 50%;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 500;
   right: 0;
+  padding-top: 3%;
   width: 100%;
   text-align: center;
   align-items: center;
-  font-size: 2.5em;
+  font-size: 1.7em;
   background-color: #000000;
   color: white;
   opacity: 0.7;
-  transition: height 2s, opacity 2s, top 2s;
+  transition: height 2s, opacity 2s, top 1s;
+}
+.category-title span  p{
+  font-size: 15px;
+  padding:0px 50px 0 50px;
 }
 
+.category-title hr {
+  width: 50%;
+  margin-left: 25%;
+  
+ 
+}
 .category-title:hover span {
   top: 85%;
   opacity: 1;
 }
+
 
 .category-title:hover {
   box-shadow: 1px 2px 5px 5px #ffffff;
