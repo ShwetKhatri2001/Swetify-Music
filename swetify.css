@@ -56,6 +56,46 @@ body {
 }
 
 
+.playlist-card {
+  margin: 30px;
+  scale:1.14;
+  background-color: #343434;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.436);
+  overflow: hidden;
+  width: 200px;
+  color: rgb(235, 235, 235);
+  transition: transform 0.3s ease;
+}
+.playlist-card img{
+  border-radius: 25px;
+  padding: 15px;
+}
+.playlist-card:hover {
+  transform: scale(1.02);
+}
+
+.playlist-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.playlist-details {
+  padding: 16px;
+}
+
+.playlist-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.playlist-description {
+  font-size: 14px;
+  color: #7b7b7b;
+}
+
 
 #particles-js {
   position:absolute;
@@ -64,6 +104,13 @@ body {
   z-index: -2;
   
 }
+
+.section-brake{
+  display: flex;
+  flex-direction: row;
+}
+
+
 
 html {
   font-size: 62.5%;
