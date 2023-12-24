@@ -1,25 +1,67 @@
 body {
+  background-color: #000000;
   background-image: linear-gradient(to left bottom,
-      #f265b5,
-      #df75cb,
-      #c984dc,
-      #b291e6,
-      #9c9cea,
-      #8c98ed,
-      #7994f1,
-      #6191f4,
-      #477efb,
-      #316aff,
-      #2852ff,
-      #3333ff);
+      #f265b528,
+      #df75cb28,
+      #c984dc28,
+      #b291e628,
+      #9c9cea28,
+      #8c98ed28,
+      #7994f128,
+      #6191f428,
+      #477efb28,
+      #316aff28,
+      #2853ff28,
+      #3333ff28);
  
   overflow-x: hidden;
   font-size: 14px;
 }
+
+#container {
+  color:white;
+  display: flex;
+  height: 100vh;
+}
+
+#side-panel {
+  width: 250px;
+  background-color: rgba(195, 195, 195, 0.175);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#content {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Add your styles for navigation links or other content in the side panel */
+#side-panel a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#side-panel a i {
+  padding: 0px 10px 0px 0px;
+}
+#side-panel a:hover {
+  color: #ff0000;
+}
+
+
+
 #particles-js {
   position:absolute;
   width: 100%;
   height: 100vh;
+  z-index: -2;
   
 }
 
@@ -36,37 +78,39 @@ html {
   background-color: #000000;
   border-radius: 0;
   border: 0;
+  
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
 }
 
 #logo-img {
   background: url("homepage/swetifylogo.jpg") no-repeat;
-  width: 150px;
-  height: 150px;
+  width: 130px !important;
+  scale:0.8;
+  height: 150px !important;
 }
 
 #PlaySing {
-  margin-top: 50px;
+  padding-top: 40px;
+  font-size: 15px;
 }
 
 #headphones {
-  margin-top: 20px;
-  font-size: 30px;
+
+  font-size: 34px;
 }
 
 .navbar-brand {
   height: 80px;
-  padding-top: 25px;
+  padding-top: 37px;
   font-size: 18px;
 }
 
 .navbar-brand h1 {
   /*Music Website Name*/
-  color: #1e70e3;
+  color: #fcfcfc;
   font-weight: bold;
   font-size: 2.2em;
-  text-shadow: 1px 1.5px 0 white;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 0.75;
@@ -85,12 +129,13 @@ html {
 }
 
 #nav-list a {
-  color: white;
+  color: rgb(209, 209, 209);
   text-align: center;
-  font-size: 1.6em;
-  text-shadow: 0.5px 1px 0 white;
+  font-size: 1.8em;
+  text-shadow: 0.5px 1px 0 rgb(87, 87, 87);
   /* border: 1px solid grey; */
-  margin-left: 0.25rem;
+  padding: 20px 25px 20px 25px;
+  margin: 0px 5px 0px 5px;
   /* box-shadow: 0 0 0 2px rgb(160, 148, 148); */
 }
 
@@ -105,8 +150,8 @@ html {
 
 #nav-list a:hover,
 .topicons:hover {
-  background-color: white;
-  color: black;
+  background-color: rgb(88, 88, 88);
+  border-radius: 5px;
   text-shadow: 1px 1px 0 #3333ff;
 }
 

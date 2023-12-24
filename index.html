@@ -44,41 +44,84 @@
 
 </head>
 
+
+
 <body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div id="side-panel">
+        <a href="index.html">
+          <!-- <div id="logo-img" alt="Logo img"></div> -->
+          <h2>Swetify</h2>
+        </a>
+       
+        <br>
+        <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
+        <a href="#popular categories"><i class="glyphicon glyphicon-music"></i> Popular Categories</a>
+        <a href="#best of artists"><i class="fa-solid fa-user"></i>  Best of Artists</a>
+        <a href="#"> <i class="fa-solid fa-heart"></i> Liked Music</a>
+        <!-- Add more links as needed -->
+    </div>
+    <div id="content">
+        <!-- Your main content goes here -->
+        <h1>
+          <span class="glyphicon glyphicon-headphones" id="headphones"></span>
+          Welcome to Swetify Music
+        </h1>
+        <p>The ultimate music streaming platform for real music enthusiasts.</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div id="snackbar">Some text some message..</div>
   <header>
     <nav id="header-nav" class="navbar navbar-default">
       <div class="container-not-bs">
         <div class="navbar-header">
           <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img" alt="Logo img"></div>
+           
           </a>
-          <div class="navbar-brand">
-            <a href="index.html">
-              <h1>Swetify</h1>
-            </a>
-            <span class="glyphicon glyphicon-headphones" id="headphones"></span>
-            <span id="PlaySing"> Play and Sing with us Now !</span>
-          </div>
+         
         </div>
         <div class="lg-display">
           <ul id="nav-list" class="nav navbar-nav navbar-right">
             <li onclick="hidevisible()">
               <a href="#" id="home" class="nav-elem">
                 <i class="glyphicon glyphicon-home"></i>
-                <span>Home</span>
+               
               </a>
             </li>
             <li onclick="hidevisible()">
               <a href="#popular categories" id="popular-categories" class="nav-elem">
                 <i class="glyphicon glyphicon-music"></i>
-                <span>Popular Categories</span>
+               
               </a>
             </li>
             <li onclick="hidevisible()">
               <a href="#best of artists" id="artists" class="nav-elem">
-                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                <span>Best of Artists</span>
+                <i class="fa-solid fa-heart"></i>
+               
               </a>
             </li>
             <!-- <li onclick="hidevisible()">
@@ -129,7 +172,7 @@
 
   <div class="" id="homepage_content">
 
-    <img src="homepage/homemusic.jpg" alt="HomeMusic picture" class="img-responsive" />
+   
     <div class="container categories-heading" id="top-picks">
       <span> Top Picks For You </span>
     </div>
@@ -425,7 +468,7 @@
       "value": 100,
       "density": {
         "enable": false,
-        "value_area": 800
+        "value_area": 900
       }
     },
     "color": {
@@ -475,7 +518,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 14,
+      "speed": 5,
       "direction": "left",
       "random": false,
       "straight": true,
