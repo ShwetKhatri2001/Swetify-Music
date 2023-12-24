@@ -327,27 +327,27 @@
     <div class="modal-box">
       <img class="banner-img-contact" src="homepage/contact4.svg"></img>
 
-      <div class='modal-div'>
+      <form class='modal-div' action=" " method="POST">
 
         <p class='contact-subheader'>Get In Touch</p>
         <div class='input-contact-flexbox'>
           <div style="margin:3vh 4vh">
-            <p class='input-header'>First Name</p>
-            <input class='input-box' style="width:100%; border-radius: none;" type="text" placeholder='Shwet' id="FNAME"
+            <label class='input-header' >First Name</label>
+            <input class='input-box' name="First Name" style="width:100%; border-radius: none;" type="text" placeholder='Shwet' id="FNAME"
               required></input>
 
           </div>
 
           <div style="margin:3vh 4vh">
-            <p class='input-header'>Last Name</p>
-            <input class='input-box' style="width:100%" type="text" placeholder='Khatri' id="LNAME"></input>
+            <label class='input-header' >Last Name</label>
+            <input class='input-box' name="Last Name" style="width:100%" type="text" placeholder='Khatri' id="LNAME"></input>
 
           </div>
         </div>
         <div class='input-contact-flexbox'>
           <div style="margin:3vh 4vh">
-            <p class='input-header'>Email</p>
-            <input class='input-box' style="width:100%" type="text" placeholder='shwet@gmail.com' id="EMAIL"
+            <label class='input-header' >Email</label>
+            <input class='input-box' name="Email" style="width:100%" type="text" placeholder='shwet@gmail.com' id="EMAIL"
               onkeyup="validateEmail()" required></input>
             <span id="error" style="font-size: 2rem;"></span>
 
@@ -357,12 +357,12 @@
         </div>
 
         <div style="margin:4vh">
-          <p class='input-header'>Leave a Message!</p>
-          <textarea class='contact-textarea' cols="43" rows="3" placeholder='Hello!' id="TEXT" required></textarea>
+          <label class='input-header' >Leave a Message!</label>
+          <textarea class='contact-textarea' name="message" cols="43" rows="3" placeholder='Hello!' id="TEXT" required></textarea>
 
         </div>
-        <button class='contact-btn' id="send_button" onclick="Checkdata()">Send</button>
-      </div>
+        <button class='contact-btn' onclick="Checkdata()" >Send</button>
+      </form>
     </div>
 
 
@@ -481,48 +481,7 @@
       }
     }
 
-    var btn = document.getElementById("send_button");
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      var fname = document.getElementById("FNAME").value;
-      var lname = document.getElementById("LNAME").value;
-      var email = document.getElementById("EMAIL").value;
-      console.log(`${email}`);
-      var text = document.getElementById("TEXT").value;
-      console.log(text.length);
-
-      //Login to EmailJs
-      Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "",
-        Password: "get_from_elstice_mail.com",
-        To: 'your_email_id',
-        From: `${email}`,
-        Subject: `New Contact Enquiry`,
-        Body: `<br>${text} <br><br> Name: ${fname} ${lname} <br> Email: ${email} <br>Contact:${contact}`
-      }).then(
-        async message => {
-          console.log(message);
-          if (message == "OK") {
-            await Swal.fire({
-              title: "Success!",
-              text: "Message Sent Successfully!",
-              icon: "success"
-            });
-
-          }
-          else {
-            await Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Something went wrong!",
-            });
-          }
-
-        }
-      )
-    })
-
+ 
   </script>
 </body>
 

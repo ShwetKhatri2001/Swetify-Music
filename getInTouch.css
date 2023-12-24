@@ -4,12 +4,12 @@
     background-color:#F3F8FF;
      padding:2vh ;
       border-radius:0 10px 10px 0; 
-      box-shadow:4px 4px 4px black
-    
+      box-shadow:4px 4px 4px black;
+    font-family:"Montserrat";
     
   }
   *{
-  font-family: "Jost", sans-serif;
+  
   scroll-behavior: smooth;
   }
   .contact-subheader{
