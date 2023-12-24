@@ -13,9 +13,10 @@ body {
   margin-top: 50px;
   position: fixed;
   height: 100%;
-  width: 250px;
-  background-color: rgba(195, 195, 195, 0.175);
+  width: 230px;
+  background-color: rgba(195, 195, 195, 0.152);
   backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 20px;
   box-sizing: border-box;
@@ -23,10 +24,23 @@ body {
 
 #content {
   flex: 1;
-  margin-left: 250px;
+  margin-left: 230px;
   box-sizing: border-box;
 }
-
+.slider-wrapper button {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background: #000000;
+  font-size: 2.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
 #cont2{
   margin-top: 50px;
   padding: 30px;
@@ -122,7 +136,6 @@ body {
 
 html {
   font-size: 62.5%;
-
   scroll-behavior: smooth;
 }
 
@@ -132,16 +145,17 @@ nav {
   padding: 5px;
   position: fixed !important;
   z-index: 99999;
-  padding-left: 30px;
+  padding-left: 50px;
   width: 100%;
   position: absolute;
-  margin-left: -250px !important;
+  margin-left: -230px !important;
   background-color: #0f0f0f !important;
 }
 #header-nav {
   background-color: #000000;
   border-radius: 0;
   border: 0;
+  
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
 }
@@ -276,6 +290,7 @@ nav {
   height: 100%;
   position: absolute;
   top: 50%;
+  font-family:'Times New Roman', Times, serif;
   font-weight: 500;
   right: 0;
   padding-top: 3%;
@@ -411,7 +426,7 @@ nav {
 }
 
 .footer {
-  height: 35vh;
+  height: 25vh;
   align-items: center;
   justify-content: space-around;
   display: flex;
@@ -1334,6 +1349,7 @@ tr:hover {
 }
 
 .button-log button {
+  background: #1db954;
   font-size: 20px;
   font-weight: 600;
   width: 190px;
