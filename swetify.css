@@ -1,20 +1,5 @@
 body {
-  background-color: #000000;
-  background-image: linear-gradient(to left bottom,
-      #f265b528,
-      #df75cb28,
-      #c984dc28,
-      #b291e628,
-      #9c9cea28,
-      #8c98ed28,
-      #7994f128,
-      #6191f428,
-      #477efb28,
-      #316aff28,
-      #2853ff28,
-      #3333ff28);
  
-  overflow-x: hidden;
   font-size: 14px;
 }
 
@@ -25,6 +10,9 @@ body {
 }
 
 #side-panel {
+  margin-top: 50px;
+  position: fixed;
+  height: 100%;
   width: 250px;
   background-color: rgba(195, 195, 195, 0.175);
   backdrop-filter: blur(10px);
@@ -35,10 +23,14 @@ body {
 
 #content {
   flex: 1;
-  padding: 20px;
+  margin-left: 250px;
   box-sizing: border-box;
 }
 
+#cont2{
+  margin-top: 50px;
+  padding: 30px;
+}
 /* Add your styles for navigation links or other content in the side panel */
 #side-panel a {
   color: #fff;
@@ -98,7 +90,23 @@ body {
 
 
 #particles-js {
-  position:absolute;
+  background-color: #000000;
+  background-image: linear-gradient(to left bottom,
+      #f265b528,
+      #df75cb28,
+      #c984dc28,
+      #b291e628,
+      #9c9cea28,
+      #8c98ed28,
+      #7994f128,
+      #6191f428,
+      #477efb28,
+      #316aff28,
+      #2853ff28,
+      #3333ff28);
+ 
+  overflow-x: hidden;
+  position:fixed;
   width: 100%;
   height: 100vh;
   z-index: -2;
@@ -114,18 +122,26 @@ body {
 
 html {
   font-size: 62.5%;
-  font-family: "Jost", sans-serif;
+
   scroll-behavior: smooth;
 }
 
 /********* Home Page styles **********/
 /******* header *******/
-
+nav {
+  padding: 5px;
+  position: fixed !important;
+  z-index: 99999;
+  padding-left: 30px;
+  width: 100%;
+  position: absolute;
+  margin-left: -250px !important;
+  background-color: #0f0f0f !important;
+}
 #header-nav {
   background-color: #000000;
   border-radius: 0;
   border: 0;
-  
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
 }
@@ -144,7 +160,7 @@ html {
 
 #headphones {
 
-  font-size: 34px;
+  font-size: 30px;
 }
 
 .navbar-brand {
@@ -260,7 +276,6 @@ html {
   height: 100%;
   position: absolute;
   top: 50%;
-  font-family:'Times New Roman', Times, serif;
   font-weight: 500;
   right: 0;
   padding-top: 3%;
@@ -1428,7 +1443,7 @@ h2 {
 }
 
 #navs {
-  position: relative;
+  position: relative; 
 }
 
 #navs :nth-child(3) {
