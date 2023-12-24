@@ -24,7 +24,7 @@ let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
-const progress_el=document.getElementById("progress-el")
+
 
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
@@ -474,6 +474,7 @@ const loadfirstsong = (
   loadSong(songs[0]);
   homepage_content.classList.add("hidden");
   main_div.classList.remove("hidden");
+  console.log(title)
   playmusic();
 };
 function findSongCategory(songTitle) {
@@ -531,68 +532,7 @@ const loadSong = (song) => {
   }
 };
 
-//function to load songs from playlist
-let song=0;
-const loadplaylistsong = (
-  arrno,tsong
-) => {
-  songs = allsongs[arrno];
-  category = allcategories[arrno];
-  loadcurrSong(songs[tsong],category);
-  homepage_content.classList.add("hidden");
-  main_div.classList.remove("hidden");
-  song=tsong;
-  console.log("hii");
-  playmusic();
-};  
 
-const loadcurrSong = (tsong,category) => {
-  title.textContent = tsong.title;
-  artist.innerHTML = `<marquee>${tsong.artist}</marquee>`; // changing the artist of the song.
-  music.src = "../songs-images/" + category + "/" + tsong.name + ".mp3";
-  console.log(music.src); // changing the source of the song.
-  songimg.src = "../songs-images/" + category + "/" + tsong.name + ".jpg";
-  const likedState = localStorage.getItem(tsong.title);
-  if (likedState === null) {
-    likeToggle.checked = false;
-  } else if (likedState === "true") {
-    likeToggle.checked = true;
-  }
-};
-
-const loadnextsong=(arrno)=>{
-  song+=1;
-  console.log(song);
-  if(song>allsongs[arrno].length)
-  {
-    song=0;
-  }
-  loadplaylistsong(arrno,song);
-}
-
-const loadprevsong=(arrno)=>{
-  song-=1;
-  if(song<0)
-  {
-    song=allsongs[arrno].length;
-  }
-  loadplaylistsong(arrno,song);
-}
-
-progress_el.addEventListener("change",()=>
-{
-    music.currentTime=(progress_el.value*music.duration)/100;
-    console.log("hii");
-})
-
-music.addEventListener("timeupdate",()=>
-{
-    let time =parseInt((music.currentTime/music.duration)*100);
-    progress_el.value=time;
-    const currentTimeMinutes = Math.floor(music.currentTime / 60);
-      const currentTimeSeconds = Math.floor(music.currentTime % 60);
-    current_time.textContent = `${currentTimeMinutes}:${currentTimeSeconds < 10 ? '0' : ''}${currentTimeSeconds}`;
-})
 
 
 const nextSong = (e) => {
@@ -612,6 +552,7 @@ const nextSong = (e) => {
     loadSong(songs[currSong]); // calling the loadSong function to load the next song.
     playmusic(); // calling the playmusic function to play the next song.
   }
+  console.log("hii")
 };
 const prevSong = () => {
   // function to play the previous song.
