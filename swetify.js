@@ -406,6 +406,7 @@ const refreshLikedList = () => {
     favlist.appendChild(containerLL);
   }
 };
+
 changeimagewidth(); // calling the function to change the width of the images according to the screen size.
 function changeimagewidth() {
   var w =
@@ -555,7 +556,8 @@ const prevSong = () => {
     category = findSongCategory(title.innerHTML);
     loadSong(likedSongs[currSong]);
     playmusic();
-  } else {
+  } 
+  else {
     currSong = (currSong - 1 + songs.length) % songs.length; // changing the current song number.
     loadSong(songs[currSong]); // calling the loadSong function to load the previous song.
     playmusic();
