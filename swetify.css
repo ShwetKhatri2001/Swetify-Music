@@ -557,12 +557,13 @@ a {
 }
 
 footer .top {
+  
   border-radius: 80px;
   height: 50px;
   width: 50px;
   position: fixed;
-  bottom: 8px;
-  right: 10px;
+  bottom: 30px;
+  right: 30px;
   font-weight: bold;
   font-size: 19px;
   justify-content: center;
@@ -577,6 +578,7 @@ footer .top:active {
 }
 
 footer .top a {
+  
   color: rgb(229, 211, 211);
   padding: 14px;
 }
@@ -589,16 +591,7 @@ footer .top a:hover {
 }
 
 footer .top:hover {
-  border-radius: 80px;
-  height: 52px;
-  width: 50px;
-  position: fixed;
-  bottom: 14px;
-  right: 10px;
-  justify-content: center;
-  font-weight: bold;
-  padding: 0;
-  box-shadow: 0 5px 0 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0px 20px 5px rgba(255, 255, 255, 0.4);
 }
 
 /********* popular artists styles *************/
