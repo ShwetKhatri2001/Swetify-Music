@@ -493,6 +493,7 @@ nav a{
 }
 
 .footer {
+  width: auto;
   height: 15vh;
   align-items: center;
   justify-content: space-around;
@@ -503,7 +504,7 @@ nav a{
 .footer p {
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -1386,9 +1387,10 @@ tr:hover {
 }
 
 .welcome-text {
-  color: white;
-  font-size: 25px;
-  font-weight: 600;
+  color: rgb(176, 176, 176);
+  font-size: 20px;
+  padding-bottom: 20px;
+
 }
 
 .welcome-text p {
