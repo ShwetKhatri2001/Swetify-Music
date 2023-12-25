@@ -126,9 +126,11 @@ body {
   position:fixed;
   width: 100%;
   height: 100vh;
+ 
   z-index: -2;
   
 }
+
 
 .section-brake{
   display: flex;
@@ -1525,4 +1527,8 @@ h2 a{
   -moz-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
   box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
   font-size: 16px;
+}
+
+.container {
+  width: auto !important;
 }
