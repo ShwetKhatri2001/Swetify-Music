@@ -163,7 +163,6 @@ nav {
   padding-left: 50px;
   width: 100%;
   position: absolute;
-  margin-left: -230px !important;
   background-color: #0f0f0f !important;
 }
 #header-nav {
@@ -219,7 +218,9 @@ nav {
   margin-top: 0;
   font-style: bold;
 }
-
+nav a{
+  text-decoration: none !important;
+}
 #nav-list a {
   color: rgb(209, 209, 209);
   text-align: center;
@@ -492,7 +493,7 @@ nav {
 }
 
 .footer {
-  height: 25vh;
+  height: 15vh;
   align-items: center;
   justify-content: space-around;
   display: flex;
