@@ -142,6 +142,16 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes scrollbelow {
+  0%{
+      top: 0px;
+  }
+  100%{
+      top: 10px;
+      opacity: 0;
+      display: none;
+  }
+}
 /********* Home Page styles **********/
 /******* header *******/
 nav {
