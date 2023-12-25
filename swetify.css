@@ -599,7 +599,7 @@ footer .top:hover {
 
 /********* popular artists styles *************/
 .popularcat{
-  padding: 50px 0px 0px 0px;
+  padding: 60px 0px 0px 0px;
 }
 .artist-container {
   transition: transform 0.3s ease-in;
@@ -1531,4 +1531,10 @@ h2 a{
 
 .container {
   width: auto !important;
+}
+
+h3{
+  font-size: 28px;
+
+ 
 }
