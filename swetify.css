@@ -27,20 +27,7 @@ body {
   margin-left: 230px;
   box-sizing: border-box;
 }
-.slider-wrapper button {
-  position: absolute;
-  top: 50%;
-  height: 50px;
-  width: 50px;
-  color: #ffffff;
-  border: none;
-  outline: none;
-  background: #000000;
-  font-size: 2.2rem;
-  cursor: pointer;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
+
 #cont2{
   margin-top: 50px;
   padding: 30px;
@@ -145,6 +132,7 @@ body {
 .section-brake{
   display: flex;
   flex-direction: row;
+
 }
 
 
@@ -157,10 +145,11 @@ html {
 /********* Home Page styles **********/
 /******* header *******/
 nav {
-  padding: 5px;
+
+  padding-bottom: 15px;
   position: fixed !important;
   z-index: 99999;
-  padding-left: 50px;
+  padding-left: 38px;
   width: 100%;
   position: absolute;
   background-color: #0f0f0f !important;
@@ -291,7 +280,7 @@ nav a{
   
 }
 
-#prev-slide {
+#prev-slide, .slider-wrapper #prev-slide {
   left:250px;
   position: absolute;
   background-color: #dfdfdf2b;
@@ -311,7 +300,7 @@ nav a{
   scale: 1.03;
 }
 
-#next-slide {
+#next-slide , .slider-wrapper #next-slide{
   right:5px;
   position: absolute;
   font-size: 6.0rem;
@@ -325,7 +314,9 @@ nav a{
   border-radius: 50%;
 
 }
-
+#next-slide{
+  right: 30px;
+}
 .material-symbols-rounded::before {
   content: "";
   /* Add your styling for the chevron_left and chevron_right symbols */
@@ -465,20 +456,7 @@ nav a{
   position: relative;
 }
 
-.slider-wrapper button {
-  position: absolute;
-  top: 50%;
-  height: 50px;
-  width: 50px;
-  color: #ffffff;
-  border: none;
-  outline: none;
-  background: #000000;
-  font-size: 2.2rem;
-  cursor: pointer;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
+
 
 .slider-wrapper .slide-button:hover {
   background: #444;
@@ -488,9 +466,6 @@ nav a{
   left: 5px;
 }
 
-.slider-wrapper button#next-slide {
-  right: 5px;
-}
 
 .footer {
   width: auto;
@@ -617,7 +592,9 @@ footer .top:hover {
 }
 
 /********* popular artists styles *************/
-
+.popularcat{
+  padding: 50px 0px 0px 0px;
+}
 .artist-container {
   transition: transform 0.3s ease-in;
   border-radius: 50%;

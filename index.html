@@ -58,7 +58,7 @@
         <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
         <a href="#popular categories"><i class="glyphicon glyphicon-music"></i> Popular Categories</a>
         <a href="#bestofartist"><i class="fa-solid fa-user"></i>  Best of Artists</a>
-        <a href="#"> <i class="fa-solid fa-heart"></i> Liked Music</a>
+        <a href="#liked"> <i class="fa-solid fa-heart"></i> Liked Music</a>
         <!-- Add more links as needed -->
     </div>
     <nav id="header-nav" class="navbar navbar-default">
@@ -70,11 +70,15 @@
        
         <!-- Your main content goes here -->
         <div id="cont2">
-          <h1>
+          <div style="padding:28vh 0px ; height: 100vh; margin-top: 80px; text-align: center; ">
+          <h1 style="font-size: 60px; color: wheat;">
              Welcome to Swetify Music
           </h1>
           <br>
-          <!-- <p>The ultimate music streaming platform for real music enthusiasts.</p> -->
+          <i style="font-size: 18px;">The ultimate music streaming platform for real music enthusiasts.</i><br>
+         
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="6em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: wheat; font-size: 90px;"><path d="M12.0001 19.1643L18.2072 12.9572L16.793 11.543L12.0001 16.3359L7.20718 11.543L5.79297 12.9572L12.0001 19.1643ZM12.0001 13.5144L18.2072 7.30728L16.793 5.89307L12.0001 10.686L7.20718 5.89307L5.79297 7.30728L12.0001 13.5144Z"></path></svg>
+          </div>
           <h3>Top Picks</h3><br>
           <div class = "section-brake">
             <div class="playlist-card"  onclick="loadfirstsong(0)">
@@ -95,11 +99,11 @@
             </div>
         </div>
 
-          <h3 id="popular categories"> Poplular Categories </h3>
+          <h3 id="popular categories" class="popularcat"> Poplular Categories </h3>
       
          <div class = "section-brake">
 
-            <div class="slider_div">
+            <div class="slider_div ">
 
               <div class="center_div" id="centerdiv">
 
@@ -192,9 +196,9 @@
       
     <div class = "section-brake">
 
-        <div class="slider_div">
+        <div class="slider_div slider-wrapper">
 
-          <div class="center_div" id="centerdiv">
+          <div class="center_div " id="centerdiv">
 
               <div class="category-slider small-category" onclick="loadfirstsong(9)">
               <div class="artist-card" >
@@ -270,7 +274,7 @@
     <div class="login-container" id="login_container">
       <div class="inner-login-container">
         <div class="welcome-text">
-          <p>Login to Spotify and see your Top 10 artists and songs of all time. </p>
+          <p>Login to Spotify and see your Top 10 artists and songs of all time ! </p>
         </div>
         <div class="button-log">
           <button type="submit" class="btn btn-dark" onclick="authorize()">Authorize Spotify</button>
@@ -317,15 +321,19 @@
       </div>
     </div>
     <!-- the liked list -->
-    <div class="container categories-heading">
-      <span> Your favourite music</span>
+    <div class="container categories-heading" id="liked"> 
+      <span> Your favourite music</span><br>
+      <div class="welcome-text">
+        <p>If you like a music it would appear here !</p>
+      </div>
     </div>
     <div id="fav-list">
     </div>
 
     <!-- footer section  -->
     <footer>
-      <div class="footer">
+      <div class="footer ">
+        <div class="footer-text">
         <p>Made with ❤️ by <span class="title"><a href="#">Swetify
             </a></span>Music Contributors
           <br>
@@ -333,11 +341,13 @@
           <a href="https://github.com/ShwetKhatri2001/Swetify-Music" class="fa-brands fa-github icon"></a>
         </p>
       </div>
+    </div>
       <button class="top" id="topbutton">
         <a href="#" class="to-top">
           <i class="fas fa-chevron-up"></i>
         </a>
       </button>
+ 
     </footer>
       </div>
     </div>
@@ -393,19 +403,21 @@
       window[functionName]();
     }
   </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script> -->
-  <script src="swetify.js"></script>
+   </script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+     crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+     crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+     crossorigin="anonymous"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+     crossorigin="anonymous"></script> -->
+   <script src="swetify.js"></script>
+   <script src="scroll-reveal.js"></script>
   <script>
     // Function to handle slider functionality
     function handleSlider(direction) {
@@ -414,7 +426,6 @@
         const slider = document.getElementById('centerdiv');
         const scrollAmount = 300; // Adjust as needed
        
-
         if (direction === 'next') {
             slider.scrollLeft += scrollAmount;
         } else if (direction === 'prev') {
