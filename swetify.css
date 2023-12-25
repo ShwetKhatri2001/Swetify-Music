@@ -57,9 +57,9 @@ body {
 
 
 .playlist-card ,.artist-card{
-  margin: 30px;
-  scale:1.14;
-  background-color: #262626;
+  margin: 50px;
+  scale:1.28;
+  background-color: #2a2a2a;
   border-radius: 8px;
   box-shadow: 0 2px 24px 5px rgba(0, 0, 0, 0.536);
   overflow: hidden;
@@ -560,7 +560,6 @@ a {
 }
 
 footer .top {
-  
   border-radius: 80px;
   height: 50px;
   width: 50px;
@@ -1535,6 +1534,4 @@ h2 a{
 
 h3{
   font-size: 28px;
-
- 
 }
