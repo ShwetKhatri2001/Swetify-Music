@@ -28,10 +28,7 @@
 
     <!-- Include Particle.js from CDN -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-      var video = document.getElementById('myVideo');
-      video.load(); // Load the video
-    </script>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
       integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
@@ -79,7 +76,21 @@
       <div class="video-filter"></div>
        <video autoplay muted loop plays-inline id="myVideo">
           <source src="homepage/website.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
+
+        <script>
+          // Preload the video
+          var videoPreloader = new Image();
+          videoPreloader.src = "homepage/website.mp4";
+        
+          // Wait for the video to be preloaded
+          videoPreloader.onload = function() {
+            // Once the video is preloaded, set the source of the actual video element
+            var video = document.getElementById('myVideo');
+            video.src = "homepage/website.mp4";
+          };
+        </script>
         
         <!-- Your main content goes here -->
         <div id="cont2">
