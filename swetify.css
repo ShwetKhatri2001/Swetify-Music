@@ -9,6 +9,12 @@ body {
   height: 100vh;
 }
 
+#myVideo{
+  left:0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
 #side-panel {
   position: fixed;
   height: 100%;
