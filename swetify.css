@@ -4,7 +4,7 @@ body {
 }
 #cont2 h1{
   font-size: 60px; 
-  color: wheat; 
+  color: #ffc400;
   text-shadow: 0 2px 34px  rgba(147, 122, 68, 0.836);
   transition: all 0.5s ease;
 }
@@ -112,7 +112,7 @@ body {
   padding: 0px 10px 0px 0px;
 }
 #side-panel a:hover {
-  color: #ff0000;
+  color: #ffc400;
 }
 
 
