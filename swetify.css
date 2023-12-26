@@ -2,7 +2,15 @@ body {
  
   font-size: 14px;
 }
-
+#cont2 h1{
+  font-size: 60px; 
+  color: wheat; 
+  text-shadow: 0 2px 34px  rgba(147, 122, 68, 0.836);
+  transition: all 0.5s ease;
+}
+#cont2 h1:hover{
+  text-shadow: 0 2px 39px rgb(219, 182, 103);
+}
 #container {
   color:white;
   display: flex;
@@ -13,7 +21,19 @@ body {
   left:0;
   right: 0;
   position: absolute;
+  z-index: -2;
+  height: 110vh;
+  width: 100%;
+}
+
+.videoo{
+  background-color: #0000004d;
   z-index: -1;
+  left:0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 104vh;
 }
 #side-panel {
   position: fixed;
@@ -36,6 +56,7 @@ body {
 #cont2{
   margin-top: 50px;
   padding: 30px;
+  z-index: 2 !important;
 }
 .cont3{
   display: flex;
