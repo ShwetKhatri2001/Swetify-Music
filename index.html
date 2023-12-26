@@ -49,7 +49,7 @@
 <body>
   <div id="snackbar">Some text some message..</div>
   <div id="container">
-    <!-- <div id="particles-js"></div> -->
+   
     <div id="side-panel">
         
           <!-- <div id="logo-img" alt="Logo img"></div> -->
@@ -74,10 +74,13 @@
     </nav>
       <div id="content">
       <div class="video-filter"></div>
-       <video autoplay muted loop plays-inline loading="lazy" id="myVideo">
+       <video autoplay muted loop plays-inline id="myVideo">
           <source src="homepage/website.mp4" type="video/mp4">
         </video>
-      
+        <script>
+          var video = document.getElementById('myVideo');
+          video.load(); // Load the video
+        </script>
         <!-- Your main content goes here -->
         <div id="cont2">
           <div style="padding:28vh 0px ; height: 100vh; margin-top: 80px; text-align: center; ">
@@ -345,8 +348,11 @@
         </div>
       </div>
     </div>
-  <div class="main_div hidden" id="main_div">
+    <div class="main_div hidden" id="main_div">
+    <div id="particles-js"></div>
+   
     <div class="music_container">
+
       <h2 id="title">songtitle</h2>
       <h3>
         <marquee id="artist">artists</marquee>

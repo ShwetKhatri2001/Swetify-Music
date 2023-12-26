@@ -31,7 +31,7 @@ body {
  
 }
 #particles-js {
-  /* background-color: #000000;
+  background-color: #000000;
   background-image: linear-gradient(to left bottom,
       #f265b528,
       #df75cb28,
@@ -44,12 +44,12 @@ body {
       #477efb28,
       #316aff28,
       #2853ff28,
-      #3333ff28); */
+      #3333ff28);
  
 
 
   top:0;
-  background-color: #0000004d;
+ 
   z-index: -1;
   left:0;
   right: 0;
@@ -706,11 +706,11 @@ footer .top:hover {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
-  color: #3333ff;
+  color: #b3b3b3;
   margin: 2rem 0 0.5rem 0;
   font-size: 2.3rem;
   font-weight: bold;
-  text-shadow: 0 0.3rem 0 2.5rem rgba(0, 0, 0, 0.7);
+  text-shadow: 0 3px 10px 2.5rem rgba(0, 0, 0, 0.7);
 }
 
 .music_container #artist {
@@ -755,32 +755,32 @@ footer .top:hover {
 }
 
 .music_controls .fa {
-  color: #3333ff;
+  color: #919191;
   font-size: 2rem;
   cursor: pointer;
   filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
 }
 
 .download_controls .fa {
-  color: #3333ff;
+  color: # #919191;
   font-size: 2rem;
   cursor: pointer;
   filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
 }
 
 .music_controls .fa:hover {
-  color: white;
+  color:  #919191;
 }
 
 .download_controls .fa:hover {
-  color: white;
+  color:  #919191;
 }
 
 .music_controls .main_button {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background-color: #3333ff;
+  background-color: #919191;
   color: #000000;
   font-size: 1.4rem;
   display: flex;
@@ -936,8 +936,8 @@ input[type="checkbox"]:checked+.like_icon {
   left: 0;
   top: 0;
   width: 0%;
-  height: 100%;
-  background-color: #3333ff;
+  height: 70%;
+  background-color: #ff3333;
   border-radius: 4rem;
   cursor: pointer;
   -webkit-appearance: none;
@@ -1229,11 +1229,11 @@ input[type="checkbox"]:checked+.like_icon {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
-  color: #3333ff;
+  color: #ffffff;
   margin: 2rem 0 0.5rem 0;
   font-size: 2.3rem;
   font-weight: bold;
-  text-shadow: 0 0.3rem 0 2.5rem rgba(0, 0, 0, 0.7);
+
 }
 
 .music_container #artist {
