@@ -24,6 +24,8 @@ let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
+
+
 // Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
 const atifsongs = [
   {
@@ -472,6 +474,7 @@ const loadfirstsong = (
   loadSong(songs[0]);
   homepage_content.classList.add("hidden");
   main_div.classList.remove("hidden");
+  console.log(title)
   playmusic();
 };
 function findSongCategory(songTitle) {
@@ -529,6 +532,9 @@ const loadSong = (song) => {
   }
 };
 
+
+
+
 const nextSong = (e) => {
   // function to play the next song.
   if(loopActive && e.type === 'ended'){
@@ -546,6 +552,7 @@ const nextSong = (e) => {
     loadSong(songs[currSong]); // calling the loadSong function to load the next song.
     playmusic(); // calling the playmusic function to play the next song.
   }
+  console.log("hii")
 };
 const prevSong = () => {
   // function to play the previous song.
