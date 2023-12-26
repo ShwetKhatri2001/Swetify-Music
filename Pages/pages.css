@@ -1,0 +1,143 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(
+      to left bottom,
+      #f265b5,
+      #df75cb,
+      #c984dc,
+      #b291e6,
+      #9c9cea,
+      #8c98ed,
+      #7994f1,
+      #6191f4,
+      #477efb,
+      #316aff,
+      #2852ff,
+      #3333ff
+    );
+    
+  }
+
+  html {
+    font-size: 62.5%;
+    font-family: "Jost", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .top{
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+  header{
+    
+    height: 300px;
+    margin: 0;
+    background-image: url("../homepage/TopHollywoodHits.jpg");
+    
+  }
+
+  .songs-list{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+  }
+
+  .song-container{
+    display: flex;
+    box-sizing: border-box;
+    margin: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    opacity: 2s;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    width: 70vw;
+    cursor: pointer;
+    
+  }
+
+  .image_container{
+    border-radius: 20px;
+    padding:10px 20px;
+    justify-self: flex-start;
+  }
+
+  .image_container img{
+    width: 20px;
+    height: 30px;
+    border-radius: 20px;
+  }
+
+  .hidden
+  {
+    display: none;
+  }
+
+  .name
+  {
+    cursor:pointer;
+  }
+
+  h2
+  {
+    font-size: 20px;
+    margin: 0 20px;
+  }
+  
+  h3
+  {
+    justify-self: flex-end;
+    font-size: 15px;
+    margin: 0 20px;
+  }
+
+
+  @media screen and (max-width: 500px) {
+    
+    h2
+  {
+    font-size: 15px;
+    margin: 0 20px;
+  }
+  
+  h3
+  {
+    justify-self: flex-end;
+    font-size: 10px;
+    margin: 0 20px;
+  }
+  .songs-container
+  {
+    width: 85vw;
+    margin: 5px 20px;
+  }
+  .image_container
+  {padding: 5px 20px;}
+  header
+  {
+    height: 30vh;
+  }
+  }
+
+  .music_controls{
+    margin-top: 5px;
+  }
+  
