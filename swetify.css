@@ -257,7 +257,7 @@ nav {
   margin-top: 0;
   font-style: bold;
 }
- a{
+nav a{
   text-decoration: none !important;
 }
 #nav-list a {
