@@ -913,6 +913,7 @@ input[type="checkbox"]:checked+.like_icon {
 }
 
 .progress {
+  /* 
   position: absolute;
   left: 0;
   top: 0;
@@ -923,6 +924,8 @@ input[type="checkbox"]:checked+.like_icon {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
+  transition: value 0s linear;
+  */
 }
 
 .progress_duration_meter {

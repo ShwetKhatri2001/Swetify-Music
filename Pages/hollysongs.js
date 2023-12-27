@@ -23,48 +23,48 @@ let home = document.getElementById("home");
 let categories = document.getElementById("popular-categories");
 let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
-const progress_el=document.getElementById("progress-el");
+const progress_el = document.getElementById("progress-el");
 
 const hollywoodsongs = [
-    { name: "Faded", title: "Faded", artist: "Alan Walker" },
-    { name: "Closer", title: "Closer", artist: "The Chainsmokers, Halsey" },
-    { name: "CheapThrills", title: "Cheap Thrills", artist: "Sia" },
-    { name: "Friends", title: "Friends", artist: "Marshmello, Anne-Marie" },
-    {
-      name: "Senorita",
-      title: "Senorita",
-      artist: "Shawn Mendes, Camila Cabello",
-    },
-    { name: "I'mMess", title: "I'm a Mess", artist: "Bebe Rexha" },
-  ];
+  { name: "Faded", title: "Faded", artist: "Alan Walker" },
+  { name: "Closer", title: "Closer", artist: "The Chainsmokers, Halsey" },
+  { name: "CheapThrills", title: "Cheap Thrills", artist: "Sia" },
+  { name: "Friends", title: "Friends", artist: "Marshmello, Anne-Marie" },
+  {
+    name: "Senorita",
+    title: "Senorita",
+    artist: "Shawn Mendes, Camila Cabello",
+  },
+  { name: "I'mMess", title: "I'm a Mess", artist: "Bebe Rexha" },
+];
 
-  // Wrapping all the songs array in one array by Type of songs.
+// Wrapping all the songs array in one array by Type of songs.
 const allsongs = [
-    hollywoodsongs
-  ];
-  // Wrapping all the categories in one array.
-  const allcategories = [
-    "TopHollywoodHits",
-    "TopBollywoodHits",
-    "RockOn",
-    "DanceHits",
-    "CollegeDeYaar",
-    "GujjuGarba",
-    "90'sHits",
-    "PatrioticBollywood",
-    "HoliSpecial",
-    "NehaKakkar",
-    "ArijitSingh",
-    "Ritviz",
-    "JubinNautiyal",
-    "AtifAslam",
-  ];
+  hollywoodsongs
+];
+// Wrapping all the categories in one array.
+const allcategories = [
+  "TopHollywoodHits",
+  "TopBollywoodHits",
+  "RockOn",
+  "DanceHits",
+  "CollegeDeYaar",
+  "GujjuGarba",
+  "90'sHits",
+  "PatrioticBollywood",
+  "HoliSpecial",
+  "NehaKakkar",
+  "ArijitSingh",
+  "Ritviz",
+  "JubinNautiyal",
+  "AtifAslam",
+];
 
-  const out=()=>{
-    console.log(title)
-  }
+const out = () => {
+  console.log(title)
+}
 
-  let isplaying = false; // variable to check if the song is playing or not.
+let isplaying = false; // variable to check if the song is playing or not.
 const playmusic = () => {
   // function to play the song.
   isplaying = true;
@@ -74,32 +74,32 @@ const playmusic = () => {
 };
 
 const pausemusic = () => {
-    // function to pause the song.
-    isplaying = false;
-    music.pause();
-    play.classList.replace("fa-pause", "fa-play"); // replacing the pause icon with play icon.
-    //songimg.classList.remove("anime");
-  };
+  // function to pause the song.
+  isplaying = false;
+  music.pause();
+  play.classList.replace("fa-pause", "fa-play"); // replacing the pause icon with play icon.
+  //songimg.classList.remove("anime");
+};
 
 let songs = [];
 let category;
 
 //function to load songs from playlist
-let song=0;
+let song = 0;
 const loadplaylistsong = (
-  arrno,tsong
+  arrno, tsong
 ) => {
   songs = allsongs[arrno];
   category = allcategories[arrno];
-  loadcurrSong(songs[tsong],category);
+  loadcurrSong(songs[tsong], category);
   homepage_content.classList.add("hidden");
   main_div.classList.remove("hidden");
-  song=tsong;
-  console.log("hii");
+  song = tsong;
+  // console.log("hii");
   playmusic();
-};  
+};
 
-const loadcurrSong = (tsong,category) => {
+const loadcurrSong = (tsong, category) => {
   title.textContent = tsong.title;
   artist.innerHTML = `<marquee>${tsong.artist}</marquee>`; // changing the artist of the song.
   music.src = "../songs-images/" + category + "/" + tsong.name + ".mp3";
@@ -107,42 +107,38 @@ const loadcurrSong = (tsong,category) => {
   songimg.src = "../songs-images/" + category + "/" + tsong.name + ".jpg";
 };
 
-const loadnextsong=(arrno)=>{
-  song+=1;
+const loadnextsong = (arrno) => {
+  song += 1;
   console.log(song);
-  if(song>allsongs[arrno].length)
-  {
-    song=0;
+  if (song > allsongs[arrno].length) {
+    song = 0;
   }
-  loadplaylistsong(arrno,song);
+  loadplaylistsong(arrno, song);
 }
 
-const loadprevsong=(arrno)=>{
-  song-=1;
-  if(song<0)
-  {
-    song=allsongs[arrno].length;
+const loadprevsong = (arrno) => {
+  song -= 1;
+  if (song < 0) {
+    song = allsongs[arrno].length;
   }
-  loadplaylistsong(arrno,song);
+  loadplaylistsong(arrno, song);
 }
 
-progress_el.addEventListener("change",()=>
-{
-    music.currentTime=(progress_el.value*music.duration)/100;
-    console.log("hii");
+progress_el.addEventListener("change", () => {
+  music.currentTime = (progress_el.value * music.duration) / 100;
+  console.log("hii");
 })
 
-music.addEventListener("timeupdate",()=>
-{
-    let time =parseInt((music.currentTime/music.duration)*100);
-    progress_el.value=time;
-    const currentTimeMinutes = Math.floor(music.currentTime / 60);
-      const currentTimeSeconds = Math.floor(music.currentTime % 60);
-    current_time.textContent = `${currentTimeMinutes}:${currentTimeSeconds < 10 ? '0' : ''}${currentTimeSeconds}`;
+music.addEventListener("timeupdate", () => {
+  let time = parseInt((music.currentTime / music.duration) * 100);
+  progress_el.value = time;
+  const currentTimeMinutes = Math.floor(music.currentTime / 60);
+  const currentTimeSeconds = Math.floor(music.currentTime % 60);
+  current_time.textContent = `${currentTimeMinutes}:${currentTimeSeconds < 10 ? '0' : ''}${currentTimeSeconds}`;
 })
 
 play.addEventListener("click", () => {
-    // event listener to play or pause the song.
-    if (isplaying) pausemusic();
-    else playmusic();
-  });
+  // event listener to play or pause the song.
+  if (isplaying) pausemusic();
+  else playmusic();
+});

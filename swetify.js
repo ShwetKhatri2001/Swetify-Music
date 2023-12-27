@@ -351,63 +351,63 @@ function toastMessage(msg) {
   }, 3000);
 }
 //code for dynamic table
-const refreshLikedList = () => {
-  const container_liked_list = document.getElementById("container-liked-list");
-  let count = 0;
-  // for(var i in localStorage){
-  // console.log(i,"   ",localStorage.getItem(i))
-  // }
-  for (var i in localStorage) {
-    if (localStorage.getItem(i) == "true") count++;
-  }
-  // console.log(count)
-  if (count == 0) {
-    container_liked_list.remove();
-  } else {
-    if (container_liked_list) container_liked_list.remove();
-    let no = 1;
-    var containerLL = document.createElement("div");
-    containerLL.id = "container-liked-list";
-    containerLL.className = "container-liked-list";
-    var containerScroll = document.createElement("div");
-    containerScroll.className = "container-scroll";
-    var table = document.createElement("table");
-    var headerRow = table.insertRow();
-    headerRow.className = "headT";
-    var headers = ["#", "Title", "Artist"];
-    headers.forEach(function (headerText) {
-      var th = document.createElement("th");
-      th.appendChild(document.createTextNode(headerText));
-      headerRow.appendChild(th);
-    });
-    for (var i in localStorage) {
-      if (localStorage.getItem(i) == "true") {
-        var searchTerm = i;
-        // console.log(i)
-        var results = globalSong.flat().find((obj) => obj.title === searchTerm);
-        var name = results.name;
-        var title = i;
-        var artist = results.artist;
-        var newSong = { name, title, artist };
-        likedSongs.push(newSong);
-        // console.log(newSong)
-        var row = table.insertRow();
-        row.setAttribute("id", "likelist");
-        row.setAttribute("onclick", "loadlikedsong(this)");
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        cell1.innerHTML = no;
-        cell2.innerHTML = i;
-        cell3.innerHTML = results.artist;
-        no++;
-      }
-    }
-    containerScroll.appendChild(table);
-    containerLL.appendChild(containerScroll);
-    favlist.appendChild(containerLL);
-  }
-};
+// const refreshLikedList = () => {
+//   const container_liked_list = document.getElementById("container-liked-list");
+//   let count = 0;
+//   // for(var i in localStorage){
+//   // console.log(i,"   ",localStorage.getItem(i))
+//   // }
+//   for (var i in localStorage) {
+//     if (localStorage.getItem(i) == "true") count++;
+//   }
+//   // console.log(count)
+//   if (count == 0) {
+//     container_liked_list.remove();
+//   } else {
+//     if (container_liked_list) container_liked_list.remove();
+//     let no = 1;
+//     var containerLL = document.createElement("div");
+//     containerLL.id = "container-liked-list";
+//     containerLL.className = "container-liked-list";
+//     var containerScroll = document.createElement("div");
+//     containerScroll.className = "container-scroll";
+//     var table = document.createElement("table");
+//     var headerRow = table.insertRow();
+//     headerRow.className = "headT";
+//     var headers = ["#", "Title", "Artist"];
+//     headers.forEach(function (headerText) {
+//       var th = document.createElement("th");
+//       th.appendChild(document.createTextNode(headerText));
+//       headerRow.appendChild(th);
+//     });
+//     for (var i in localStorage) {
+//       if (localStorage.getItem(i) == "true") {
+//         var searchTerm = i;
+//         // console.log(i)
+//         var results = globalSong.flat().find((obj) => obj.title === searchTerm);
+//         var name = results.name;
+//         var title = i;
+//         var artist = results.artist;
+//         var newSong = { name, title, artist };
+//         likedSongs.push(newSong);
+//         // console.log(newSong)
+//         var row = table.insertRow();
+//         row.setAttribute("id", "likelist");
+//         row.setAttribute("onclick", "loadlikedsong(this)");
+//         var cell1 = row.insertCell(0);
+//         var cell2 = row.insertCell(1);
+//         var cell3 = row.insertCell(2);
+//         cell1.innerHTML = no;
+//         cell2.innerHTML = i;
+//         cell3.innerHTML = results.artist;
+//         no++;
+//       }
+//     }
+//     containerScroll.appendChild(table);
+//     containerLL.appendChild(containerScroll);
+//     favlist.appendChild(containerLL);
+//   }
+// };
 changeimagewidth(); // calling the function to change the width of the images according to the screen size.
 function changeimagewidth() {
   var w =
@@ -469,6 +469,7 @@ let islikedplaying = false;
 const loadfirstsong = (
   arrno // function to load the first song of the category.
 ) => {
+  console.log("loadfirstsong function called");
   songs = allsongs[arrno];
   category = allcategories[arrno];
   loadSong(songs[0]);
@@ -515,7 +516,7 @@ const pausemusic = () => {
 currSong = 0; // variable to store the current song number.
 const loadSong = (song) => {
   // function to load the song.
-  // console.log(song);
+  console.log("loadSong function called");
   title.textContent = song.title;
   category = findSongCategory(title.innerHTML);
   // console.log(title.textContent); // changing the title of the song.
@@ -537,7 +538,7 @@ const loadSong = (song) => {
 
 const nextSong = (e) => {
   // function to play the next song.
-  if(loopActive && e.type === 'ended'){
+  if (loopActive && e.type === 'ended') {
     loadSong(songs[currSong])
     playmusic();
   }
@@ -593,6 +594,7 @@ const shuffleSong = () => {
 
 let loopActive = false;
 const loopSong = () => {
+  // console.log("Inside loopSong");
   // function to check if the song is looping or not.
   if (loopActive) {
     loopActive = false;
@@ -626,70 +628,95 @@ play.addEventListener("click", () => {
   if (isplaying) pausemusic();
   else playmusic();
 });
-home.onclick = function () {
-  if (isplaying) pausemusic();
-  islikedplaying = false
-};
-categories.onclick = function () {
-  if (isplaying) pausemusic();
-  islikedplaying = false
-};
-artists.onclick = function () {
-  if (isplaying) pausemusic();
-  islikedplaying = false
-};
-const skipback = () => {
+// home.onclick = function () {
+//   if (isplaying) pausemusic();
+//   islikedplaying = false
+// };
+// categories.onclick = function () {
+//   if (isplaying) pausemusic();
+//   islikedplaying = false
+// };
+// artists.onclick = function () {
+//   if (isplaying) pausemusic();
+//   islikedplaying = false
+// };
+function skipBack() {
+  // console.log("skipback called");
   if (music.currentTime >= 10) {
     music.currentTime -= 10; // Skip back 5 seconds
   } else {
     music.currentTime = 0; // If less than 5 seconds have passed, set currentTime to 0
   }
 };
-// Add event listener for the like toggle button
-likeToggle.addEventListener("change", function () {
+
+// Update the liked state in local storage
+const updateLikedState = () => {
   song = title.textContent;
-  // Update the liked state in local storage
   localStorage.setItem(song, this.checked);
-  if (this.checked) {
-    toastMessage(song + " added in Liked list");
-  } else {
-    toastMessage(song + " removed from Liked list");
-  }
-  refreshLikedList();
-});
-music.addEventListener("timeupdate", (event) => {
-  // event listener to update the progress bar of the song.
-  const { currentTime, duration } = event.srcElement; // getting the current time and duration of the song.
-  let progress_time = (currentTime / duration) * 100; // calculating the progress time of the song.
-  progress.style.width = `${progress_time}%`; // changing the width of the progress bar.
+  // if (this.checked) {
+  //   toastMessage(song + " added in Liked list");
+  // } else {
+  //   toastMessage(song + " removed from Liked list");
+  // }
+  // refreshLikedList();
+};
+
+// Add event listener for the like toggle button
+likeToggle.addEventListener("change", updateLikedState);
+
+function updateDuration() {
   // updating duration time for each song
-  let min_duration = Math.floor(duration / 60); // calculating the minutes of the song.
-  let sec_duration = Math.floor(duration % 60); // calculating the seconds of the song.
-  if (sec_duration < 10) {
-    sec_duration = `0${sec_duration}`;
-  } // adding 0 before the seconds if the seconds are less than 10.
+  const min_duration = Math.floor(music.duration / 60); // calculating the minutes of the song.
+  const sec_duration = Math.floor(music.duration % 60).toString().padStart(2, '0'); // calculating the seconds of the song.
+
   if (duration) {
-    song_duration.textContent = `${min_duration}:${sec_duration}`;
+    song_duration.innerHTML = `${min_duration}:${sec_duration}`;
+    // console.log(`${min_duration}:${sec_duration}`);
   } // changing the duration of the song.
-  // updating current time for a song curretly playing
-  let min_currtime = Math.floor(currentTime / 60); // calculating the minutes of the song.
-  let sec_currtime = Math.floor(currentTime % 60); // calculating the seconds of the song.
-  if (sec_currtime < 10) {
-    sec_currtime = `0${sec_currtime}`;
-  } // adding 0 before the seconds if the seconds are less than 10.
-  if (currentTime) {
-    current_time.textContent = `${min_currtime}:${sec_currtime}`;
-  } // changing the current time of the song.
+}
+
+music.addEventListener("timeupdate", () => {
+  // console.log("timeupdate event fired");
+  // event listener to update the progress bar of the song.
+  // const { currentTime, duration } = event.target; // getting the current time and duration of the song.
+  // const progress_time = (currentTime / duration) * 100; // calculating the progress time of the song.
+  // progress.style.width = `${progress_time}%`; // changing the width of the progress bar.
+
+  /*
+    Updating duration of song is not needed when updating the progress bar
+    because the duration of the song is fixed and the progress bar is updated
+
+    // updating duration time for each song
+    const min_duration = Math.floor(duration / 60); // calculating the minutes of the song.
+    const sec_duration = Math.floor(duration % 60).toString().padStart(2, '0'); // calculating the seconds of the song.
+   
+    if (duration) {
+      song_duration.innerHTML = `${min_duration}:${sec_duration}`;
+    } // changing the duration of the song.
+  */
+  let time = parseInt((music.currentTime / music.duration) * 100);
+  progress.value = time;
+
+  // updating current time for a song currently playing
+  const min_currtime = Math.floor(music.currentTime / 60); // calculating the minutes of the song.
+  const sec_currtime = Math.floor(music.currentTime % 60).toString().padStart(2, '0'); // calculating the seconds of the song.
+  current_time.textContent = `${min_currtime}:${sec_currtime}`; // changing the current time of the song.
+  updateDuration();
+
 });
 window.addEventListener("load", () => {
-  refreshLikedList();
+  // refreshLikedList();
 });
-progress_div.addEventListener("click", (event) => {
+progress.addEventListener("change", () => {
+  console.log("progress_div click event fired");
   // event listener to change the progress bar of the song.
-  const { duration } = music; // getting the duration of the song.
-  let move_progress = (event.offsetX / event.srcElement.clientWidth) * duration;
-  console.log(move_progress);
-  music.currentTime = move_progress; // changing the current time of the song.
+
+  music.currentTime = (progress.value * music.duration) / 100;
+
+  // const { duration } = music.duration; // getting the duration of the song.
+  // let move_progress = (event.offsetX / event.target.clientWidth) * duration;
+  // console.log(move_progress);
+  // music.currentTime = move_progress; // changing the current time of the song.
 });
 music.addEventListener("ended", nextSong); // Event listener to play the next song when the current song ends.
 next.addEventListener("click", nextSong); // Event listener to play the next song when the next button is clicked.
@@ -699,12 +726,12 @@ shuffle.addEventListener("click", shuffleSong);
 
 loop.addEventListener("click", loopSong);
 
-back.addEventListener("click", skipback);
+back.addEventListener("click", skipBack);
 
 download.addEventListener('click', downloadCurrentSong); // Adding an event listener to the download button
 // spotify functionality
 //var redirect_uri = "https://deploy-preview-40--swetify.netlify.app/";
-var redirect_uri="https://swetify.netlify.app/";
+var redirect_uri = "https://swetify.netlify.app/";
 //var redirect_uri= 'http://localhost:5501/';
 var client_id = "e5a392471667465499be5e9bc54c24dc";
 var client_secret = "3a7df71fe8554b5faaa1bd69c11265c9";
@@ -822,17 +849,17 @@ function renderTopArtists(data) {
     songItemElement.classList.add('song-item');
     // Add song information to the HTML
     songItemElement.innerHTML = `
-                   <div class="list-displayer">
-                   <div class="innerimage" >
-                   <img src="${song.images[0].url}" alt="${song.name}" width="200" height="100" >
-                   </div>
-                   <div class="textdiv" >
-                   <label>Artist name: ${song.name}</label>
-                   <label>Popularity: ${song.popularity}</label>
-                   <label>URI: <a href="${song.uri}" target="_blank">${song.uri}</a></label>
-                   </div> 
-                   </div>
-               `;
+                       <div class="list-displayer">
+                       <div class="innerimage" >
+                       <img src="${song.images[0].url}" alt="${song.name}" width="200" height="100" >
+                       </div>
+                       <div class="textdiv" >
+                       <label>Artist name: ${song.name}</label>
+                       <label>Popularity: ${song.popularity}</label>
+                       <label>URI: <a href="${song.uri}" target="_blank">${song.uri}</a></label>
+                       </div> 
+                       </div>
+                   `;
     // Append the song item to the top songs list
     topSongsListElement.appendChild(songItemElement);
   });
@@ -851,17 +878,17 @@ function renderTopSongs(data) {
     songItemElement.classList.add('song-item');
     // Add song information to the HTML
     songItemElement.innerHTML = `
-                   <div class="list-displayer">
-                   <div class="innerimage" >
-                   <img src="${song.album.images[0].url}" alt="${song.name}" width="200" height="100" >
-                   </div>
-                   <div class="textdiv" >
-                   <label><ran>Song name:</ran> ${song.name}</label>
-                   <label><ran>Popularity:</ran> ${song.popularity}</label>
-                   <label><ran>URI:</ran> <a href="${song.uri}" target="_blank">${song.uri}</a></label>
-                   </div>
-                   </div>  
-               `;
+                       <div class="list-displayer">
+                       <div class="innerimage" >
+                       <img src="${song.album.images[0].url}" alt="${song.name}" width="200" height="100" >
+                       </div>
+                       <div class="textdiv" >
+                       <label><ran>Song name:</ran> ${song.name}</label>
+                       <label><ran>Popularity:</ran> ${song.popularity}</label>
+                       <label><ran>URI:</ran> <a href="${song.uri}" target="_blank">${song.uri}</a></label>
+                       </div>
+                       </div>  
+                   `;
     topSongsListElement.appendChild(songItemElement);
   });
 }
