@@ -21,7 +21,7 @@ const main_div = document.getElementById("main_div");
 let cat_images = document.getElementsByClassName("image");
 let category_title = document.getElementsByClassName("small-category");
 let home = document.getElementById("home");
-let categories = document.getElementById("popular-categories");
+let categories = document.getElementById("categories");
 let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
 
@@ -351,63 +351,72 @@ function toastMessage(msg) {
   }, 3000);
 }
 //code for dynamic table
-// const refreshLikedList = () => {
-//   const container_liked_list = document.getElementById("container-liked-list");
-//   let count = 0;
-//   // for(var i in localStorage){
-//   // console.log(i,"   ",localStorage.getItem(i))
-//   // }
-//   for (var i in localStorage) {
-//     if (localStorage.getItem(i) == "true") count++;
-//   }
-//   // console.log(count)
-//   if (count == 0) {
-//     container_liked_list.remove();
-//   } else {
-//     if (container_liked_list) container_liked_list.remove();
-//     let no = 1;
-//     var containerLL = document.createElement("div");
-//     containerLL.id = "container-liked-list";
-//     containerLL.className = "container-liked-list";
-//     var containerScroll = document.createElement("div");
-//     containerScroll.className = "container-scroll";
-//     var table = document.createElement("table");
-//     var headerRow = table.insertRow();
-//     headerRow.className = "headT";
-//     var headers = ["#", "Title", "Artist"];
-//     headers.forEach(function (headerText) {
-//       var th = document.createElement("th");
-//       th.appendChild(document.createTextNode(headerText));
-//       headerRow.appendChild(th);
-//     });
-//     for (var i in localStorage) {
-//       if (localStorage.getItem(i) == "true") {
-//         var searchTerm = i;
-//         // console.log(i)
-//         var results = globalSong.flat().find((obj) => obj.title === searchTerm);
-//         var name = results.name;
-//         var title = i;
-//         var artist = results.artist;
-//         var newSong = { name, title, artist };
-//         likedSongs.push(newSong);
-//         // console.log(newSong)
-//         var row = table.insertRow();
-//         row.setAttribute("id", "likelist");
-//         row.setAttribute("onclick", "loadlikedsong(this)");
-//         var cell1 = row.insertCell(0);
-//         var cell2 = row.insertCell(1);
-//         var cell3 = row.insertCell(2);
-//         cell1.innerHTML = no;
-//         cell2.innerHTML = i;
-//         cell3.innerHTML = results.artist;
-//         no++;
-//       }
-//     }
-//     containerScroll.appendChild(table);
-//     containerLL.appendChild(containerScroll);
-//     favlist.appendChild(containerLL);
-//   }
-// };
+const refreshLikedList = () => {
+  // console.log("refreshLikedList function called");
+  const container_liked_list = document.getElementById("container-liked-list");
+  let count = 0;
+  // for(var i in localStorage){
+  // console.log(i,"   ",localStorage.getItem(i))
+  // }
+  for (var i in localStorage) {
+    if (localStorage.getItem(i) ) count++;
+  }
+  // console.log("count: "+count);
+  if (count !== 0) {
+    container_liked_list.remove();
+    // if (container_liked_list) 
+    //   container_liked_list.remove();
+    let no = 1;
+    var containerLL = document.createElement("div");
+    containerLL.id = "container-liked-list";
+    containerLL.className = "container-liked-list";
+    var containerScroll = document.createElement("div");
+    containerScroll.className = "container-scroll";
+    var table = document.createElement("table");
+    var headerRow = table.insertRow();
+    headerRow.className = "headT";
+    var headers = ["#", "Title", "Artist"];
+    headers.forEach(function (headerText) {
+      var th = document.createElement("th");
+      th.appendChild(document.createTextNode(headerText));
+      headerRow.appendChild(th);
+    });
+    for (var i in localStorage) {
+      if (localStorage.getItem(i) !== false) {
+        var searchTerm = i;
+        // console.log(i)
+        if(globalSong.flat().find((song) => song.title === searchTerm) === undefined){
+          localStorage.removeItem(i);
+          count--;
+          // console.log("Removing: "+i+" from local storage");
+          continue;
+        }
+        var results = globalSong.flat().find((song) => song.title === searchTerm) ;
+        // console.log("Results: "+results);
+        var name = results.name;
+        var title = i;
+        var artist = results.artist;
+        var newSong = { name, title, artist };
+        likedSongs.push(newSong);
+        // console.log(newSong);
+        var row = table.insertRow();
+        row.setAttribute("id", "likelist");
+        row.setAttribute("onclick", "loadlikedsong(this)");
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML = no;
+        cell2.innerHTML = i;
+        cell3.innerHTML = results.artist;
+        no++;
+      }
+    }
+    containerScroll.appendChild(table);
+    containerLL.appendChild(containerScroll);
+    favlist.appendChild(containerLL);
+  }
+};
+
 changeimagewidth(); // calling the function to change the width of the images according to the screen size.
 function changeimagewidth() {
   var w =
@@ -563,14 +572,15 @@ const prevSong = () => {
     category = findSongCategory(title.innerHTML);
     loadSong(likedSongs[currSong]);
     playmusic();
-  } else {
+  } 
+  else {
     currSong = (currSong - 1 + songs.length) % songs.length; // changing the current song number.
     loadSong(songs[currSong]); // calling the loadSong function to load the previous song.
     playmusic();
   }
 };
 const shuffleSong = () => {
-  console.log(currSong);
+  // console.log("shuffleSong function called");
   prevsong = currSong;
   if (islikedplaying) {
     currSong = (currSong + Math.floor((Math.random() + 1) * (likedSongs.length + 1))) % likedSongs.length;
@@ -628,18 +638,18 @@ play.addEventListener("click", () => {
   if (isplaying) pausemusic();
   else playmusic();
 });
-// home.onclick = function () {
-//   if (isplaying) pausemusic();
-//   islikedplaying = false
-// };
-// categories.onclick = function () {
-//   if (isplaying) pausemusic();
-//   islikedplaying = false
-// };
-// artists.onclick = function () {
-//   if (isplaying) pausemusic();
-//   islikedplaying = false
-// };
+home.onclick = function () {
+  if (isplaying) pausemusic();
+  islikedplaying = false
+};
+categories.onclick = function () {
+  if (isplaying) pausemusic();
+  islikedplaying = false
+};
+artists.onclick = function () {
+  if (isplaying) pausemusic();
+  islikedplaying = false
+};
 function skipBack() {
   // console.log("skipback called");
   if (music.currentTime >= 10) {
@@ -651,14 +661,17 @@ function skipBack() {
 
 // Update the liked state in local storage
 const updateLikedState = () => {
+  console.log("updateLikedState function called");
   song = title.textContent;
-  localStorage.setItem(song, this.checked);
-  // if (this.checked) {
-  //   toastMessage(song + " added in Liked list");
-  // } else {
-  //   toastMessage(song + " removed from Liked list");
-  // }
-  // refreshLikedList();
+  console.log("Song: "+song);
+  if (localStorage.getItem(song) === "true") {
+    localStorage.removeItem(song);
+    toastMessage(song + " removed from Liked list");
+  } else {
+    localStorage.setItem(song, true);
+    toastMessage(song + " added in Liked list");
+  }
+  refreshLikedList();
 };
 
 // Add event listener for the like toggle button
@@ -705,7 +718,7 @@ music.addEventListener("timeupdate", () => {
 
 });
 window.addEventListener("load", () => {
-  // refreshLikedList();
+  refreshLikedList();
 });
 progress.addEventListener("change", () => {
   console.log("progress_div click event fired");

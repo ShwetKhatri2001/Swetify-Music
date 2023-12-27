@@ -25,8 +25,8 @@ ScrollReveal().reveal("#holly", {
 	distance: "70px",
 });
 ScrollReveal().reveal(".footer-text", {
-	delay: 500,
-	origin: "left",
+	delay: 800,
+	origin: "bottom",
 	distance: "70px",
 });
 ScrollReveal().reveal("#bolly", {
