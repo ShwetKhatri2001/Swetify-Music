@@ -111,6 +111,11 @@
 
   }
 
+  .content{
+    margin-top: 60px;
+    line-height: 1.5;
+  }
+
   .shvet-img{
     width: 400px;
     height: 400px;
