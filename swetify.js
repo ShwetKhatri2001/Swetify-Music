@@ -682,7 +682,7 @@ function updateDuration() {
   const min_duration = Math.floor(music.duration / 60); // calculating the minutes of the song.
   const sec_duration = Math.floor(music.duration % 60).toString().padStart(2, '0'); // calculating the seconds of the song.
 
-  if (duration) {
+  if (min_duration && sec_duration ) {
     song_duration.innerHTML = `${min_duration}:${sec_duration}`;
     // console.log(`${min_duration}:${sec_duration}`);
   } // changing the duration of the song.
