@@ -286,6 +286,10 @@ nav a{
   border-radius: 5px;
   text-shadow: 1px 1px 0 #3333ff;
 }
+.navbar-header{
+  display: flex;
+  width: 100%;
+}
 
 .navbar-header button.navbar-toggle {
   border: 1px solid white;
