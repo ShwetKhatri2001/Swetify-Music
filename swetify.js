@@ -21,7 +21,7 @@ const main_div = document.getElementById("main_div");
 let cat_images = document.getElementsByClassName("image");
 let category_title = document.getElementsByClassName("small-category");
 let home = document.getElementById("home");
-let categories = document.getElementById("categories");
+let categories = document.getElementById("popular categories");
 let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
 
