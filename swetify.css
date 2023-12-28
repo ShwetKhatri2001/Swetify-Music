@@ -766,7 +766,7 @@ footer .top:hover {
 }
 
 .download_controls .fa {
-  color: # #919191;
+  color: #919191;
   font-size: 2rem;
   cursor: pointer;
   filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
@@ -936,6 +936,7 @@ input[type="checkbox"]:checked+.like_icon {
 }
 
 .progress {
+  /* 
   position: absolute;
   left: 0;
   top: 0;
@@ -946,6 +947,8 @@ input[type="checkbox"]:checked+.like_icon {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
+  transition: value 0s linear;
+  */
 }
 
 .progress_duration_meter {
