@@ -14,7 +14,6 @@ body:
       label: What's the style idea?
       placeholder: Add descriptions
       value: 'We need to improve'
-      required: true
 
   - type: checkboxes
     id: no-duplicate-issues
