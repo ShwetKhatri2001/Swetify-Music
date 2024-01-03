@@ -11,6 +11,11 @@ body {
 #cont2 h1:hover{
   text-shadow: 0 2px 39px rgb(219, 182, 103);
 }
+@media (max-width: 680px) {
+  #cont2 h1{
+    font-size: 50px;
+  }
+}
 #container {
   color:white;
   display: flex;
@@ -69,6 +74,7 @@ body {
   height: 100%;
 }
 #side-panel {
+  display: none;
   position: fixed;
   height: 100%;
   width: 230px;
@@ -78,13 +84,15 @@ body {
   color: #fff;
   padding: 20px;
   box-sizing: border-box;
+  z-index: 1000;
 }
 
 #content {
   flex: 1;
-  margin-left: 230px;
+  margin-left: 0px;
   box-sizing: border-box;
 }
+
 
 #cont2{
   margin-top: 50px;
@@ -208,6 +216,9 @@ nav {
   background-color: #000000;
   border-radius: 0;
   border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
@@ -228,6 +239,14 @@ nav {
 #headphones {
 
   font-size: 30px;
+}
+#menu{
+  font-size: 20px;
+  color: rgb(255, 179, 39) !important;
+  margin-right: 4rem;
+  margin-top: 1rem;
+  margin-left: -1rem;
+ 
 }
 
 .navbar-brand {
@@ -335,7 +354,7 @@ nav a{
 }
 
 #prev-slide, .slider-wrapper #prev-slide {
-  left:250px;
+  left:50px;
   position: absolute;
   background-color: #dfdfdf2b;
   color: #ffffff;
@@ -355,7 +374,7 @@ nav a{
 }
 
 #next-slide , .slider-wrapper #next-slide{
-  right:5px;
+  right:5px ;
   position: absolute;
   font-size: 6.0rem;
   border: none;
@@ -1052,6 +1071,11 @@ input[type="checkbox"]:checked+.like_icon {
   #PlaySing {
     font-size: 0.9em;
   }
+  #menu{
+  font-size: 1.8em;
+ 
+ 
+}
 
   .container .photo {
     background: url("images/ABOUT/shwetsofa_small.jpg") no-repeat;
@@ -1148,6 +1172,11 @@ input[type="checkbox"]:checked+.like_icon {
     font-size: 0.9em;
     margin-top: 8px;
   }
+  #menu{
+font-size: 2.5em !important;
+margin-left: 0;
+  
+}
 
   #collapsable-nav a {
     font-size: 1.2em;
@@ -1578,4 +1607,23 @@ h2 a{
 
 h3{
   font-size: 28px;
+}
+.hamburger {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger{
+  color: white;
+  
+
 }

@@ -65,45 +65,6 @@
     <div id="snackbar">Some text some message..</div>
     <header>
       <nav id="header-nav" class="navbar navbar-default">
-        <!-- <div class="container-not-bs">
-          <div class="navbar-header">
-            <a href="index.html" class="pull-left visible-md visible-lg">
-              <div id="logo-img" alt="Logo img"></div>
-            </a>
-            <div class="navbar-brand">
-              <a href="index.html"><h1>Swetify</h1></a>
-              <span class="glyphicon glyphicon-headphones" id="headphones"></span>
-              <span id="PlaySing"> Play and Sing with us Now !</span>
-            </div>
-          </div> -->
-          <!-- <div class="lg-display">
-            <ul id="nav-list" class="nav navbar-nav navbar-right">
-              <li onclick="hidevisible()">
-                <a href="#" id="home" class="nav-elem">
-                  <i class="glyphicon glyphicon-home"></i>
-                  <span>Home</span>
-                </a>
-              </li>
-              <li onclick="hidevisible()">
-                <a href="#popular categories" id="popular-categories" class="nav-elem">
-                  <i class="glyphicon glyphicon-music"></i>
-                  <span>Popular Categories</span>
-                </a>
-              </li>
-              <li onclick="hidevisible()">
-                <a href="#best of artists" id="artists" class="nav-elem">
-                  <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                  <span>Best of Artists</span>
-                </a>
-              </li>
-              <li onclick="hidevisible()">
-                <a href="about.html" id="artists" class="nav-elem">
-                  <i class="fa-solid fa-address-card"></i>
-                  <span>About Us</span>
-                </a>
-              </li>
-            </ul>
-          </div> -->
           <button
             type="button"
             class="navbar-toggle collapsed"
@@ -167,11 +128,12 @@
     <div id="side-panel">
 
       <!-- <div id="logo-img" alt="Logo img"></div> -->
-
+      
 
         <br>
 
         <div style="padding-top: 80px;">
+         
           <a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a>
           <a href="#popular categories"><i class="glyphicon glyphicon-music"></i> Popular Categories</a>
           <a href="#bestofartist"><i class="fa-solid fa-user"></i>  Best of Artists</a>
@@ -184,7 +146,14 @@
     </div>
     
     <nav id="header-nav" class="navbar navbar-default">
+      <button class="hamburger" onclick="toggleMenu()">
+        <!-- <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div> -->
+        <span class="glyphicon glyphicon-align-justify" id="menu"></span> 
+    </button>
       <h2 class="navbar-header">
+        
       <a href="index.html">
        <span class="glyphicon glyphicon-headphones " id="headphones"></span> Swetify
       </a>
@@ -539,6 +508,33 @@
         window[functionName]();
       }
     </script>
+    <script>
+      function toggleMenu() {
+        var element = document.getElementById("side-panel");
+   
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+                
+            } else {
+                element.style.display = "none";
+  
+            }
+        
+      }
+  </script>
+   <!-- <script>
+    function toggleMargin() {
+        var content = document.getElementById("content");
+        var toggleSwitch = document.getElementById("toggleSwitch");
+
+        if (toggleSwitch.checked) {
+            content.classList.remove("toggle-off");
+        } else {
+            content.classList.add("toggle-off");
+        }
+    }
+</script> -->
+  
    </script>
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
