@@ -11,6 +11,12 @@ body {
 #cont2 h1:hover{
   text-shadow: 0 2px 39px rgb(219, 182, 103);
 }
+
+#cont2 a:hover{
+  text-decoration: none;
+  cursor: text;
+}
+
 #container {
   color:white;
   display: flex;
