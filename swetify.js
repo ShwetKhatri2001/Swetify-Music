@@ -26,66 +26,103 @@ let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
 
 const jsonPaths = [
-  './playlists/hollywoodsongs.json',
-  './playlists/holispecial.jsonn',
-  './playlists/bollywoodsongs.json',
-  './playlists/patriotic.json',
-  './playlists/Hits90s.json',
-  './playlists/garbasongs.json',
-  './playlists/dancesongs.json',
-  './playlists/arijitsongs.json',
   './playlists/atifsongs.json',
+  './playlists/arijitsongs.json',
   './playlists/nehasongs.json',
   './playlists/jubinsongs.json',
   './playlists/ritvizsongs.json',
   './playlists/rocksongs.json',
+  './playlists/dancesongs.json',
   './playlists/collegesongs.json',
-];
+  './playlists/garbasongs.json',
+  './playlists/Hits90s.json',
+  './playlists/patriotic.json',
+  './playlists/holispecial.json',
+  './playlists/bollywoodsongs.json',
+  './playlists/hollywoodsongs.json',
+ ];
 
-// Fetch data function
-const fetchData = async (path) => {
-  try {
-    const response = await fetch(path);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return null;
-  }
-};
+ let globalSong, allsongs; 
+ const fetchData = async (path) => {
+   try {
+     const response = await fetch(path);
+     const data = await response.json();
+     return data;
+   } catch (error) {
+     console.error('Error fetching data:', error);
+     return null;
+   }
+ };
 
-// Load songs for each category and artist
-const hollywoodsongs = await fetchData(jsonPaths[0]);
-const holispecial = await fetchData(jsonPaths[1]);
-const bollywoodsongs = await fetchData(jsonPaths[2]);
-const patriotic = await fetchData(jsonPaths[3]);
-const Hits90s = await fetchData(jsonPaths[4]);
-const garbasongs = await fetchData(jsonPaths[5]);
-const dancesongs = await fetchData(jsonPaths[6]);
-const arijitsongs = await fetchData(jsonPaths[7]);
-const atifsongs = await fetchData(jsonPaths[8]);
-const nehasongs = await fetchData(jsonPaths[9]);
-const jubinsongs = await fetchData(jsonPaths[10]);
-const ritvizsongs = await fetchData(jsonPaths[11]);
-const rocksongs = await fetchData(jsonPaths[12]);
-const collegesongs = await fetchData(jsonPaths[13]);
+const fetchAndLogSongs = async () => {
+ try {
+  const atifsongs = await fetchData(jsonPaths[0]);
+  // Below is the array of songs by Arijit Singh, in which each song is an object with the name, title and artist properties.
+  const arijitsongs = await fetchData(jsonPaths[1]);
+  // Below is the array of songs by Neha Kakkar, in which each song is an object with the name, title and artist properties.
+  const nehasongs = await fetchData(jsonPaths[2]);
+  // Below is the array of songs by Jubin Nautiyal, in which each song is an object with the name, title and artist properties.
+  const jubinsongs = await fetchData(jsonPaths[3]);
+  // Below is the array of songs by Ritviz, in which each song is an object with the name, title and artist properties.
+  const ritvizsongs = await fetchData(jsonPaths[4]);
+  // Below is the array of songs in Rock genre, in which each song is an object with the name, title and artist properties.
+  const rocksongs = await fetchData(jsonPaths[5]);
+  // Below is the array of songs for dance, in which each song is an object with the name, title and artist properties.
+  const dancesongs = await fetchData(jsonPaths[6]);
+  // Below is the array of songs for college, in which each song is an object with the name, title and artist properties.
+  const collegesongs = await fetchData(jsonPaths[7]);
+  // Below is the array of songs for garba, in which each song is an object with the name, title and artist properties.
+  const garbasongs = await fetchData(jsonPaths[8]);
+  // Below is the array of songs for 90's Bollywood songs, in which each song is an object with the name, title and artist properties.
+  const Hits90s = await fetchData(jsonPaths[9]);
+  // Below is the array of Bollywood patriotic songs , in which each song is an object with the name, title and artist properties.
+  const patriotic = await fetchData(jsonPaths[10]);
+  // Below is the array of Holi special songs , in which each song is an object with the name, title and artist properties.
+  const holispecial = await fetchData(jsonPaths[11]);
+  // Array of Bollywood songs, in which each song is an object with the name, title and artist properties.
+  const bollywoodsongs = await fetchData(jsonPaths[12]);
+  // Array of Hollywood songs, in which each song is an object with the name, title and artist properties.
+  const hollywoodsongs = await fetchData(jsonPaths[13]);
 
-const globalSong = [
+    globalSong = [
+    hollywoodsongs,
+    holispecial,
+    bollywoodsongs,
+    patriotic,
+    Hits90s,
+    garbasongs,
+    dancesongs,
+    arijitsongs,
+    atifsongs,
+    nehasongs,
+    jubinsongs,
+    ritvizsongs,
+    rocksongs,
+    collegesongs,
+  ];
+  // Wrapping all the songs array in one array by Type of songs.
+  allsongs = [
   hollywoodsongs,
-  holispecial,
   bollywoodsongs,
-  patriotic,
-  Hits90s,
-  garbasongs,
-  dancesongs,
-  arijitsongs,
-  atifsongs,
-  nehasongs,
-  jubinsongs,
-  ritvizsongs,
   rocksongs,
+  dancesongs,
   collegesongs,
+  garbasongs,
+  Hits90s,
+  patriotic,
+  holispecial,
+  nehasongs,
+  arijitsongs,
+  ritvizsongs,
+  jubinsongs,
+  atifsongs,
 ];
+
+ } catch (error) {
+   console.error('Error fetching or logging songs:', error);
+ }
+};
+fetchAndLogSongs()
  
 let likedSongs = [];
 function toastMessage(msg) {
@@ -184,23 +221,7 @@ const hidevisible = () => {
   homepage_content.classList.remove("hidden"); // removing the hidden class from the homepage content.
   main_div.classList.add("hidden");
 };
-// Wrapping all the songs array in one array by Type of songs.
-const allsongs = [
-  hollywoodsongs,
-  bollywoodsongs,
-  rocksongs,
-  dancesongs,
-  collegesongs,
-  garbasongs,
-  Hits90s,
-  patriotic,
-  holispecial,
-  nehasongs,
-  arijitsongs,
-  ritvizsongs,
-  jubinsongs,
-  atifsongs,
-];
+
 // Wrapping all the categories in one array.
 const allcategories = [
   "TopHollywoodHits",
