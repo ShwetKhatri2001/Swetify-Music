@@ -115,7 +115,7 @@ body {
   color: #ffc400;
 }
 
-.playlist-page-link :hover{
+.playlist-page-link:hover{
   text-decoration: none;
 }
 
