@@ -25,7 +25,7 @@ let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
 const progress_el = document.getElementById("progress-el");
 
-
+let allsongs;
 const fetchData = async (path) => {
   try {
     const response = await fetch(path);
@@ -36,12 +36,19 @@ const fetchData = async (path) => {
     return null;
   }
 };
-const hollywoodsongs = await fetchData("../playlists/hollywoodsongs.json");
-
-// Wrapping all the songs array in one array by Type of songs.
-const allsongs = [
+const fetchAndLogSongs = async () => {
+  try {
+    const hollywoodsongs = await fetchData("../playlists/hollywoodsongs.json");
+    // Wrapping all the songs array in one array by Type of songs.
+    allsongs = [
   hollywoodsongs
 ];
+  } catch (error) {
+    console.error('Error fetching or logging songs:', error);
+  }
+ };
+ fetchAndLogSongs()
+
 // Wrapping all the categories in one array.
 const allcategories = [
   "TopHollywoodHits",
