@@ -484,9 +484,16 @@ music.addEventListener("timeupdate", () => {
   updateDuration();
 
 });
-window.addEventListener("load", () => {
+
+// window.addEventListener("load", () => {
+//   refreshLikedList();
+// });
+// Modify the window event listener to use async/await
+window.addEventListener("load", async () => {
+  await fetchAndLogSongs();
   refreshLikedList();
 });
+
 progress.addEventListener("change", () => {
   console.log("progress_div click event fired");
   // event listener to change the progress bar of the song.
