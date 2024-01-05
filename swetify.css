@@ -97,6 +97,7 @@ body {
 #cont2{
   margin-top: 50px;
   padding: 30px;
+  width: 95vw;
   z-index: 2 !important;
 }
 .cont3{
@@ -1445,6 +1446,7 @@ tr:hover {
   color: rgb(176, 176, 176);
   font-size: 20px;
   padding-bottom: 20px;
+  margin: 0 1rem;
 
 }
 
