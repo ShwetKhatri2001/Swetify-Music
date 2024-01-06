@@ -1,0 +1,21 @@
+[
+    { "name": "Bekhayali", "title": "Bekhayali", "artist": "Sachet Tandon" },
+    {
+      "name": "OSakiSaki",
+      "title": "O Saki Saki",
+      "artist": "Neha Kakkar, Tulai Kumar, B Praak, Tanishk Bagchi"
+    },
+    {
+      "name": "Aashiqui2Mashup",
+      "title": "Aashiqui 2 Mashup",
+      "artist": "Aashiqui 2 Music-Cast"
+    },
+    {
+      "name": "RockOn",
+      "title": "Rock On",
+      "artist": "Farhan Akhtar, Shraddha Kapoor"
+    },
+    { "name": "CocaCola", "title": "Coca Cola", "artist": "Tony Kakkar, Neha Kakkar" },
+    { "name": "SaddaHaq", "title": "Sadda Haq", "artist": "Mohit Chauhan" }
+  ]
+  

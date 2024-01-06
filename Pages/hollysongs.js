@@ -25,23 +25,30 @@ let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
 const progress_el = document.getElementById("progress-el");
 
-const hollywoodsongs = [
-  { name: "Faded", title: "Faded", artist: "Alan Walker" },
-  { name: "Closer", title: "Closer", artist: "The Chainsmokers, Halsey" },
-  { name: "CheapThrills", title: "Cheap Thrills", artist: "Sia" },
-  { name: "Friends", title: "Friends", artist: "Marshmello, Anne-Marie" },
-  {
-    name: "Senorita",
-    title: "Senorita",
-    artist: "Shawn Mendes, Camila Cabello",
-  },
-  { name: "I'mMess", title: "I'm a Mess", artist: "Bebe Rexha" },
-];
-
-// Wrapping all the songs array in one array by Type of songs.
-const allsongs = [
+let allsongs;
+const fetchData = async (path) => {
+  try {
+    const response = await fetch(path);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+};
+const fetchAndLogSongs = async () => {
+  try {
+    const hollywoodsongs = await fetchData("../playlists/hollywoodsongs.json");
+    // Wrapping all the songs array in one array by Type of songs.
+    allsongs = [
   hollywoodsongs
 ];
+  } catch (error) {
+    console.error('Error fetching or logging songs:', error);
+  }
+ };
+ fetchAndLogSongs()
+
 // Wrapping all the categories in one array.
 const allcategories = [
   "TopHollywoodHits",

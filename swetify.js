@@ -25,322 +25,105 @@ let categories = document.getElementById("popular categories");
 let artists = document.getElementById("artists");
 const favlist = document.getElementById("fav-list");
 
+const jsonPaths = [
+  './playlists/atifsongs.json',
+  './playlists/arijitsongs.json',
+  './playlists/nehasongs.json',
+  './playlists/jubinsongs.json',
+  './playlists/ritvizsongs.json',
+  './playlists/rocksongs.json',
+  './playlists/dancesongs.json',
+  './playlists/collegesongs.json',
+  './playlists/garbasongs.json',
+  './playlists/Hits90s.json',
+  './playlists/patriotic.json',
+  './playlists/holispecial.json',
+  './playlists/bollywoodsongs.json',
+  './playlists/hollywoodsongs.json',
+ ];
 
-// Below is the array of songs by Atif Aslam, in which each song is an object with the name, title and artist properties.
-const atifsongs = [
-  {
-    name: "DekhteDekhte",
-    title: "Dekhte Dekhte",
-    artist: "Atif Aslam, Nusarat Ali Fateh Khan, Rochak Kohli",
-  },
-  {
-    name: "PehliDafa",
-    title: "Pehli Dafa",
-    artist: "Atif Aslam, Shiraz Uppal",
-  },
-  { name: "DilDiyanGallan", title: "Dil Diyan Gallan", artist: "Atif Aslam" },
-  {
-    name: "PaniyonSa",
-    title: "Paniyon Sa",
-    artist: "Atif Aslam, Tulsi Kumar, Rochak Kohli",
-  },
-  { name: "TeresangYaara", title: "Tere Sang Yaara", artist: "Atif Aslam" },
-  { name: "JeenaJeena", title: "Jeena Jeena", artist: "Atif Aslam" },
-];
-// Below is the array of songs by Arijit Singh, in which each song is an object with the name, title and artist properties.
-const arijitsongs = [
-  { name: "TumHiHo", title: "Tum Hi Ho", artist: "Arijit Singh" },
-  { name: "Khairiyat", title: "Khairiyat", artist: "Arijit Singh" },
-  { name: "IkVaariAa", title: "Ik Vaari Aa", artist: "Arijit Singh" },
-  {
-    name: "Qaafirana",
-    title: "Qaafirana",
-    artist: "Arijit Singh, Nikita Ganndhi",
-  },
-  {
-    name: "TeraYaarHoonMain",
-    title: "Tera Yaar Hoon Main",
-    artist: "Arijit Singh",
-  },
-  {
-    name: "TujheKitnaChahneLage",
-    title: "Tujhe Kitna Chahne Lage",
-    artist: "Arijit Singh",
-  },
-  { name: "Naina", title: "Naina", artist: "Arijit Singh" },
-  { name: "Kesariya", title: "Kesariya", artist: "Arijit Singh" },
-];
-// Below is the array of songs by Neha Kakkar, in which each song is an object with the name, title and artist properties.
-const nehasongs = [
-  {
-    name: "Dilbar",
-    title: "Dilbar",
-    artist: "Neha Kakkar, Dhvani Bhanushali, Ikka, Tanishk Bagchi",
-  },
-  {
-    name: "TuHiYaarMera",
-    title: "Tu Hi Yaar Mera",
-    artist: "Neha Kakkar, Arijit Singh, Rochak Kohli",
-  },
-  {
-    name: "YaadPiyaKiAaneLagi",
-    title: "Yaad Piya Ki Aane Lagi",
-    artist: "Neha Kakkar, Tanishk Bagchi, Lalit Sen",
-  },
-  { name: "Garmi", title: "Garmi", artist: "Neha Kakkar, Badshah" },
-  { name: "LaLaLa", title: "La La La", artist: "Neha Kakkar, Arjun Kanungo" },
-  {
-    name: "GaliGali",
-    title: "Gali Gali",
-    artist: "Neha Kakkar, Tanishk Bagchi",
-  },
-];
-// Below is the array of songs by Jubin Nautiyal, in which each song is an object with the name, title and artist properties.
-const jubinsongs = [
-  {
-    name: "GazabKaHaiDin",
-    title: "Gazab Ka Hai Din",
-    artist: "Jubin Nautiyal, Prakriti Kakkar, Tanishk Bagchi",
-  },
-  {
-    name: "TujheKitnaChaheinAur",
-    title: "Tujhe Kitna Chahein Aur",
-    artist: "Jubin Nautiyal",
-  },
-  {
-    name: "Manike",
-    title: "Manike",
-    artist: "Jubin Nautiyal, Yohani, Surya Ragunnathan",
-  },
-  {
-    name: "TumHiAana",
-    title: "Tum Hi Aana",
-    artist: "Jubin Nautiyal, Payal Dev",
-  },
-  { name: "LoSafar", title: "Lo Safar", artist: "Jubin Nautiyal, Mithoon" },
-  {
-    name: "ZindagiKuchTohBata",
-    title: "Zindagi Kuch Toh Bata",
-    artist: "Jubin Nautiyal",
-  },
-];
-// Below is the array of songs by Ritviz, in which each song is an object with the name, title and artist properties.
-const ritvizsongs = [
-  { name: "UddGaye", title: "Udd Gaye", artist: "Ritviz" },
-  { name: "Sage", title: "Sage", artist: "Ritviz" },
-  { name: "ChaloChalein", title: "Chalo Chalein", artist: "Ritviz" },
-  { name: "Jeet", title: "Jeet", artist: "Ritviz" },
-  { name: "ThandiHawa", title: "Thandi Hawa", artist: "Ritviz" },
-  { name: "Jeet2.0", title: "Jeet 2.0", artist: "Ritviz" },
-];
-// Below is the array of songs in Rock genre, in which each song is an object with the name, title and artist properties.
-const rocksongs = [
-  { name: "Beliver", title: "Beliver", artist: "Imagine Dragon" },
-  { name: "CrazyTrain", title: "Crazy Train", artist: "Ozzy Osbourne" },
-  { name: "DanceDance", title: "Dance Dance", artist: "Toners" },
-  {
-    name: "RockYouLikeAHarricane",
-    title: "Rock You Like A Harricane",
-    artist: "Scorpions",
-  },
-];
-// Below is the array of songs for dance, in which each song is an object with the name, title and artist properties.
-const dancesongs = [
-  { name: "PostMalone", title: "Post Malone", artist: "Sam Feldt" },
-  { name: "TechnoPrank", title: "Techno Prank", artist: "Dubdogz" },
-  { name: "BoomZubarecki", title: "Boom Zubarecki", artist: "Tiesto, Seven" },
-  {
-    name: "WhatUWaitingFo",
-    title: "What U Waiting Fo",
-    artist: "Moti x Bodyworx",
-  },
-  { name: "ThereForYou", title: "There For You", artist: "Alex Hart" },
-];
-// Below is the array of songs for college, in which each song is an object with the name, title and artist properties.
-const collegesongs = [
-  {
-    name: "TeriYaari",
-    title: "Teri Yaari",
-    artist: "Milind Gaba, Aparshakti Khurana, King Kaazi",
-  },
-  { name: "Yaari", title: "Yaari", artist: "Nikk feat. Avneet Kaur" },
-  {
-    name: "AtrangiYaari",
-    title: "Atrangi Yaari",
-    artist: "Amitabh Bachchan, Farhan Akhtar",
-  },
-  { name: "WohDin", title: "Woh Din", artist: "Arijit Singh" },
-  {
-    name: "Hostel",
-    title: "Hostel",
-    artist: "Sharry Mann, Parmish Verma, Mista Baaz",
-  },
-  {
-    name: "YaaraTeriYaari",
-    title: "Yaara Teri Yaari",
-    artist: "Darshan Raval",
-  },
-];
-// Below is the array of songs for garba, in which each song is an object with the name, title and artist properties.
-const garbasongs = [
-  {
-    name: "Dholida",
-    title: "Dholida",
-    artist: "Udit Narayan, Neha Kakkar, Palak Muchhal, Raja Hasan",
-  },
-  { name: "Chogada", title: "Chogada", artist: "Darshan Raval, Asees Kaur" },
-  {
-    name: "AtulPurohit3Tali",
-    title: "Atul Purohit 3 Tali",
-    artist: "Atul Purohit and mandal",
-  },
-  {
-    name: "AtulPurohit2Tali",
-    title: "Atul Purohit 2 Tali",
-    artist: "Atul Purohit and mandal",
-  },
-  {
-    name: "AtulbhaiFinalSteps",
-    title: "Atulbhai Final Steps",
-    artist: "Atul Purohit",
-  },
-  { name: "FullNightTrack", title: "Full Night Track", artist: "Ae Halo" },
-];
-// Below is the array of songs for 90's Bollywood songs, in which each song is an object with the name, title and artist properties.
-const Hits90s = [
-  {
-    name: "ChuraKeDilMera",
-    title: "Chura Ke Dil Mera",
-    artist: "Alka Yagnik and Kumar Sanu",
-  },
-  {
-    name: "BaazigarOBaazigar",
-    title: "Baazigar O Baazigar",
-    artist: "Alka Yagnik and Kumar Sanu",
-  },
-  {
-    name: "ChandChhupaBadalMein",
-    title: "Chand Chhupa Badal Mein",
-    artist: "Udit Narayan and Alka Yagnik",
-  },
-  {
-    name: "AeMereHumsafar",
-    title: "Ae Mere Humsafar",
-    artist: "Udit Narayan and Alka Yagnik",
-  },
-  {
-    name: "AisiDeewangi",
-    title: "Aisi Deewangi",
-    artist: "Alka Yagnik and Vinod Rathod",
-  },
-  {
-    name: "ChhupanaBhiNahinAata",
-    title: "Chhupana Bhi Nahin Aata",
-    artist: "Pankaj Udhas",
-  },
-];
-// Below is the array of Bollywood patriotic songs , in which each song is an object with the name, title and artist properties.
-const patriotic = [
-  {
-    name: "SareJahanSeAchha",
-    title: "Sare Jahan Se Achha",
-    artist: "Seema Mishra",
-  },
-  {
-    name: "SarfaroshiKiTamanna",
-    title: "Sarfaroshi Ki Tamanna",
-    artist: "Sonu Nigam",
-  },
-  {
-    name: "DesMereDes",
-    title: "Des Mere Des",
-    artist: "A.R. Rahman, Sukhwinder Singh",
-  },
-  { name: "MaaTujheSalaam", title: "Maa Tujhe Salaam", artist: "A.R. Rahman" },
-  {
-    name: "MeraRangDeBasanti",
-    title: "Mera Rang De Basanti",
-    artist: "Sonu Nigam, Manmohan Waris",
-  },
-];
-// Below is the array of Holi special songs , in which each song is an object with the name, title and artist properties.
-const holispecial = [
-  {
-    name: "BalamPichkari",
-    title: "Balam Pichkari",
-    artist: "Pritam, Vishal Dadlani, Shalmali Kholgade",
-  },
-  {
-    name: "HoliKeDin",
-    title: "Holi Ke Din",
-    artist: "Lata Mangeshkar, Kishore Kumar, R. D. Burman",
-  },
-  {
-    name: "BadriKiDulhaniya",
-    title: "Badri Ki Dulhaniya",
-    artist: "Dev Negi, Neha Kakkar, Monali Thakur, Ikka",
-  },
-  {
-    name: "AngSeAngLagana",
-    title: "Ang Se Ang Lagana",
-    artist: "Alka Yagnik, Sudesh Bhosle, Vinod Rathod",
-  },
-  {
-    name: "RangBaraseBheegeChunarwali",
-    title: "Rang Barase Bheege Chunarwali",
-    artist: "Amitabh Bachchan",
-  },
-];
-// Array of Bollywood songs, in which each song is an object with the name, title and artist properties.
-const bollywoodsongs = [
-  { name: "Bekhayali", title: "Bekhayali", artist: "Sachet Tandon" },
-  {
-    name: "OSakiSaki",
-    title: "O Saki Saki",
-    artist: "Neha Kakkar, Tulai Kumar, B Praak, Tanishk Bagchi",
-  },
-  {
-    name: "Aashiqui2Mashup",
-    title: "Aashiqui 2 Mashup",
-    artist: "Aashiqui 2 Music-Cast",
-  },
-  {
-    name: "RockOn",
-    title: "Rock On",
-    artist: "Farhan Akhtar, Shraddha Kapoor",
-  },
-  { name: "CocaCola", title: "Coca Cola", artist: "Tony Kakkar, Neha Kakkar" },
-  { name: "SaddaHaq", title: "Sadda Haq", artist: "Mohit Chauhan" },
-];
-// Array of Hollywood songs, in which each song is an object with the name, title and artist properties.
-const hollywoodsongs = [
-  { name: "Faded", title: "Faded", artist: "Alan Walker" },
-  { name: "Closer", title: "Closer", artist: "The Chainsmokers, Halsey" },
-  { name: "CheapThrills", title: "Cheap Thrills", artist: "Sia" },
-  { name: "Friends", title: "Friends", artist: "Marshmello, Anne-Marie" },
-  {
-    name: "Senorita",
-    title: "Senorita",
-    artist: "Shawn Mendes, Camila Cabello",
-  },
-  { name: "I'mMess", title: "I'm a Mess", artist: "Bebe Rexha" },
-];
-const globalSong = [
+ let globalSong, allsongs; 
+ const fetchData = async (path) => {
+   try {
+     const response = await fetch(path);
+     const data = await response.json();
+     return data;
+   } catch (error) {
+     console.error('Error fetching data:', error);
+     return null;
+   }
+ };
+
+const fetchAndLogSongs = async () => {
+ try {
+  const atifsongs = await fetchData(jsonPaths[0]);
+  // Below is the array of songs by Arijit Singh, in which each song is an object with the name, title and artist properties.
+  const arijitsongs = await fetchData(jsonPaths[1]);
+  // Below is the array of songs by Neha Kakkar, in which each song is an object with the name, title and artist properties.
+  const nehasongs = await fetchData(jsonPaths[2]);
+  // Below is the array of songs by Jubin Nautiyal, in which each song is an object with the name, title and artist properties.
+  const jubinsongs = await fetchData(jsonPaths[3]);
+  // Below is the array of songs by Ritviz, in which each song is an object with the name, title and artist properties.
+  const ritvizsongs = await fetchData(jsonPaths[4]);
+  // Below is the array of songs in Rock genre, in which each song is an object with the name, title and artist properties.
+  const rocksongs = await fetchData(jsonPaths[5]);
+  // Below is the array of songs for dance, in which each song is an object with the name, title and artist properties.
+  const dancesongs = await fetchData(jsonPaths[6]);
+  // Below is the array of songs for college, in which each song is an object with the name, title and artist properties.
+  const collegesongs = await fetchData(jsonPaths[7]);
+  // Below is the array of songs for garba, in which each song is an object with the name, title and artist properties.
+  const garbasongs = await fetchData(jsonPaths[8]);
+  // Below is the array of songs for 90's Bollywood songs, in which each song is an object with the name, title and artist properties.
+  const Hits90s = await fetchData(jsonPaths[9]);
+  // Below is the array of Bollywood patriotic songs , in which each song is an object with the name, title and artist properties.
+  const patriotic = await fetchData(jsonPaths[10]);
+  // Below is the array of Holi special songs , in which each song is an object with the name, title and artist properties.
+  const holispecial = await fetchData(jsonPaths[11]);
+  // Array of Bollywood songs, in which each song is an object with the name, title and artist properties.
+  const bollywoodsongs = await fetchData(jsonPaths[12]);
+  // Array of Hollywood songs, in which each song is an object with the name, title and artist properties.
+  const hollywoodsongs = await fetchData(jsonPaths[13]);
+
+    globalSong = [
+    hollywoodsongs,
+    holispecial,
+    bollywoodsongs,
+    patriotic,
+    Hits90s,
+    garbasongs,
+    dancesongs,
+    arijitsongs,
+    atifsongs,
+    nehasongs,
+    jubinsongs,
+    ritvizsongs,
+    rocksongs,
+    collegesongs,
+  ];
+  // Wrapping all the songs array in one array by Type of songs.
+  allsongs = [
   hollywoodsongs,
-  holispecial,
   bollywoodsongs,
-  patriotic,
-  Hits90s,
-  garbasongs,
-  dancesongs,
-  arijitsongs,
-  atifsongs,
-  nehasongs,
-  jubinsongs,
-  ritvizsongs,
   rocksongs,
+  dancesongs,
   collegesongs,
+  garbasongs,
+  Hits90s,
+  patriotic,
+  holispecial,
+  nehasongs,
+  arijitsongs,
+  ritvizsongs,
+  jubinsongs,
+  atifsongs,
 ];
+
+ } catch (error) {
+   console.error('Error fetching or logging songs:', error);
+ }
+};
+fetchAndLogSongs()
+ 
 let likedSongs = [];
 function toastMessage(msg) {
   var x = document.getElementById("snackbar");
@@ -438,23 +221,7 @@ const hidevisible = () => {
   homepage_content.classList.remove("hidden"); // removing the hidden class from the homepage content.
   main_div.classList.add("hidden");
 };
-// Wrapping all the songs array in one array by Type of songs.
-const allsongs = [
-  hollywoodsongs,
-  bollywoodsongs,
-  rocksongs,
-  dancesongs,
-  collegesongs,
-  garbasongs,
-  Hits90s,
-  patriotic,
-  holispecial,
-  nehasongs,
-  arijitsongs,
-  ritvizsongs,
-  jubinsongs,
-  atifsongs,
-];
+
 // Wrapping all the categories in one array.
 const allcategories = [
   "TopHollywoodHits",
@@ -717,9 +484,16 @@ music.addEventListener("timeupdate", () => {
   updateDuration();
 
 });
-window.addEventListener("load", () => {
+
+// window.addEventListener("load", () => {
+//   refreshLikedList();
+// });
+// Modify the window event listener to use async/await
+window.addEventListener("load", async () => {
+  await fetchAndLogSongs();
   refreshLikedList();
 });
+
 progress.addEventListener("change", () => {
   console.log("progress_div click event fired");
   // event listener to change the progress bar of the song.
