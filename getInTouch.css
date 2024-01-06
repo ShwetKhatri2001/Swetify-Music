@@ -1,3 +1,52 @@
+
+
+
+
+
+
+#content.hidden {
+  opacity: 0;
+  transition: opacity 1s ease; /* Smooth transition on opacity change */
+}
+
+/* Loader styles */
+.loader-wrapper {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 9999;
+}
+
+.logo {
+  width: 200px; 
+  height: 200px;
+  background-image: url("./homepage/swetifylogo.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
 .modal-div{
     width: 60%;
     display: block;
@@ -9,6 +58,7 @@
     font-family:"Montserrat";
     
   }
+
   *{
   
   scroll-behavior: smooth;
@@ -148,6 +198,5 @@
     .contact-textarea{
         width: 100%;
     }
+
   }
-  
-  
