@@ -24,8 +24,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="homepage/Favicon.ico"> 
-<!-- scrollbar css link -->
-<link rel="stylesheet" href="../Swetify-Music/Srollbar_style/style.css">
+
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
 
@@ -55,7 +54,7 @@
 <body>
   <div id="snackbar">Some text some message..</div>
   <header>
-    <nav id="header-nav" class="navbar navbar-default">
+    <nav id="header-nav-2" class="navbar navbar-default">
       <!-- <div class="container-not-bs">
         <div class="navbar-header">
           <a href="index.html" class="pull-left visible-md visible-lg">
@@ -95,7 +94,7 @@
             </li>
           </ul>
         </div> -->
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav"
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav"
         aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -169,6 +168,13 @@
             <span class="glyphicon glyphicon-headphones " id="headphones"></span> Swetify
           </a>
         </h2>
+        <label for="themeSelector"></label>
+        <select id="themeSelector">
+            <option value="default" class="default"></option>
+            <option value="light" class="light"></option>
+            <option value="blue" class="blue"></option>
+            <option value="green" class="green"></option>
+        </select>
       </nav>
       <div id="content">
         <div class="video-filter"></div>
@@ -452,7 +458,7 @@
 
             <!-- footer section  -->
             <footer>
-              <div class="footer ">
+              <div class="footer" id="footer">
                 <div class="footer-text">
                   <p>Made with ❤️ by <span class="title"><a href="#">Swetify
                       </a></span>Music Contributors
@@ -474,15 +480,15 @@
       <div class="main_div hidden" id="main_div">
         <div id="particles-js"></div>
 
-<div class="main-img_container"> 
-  <div class="img_container" id="songimage">
-  <img src="songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
-</div></div>
         <div class="music_container">
 
           <h2 id="title">songtitle</h2>
-         
-         
+          <h3>
+            <marquee id="artist">artists</marquee>
+          </h3>
+          <div class="img_container" id="songimage">
+            <img src="songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
+          </div>
           <audio src="songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
           <!-- progress-bar -->
           <div class="progress_container" id="progress_container">
@@ -494,10 +500,6 @@
             <!-- <div class="progress_div" id="progress_div">
         <div class="progress" id="progress"></div>
       </div> -->
-<!-- artists name -->
-      <h3>
-        <marquee id="artist">artists</marquee>
-      </h3>
           </div>
 
           <!-- controls -->
@@ -512,12 +514,14 @@
               <input type="checkbox" id="likeToggle" />
               <label for="likeToggle" class="like_icon"></label>
             </div>
-            <div class="download_controls"> 
+            <div class="download_controls">
               <div class="fa fa-download download_button" id="download" title="Download Music"></div>
             </div>
           </div>
         </div>
       </div>
+
+      <script src="./jsfunctions//mode.js"></script>
 
       <script src="./jsfunctions//changetab.js"></script>
 
@@ -544,6 +548,7 @@
       <script src="./jsfunctions/slider.js"></script>
       <!-- particles -->
       <script src="./jsfunctions//particles.js"></script>
+      
 
   </body>
 

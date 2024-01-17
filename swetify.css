@@ -208,16 +208,51 @@ nav {
   padding-left: 38px;
   width: 100%;
   position: absolute;
-  background-color: #0f0f0f !important;
+  /* background-color: #0f0f0f !important; */
 }
 #header-nav {
   background-color: #000000;
   border-radius: 0;
   border: 0;
-  
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-between;
 }
+#themeSelector{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  color:transparent;
+  margin-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.default{
+  background-color: black;
+  color: white;
+}
+.blue{
+  background-color: #222dee;
+  color: white;
+}
+.green{
+  background-color: #017334;
+  color: white;
+}
+.default:hover{
+  background-color: rgba(0, 0, 0, 0.571);
+  color: white;
+}
+.blue:hover{
+  background-color: #222ceea9;
+  color: white;
+}
+.green:hover{
+  background-color: #0173348b;
+  color: white;
+}
+
 
 #logo-img {
   background: url("homepage/swetifylogo.jpg") no-repeat;
@@ -526,7 +561,9 @@ nav a{
   left: 5px;
 }
 
-
+#footer{
+  background-color: #000000;
+}
 .footer {
   width: auto;
   height: 12vh;
