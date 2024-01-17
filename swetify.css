@@ -702,14 +702,16 @@ footer .top:hover {
 }
 
 .music_container {
-  width: 40rem;
-  height: 63rem;
+  width:80%;
+  height:100%;
   background-color: #000000;
   border-radius: 2rem;
   box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.2);
-  padding: 2rem;
   text-align: center;
-  position: relative;
+  margin-left:20%;
+  margin-top: 0%;
+  padding:0% 0% 0% 2rem;
+
 }
 
 .music_container #title {
@@ -717,9 +719,10 @@ footer .top:hover {
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
   color: #b3b3b3;
-  margin: 2rem 0 0.5rem 0;
+  margin: 5px 0 0 0 ;
   font-size: 2.3rem;
   font-weight: bold;
+  padding-top: 0;
   text-shadow: 0 3px 10px 2.5rem rgba(0, 0, 0, 0.7);
 }
 
@@ -728,14 +731,8 @@ footer .top:hover {
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-size: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0;
   font-weight: 300;
-}
-
-.img_container {
-  width: 28rem;
-  height: 28rem;
-  margin: auto;
 }
 
 .songimg {
@@ -752,16 +749,20 @@ footer .top:hover {
   width: 29rem;
   display: flex;
   margin: auto;
-  margin-top: 2rem;
   justify-content: space-around;
   align-items: center;
+  padding-top: 0;
+  padding-bottom: 10px;
+  margin-top: 0;
 }
-
+.progress_container h3{
+  margin-bottom: 0;
+ }
 .download_controls {
-  position: absolute;
+  position: relative;
   bottom: 7px;
   right: 10px;
-  padding: 1rem;
+  padding: 1.75rem 1rem 0rem 1rem;
 }
 
 .music_controls .fa {
@@ -769,6 +770,8 @@ footer .top:hover {
   font-size: 2rem;
   cursor: pointer;
   filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .download_controls .fa {
@@ -918,8 +921,8 @@ input[type="checkbox"]:checked+.like_icon {
 .progress_container {
   width: 100%;
   height: auto;
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: 1rem 1rem 0 1rem;
+  margin-top:0;
 }
 
 .progress_div {
@@ -1168,11 +1171,6 @@ input[type="checkbox"]:checked+.like_icon {
     opacity: 1;
   }
 
-  .music_container {
-    width: 30rem;
-    height: 53rem;
-    background-color: #000000;
-  }
 
   .footer {
     height: 300px;
@@ -1238,30 +1236,26 @@ input[type="checkbox"]:checked+.like_icon {
   }
 }
 
-.music_container #title {
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  word-spacing: 0.5rem;
-  color: #ffffff;
-  margin: 2rem 0 0.5rem 0;
-  font-size: 2.3rem;
-  font-weight: bold;
-
-}
 
 .music_container #artist {
   color: white;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-size: 1.7rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   font-weight: 300;
-}
+ }
+
+ .main-img_container{
+  margin:auto auto 0 auto;
+} 
 
 .img_container {
+  position: relative;
+  left: 50%;
   width: 28rem;
   height: 28rem;
-  margin: auto;
+  margin: 35% 10% 5% auto;
 }
 
 /******Super Extra Small Devices Only*****/
