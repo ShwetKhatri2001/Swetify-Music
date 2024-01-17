@@ -1,0 +1,40 @@
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #eea600, #e44724);
+  border-radius: 6px;
+  animation: flicker 0.2s infinite alternate;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0f3057;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: thin;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #eea600, #e44724);
+  border-radius: 6px;
+  animation: flicker 0.2s infinite alternate;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #0f3057;
+}
+
+@keyframes flicker {
+  0% {
+    background: linear-gradient(to bottom, #eea600, #e44724);
+  }
+  100% {
+    background: linear-gradient(to bottom, #eea600, #e44724, #eea600);
+  }
+}
