@@ -66,6 +66,7 @@ const allcategories = [
   "JubinNautiyal",
   "AtifAslam",
   "SonuNigam",
+  "ShreyaGhosal"
 ];
 
 const out = () => {
