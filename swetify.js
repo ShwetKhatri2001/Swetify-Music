@@ -41,6 +41,7 @@ const jsonPaths = [
   './playlists/bollywoodsongs.json',
   './playlists/hollywoodsongs.json',
   './playlists/sonusongs.json',
+  './playlists/shreyasongs.json',
 ];
 
 let globalSong, allsongs;
@@ -86,6 +87,8 @@ const fetchAndLogSongs = async () => {
     const hollywoodsongs = await fetchData(jsonPaths[13]);
     // Below is the array of songs by Sonu Nigam, in which each song is an object with the name, title and artist properties.
     const sonusongs = await fetchData(jsonPaths[14]);
+    // Below is the array of songs by Shreya Ghosal, in which each song is an object with the name, title and artist properties.
+    const shreyasongs = await fetchData(jsonPaths[15]);
 
     globalSong = [
       hollywoodsongs,
@@ -103,6 +106,7 @@ const fetchAndLogSongs = async () => {
       rocksongs,
       collegesongs,
       sonusongs,
+      shreyasongs,
     ];
     // Wrapping all the songs array in one array by Type of songs.
     allsongs = [
@@ -121,6 +125,7 @@ const fetchAndLogSongs = async () => {
       jubinsongs,
       atifsongs,
       sonusongs,
+      shreyasongs,
     ];
   } catch (error) {
     console.error('Error fetching or logging songs:', error);
@@ -248,6 +253,7 @@ const allcategories = [
   'JubinNautiyal',
   'AtifAslam',
   'SonuNigam',
+  'ShreyaGhosal',
 ];
 let songs = [];
 let category;
