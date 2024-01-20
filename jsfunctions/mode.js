@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function enableDarkMode() {
         nav.classList.add('dark-mode');
-        side.classList.add('dark-mode');
+        // side.classList.add('dark-mode');
         footer.classList.add('dark-mode');
         for(let l=0;l<playlist.length;l++){
             playlist[l].classList.add('dark-mode');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function disableDarkMode() {
         nav.classList.remove('dark-mode');
-        side.classList.remove('dark-mode');
+        // side.classList.remove('dark-mode');
         footer.classList.remove('dark-mode');
         for(let l=0;l<playlist.length;l++){
             playlist[l].classList.remove('dark-mode');
