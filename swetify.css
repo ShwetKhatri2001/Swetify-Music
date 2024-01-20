@@ -208,13 +208,15 @@ nav {
   padding-left: 38px;
   width: 100%;
   position: absolute;
-  background-color: #0f0f0f !important;
+  /* background-color: #0f0f0f !important; */
 }
 #header-nav {
   background-color: #000000;
   border-radius: 0;
   border: 0;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
 }
@@ -1578,4 +1580,79 @@ h2 a{
 
 h3{
   font-size: 28px;
+}
+
+.dark-mode {
+  background-color: #d6d5d5 !important;
+  color: #272626 !important;
+}
+.dark-mode a{
+  
+  color: #272626 !important;
+}
+.dark-mode p{
+  color: #272626 !important;
+}
+.dark-mode label{
+  color: #272626 !important;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#footer{
+  background-color: black;
+}
+.slider2 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider2:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider2 {
+  background-color: #272727;
+}
+
+input:focus + .slider2 {
+  box-shadow: 0 0 1px #383838;
+}
+
+input:checked + .slider2:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider2.round {
+  border-radius: 34px;
+}
+
+.slider2.round:before {
+  border-radius: 50%;
 }
