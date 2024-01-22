@@ -43,6 +43,14 @@ const jsonPaths = [
   './playlists/sonusongs.json',
   './playlists/shreyasongs.json',
 ];
+function toggleNavbar() {
+  var navbar = document.getElementById("navbar");
+  if (navbar.style.left === "0px") {
+    navbar.style.left = "-250px";
+  } else {
+    navbar.style.left = "0px";
+  }
+}
 
 let globalSong, allsongs;
 const fetchData = async (path) => {
