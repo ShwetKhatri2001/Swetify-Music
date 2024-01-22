@@ -22,3 +22,34 @@ const initSlider = () => {
 };
 
 window.addEventListener("load", initSlider);
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Fetch contributors data from the JSON file
+    fetch("contributors.json")
+      .then(response => response.json())
+      .then(data => displayContributors(data))
+      .catch(error => console.error("Error fetching contributors:", error));
+  });
+  
+  // Function to display contributors in the HTML
+  function displayContributors(contributors) {
+    const contributorsList = document.getElementById("contributors-list");
+  
+    // Iterate through the contributors and create list items
+    contributors.forEach(contributor => {
+      // Fetch the GitHub user details to get the profile picture
+      fetch(`https://api.github.com/users/${contributor.github}`)
+        .then(response => response.json())
+        .then(user => {
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `
+            <div class="contributor-item">
+              <img src="${user.avatar_url}" alt="${contributor.name}'s profile picture" class="contributor-image">
+              <a href="https://github.com/${contributor.github}" target="_blank">${contributor.name}</a>
+            </div>`;
+          contributorsList.appendChild(listItem);
+        })
+        .catch(error => console.error(`Error fetching GitHub user (${contributor.github}) details:`, error));
+    });
+  }
+  
