@@ -4,8 +4,7 @@ const initSlider = () => {
     let maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
 
     const scrollAmount = imageList.clientWidth;
-
-    const handleSlideButtons = () => {
+      const handleSlideButtons = () => {
         slideButtons[0].style.visibility = imageList.scrollLeft <= 0 ? "hidden" : "visible";
         slideButtons[1].style.visibility = imageList.scrollLeft >= maxScrollLeft ? "hidden" : "visible";
     };
