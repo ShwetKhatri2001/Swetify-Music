@@ -1657,3 +1657,51 @@ input:checked + .slider2:before {
 .slider2.round:before {
   border-radius: 50%;
 }
+/* Add these styles to your existing CSS file or create a new one */
+
+#contributors-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: grid; /* Add this line */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Add this line */
+  gap: 20px; /* Add this line to add space between grid items */
+}
+
+.contributor-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contributor-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contributor-name {
+  font-size: 20px; /* Adjust the font size as needed */
+}
+.contributor-name:hover {
+  text-decoration: underline;
+}
+
+.contributors-container h2{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.contributors-container a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: medium;
+}
+.contributors-container a:hover{
+  color:#ffc400;
+}
+#contributors-list {
+  list-style-type: none; /* Add this line */
+  padding-left: 0; /* Add this line to remove the default padding */
+}
