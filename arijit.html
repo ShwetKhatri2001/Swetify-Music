@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arijit Singh Hits - Swetify</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph Protocols -->
+    <meta property="og:title" content="Let's Play On Swetify" />
+    <meta property="og:description" content="Play and Sing with us Now !" />
+    <meta property="og:image" content="homepage/swetifylogo.jpg" />
+    <meta property="og:url" content="https://swetify.netlify.app/" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg" />
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
+    <!-- scrollbar css link -->
+    <link rel="stylesheet" href="../Swetify-Music/Srollbar_style/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link href="../swetify.css" type="text/css" rel="stylesheet" />
+    <link href="pages.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom Script -->
+    <script src="../script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+
+    <!-- internal css  -->
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp8207091.jpg");
+            font-size: 14px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="top">
+      <h1>Top Hollywood Hits</h1>
+    </div>
+    <header>
+    </header> -->
+
+    <div id="side-panel">
+
+        <!-- <div id="logo-img" alt="Logo img"></div> -->
+
+
+        <br>
+
+        <div style="padding-top: 80px;">
+            <a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a>
+            <a href="#popular categories"><i class="glyphicon glyphicon-music"></i> Popular Categories</a>
+            <a href="#bestofartist"><i class="fa-solid fa-user"></i> Best of Artists</a>
+            <a href="#liked"> <i class="fa-solid fa-heart"></i> Liked Music</a>
+            <a href="contact.html"><i class="fa-solid fa-phone"></i>Contact</a>
+            <a href="about.html"><i class="fa-regular fa-address-card"></i>About Us</a>
+
+        </div>
+        <!-- Add more links as needed -->
+    </div>
+
+    <nav id="header-nav" class="navbar navbar-default">
+        <h2 class="navbar-header">
+            <a href="index.html">
+                <span class="glyphicon glyphicon-headphones " id="headphones"></span> Swetify
+            </a>
+        </h2>
+        <label class="switch">
+            <input type="checkbox" id="toggle-switch">
+            <span class="slider2 round"></span>
+        </label>
+    </nav>
+
+    <div class="playlist-heading">
+        <p class="playlist_tag">Playlist</p>
+        <h2 class="playlist_name">The Arijit Singh</h2>
+
+    </div>
+
+
+
+    <div class="songs-list" id="homepage_content">
+
+
+
+        <div class="song-container" onclick="loadplaylistsong(0,0)">
+            <div class="image_container">
+                <img src="https://c.saavncdn.com/430/Aashiqui-2-Hindi-2013-500x500.jpg
+                " alt="" class="cover">
+
+                <div class="name-artist">
+                    <div class="name" id="0">Tum Hi Ho </div>
+                    <div class="artist">Arijit Singh</div>
+                </div>
+            </div>
+            <div class="album">Aashiqui 2</div>
+            <div class="dur">3:32</div>
+        </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,1)">
+            <div class="image_container">
+                <img src="https://th.bing.com/th/id/OIP.-LZlDTeDKEO9Q-i_GM6bmwHaHa?rs=1&pid=ImgDetMain" alt="" class="cover">
+
+                <div class="name-artist">
+
+                    <div class="name" id="1">Khairiyat</div>
+                    <div class="artist">Arijit Singh</div>
+                </div>
+            </div>
+            <div class="album">Chhichhore</div>
+            <div class="dur">4:04</div>
+        </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,2)">
+            <div class="image_container">
+                <img src="https://c.saavncdn.com/023/Raabta-Hindi-2017-500x500.jpg" alt="" class="cover">
+
+                <div class="name-artist">
+
+                    <div class="name" id="2">Ik Vaari aa</div>
+                    <div class="artist">Arijit Singh</div>
+                </div>
+            </div>
+            <div class="album">Raabta</div>
+            <div class="dur">3:31</div>
+        </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,3)">
+            <div class="image_container">
+                <img src="https://c.saavncdn.com/367/Kedarnath-Hindi-2019-20190219-500x500.jpg" alt="" class="cover">
+
+                <div class="name-artist">
+
+                    <div class="name" id="3">Qaafirana</div>
+                    <div class="artist">Arijit Singh, Nikita Gandhi</div>
+                </div>
+            </div>
+            <div class="album">Kedarnath</div>
+            <div class="dur">3:32</div>
+        </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,4)">
+            <div class="image_container">
+                <img src="https://c.saavncdn.com/074/Sonu-Ke-Titu-Ki-Sweety-Hindi-2018-20180214153942-500x500.jpg" alt="" class="cover">
+
+                <div class="name-artist">
+
+                    <div class="name" id="2">Tera Yaar Hoon Main</div>
+                    <div class="artist">Arijit Singh</div>
+                </div>
+            </div>
+            <div class="album">Sonu Ke Titu Ki Sweety</div>
+            <div class="dur">3:10</div>
+        </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,2)">
+            <div class="image_container">
+                <img src="https://c.saavncdn.com/807/Kabir-Singh-Hindi-2019-20190614075009-500x500.jpg" alt="" class="cover">
+
+                <div class="name-artist">
+
+                    <div class="name" id="2">Tujhe Kitna Chahne Lage Hum</div>
+                    <div class="artist">Arijit Singh</div>
+                </div>
+            </div>
+            <div class="album">Kabir Singh</div>
+            <div class="dur">3:15</div>
+        </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,2)">
+            <div class="image_container">
+                <img src="https://c.saavncdn.com/480/Dangal-Hindi-2016-20200116120806-500x500.jpg" alt="" class="cover">
+
+                <div class="name-artist">
+
+                    <div class="name" id="2">Naina</div>
+                    <div class="artist">Arijit Singh</div>
+                </div>
+            </div>
+            <div class="album">Dangal</div>
+            <div class="dur">3:15</div>
+        </div>
+
+        <div class="song-container" onclick="loadplaylistsong(0,2)">
+            <div class="image_container">
+                <img src="https://c.saavncdn.com/871/Brahmastra-Original-Motion-Picture-Soundtrack-Hindi-2022-20221006155213-500x500.jpg" alt="" class="cover">
+
+                <div class="name-artist">
+
+                    <div class="name" id="2">Kesariya</div>
+                    <div class="artist">Pritam, Arijit Singh</div>
+                </div>
+            </div>
+            <div class="album">Bhramastra</div>
+            <div class="dur">3:15</div>
+        </div>
+        
+    </div>
+
+
+    <!-- ---------------------------------------------------------------------------------------- -->
+    <div class="main_div hidden" id="main_div">
+        <div class="music_container">
+            <h2 id="title">songtitle</h2>
+            <h3>
+                <marquee id="artist">artists</marquee>
+            </h3>
+            <div class="img_container" id="songimage">
+                <img src="../songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
+            </div>
+            <audio src="../songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
+
+            <!-- progress-bar -->
+            <div class="progress_container" id="progress_container">
+                <div class="progress_duration_meter">
+                    <div id="current_time">0:00</div>
+                    <div id="duration">4:16</div>
+                </div>
+                <input type="range" id="progress-el" min="0" value="0" max="100">
+            </div>
+
+            <!-- controls -->
+            <div class="music_controls">
+                <i class="fa fa-step-backward" id="prev" title="Previous" onclick="loadprevsong(0)"></i>
+                <i class="fa fa-play main_button" id="play" title="Play"></i>
+                <i class="fa fa-step-forward" id="next" title="Next" onclick="loadnextsong(0)"></i>
+                <i class="fa fa-random shuffle_button" id="shuffle" title="Shuffle Music"></i>
+                <div class="like_button" id="likeBtn">
+                    <input type="checkbox" id="likeToggle" />
+                    <label for="likeToggle" class="like_icon"></label>
+                </div>
+                <div class="download_controls">
+                    <div class="fa fa-download download_button" id="download" title="Download Music"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="arijit.js" defer></script>
+</body>
+
+</html>

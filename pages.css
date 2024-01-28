@@ -1,0 +1,235 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://wallpapercave.com/wp/wp7898498.jpg);
+  font-size: 14px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+  html {
+    font-size: 62.5%;
+    font-family: "Jost", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .top{
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+  header{
+    
+    height: 300px;
+    margin: 0;
+    background-image: url("../homepage/TopHollywoodHits.jpg");
+    
+  }
+
+  .playlist_tag {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    left: 15px;
+    padding: 0px;
+    margin: 0px;
+    text-shadow: 2px 1px 2px black;
+  }
+
+  .playlist_name {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    font-size: 65px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 6px 4px 2px black;
+}
+
+  .playlist-heading{
+    position: absolute;
+    top: 215px;
+    left: 300px;
+    color: white;
+    /* border: 1px solid red; */
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 6px 4px 2px black;
+
+  }
+
+  .songs-list {
+    /* border: 1px solid red; */
+    background-color:  rgba(22, 20, 20, 0.59);
+    border-radius: 10px;
+    opacity: 2s;
+    position: absolute;
+    top: 370px;
+    left: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    
+}
+
+  .song-container{
+    display: flex;
+    box-sizing: border-box;
+    margin: 8px 20px;
+    /* background-color: rgb(50 39 39 / 59%); */
+    opacity: 2s;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 860px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 3px 2px 3px black;
+    
+    
+  }
+
+  .songlistheader{
+    display: flex;
+    box-sizing: border-box;
+    margin: 10px 20px;
+    background-color: rgb(228, 7, 7);
+    opacity: 2s;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+    cursor: pointer;
+    
+    
+  }
+
+  .title{
+    position: relative;
+    left: 16px;
+  }
+  .album-title{
+    position: relative;
+    left: 215px;
+  }
+  .duration{
+
+  }
+
+  .image_container{
+    
+    display: flex;
+    align-items: center;
+    padding:10px 15px;
+    
+  }
+
+  .image_container img{
+    
+    width: 40px;
+    height: 40px;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 5px;
+  }
+
+  .hidden
+  {
+    display: none;
+  }
+
+  .name
+  {
+    cursor:pointer;
+  }
+
+  .name
+  {
+    font-size: 15px;
+    margin: 0 20px;
+  }
+  
+  .artist
+  {
+    justify-self: flex-end;
+    font-size: 11px;
+    margin: 0 20px;
+  }
+
+  .name-artist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 360px;
+    font-size: 10px;
+}
+
+.dur{
+  margin-right: 25px;
+}
+
+.song-container:hover{
+  cursor: pointer;
+  background-color:  rgba(40, 39, 39, 0.59);
+}
+
+
+  @media screen and (max-width: 500px) {
+    
+    h2
+  {
+    font-size: 15px;
+    margin: 0 20px;
+  }
+  
+  h3
+  {
+    justify-self: flex-end;
+    font-size: 10px;
+    margin: 0 20px;
+  }
+  .songs-container
+  {
+    width: 85vw;
+    margin: 5px 20px;
+  }
+  .image_container
+  {padding: 5px 20px;}
+  header
+  {
+    height: 30vh;
+  }
+  }
+
+  .music_controls{
+    margin-top: 5px;
+  }
+  
+
+  /* SIDE PANEL AND NAVBAR CSS  */
+
+  
