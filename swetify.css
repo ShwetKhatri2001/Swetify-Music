@@ -84,6 +84,7 @@ body {
   margin-top: 50px;
   padding: 30px;
   z-index: 2 !important;
+  margin-left: -108px;
 }
 
 .cont3 {
@@ -167,7 +168,7 @@ a {
   text-decoration: none !important;
 }
 
-a:visited{
+a:visited {
   text-decoration: none !important;
   color: inherit;
 }
@@ -180,6 +181,9 @@ a:visited{
   color: blanchedalmond;
   transition: all 0.3s linear;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar-toggle:hover {
@@ -391,7 +395,7 @@ nav {
 
 #headphones {
 
-  font-size: 30px;
+  font-size: 0.9em;
 }
 
 .navbar-brand {
@@ -454,8 +458,7 @@ nav a {
 }
 
 .navbar-header {
-  width: 21rem;
-  font-size: 1.25rem;
+  width: 22rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1153,11 +1156,6 @@ input[type="checkbox"]:checked+.like_icon {
     display: none !important;
   }
 
-  #header-nav {
-    font-size: 1.25em;
-    height: 80px;
-  }
-
   .container-not-bs {
     padding: 0 35px 0 0;
   }
@@ -1232,11 +1230,6 @@ input[type="checkbox"]:checked+.like_icon {
 @media (min-width: 768px) and (max-width: 991px) {
   .lg-display {
     display: flex;
-  }
-
-  #header-nav {
-    font-size: 1.25em;
-    height: 80px;
   }
 
   .max-lg-display {
@@ -1333,13 +1326,24 @@ input[type="checkbox"]:checked+.like_icon {
     display: none;
   }
 
-  /* .navbar-brand h1 {
-      font-size: 1.7em;
-    } */
-
-  #header-nav {
+  /* #header-nav {
     font-size: 1.25em;
     height: 80px;
+  } */
+  .navbar-header {
+    width: 16rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+
+  }
+
+  .sidebar-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #collapsable-nav a {
@@ -1818,6 +1822,8 @@ h3 {
 
 #footer {
   background-color: black;
+  margin-left: -109px;
+  height: fit-content;
 }
 
 .slider2 {
