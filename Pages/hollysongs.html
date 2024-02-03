@@ -1,152 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Let's Play On Swetify</title>
-  
+
+<head>
+  <title>Let's Play On Swetify</title>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Open Graph Protocols -->
-    <meta property="og:title" content="Let's Play On Swetify" />
-    <meta property="og:description" content="Play and Sing with us Now !" />
-    <meta property="og:image" content="homepage/swetifylogo.jpg" />
-    <meta property="og:url" content="https://swetify.netlify.app/" />
+  <!-- Open Graph Protocols -->
+  <meta property="og:title" content="Let's Play On Swetify" />
+  <meta property="og:description" content="Play and Sing with us Now !" />
+  <meta property="og:image" content="homepage/swetifylogo.jpg" />
+  <meta property="og:url" content="https://swetify.netlify.app/" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="homepage/Favicon.ico">
+  <!-- scrollbar css link -->
+  <link rel="stylesheet" href="../Swetify-Music/Srollbar_style/style.css">
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg" />
+  <!-- Include Particle.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
-<!-- scrollbar css link -->
-<link rel="stylesheet" href="../Swetify-Music/Srollbar_style/style.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous" />
+  <!-- Remix icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
-    <!-- Custom CSS -->
-    <link href="../swetify.css" type="text/css" rel="stylesheet" />
-    <link href="pages.css" type="text/css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Custom Script -->
-    <script src="../script.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src="https://kit.fontawesome.com/32ceed9cc4.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="script.js"></script>
+  <link href="../swetify.css" type="text/css" rel="stylesheet" />
+  <link href="pages.css" type="text/css" rel="stylesheet" />
 
-    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- internal css for body image  -->
+  <style>
+    body {
+      background-image: url("	https://wallpapercave.com/wp/wp7898498.jpg");
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div id="overlay"></div>
+
+  <div id="snackbar">Some text some message..</div>
+  <header>
+    <nav id="header-nav-2" class="navbar navbar-default">
+      <!-- <div class="container-not-bs">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img" alt="Logo img"></div>
+          </a>
+          <div class="navbar-brand">
+            <a href="index.html"><h1>Swetify</h1></a>
+            <span class="glyphicon glyphicon-headphones" id="headphones"></span>
+            <span id="PlaySing"> Play and Sing with us Now !</span>
+          </div>
+        </div> -->
+      <!-- <div class="lg-display">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li onclick="hidevisible()">
+              <a href="#" id="home" class="nav-elem">
+                <i class="glyphicon glyphicon-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li onclick="hidevisible()">
+              <a href="#popular categories" id="popular-categories" class="nav-elem">
+                <i class="glyphicon glyphicon-music"></i>
+                <span>Popular Categories</span>
+              </a>
+            </li>
+            <li onclick="hidevisible()">
+              <a href="#best of artists" id="artists" class="nav-elem">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                <span>Best of Artists</span>
+              </a>
+            </li>
+            <li onclick="hidevisible()">
+              <a href="about.html" id="artists" class="nav-elem">
+                <i class="fa-solid fa-address-card"></i>
+                <span>About Us</span>
+              </a>
+            </li>
+          </ul>
+        </div> -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      </div>
+
+      <div class="max-lg-display">
+        <div class="collapse navbar-collapse" id="collapsable-nav">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li onclick="hidevisible()">
+              <a href="#" id="home">
+                <span class="glyphicon glyphicon-home"></span><br class="hidden-xs" />Home
+              </a>
+            </li>
+
+            <li onclick="hidevisible()">
+              <a href="#Toppics" id="popular-categories"><span class="glyphicon glyphicon-music"></span><br
+                  class="hidden-xs" />Top Picks
+              </a>
+            </li>
+
+            <li onclick="hidevisible()">
+              <a href="#popular categories" id="popular-categories"><span class="glyphicon glyphicon-music"></span><br
+                  class="hidden-xs" />Popular Categories
+              </a>
+            </li>
+
+            <li onclick="hidevisible()">
+              <a href="#bestofartist" id="artists"><i class="fa fa-thumbs-up" aria-hidden="true"></i><br
+                  class="hidden-xs" />Best
+                of Artists
+              </a>
+            </li>
+
+            <li onclick="hidevisible()">
+              <a href="#container-liked-list" id="your spotify music"><i class="fa fa-thumbs-up"
+                  aria-hidden="true"></i><br class="hidden-xs" />Your Favourites
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Custom CSS -->
+  <link href="swetify.css" type="text/css" rel="stylesheet" />
+
+  <!-- Css file for Get-In-Touch Section -->
+  <link href="getInTouch.css" type="text/css" rel="stylesheet" />
+
+
   </head>
 
+
+
   <body>
-    <div class="top">
-      <h1>Top Hollywood Hits</h1>
+    <div id="snackbar">Some text some message..</div>
+
+    <div id="container">
+
+      <div class="outer-sidebar" id="ytsidebar">
+        <div class="sidebar">
+          <div class="links">
+
+
+            <a href="../index.html" class="aside-sidebar-elements" title="Home">
+              <i class="glyphicon glyphicon-home side-icons"></i>
+              <span>Home</span>
+            </a>
+
+
+            <a class="aside-sidebar-elements" title="Top Picks" href="#Toppics">
+              <i class="glyphicon glyphicon-music"></i>
+              <span>Top Picks</span>
+            </a>
+
+
+            <div class="white-line"></div>
+
+            <div>
+              <a class="aside-sidebar-elements" title="Popular Categories" href="#popular categories">
+                <span>Popular Categories</span>
+                <i class="ri-arrow-right-double-line"></i>
+              </a>
+
+              <a class="aside-sub-elements" title="Rock On" href="#popular categories">
+                <i class="ri-disc-line"></i>
+                <span>Rock On</span>
+              </a>
+
+              <a class="aside-sub-elements" title="Dance Hits" href="#popular categories">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Dance Hits</span>
+              </a>
+
+              <a class="aside-sub-elements" title="College De Yaar" href="#popular categories">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>College De Yaar</span>
+              </a>
+
+            </div>
+
+            <div class="white-line"></div>
+
+            <div>
+              <a class="aside-sidebar-elements" title="Best Of Artists" href="#bestofartist">
+                <span>Best Of Artists</span>
+                <i class="ri-arrow-right-double-line"></i>
+              </a>
+              <a class="aside-sub-elements" title="Neha Kakkar" href="#bestofartist">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Neha Kakkar</span>
+              </a>
+
+              <a class="aside-sub-elements" title="Arijit singh" href="#bestofartist">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Arijit singh</span>
+              </a>
+
+              <a class="aside-sub-elements" title="Ritviz" href="#bestofartist">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Ritviz</span>
+              </a>
+
+            </div>
+
+            <div class="white-line"></div>
+
+
+            <a class="aside-sidebar-elements" title="Your Favourites" href="#container-liked-list"> <i
+                class="fa-solid fa-heart"></i>
+              <span>Your Favourites</span>
+            </a>
+
+
+            <a class="aside-sidebar-elements" title="Contact Us" href="contact.html"><i class="fa-solid fa-phone"></i>
+              <span>Contact Us</span>
+            </a>
+
+            <a class="aside-sidebar-elements" title="About Us" href="about.html"><i
+                class="fa-regular fa-address-card"></i>
+              <span>About Us</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div id="side-panel">
+        <div class="inside-side-pannel">
+
+          <a href="../index.html" class="sidebar-elements" title="Home">
+            <i class="glyphicon glyphicon-home side-icons"></i>
+            <span>Home</span>
+          </a>
+
+          <a class="sidebar-elements" title="Top Picks" href="Toppics">
+            <i class="glyphicon glyphicon-music"></i>
+            <span>Top Picks</span>
+          </a>
+
+          <a class="sidebar-elements" title="Categories" href="#popular categories">
+            <i class="glyphicon glyphicon-music"></i>
+            <span>Categories</span>
+          </a>
+
+          <a class="sidebar-elements" title="Best Of Artists" href="#bestofartist"><i class="fa-solid fa-user"></i>
+            <span>Best Of Artists</span>
+          </a>
+
+          <a class="sidebar-elements" title="Your Favourites" href="#container-liked-list"> <i
+              class="fa-solid fa-heart"></i>
+            <span>Your Favourites</span>
+          </a>
+
+          <a class="sidebar-elements" title="Contact Us" href="contact.html"><i class="fa-solid fa-phone"></i>
+            <span>Contact Us</span>
+          </a>
+
+          <a class="sidebar-elements" title="About Us" href="about.html"><i class="fa-regular fa-address-card"></i>
+            <span>About Us</span>
+          </a>
+
+        </div>
+
+        <!-- Add more links as needed -->
+      </div>
+
+      <nav id="header-nav" class="navbar navbar-default">
+        <h2 class="navbar-header">
+          <button class="sidebar-toggle">
+            <i class="ri-menu-line"></i>
+          </button>
+          <a href="../index.html">
+            <span class="glyphicon glyphicon-headphones " id="headphones"></span> Swetify
+          </a>
+        </h2>
+        <label class="switch">
+          <input type="checkbox" id="toggle-switch">
+          <span class="slider2 round"></span>
+        </label>
+      </nav>
+      <div id="content">
+
+        <div class="playlist-heading">
+          <p class="playlist_tag">Playlist</p>
+          <h2 class="playlist_name">Top Hollywood Hits</h2>
+
+        </div>
+
+        <div class="songs-list" id="homepage_content">
+
+
+
+          <div class="song-container" onclick="loadplaylistsong(0,0)">
+            <div class="image_container">
+              <img src="../songs-images/TopHollywoodHits/Faded.jpg" alt="" class="cover">
+
+              <div class="name-artist">
+                <div class="name" id="0">Faded </div>
+                <div class="artist">Alan Walker</div>
+              </div>
+            </div>
+            <div class="album">Different World</div>
+            <div class="dur">3:32</div>
+          </div>
+
+          <div class="song-container" onclick="loadplaylistsong(0,1)">
+            <div class="image_container">
+              <img src="../songs-images/TopHollywoodHits/Closer.jpg" alt="" class="cover">
+
+              <div class="name-artist">
+
+                <div class="name" id="1">Closer</div>
+                <div class="artist">The Chainsmoker</div>
+              </div>
+            </div>
+            <div class="album">Closer</div>
+            <div class="dur">4:04</div>
+          </div>
+
+          <div class="song-container" onclick="loadplaylistsong(0,2)">
+            <div class="image_container">
+              <img src="../songs-images/TopHollywoodHits/CheapThrills.jpg" alt="" class="cover">
+
+              <div class="name-artist">
+
+                <div class="name" id="2">Cheap Thrills</div>
+                <div class="artist">Sia</div>
+              </div>
+            </div>
+            <div class="album">This Is Acting</div>
+            <div class="dur">3:31</div>
+          </div>
+
+          <div class="song-container" onclick="loadplaylistsong(0,3)">
+            <div class="image_container">
+              <img src="../songs-images/TopHollywoodHits/Friends.jpg" alt="" class="cover">
+
+              <div class="name-artist">
+
+                <div class="name" id="3">Friends</div>
+                <div class="artist">Marshmello, Anne-Marie</div>
+              </div>
+            </div>
+            <div class="album">Friends</div>
+            <div class="dur">3:32</div>
+          </div>
+
+          <div class="song-container" onclick="loadplaylistsong(0,4)">
+            <div class="image_container">
+              <img src="../songs-images/TopHollywoodHits/Senorita.jpg" alt="" class="cover">
+
+              <div class="name-artist">
+
+                <div class="name" id="2">Señorita</div>
+                <div class="artist">Shawn Mendes, Camila Cabello</div>
+              </div>
+            </div>
+            <div class="album">Señorita</div>
+            <div class="dur">3:10</div>
+          </div>
+
+          <div class="song-container" onclick="loadplaylistsong(0,2)">
+            <div class="image_container">
+              <img src="../songs-images/TopHollywoodHits/CheapThrills.jpg" alt="" class="cover">
+
+              <div class="name-artist">
+
+                <div class="name" id="2">I'm a Mess</div>
+                <div class="artist">Bebe Rexha</div>
+              </div>
+            </div>
+            <div class="album">Expectations</div>
+            <div class="dur">3:15</div>
+          </div>
+
+        </div>
+
+
+
+
+
+      </div>
     </div>
-    <header>
-    </header>
-      <div class="songs-list" id="homepage_content">
-        <div class="song-container" onclick="loadplaylistsong(0,0)" >
-          <div class="image_container">
-            <img src="../songs-images/TopHollywoodHits/Faded.jpg" alt="" class="cover">
-          </div>
-          <h2 class="name" id="0" >Faded</h2>
-          <h3 class="artist">Alan Walker</h3>
-        </div>
 
-        <div class="song-container" onclick="loadplaylistsong(0,1)">
-          <div class="image_container">
-            <img src="../songs-images/TopHollywoodHits/Closer.jpg" alt="" class="cover">
-          </div>
-          <h2 class="name" id="1" >Closer</h2>
-          <h3 class="artist">The Chainsmoker</h3>
-        </div>
-        
-        <div class="song-container" onclick="loadplaylistsong(0,2)">
-          <div class="image_container">
-            <img src="../songs-images/TopHollywoodHits/CheapThrills.jpg" alt="" class="cover">
-          </div>
-          <h2 class="name" id="2" >Cheap Thrills</h2>
-          <h3 class="artist">Sia</h3>
-        </div>
 
-        <div class="song-container" onclick="loadplaylistsong(0,3)">
-          <div class="image_container">
-            <img src="../songs-images/TopHollywoodHits/Friends.jpg" alt="" class="cover">
+
+    <div class="main_div hidden" id="main_div">
+      <div class="music_container">
+
+        <div class="img_n_title">
+
+          <div class="img_container" id="songimage">
+            <img src="../songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
           </div>
-            <h2 class="name" id="3" >Friends</h2>
-          <h3 class="artist">Marshmello, Anne-Marie</h3>
-        </div>
 
-        <div class="song-container" onclick="loadplaylistsong(0,4)">
-          <div class="image_container">
-            <img src="../songs-images/TopHollywoodHits/Senorita.jpg" alt="" class="cover">
-          </div>
-          <h2 class="name" id="2" >Senorita</h2>
-          <h3 class="artist">Shawn Mendes, Camila Cabello</h3>
-        </div>
-
-        <div class="song-container" onclick="loadplaylistsong(0,2)">
-          <div class="image_container">
-            <img src="../songs-images/TopHollywoodHits/CheapThrills.jpg" alt="" class="cover">
-          </div>
-          <h2 class="name" id="2" >I'M Mess</h2>
-          <h3 class="artist">Bebe Rexha</h3>
-        </div>
-
-       </div>
-       
-
-        <!-- ---------------------------------------------------------------------------------------- -->
-        <div class="main_div hidden" id="main_div">
-          <div class="music_container">
-            <h2 id="title">songtitle</h2>
+          <div class="songtitle">
+            <p id="title">songtitle</p>
             <h3>
               <marquee id="artist">artists</marquee>
             </h3>
-            <div class="img_container" id="songimage">
-              <img src="../songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
-            </div>
-            <audio src="../songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
+          </div>
 
-            <!-- progress-bar -->
-            <div class="progress_container" id="progress_container">
-              <div class="progress_duration_meter">
-                <div id="current_time">0:00</div>
-                <div id="duration">4:16</div>
-              </div>
-              <input type="range" id="progress-el" min="0" value="0" max="100">
+        </div>
+
+        <audio src="../songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
+
+        <!-- progress-bar -->
+        <div class="progress_n_controls">
+
+          <!-- controls -->
+          <div class="music_controls">
+            <i class="fa fa-random shuffle_button" id="shuffle" title="Shuffle Music"></i>
+            <div class="like_button" id="likeBtn">
+              <input type="checkbox" id="likeToggle" />
+              <label for="likeToggle" class="like_icon"></label>
             </div>
-    
-            <!-- controls -->
-            <div class="music_controls">
-              <i class="fa fa-step-backward" id="prev" title="Previous" onclick="loadprevsong(0)"></i>
-              <i class="fa fa-play main_button" id="play"  title="Play"></i>
-              <i class="fa fa-step-forward" id="next" title="Next" onclick="loadnextsong(0)"></i>
-              <i
-                class="fa fa-random shuffle_button"
-                id="shuffle"
-                title="Shuffle Music"
-              ></i>
-              <div class="like_button" id="likeBtn">
-                <input type="checkbox" id="likeToggle" />
-                <label for="likeToggle" class="like_icon"></label>
-              </div>
-              <div class="download_controls">
-                <div
-                  class="fa fa-download download_button"
-                  id="download"
-                  title="Download Music"
-                ></div>
-              </div>
+            <i class="fa fa-step-backward" id="prev" title="Previous" onclick="loadprevsong(0)"></i>
+            <i class="fa fa-play main_button" id="play" title="Play"></i>
+            <i class="fa fa-step-forward" id="next" title="Next" onclick="loadnextsong(0)"></i>
+            <i class="fa fa-repeat loop_button" id="loop" aria-hidden="true" title="Loop"></i>
+            <div class="download_controls">
+              <div class="fa fa-download download_button" id="download" title="Download Music"></div>
             </div>
           </div>
+
+          <div class="progress_container" id="progress_container">
+            <div class="progress_duration_meter">
+              <div id="current_time">0:00</div>
+              <div id="duration">4:16</div>
+            </div>
+            <input type="range" id="progress-el" min="0" value="0" max="100">
+          </div>
+
+
+
         </div>
-        <script src="hollysongs.js" defer></script>
+      </div>
+    </div>
+
+    
+
+    <script src="./jsfunctions//changetab.js"></script>
+    <script src="./jsfunctions/mode.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+     crossorigin="anonymous"></script> -->
+    <script src="swetify.js"></script>
+    <script src="scroll-reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- for email validation and data check -->
+    <script src="./jsfunctions/validateEmail.js"></script>
+    <!-- Function to handle slider functionality -->
+    <script src="./jsfunctions/slider.js"></script>
+    <!-- particles -->
+    <script src="./jsfunctions//particles.js"></script>
+
+    <script src="hollysongs.js" defer></script>
   </body>
-  </html>
+
+</html>

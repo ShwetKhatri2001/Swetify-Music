@@ -874,34 +874,60 @@ footer .top:hover {
 
 /********** main and music containers styles ***********/
 
-.main_div {
+/* .main_div {
   font-family: "Jost", sans-serif;
   width: 96vw;
   height: 96vh;
   display: grid;
   place-items: center;
-}
+} */
 
 .music_container {
-  width: 80%;
-  height: 100%;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  height: 100px;
   background-color: #000000;
-  border-radius: 2rem;
   box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-left: 20%;
-  margin-top: 0%;
   padding: 0% 0% 0% 2rem;
 
+}
+
+.progress_n_controls{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img_n_title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 200px;
+}
+
+.songtitle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .music_container #title {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
-  color: #b3b3b3;
+  color: white;
   margin: 5px 0 0 0;
   font-size: 2.3rem;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   padding-top: 0;
   text-shadow: 0 3px 10px 2.5rem rgba(0, 0, 0, 0.7);
@@ -911,30 +937,27 @@ footer .top:hover {
   color: white;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 0;
   font-weight: 300;
 }
 
 .songimg {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  border-radius: 7px;
   object-fit: cover;
   box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
-  position: relative;
+  /* position: relative; */
 }
 
 /******* controls styles ********/
 .music_controls {
-  width: 29rem;
+  margin: 0p auto;
+  width: 30rem;
   display: flex;
-  margin: auto;
   justify-content: space-around;
   align-items: center;
-  padding-top: 0;
-  padding-bottom: 10px;
-  margin-top: 0;
 }
 
 .progress_container h3 {
@@ -965,18 +988,18 @@ footer .top:hover {
 }
 
 .music_controls .fa:hover {
-  color: #919191;
+  color: white;
 }
 
 .download_controls .fa:hover {
-  color: #919191;
+  color: white;
 }
 
 .music_controls .main_button {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  background-color: #919191;
+  background-color: white;
   color: #000000;
   font-size: 1.4rem;
   display: flex;
@@ -1102,10 +1125,11 @@ input[type="checkbox"]:checked+.like_icon {
 /******** progressive bar styles ********/
 
 .progress_container {
+  align-self: flex-end;
   width: 100%;
-  height: auto;
-  padding: 1rem 1rem 0 1rem;
-  margin-top: 0;
+  /* height: auto; */
+  /* padding: 10px; */
+  /* margin-top: 0; */
 }
 
 .progress_div {
@@ -1127,21 +1151,7 @@ input[type="checkbox"]:checked+.like_icon {
   appearance: none;
 }
 
-.progress {
-  /* 
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 70%;
-  background-color: #ff3333;
-  border-radius: 4rem;
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  transition: value 0s linear;
-  */
-}
+
 
 .progress_duration_meter {
   display: flex;
@@ -1439,11 +1449,12 @@ input[type="checkbox"]:checked+.like_icon {
 }
 
 .img_container {
-  position: relative;
-  left: 50%;
-  width: 28rem;
-  height: 28rem;
-  margin: 35% 10% 5% auto;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /******Super Extra Small Devices Only*****/
