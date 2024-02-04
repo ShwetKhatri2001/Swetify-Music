@@ -468,56 +468,48 @@
 
         <div class="main_div hidden" id="main_div">
             <div class="music_container">
-
-                <div class="img_n_title">
-
-                    <div class="img_container" id="songimage">
-                        <img src="../songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
-                    </div>
-
-                    <div class="songtitle">
-                        <p id="title">songtitle</p>
-                        <h3>
-                            <marquee id="artist">artists</marquee>
-                        </h3>
-                    </div>
-
+              <h2 id="title">songtitle</h2>
+              <h3>
+                <marquee id="artist">artists</marquee>
+              </h3>
+              <div class="img_container" id="songimage">
+                <img src="../songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
+              </div>
+              <audio src="../songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
+  
+              <!-- progress-bar -->
+              <div class="progress_container" id="progress_container">
+                <div class="progress_duration_meter">
+                  <div id="current_time">0:00</div>
+                  <div id="duration">4:16</div>
                 </div>
-
-                <audio src="../songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
-
-                <!-- progress-bar -->
-                <div class="progress_n_controls">
-
-                    <!-- controls -->
-                    <div class="music_controls">
-                        <i class="fa fa-random shuffle_button" id="shuffle" title="Shuffle Music"></i>
-                        <div class="like_button" id="likeBtn">
-                            <input type="checkbox" id="likeToggle" />
-                            <label for="likeToggle" class="like_icon"></label>
-                        </div>
-                        <i class="fa fa-step-backward" id="prev" title="Previous" onclick="loadprevsong(0)"></i>
-                        <i class="fa fa-play main_button" id="play" title="Play"></i>
-                        <i class="fa fa-step-forward" id="next" title="Next" onclick="loadnextsong(0)"></i>
-                        <i class="fa fa-repeat loop_button" id="loop" aria-hidden="true" title="Loop"></i>
-                        <div class="download_controls">
-                            <div class="fa fa-download download_button" id="download" title="Download Music"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress_container" id="progress_container">
-                        <div class="progress_duration_meter">
-                            <div id="current_time">0:00</div>
-                            <div id="duration">4:16</div>
-                        </div>
-                        <input type="range" id="progress-el" min="0" value="0" max="100">
-                    </div>
-
-
-
+                <input type="range" id="progress-el" min="0" value="0" max="100">
+              </div>
+      
+              <!-- controls -->
+              <div class="music_controls">
+                <i class="fa fa-step-backward" id="prev" title="Previous" onclick="loadprevsong(0)"></i>
+                <i class="fa fa-play main_button" id="play"  title="Play"></i>
+                <i class="fa fa-step-forward" id="next" title="Next" onclick="loadnextsong(0)"></i>
+                <i
+                  class="fa fa-random shuffle_button"
+                  id="shuffle"
+                  title="Shuffle Music"
+                ></i>
+                <div class="like_button" id="likeBtn">
+                  <input type="checkbox" id="likeToggle" />
+                  <label for="likeToggle" class="like_icon"></label>
                 </div>
+                <div class="download_controls">
+                  <div
+                    class="fa fa-download download_button"
+                    id="download"
+                    title="Download Music"
+                  ></div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
 
 
 
