@@ -235,14 +235,14 @@
               <div style="margin:3vh 4vh ;display: block;">
                 <label class='input-header'>First Name</label>
                 <input class='input-box' name="First Name" style="width:100%; border-radius: none;" type="text"
-                  placeholder='Shwet' id="FNAME" required></input>
+                  placeholder='Shwet' id="FNAME" required pattern="[a-zA-Z]{2,}$"title="please enter alphabets only"></input>
 
               </div>
 
               <div style="margin:3vh 4vh;display: block;">
                 <label class='input-header'>Last Name</label>
                 <input class='input-box' name="Last Name" style="width:100%" type="text" placeholder='Khatri'
-                  id="LNAME"></input>
+                  id="LNAME" required pattern="[a-zA-Z]{2,}$"title="please enter alphabets only"></input>
 
               </div>
             </div>
