@@ -874,13 +874,13 @@ footer .top:hover {
 
 /********** main and music containers styles ***********/
 
-.main_div {
+ .main_div {
   font-family: "Jost", sans-serif;
   width: 96vw;
   height: 96vh;
   display: grid;
   place-items: center;
-}
+} 
 
 .music_container {
   width: 80%;
@@ -906,6 +906,7 @@ footer .top:hover {
   padding-top: 0;
   text-shadow: 0 3px 10px 2.5rem rgba(0, 0, 0, 0.7);
 }
+
 
 .music_container #artist {
   color: white;
@@ -1127,21 +1128,7 @@ input[type="checkbox"]:checked+.like_icon {
   appearance: none;
 }
 
-.progress {
-  /* 
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 70%;
-  background-color: #ff3333;
-  border-radius: 4rem;
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  transition: value 0s linear;
-  */
-}
+
 
 .progress_duration_meter {
   display: flex;
