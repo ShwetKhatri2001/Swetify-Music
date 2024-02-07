@@ -323,6 +323,8 @@ const loadSong = (song) => {
   } else if (likedState === 'true') {
     likeToggle.checked = true;
   }
+
+  
 };
 
 const nextSong = (e) => {
