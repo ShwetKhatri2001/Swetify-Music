@@ -24,8 +24,12 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/homepage/swetifylogo.jpg" />
-<!-- scrollbar css link -->
-<link rel="stylesheet" href="../Swetify-Music/Srollbar_style/style.css">
+
+  <!-- Remix icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+  <!-- scrollbar css link -->
+  <link rel="stylesheet" href="../Swetify-Music/Srollbar_style/style.css">
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
 
@@ -49,6 +53,8 @@
   <!-- Custom Script -->
   <script src="script.js" defer></script>
 
+  <script src="about.js"></script>
+
 </head>
 
 
@@ -57,12 +63,118 @@
   <div id="snackbar">Some text some message..</div>
   <div id="container">
 
+    <div class="outer-sidebar" id="ytsidebar">
+      <div class="sidebar">
+        <div class="links">
+
+
+          <a href="#" class="aside-sidebar-elements" title="Home">
+            <i class="glyphicon glyphicon-home side-icons"></i>
+            <span>Home</span>
+          </a>
+
+
+          <a class="aside-sidebar-elements" title="Top Picks" href="index.html#Toppics">
+            <i class="glyphicon glyphicon-music"></i>
+            <span>Top Picks</span>
+          </a>
+
+
+          <div class="white-line"></div>
+
+          <div>
+            <a class="aside-sidebar-elements" title="Popular Categories" href="index.html#popular categories">
+              <span>Popular Categories</span>
+              <i class="ri-arrow-right-double-line"></i>
+            </a>
+
+            <a class="aside-sub-elements" title="Rock On" href="index.html#popular categories">
+              <i class="ri-disc-line"></i>
+              <span>Rock On</span>
+            </a>
+
+            <a class="aside-sub-elements" title="Dance Hits" href="index.html#popular categories">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Dance Hits</span>
+            </a>
+
+            <a class="aside-sub-elements" title="College De Yaar" href="index.html#popular categories">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>College De Yaar</span>
+            </a>
+
+          </div>
+
+          <div class="white-line"></div>
+
+          <div>
+            <a class="aside-sidebar-elements" title="Best Of Artists" href="index.html#bestofartist">
+              <span>Best Of Artists</span>
+              <i class="ri-arrow-right-double-line"></i>
+            </a>
+            <a class="aside-sub-elements" title="Neha Kakkar" href="index.html#bestofartist">
+              <i class="fa-brands fa-spotify"></i>
+              <span>Neha Kakkar</span>
+            </a>
+
+            <a class="aside-sub-elements" title="Arijit singh" href="index.html#bestofartist">
+              <i class="fa-brands fa-spotify"></i>
+              <span>Arijit singh</span>
+            </a>
+
+            <a class="aside-sub-elements" title="Ritviz" href="index.html#bestofartist">
+              <i class="fa-brands fa-spotify"></i>
+              <span>Ritviz</span>
+            </a>
+
+          </div>
+
+          <div class="white-line"></div>
+
+
+          <a class="aside-sidebar-elements" title="Your Favourites" href="index.html#container-liked-list"> <i
+              class="fa-solid fa-heart"></i>
+            <span>Your Favourites</span>
+          </a>
+
+
+          <a class="aside-sidebar-elements" title="Contact Us" href="contact.html"><i class="fa-solid fa-phone"></i>
+            <span>Contact Us</span>
+          </a>
+
+          <a class="aside-sidebar-elements" title="About Us" href="about.html"><i
+              class="fa-regular fa-address-card"></i>
+            <span>About Us</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
     <div id="side-panel">
+      <div class="inside-side-pannel">
 
-      <!-- <div id="logo-img" alt="Logo img"></div> -->
+        <a href="index.html" class="sidebar-elements" title="Home">
+          <i class="glyphicon glyphicon-home side-icons"></i>
+          <span>Home</span>
+        </a>
 
+        <a class="sidebar-elements" title="Top Picks" href="index.html#Toppics">
+          <i class="glyphicon glyphicon-music"></i>
+          <span>Top Picks</span>
+        </a>
 
-      <br>
+        <a class="sidebar-elements" title="Categories" href="index.html#popular categories">
+          <i class="glyphicon glyphicon-music"></i>
+          <span>Categories</span>
+        </a>
+
+        <a class="sidebar-elements" title="Best Of Artists" href="index.html#bestofartist"><i
+            class="fa-solid fa-user"></i>
+          <span>Best Of Artists</span>
+        </a>
+
 
       <div style="padding-top: 80px;">
         <a href="index.html#"><i class="glyphicon glyphicon-home"></i> Home</a>
@@ -72,12 +184,30 @@
         <a href="contact.html"><i class="fa-solid fa-phone"></i>Contact</a>
         <a href="about.html"><i class="fa-regular fa-address-card"></i>About Us</a>
 
+        <a class="sidebar-elements" title="Your Favourites" href="index.html#container-liked-list"> <i
+            class="fa-solid fa-heart"></i>
+          <span>Your Favourites</span>
+        </a>
+
+        <a class="sidebar-elements" title="Contact Us" href="contact.html"><i class="fa-solid fa-phone"></i>
+          <span>Contact Us</span>
+        </a>
+
+        <a class="sidebar-elements" title="About Us" href="about.html"><i class="fa-regular fa-address-card"></i>
+          <span>About Us</span>
+        </a>
+
+
       </div>
+
       <!-- Add more links as needed -->
     </div>
 
     <nav id="header-nav" class="navbar navbar-default">
       <h2 class="navbar-header">
+        <button class="sidebar-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
         <a href="index.html">
           <span class="glyphicon glyphicon-headphones " id="headphones"></span> Swetify
         </a>
@@ -85,7 +215,7 @@
       <label class="switch">
         <input type="checkbox" id="toggle-switch">
         <span class="slider2 round"></span>
-    </label>
+      </label>
     </nav>
     <div id="content">
       <div id="particles-js"></div>
@@ -149,6 +279,14 @@
 
 
       </div>
+      <!-- Contributor Section -->
+      <div class="contributors-container">
+        <h2>Contributors</h2>
+        <ul id="contributors-list">
+          <!-- Contributors will be dynamically added here -->
+        </ul>
+      </div>
+
 
 
       <!-- footer section  -->
@@ -190,7 +328,7 @@
       <!-- to change tabs -->
       <script src="./jsfunctions//changetab.js"></script>
       <script src="./jsfunctions/mode.js"></script>
-      
+
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

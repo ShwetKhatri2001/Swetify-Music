@@ -30,8 +30,13 @@
 ## 👀 Preview
 
 ## [Live Link](https://swetify.netlify.app/)
-![image](https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/efaf90b0-fb1b-4e03-9b54-f55cb1a8559b)
-![image](https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/340dba22-f8e7-496d-b0d1-752b59b8bf8c)
+
+![image](https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/231c7290-b027-4a85-ab66-d9c918cd3576)
+
+![image](https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/291def5f-0afc-40ec-91fe-2f0d494ba225)
+
+![image](https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/9b70ab18-286e-4291-ac96-7b59b3864a75)
+
 
 <a name="exposure"></a>
 
@@ -82,9 +87,18 @@ Looking for the perfect project to kickstart your web development journey and di
 
 ### This project has been a part of the following Open Source Programs
 
-![image](https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/58c3dfe5-1f53-4c11-84d1-3c1f91f8dc6e)
-
-<br>
+<img src="https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/58c3dfe5-1f53-4c11-84d1-3c1f91f8dc6e" width="500" />
+<br />
+<br/>
+<img src="https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/32c23460-579d-4158-b1c5-aaae3b53cba7" width="500" />
+<br/>
+<br/>
+<img src="https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/cafaa1b8-4f6e-40a4-bf19-371e173faf63" width="400" />
+<br/>
+<br/>
+<img src="https://github.com/ShwetKhatri2001/Swetify-Music/assets/56475750/fcfa9ffe-7d51-4ad8-89e0-ae38589a710e" width="250" />
+<br/>
+<br/>
 
 <a name="project-admin"></a>
 ## Project Admin

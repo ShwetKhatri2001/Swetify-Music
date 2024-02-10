@@ -23,14 +23,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="homepage/Favicon.ico"> 
-<!-- scrollbar css link -->
-<link rel="stylesheet" href="../Swetify-Music/Srollbar_style/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="homepage/Favicon.ico">
+  <!-- scrollbar css link -->
+  <link rel="stylesheet" href="../Swetify-Music/Srollbar_style/style.css">
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/32ceed9cc4.js" crossorigin="anonymous"></script>
 
   <!-- Include Particle.js from CDN -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- Remix icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -53,6 +56,8 @@
 </head>
 
 <body>
+  <div id="overlay"></div>
+
   <div id="snackbar">Some text some message..</div>
   <header>
     <nav id="header-nav-2" class="navbar navbar-default">
@@ -103,6 +108,7 @@
         <span class="icon-bar"></span>
       </button>
       </div>
+
       <div class="max-lg-display">
         <div class="collapse navbar-collapse" id="collapsable-nav">
           <ul id="nav-list" class="nav navbar-nav navbar-right">
@@ -111,14 +117,28 @@
                 <span class="glyphicon glyphicon-home"></span><br class="hidden-xs" />Home
               </a>
             </li>
+
+            <li onclick="hidevisible()">
+              <a href="#Toppics" id="popular-categories"><span class="glyphicon glyphicon-music"></span><br class="hidden-xs" />Top Picks
+              </a>
+            </li>
+
             <li onclick="hidevisible()">
               <a href="#popular categories" id="popular-categories"><span class="glyphicon glyphicon-music"></span><br
                   class="hidden-xs" />Popular Categories
               </a>
             </li>
+
             <li onclick="hidevisible()">
-              <a href="#best of artists" id="artists"><i class="fa fa-thumbs-up" aria-hidden="true"></i><br
-                  class="hidden-xs" />Best of Artists
+              <a href="#bestofartist" id="artists"><i class="fa fa-thumbs-up" aria-hidden="true"></i><br
+                  class="hidden-xs" />Best
+                of Artists
+              </a>
+            </li>
+
+            <li onclick="hidevisible()">
+              <a href="#container-liked-list" id="your spotify music"><i class="fa fa-thumbs-up"
+                  aria-hidden="true"></i><br class="hidden-xs" />Your Favourites
               </a>
             </li>
 
@@ -142,14 +162,110 @@
 
   <body>
     <div id="snackbar">Some text some message..</div>
+
     <div id="container">
 
+      <div class="outer-sidebar" id="ytsidebar">
+        <div class="sidebar">
+          <div class="links">
+
+
+            <a href="#" class="aside-sidebar-elements" title="Home">
+              <i class="glyphicon glyphicon-home side-icons"></i>
+              <span>Home</span>
+            </a>
+
+
+            <a class="aside-sidebar-elements" title="Top Picks" href="#Toppics">
+              <i class="glyphicon glyphicon-music"></i>
+              <span>Top Picks</span>
+            </a>
+
+
+            <div class="white-line"></div>
+
+            <div>
+              <a class="aside-sidebar-elements" title="Popular Categories" href="#popular categories">
+                <span>Popular Categories</span>
+                <i class="ri-arrow-right-double-line"></i>
+              </a>
+
+              <a class="aside-sub-elements" title="Rock On" href="#popular categories">
+                <i class="ri-disc-line"></i>
+                <span>Rock On</span>
+              </a>
+
+              <a class="aside-sub-elements" title="Dance Hits" href="#popular categories">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Dance Hits</span>
+              </a>
+
+              <a class="aside-sub-elements" title="College De Yaar" href="#popular categories">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>College De Yaar</span>
+              </a>
+
+            </div>
+
+            <div class="white-line"></div>
+
+            <div>
+              <a class="aside-sidebar-elements" title="Best Of Artists" href="#bestofartist">
+                <span>Best Of Artists</span>
+                <i class="ri-arrow-right-double-line"></i>
+              </a>
+              <a class="aside-sub-elements" title="Neha Kakkar" href="#bestofartist">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Neha Kakkar</span>
+              </a>
+
+              <a class="aside-sub-elements" title="Arijit singh" href="#bestofartist">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Arijit singh</span>
+              </a>
+
+              <a class="aside-sub-elements" title="Ritviz" href="#bestofartist">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Ritviz</span>
+              </a>
+
+            </div>
+
+            <div class="white-line"></div>
+
+
+            <a class="aside-sidebar-elements" title="Your Favourites" href="#container-liked-list"> <i
+                class="fa-solid fa-heart"></i>
+              <span>Your Favourites</span>
+            </a>
+
+
+            <a class="aside-sidebar-elements" title="Contact Us" href="contact.html"><i class="fa-solid fa-phone"></i>
+              <span>Contact Us</span>
+            </a>
+
+            <a class="aside-sidebar-elements" title="About Us" href="about.html"><i
+                class="fa-regular fa-address-card"></i>
+              <span>About Us</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+
       <div id="side-panel">
+        <div class="inside-side-pannel">
 
-        <!-- <div id="logo-img" alt="Logo img"></div> -->
+          <a href="#" class="sidebar-elements" title="Home">
+            <i class="glyphicon glyphicon-home side-icons"></i>
+            <span>Home</span>
+          </a>
 
-        g
-        <br>
+          <a class="sidebar-elements" title="Top Picks" href="#Toppics">
+            <i class="glyphicon glyphicon-music"></i>
+            <span>Top Picks</span>
+          </a>
 
         <div style="padding-top: 80px;">
           <a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a>
@@ -159,12 +275,39 @@
           <a href="contact.html"><i class="fa-solid fa-phone"></i>Contact</a>
           <a href="about.html"><i class="fa-regular fa-address-card"></i>About Us</a>
 
+          <a class="sidebar-elements" title="Categories" href="#popular categories">
+            <i class="glyphicon glyphicon-music"></i>
+            <span>Categories</span>
+          </a>
+
+          <a class="sidebar-elements" title="Best Of Artists" href="#bestofartist"><i class="fa-solid fa-user"></i>
+            <span>Best Of Artists</span>
+          </a>
+
+          <a class="sidebar-elements" title="Your Favourites" href="#container-liked-list"> <i
+              class="fa-solid fa-heart"></i>
+            <span>Your Favourites</span>
+          </a>
+
+          <a class="sidebar-elements" title="Contact Us" href="contact.html"><i class="fa-solid fa-phone"></i>
+            <span>Contact Us</span>
+          </a>
+
+          <a class="sidebar-elements" title="About Us" href="about.html"><i class="fa-regular fa-address-card"></i>
+            <span>About Us</span>
+          </a>
+
+
         </div>
+
         <!-- Add more links as needed -->
       </div>
 
       <nav id="header-nav" class="navbar navbar-default">
         <h2 class="navbar-header">
+          <button class="sidebar-toggle">
+            <i class="ri-menu-line"></i>
+          </button>
           <a href="index.html">
             <span class="glyphicon glyphicon-headphones " id="headphones"></span> Swetify
           </a>
@@ -172,7 +315,7 @@
         <label class="switch">
           <input type="checkbox" id="toggle-switch">
           <span class="slider2 round"></span>
-      </label>
+        </label>
       </nav>
       <div id="content">
         <div class="video-filter"></div>
@@ -211,7 +354,7 @@
               </path>
             </svg>
           </div>
-          <h3 style="padding-bottom: 60px;">Top Picks</h3><br>
+          <h3 style="padding-bottom: 60px;" id="Toppics">Top Picks</h3><br>
           <div class="section-brake">
             <a href="./Pages/hollysongs.html" class="playlist-page-link">
               <div class="playlist-card" onclick="loadfirstsong(0)">
@@ -234,8 +377,8 @@
           </div>
 
           <h3 id="popular categories" class="popularcat"> Popular Categories </h3>
-      
-         <div class = "section-brake">
+
+          <div class="section-brake">
 
             <div class="slider_div ">
 
@@ -335,15 +478,18 @@
                   </div>
                 </div>
 
-                <div class="category-slider small-category" onclick="loadfirstsong(10)">
-                  <div class="artist-card">
-                    <img class="playlist-cover" src="homepage/ArijitSingh.jpg" alt="category-img image">
-                    <div class="playlist-details">
-                      <div class="playlist-title">Arijit Singh</div>
-                      <div class="playlist-description"> Artist</div>
+                <a href="./Pages/arijitsingh.html" class="playlist-page-link">
+
+                  <div class="category-slider small-category">
+                    <div class="artist-card">
+                      <img class="playlist-cover" src="homepage/ArijitSingh.jpg" alt="category-img image">
+                      <div class="playlist-details">
+                        <div class="playlist-title">Arijit Singh</div>
+                        <div class="playlist-description"> Artist</div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
 
                 <div class="category-slider small-category" onclick="loadfirstsong(11)">
                   <div class="artist-card">
@@ -499,15 +645,16 @@
       <div class="main_div hidden" id="main_div">
         <div id="particles-js"></div>
 
-<div class="main-img_container"> 
-  <div class="img_container" id="songimage">
-  <img src="songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
-</div></div>
+        <div class="main-img_container">
+          <div class="img_container" id="songimage">
+            <img src="songs-images/AtifAslam/DekhteDekhte.jpg" class="songimg" id="songimg" />
+          </div>
+        </div>
         <div class="music_container">
 
           <h2 id="title">songtitle</h2>
-         
-         
+
+
           <audio src="songs-images/AtifAslam/DekhteDekhte.mp3"></audio>
           <!-- progress-bar -->
           <div class="progress_container" id="progress_container">
@@ -519,10 +666,10 @@
             <!-- <div class="progress_div" id="progress_div">
         <div class="progress" id="progress"></div>
       </div> -->
-<!-- artists name -->
-      <h3>
-        <marquee id="artist">artists</marquee>
-      </h3>
+            <!-- artists name -->
+            <h3>
+              <marquee id="artist">artists</marquee>
+            </h3>
           </div>
 
           <!-- controls -->
@@ -537,7 +684,7 @@
               <input type="checkbox" id="likeToggle" />
               <label for="likeToggle" class="like_icon"></label>
             </div>
-            <div class="download_controls"> 
+            <div class="download_controls">
               <div class="fa fa-download download_button" id="download" title="Download Music"></div>
             </div>
           </div>
