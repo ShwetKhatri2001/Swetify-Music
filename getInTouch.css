@@ -6,7 +6,7 @@
      padding:2vh ;
       border-radius:0 10px 10px 0; 
       box-shadow:0px 4px 14px 3px black;
-    font-family:"Montserrat";
+    font-family:'Poppins', sans-serif;:"Montserrat";
     
   }
   *{
@@ -107,7 +107,7 @@
     justify-content: center;
     z-index: 100;
     margin-bottom: 50px;
-    font-family:"Montserrat";
+    font-family:'Poppins', sans-serif;:"Montserrat";
 
   }
 

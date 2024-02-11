@@ -1,4 +1,67 @@
 body {
+  margin: 0;
+  font-family:'Poppins', sans-serif;
+  /* background-color: #f8f8f8; */
+}
+
+.container {
+  padding: 28vh 0;
+  height: 100vh;
+  margin-top: 80px;
+  text-align: center;
+  box-shadow: #ffc400;
+}
+
+.container>h1 {
+  color: #EBD9B4;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: #FC0 1px 0 10px;
+}
+
+i {
+  color: #C4DFDF;
+  font-size: 18px;
+}
+
+svg {
+  color: #ffc400;
+  height: 90px;
+  width: 90px;
+  animation: scrollbelow 1.2s infinite forwards;
+  fill: #ffc400;
+  transition: fill 0.5s;
+}
+
+@keyframes scrollbelow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+@media (max-width: 767px) {
+  #nav-list > li {
+    display: block;
+    width: 100%;
+  }
+}
+.navbar-nav {
+  width: auto;
+}
+#side-panel {
+  white-space: nowrap;
+}
+#side-panel a {
+  display: inline-block;
+  margin-bottom: 10px; /* Optional: Adjust spacing between links */
+}
+body {
  
   font-size: 14px;
 }
@@ -17,6 +80,7 @@ body {
   display: flex;
   height: 100vh;
 }
+
 
 #myVideo{
   top:0;
@@ -219,7 +283,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family:'Poppins', sans-serif;
 }
 
 #logo-img {
@@ -330,16 +394,16 @@ nav a{
 /******** Home Page Main Content Styles ***********/
 
 .categories-heading {
-
-  font-family: sans-serif;
+  text-align: center;
+  font-family:'Poppins', sans-serif;
   font-size: 3em;
   color: white;
   opacity: 0.8;
   font-weight: 800;
   margin-top: 20px;
   transition: width 2s, opacity 2s;
-  padding: 40px;
-  text-align: center;
+  /* padding: 10px; */
+  /* text-align: center; */
   
 }
 
@@ -386,7 +450,7 @@ nav a{
 }
 
 .category-title {
-  font-family: "Montserrat", sans-serif;
+  font-family:'Poppins', sans-serif;
   border-radius: 10%;
   position: relative;
   border: 2px solid #3f0c1f;
@@ -400,7 +464,7 @@ nav a{
   height: 100%;
   position: absolute;
   top: 50%;
-  font-family:'Times New Roman', Times, serif;
+  font-family:'Poppins', sans-serif;
   font-weight: 500;
   right: 0;
   padding-top: 3%;
@@ -469,7 +533,7 @@ nav a{
 }
 
 .slider-title {
-  font-family: "Montserrat", sans-serif;
+  font-family:'Poppins', sans-serif;
   border-radius: 30px;
   position: absolute;
   bottom: 8%;
@@ -540,7 +604,7 @@ nav a{
 }
 
 .footer p {
-  font-family: "Montserrat", sans-serif;
+  font-family:'Poppins', sans-serif;
   color: white;
   font-size: 2rem;
   text-align: center;
@@ -583,8 +647,8 @@ nav a{
 
 .footer ul {
   color: white;
-  /* font-family: "Lobster", cursive; */
-  font-family: "Montserrat", sans-serif;
+  
+  font-family:'Poppins', sans-serif;
   font-size: 20px;
   list-style: disc;
 }
@@ -673,7 +737,7 @@ footer .top:hover {
   padding: 80px;
   padding-top: 100px;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family:'Poppins', sans-serif;
   display: none;
   position: absolute;
   height: 100%;
@@ -697,7 +761,7 @@ footer .top:hover {
 /********** main and music containers styles ***********/
 
 .main_div {
-  font-family: "Jost", sans-serif;
+  font-family:'Poppins', sans-serif;
   width: 96vw;
   height: 96vh;
   display: grid;
@@ -1151,7 +1215,7 @@ input[type="checkbox"]:checked+.like_icon {
     display: none;
   }
 
-  .navbar-brand h1 {
+  .navbar-brand  h1 {
     font-size: 1.7em;
   }
 
@@ -1313,7 +1377,9 @@ input[type="checkbox"]:checked+.like_icon {
 /* liked song list */
 
 .container-liked-list {
-  margin: 20px;
+  margin: 10px;
+  margin-top: 3px;
+  
   /* position: relative;
 	bottom: 40px;
 	right: 10px;
@@ -1326,7 +1392,7 @@ input[type="checkbox"]:checked+.like_icon {
   margin: auto;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   border: 10px solid whitesmoke;
-  font-family: "Arial", sans-serif;
+  font-family:'Poppins', sans-serif;
   height: 200px;
   width: 90%;
   overflow-y: auto;
@@ -1335,12 +1401,12 @@ input[type="checkbox"]:checked+.like_icon {
 
 table {
   width: 100%;
-  font-family: Verdana;
+  font-family:'Poppins', sans-serif;
 }
 
 .headT {
   color: black;
-  font-family: Arial, sans-serif;
+  font-family:'Poppins', sans-serif;
   font-size: large;
   font-weight: lighter;
   position: sticky;
@@ -1418,7 +1484,7 @@ tr:hover {
 .welcome-text {
   color: rgb(176, 176, 176);
   font-size: 20px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 
 }
 

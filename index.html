@@ -54,56 +54,6 @@
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   <script src="script.js"></script>
 
-  <style>
-    body {
-      margin: 0;
-      font-family:'Poppins', sans-serif;;
-      /* background-color: #f8f8f8; */
-    }
-
-    .container {
-      padding: 28vh 0;
-      height: 100vh;
-      margin-top: 80px;
-      text-align: center;
-      box-shadow: #ffc400;
-    }
-
-    .container>h1 {
-      color: #EBD9B4;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      text-shadow: #FC0 1px 0 10px;
-    }
-
-    i {
-      color: #C4DFDF;
-      font-size: 18px;
-    }
-    
-    svg {
-      color: #ffc400;
-      height: 90px;
-      width: 90px;
-      animation: scrollbelow 1.2s infinite forwards;
-      fill: #ffc400;
-      transition: fill 0.5s;
-    }
-    
-    @keyframes scrollbelow {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-        
-      }
-      40% {
-        transform: translateY(10px);
-      }
-      60% {
-        transform: translateY(5px);
-      }
-    }
-    
-  </style>
   
 </head>
 
@@ -168,8 +118,7 @@
               </a>
             </li>
             <li onclick="hidevisible()">
-              <a href="#popular categories" id="popular-categories"><span class="glyphicon glyphicon-music"></span><br
-                  class="hidden-xs" />Popular Categories
+              <a href="#popular categories" id="popular-categories"><span class="glyphicon glyphicon-music"></span> <br class="hidden-xs" />Popular Categories
               </a>
             </li>
             <li onclick="hidevisible()">
@@ -182,7 +131,9 @@
         </div>
       </div>
     </nav>
+    
   </header>
+  
 
 
   <!-- Custom CSS -->
@@ -200,11 +151,9 @@
     <div id="snackbar">Some text some message..</div>
     <div id="container">
 
-      <div id="side-panel">
+      <div id="side-panel" >
 
         <!-- <div id="logo-img" alt="Logo img"></div> -->
-
-        g
         <br>
 
         <div style="padding-top: 80px;">
@@ -252,7 +201,7 @@
 
         <!-- Your main content goes here -->
         <div id="cont2">
-          <div class="container" style="margin-top: 9px;">
+          <div class="container" style="margin-top: 9px; ">
             <h1 style="color: #EBD9B4; text-shadow: rgb(132, 102, 251) 1px 0 7px;">Welcome to Swetify Music</h1>
             <br>
             <i>The ultimate music streaming platform for real music enthusiasts.</i><br>
@@ -457,9 +406,12 @@
             </div>
           </div>
         </div>
-        <div class="container-brake">
-          <div class="cont3 fluid-container">
-            <div class="container categories-heading" id="your spotify music">
+        <div class="container-wrapper">
+
+        
+        <div class="container-b">
+          <div class="cont3">
+            <div class="categories-heading" id="your spotify music">
               <span style="color: #ffc400;"> Your Spotify Music </span>
             </div>
             <div class="login-container" id="login_container">
@@ -511,16 +463,18 @@
                 <div id="top_artists_list"></div>
               </div>
             </div>
+          </div>
             <!-- the liked list -->
-            <div class="container categories-heading" id="container-liked-list">
+            <div class="categories-heading" id="container-liked-list">
               <span style="color: #ffc400;"> Your Favourite Music</span><br>
               <div class="welcome-text">
-                <p style="font-weight: 100; color: rgb(202, 202, 202); padding-top: 40px;">If you like a music it would
+                <p style="font-weight: 100; color: rgb(202, 202, 202); padding-top: 30px;padding: 30px; text-align: center;">If you like a music it would
                   appear here !</p>
               </div>
             </div>
-            <div id="fav-list">
-            </div>
+          </div>
+        </div>
+        
 
 
 
