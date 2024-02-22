@@ -892,7 +892,7 @@ footer .top:hover {
   margin-left: 20%;
   margin-top: 0%;
   padding: 0% 0% 0% 2rem;
-
+  border: 2px solid red;
 }
 
 .music_container #title {
@@ -1427,10 +1427,9 @@ input[type="checkbox"]:checked+.like_icon {
 
 .img_container {
   position: relative;
-  left: 50%;
+  left: 40%;
   width: 28rem;
   height: 28rem;
-  margin: 35% 10% 5% auto;
 }
 
 /******Super Extra Small Devices Only*****/
