@@ -1594,6 +1594,8 @@ tr:hover {
 
 /* spotify login/authorize container */
 
+
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -1617,6 +1619,32 @@ tr:hover {
 .button-log {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+}
+
+.button-log button {
+  background: linear-gradient(45deg, #4CAF50, #6EE7B7); /* Updated to a green gradient color */
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  width: 220px;
+  height: 60px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.button-log button:hover {
+  background: linear-gradient(45deg, #6EE7B7, #4CAF50); /* Adjusted gradient color on hover */
+  box-shadow: 0px 10px 20px rgba(76, 175, 80, 0.2); /* Updated box shadow with a green tint on hover */
+  transform: scale(1.08);
+}
+
+
+/* .button-log {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
 }
 
@@ -1628,7 +1656,7 @@ tr:hover {
   height: 45px;
   border: none;
   border-radius: 30px;
-}
+} */
 
 /* spotify songs displayer */
 
