@@ -883,14 +883,11 @@ footer .top:hover {
 } 
 
 .music_container {
-  width: 80%;
-  height: 100%;
+  width: 40%;
+  height: 80%;
   background-color: #000000;
   border-radius: 2rem;
-  box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-left: 20%;
-  margin-top: 0%;
   padding: 0% 0% 0% 2rem;
   border: 2px solid red;
 }
@@ -917,13 +914,11 @@ footer .top:hover {
   font-weight: 300;
 }
 
-.songimg {
-  width: 100%;
-  height: 100%;
+.img_container img {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
-  position: relative;
 }
 
 /******* controls styles ********/
@@ -1425,12 +1420,6 @@ input[type="checkbox"]:checked+.like_icon {
   margin: auto auto 0 auto;
 }
 
-.img_container {
-  position: relative;
-  left: 40%;
-  width: 28rem;
-  height: 28rem;
-}
 
 /******Super Extra Small Devices Only*****/
 @media (max-width: 479px) {
