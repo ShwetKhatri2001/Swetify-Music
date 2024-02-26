@@ -1,5 +1,4 @@
 body {
-
   font-size: 14px;
 }
 
@@ -17,7 +16,7 @@ body {
 #container {
   color: white;
   display: flex;
-  height: 100vh;
+  height: 40vh;
 }
 
 #myVideo {
@@ -31,26 +30,25 @@ body {
   z-index: -2;
   height: 100%;
   width: 100%;
-
 }
 
 #particles-js {
   background-color: #000000;
-  background-image: linear-gradient(to left bottom,
-      #f265b528,
-      #df75cb28,
-      #c984dc28,
-      #b291e628,
-      #9c9cea28,
-      #8c98ed28,
-      #7994f128,
-      #6191f428,
-      #477efb28,
-      #316aff28,
-      #2853ff28,
-      #3333ff28);
-
-
+  background-image: linear-gradient(
+    to left bottom,
+    #f265b528,
+    #df75cb28,
+    #c984dc28,
+    #b291e628,
+    #9c9cea28,
+    #8c98ed28,
+    #7994f128,
+    #6191f428,
+    #477efb28,
+    #316aff28,
+    #2853ff28,
+    #3333ff28
+  );
 
   top: 0;
 
@@ -60,7 +58,6 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-
 }
 
 .video-filter {
@@ -173,7 +170,6 @@ a:visited {
   color: inherit;
 }
 
-
 .sidebar-toggle {
   font-size: 3rem;
   background: transparent;
@@ -207,7 +203,6 @@ a:visited {
   border-radius: 12px;
 }
 
-
 .outer-sidebar {
   position: fixed;
   top: 80px;
@@ -223,7 +218,6 @@ a:visited {
   z-index: 1000;
   overflow-y: auto;
 }
-
 
 .sidebar {
   display: flex;
@@ -256,21 +250,18 @@ a:visited {
   height: 1.1px;
   color: white;
   background-color: white;
-  opacity: .15;
-
+  opacity: 0.15;
 }
 
 .show-sidebar {
   transform: translate(0);
 }
 
-
 /* ===================================== */
 
 .playlist-page-link:hover {
   text-decoration: none;
 }
-
 
 .playlist-card,
 .artist-card {
@@ -295,7 +286,6 @@ a:visited {
   padding: 15px;
 }
 
-
 .playlist-card:hover,
 .artist-card:hover {
   transform: scale(1.02);
@@ -308,7 +298,6 @@ a:visited {
   object-fit: cover;
   cursor: initial;
 }
-
 
 .playlist-details {
   padding: 16px;
@@ -326,17 +315,10 @@ a:visited {
   color: #7b7b7b;
 }
 
-
-
-
-
 .section-brake {
   display: flex;
   flex-direction: row;
-
 }
-
-
 
 html {
   font-size: 62.5%;
@@ -358,7 +340,6 @@ html {
 /********* Home Page styles **********/
 /******* header *******/
 nav {
-
   padding-bottom: 15px;
   position: fixed !important;
   z-index: 99999;
@@ -378,11 +359,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #logo-img {
-  background: url("homepage/swetifylogo.jpg") no-repeat;
+  background: url('homepage/swetifylogo.jpg') no-repeat;
   width: 130px !important;
   scale: 0.8;
   height: 150px !important;
@@ -394,7 +375,6 @@ nav {
 }
 
 #headphones {
-
   font-size: 0.9em;
 }
 
@@ -464,7 +444,6 @@ nav a {
   align-items: center;
   position: fixed;
   left: 0;
-
 }
 
 .navbar-header button.navbar-toggle {
@@ -485,10 +464,10 @@ nav a {
 }
 
 /* .navbar-header{
-  position: relative; 
-  display: flex;
-  left: -150px;
-} */
+      position: relative; 
+      display: flex;
+      left: -150px;
+    } */
 
 .navbar-nav {
   flex-direction: row;
@@ -497,7 +476,6 @@ nav a {
 /******** Home Page Main Content Styles ***********/
 
 .categories-heading {
-
   font-family: sans-serif;
   font-size: 3em;
   color: white;
@@ -507,7 +485,6 @@ nav a {
   transition: width 2s, opacity 2s;
   padding: 40px;
   text-align: center;
-
 }
 
 #prev-slide,
@@ -520,11 +497,10 @@ nav a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   border: none;
   outline: none;
-  font-size: 6.0rem;
+  font-size: 6rem;
   cursor: pointer;
   border-radius: 50%;
   transition: all 0.3s ease;
-
 }
 
 #prev-slide:hover,
@@ -536,7 +512,7 @@ nav a {
 .slider-wrapper #next-slide {
   right: 5px;
   position: absolute;
-  font-size: 6.0rem;
+  font-size: 6rem;
   border: none;
   outline: none;
   background-color: #dfdfdf2b;
@@ -545,7 +521,6 @@ nav a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   cursor: pointer;
   border-radius: 50%;
-
 }
 
 #next-slide {
@@ -553,12 +528,12 @@ nav a {
 }
 
 .material-symbols-rounded::before {
-  content: "";
+  content: '';
   /* Add your styling for the chevron_left and chevron_right symbols */
 }
 
 .category-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   border-radius: 10%;
   position: relative;
   border: 2px solid #3f0c1f;
@@ -594,15 +569,12 @@ nav a {
 .category-title hr {
   width: 50%;
   margin-left: 25%;
-
-
 }
 
 .category-title:hover span {
   top: 85%;
   opacity: 1;
 }
-
 
 .category-title:hover {
   box-shadow: 1px 2px 5px 5px #ffffff;
@@ -643,7 +615,7 @@ nav a {
 }
 
 .slider-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   border-radius: 30px;
   position: absolute;
   bottom: 8%;
@@ -695,8 +667,6 @@ nav a {
   position: relative;
 }
 
-
-
 .slider-wrapper .slide-button:hover {
   background: #444;
 }
@@ -704,7 +674,6 @@ nav a {
 .slider-wrapper button#prev-slide {
   left: 5px;
 }
-
 
 .footer {
   width: auto;
@@ -716,7 +685,7 @@ nav a {
 }
 
 .footer p {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   font-size: 2rem;
   text-align: center;
@@ -760,7 +729,7 @@ nav a {
 .footer ul {
   color: white;
   /* font-family: "Lobster", cursive; */
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   list-style: disc;
 }
@@ -807,7 +776,6 @@ footer .top:active {
 }
 
 footer .top a {
-
   color: rgb(229, 211, 211);
   padding: 14px;
 }
@@ -851,7 +819,7 @@ footer .top:hover {
   padding: 80px;
   padding-top: 100px;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: none;
   position: absolute;
   height: 100%;
@@ -874,25 +842,23 @@ footer .top:hover {
 
 /********** main and music containers styles ***********/
 
- .main_div {
-  font-family: "Jost", sans-serif;
-  width: 96vw;
-  height: 96vh;
+.main_div {
+  font-family: 'Jost', sans-serif;
+  width: 100vw;
+  height: 60vh;
   display: grid;
   place-items: center;
-} 
+}
 
 .music_container {
-  width: 80%;
-  height: 100%;
+  width: 350px;
+  height: 450px;
   background-color: #000000;
   border-radius: 2rem;
-  box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-left: 20%;
-  margin-top: 0%;
-  padding: 0% 0% 0% 2rem;
-
+  padding: 20px;
+  /* border: 2px solid red; */
+  box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.2);
 }
 
 .music_container #title {
@@ -901,12 +867,11 @@ footer .top:hover {
   word-spacing: 0.5rem;
   color: #b3b3b3;
   margin: 5px 0 0 0;
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: bold;
   padding-top: 0;
   text-shadow: 0 3px 10px 2.5rem rgba(0, 0, 0, 0.7);
 }
-
 
 .music_container #artist {
   color: white;
@@ -917,13 +882,11 @@ footer .top:hover {
   font-weight: 300;
 }
 
-.songimg {
-  width: 100%;
-  height: 100%;
+.img_container img {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
-  position: relative;
 }
 
 /******* controls styles ********/
@@ -1011,7 +974,7 @@ footer .top:hover {
   /* margin-bottom: 0px; */
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: none;
 }
 
@@ -1019,13 +982,13 @@ input[type="checkbox"] {
   width: 25px;
   height: 25px;
   margin-bottom: 0px;
-  background-image: url("icons/likeBefore.png");
+  background-image: url('icons/likeBefore.png');
   background-size: cover;
   cursor: pointer;
 }
 
-input[type="checkbox"]:checked+.like_icon {
-  background-image: url("icons/likeAfter.png");
+input[type='checkbox']:checked + .like_icon {
+  background-image: url('icons/likeAfter.png');
 }
 
 /******** toast message styles ********/
@@ -1105,7 +1068,7 @@ input[type="checkbox"]:checked+.like_icon {
 .progress_container {
   width: 100%;
   height: auto;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
   margin-top: 0;
 }
 
@@ -1127,8 +1090,6 @@ input[type="checkbox"]:checked+.like_icon {
   -webkit-appearance: none;
   appearance: none;
 }
-
-
 
 .progress_duration_meter {
   display: flex;
@@ -1162,9 +1123,6 @@ input[type="checkbox"]:checked+.like_icon {
   .max-lg-display {
     display: none !important;
   }
-
-
-
 
   .footer ul {
     font-size: 23px;
@@ -1224,11 +1182,11 @@ input[type="checkbox"]:checked+.like_icon {
   }
 
   /* .navbar-brand h1 {
-      font-size: 1.7em;
-    } */
+          font-size: 1.7em;
+        } */
 
   .container .photo {
-    background: url("images/ABOUT/shwetsofa_small.jpg") no-repeat;
+    background: url('images/ABOUT/shwetsofa_small.jpg') no-repeat;
     height: 454px;
     width: 238px;
     box-shadow: 0 0 50px #3f0c1f;
@@ -1314,9 +1272,9 @@ input[type="checkbox"]:checked+.like_icon {
   }
 
   /* #header-nav {
-    font-size: 1.25em;
-    height: 80px;
-  } */
+        font-size: 1.25em;
+        height: 80px;
+      } */
   .navbar-header {
     width: 16rem;
     display: flex;
@@ -1324,7 +1282,6 @@ input[type="checkbox"]:checked+.like_icon {
     align-items: center;
     position: fixed;
     left: 0;
-
   }
 
   .sidebar-toggle {
@@ -1345,7 +1302,6 @@ input[type="checkbox"]:checked+.like_icon {
     width: 95%;
     opacity: 1;
   }
-
 
   .footer {
     height: 300px;
@@ -1411,7 +1367,6 @@ input[type="checkbox"]:checked+.like_icon {
   }
 }
 
-
 .music_container #artist {
   color: white;
   text-transform: capitalize;
@@ -1425,14 +1380,6 @@ input[type="checkbox"]:checked+.like_icon {
   margin: auto auto 0 auto;
 }
 
-.img_container {
-  position: relative;
-  left: 50%;
-  width: 28rem;
-  height: 28rem;
-  margin: 35% 10% 5% auto;
-}
-
 /******Super Extra Small Devices Only*****/
 @media (max-width: 479px) {
   .lg-display {
@@ -1440,7 +1387,7 @@ input[type="checkbox"]:checked+.like_icon {
   }
 
   .sidebar-elements {
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
   }
 
   .outer-sidebar {
@@ -1449,15 +1396,14 @@ input[type="checkbox"]:checked+.like_icon {
     font-size: 2rem;
   }
 
-
   .sidebar {
     padding-bottom: 75px;
   }
 
   /* .navbar-h1 {
-    padding: 5px;
-    font-size: 6vw;
-  } */
+        padding: 5px;
+        font-size: 6vw;
+      } */
 
   .footer {
     height: 400px;
@@ -1502,10 +1448,10 @@ input[type="checkbox"]:checked+.like_icon {
 .container-liked-list {
   margin: 20px;
   /* position: relative;
-	bottom: 40px;
-	right: 10px;
-	left: 10px;
-	top: 400vh; */
+        bottom: 40px;
+        right: 10px;
+        left: 10px;
+        top: 400vh; */
 }
 
 .container-scroll {
@@ -1513,7 +1459,7 @@ input[type="checkbox"]:checked+.like_icon {
   margin: auto;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   border: 10px solid whitesmoke;
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
   height: 200px;
   width: 90%;
   overflow-y: auto;
@@ -1606,7 +1552,6 @@ tr:hover {
   color: rgb(176, 176, 176);
   font-size: 20px;
   padding-bottom: 20px;
-
 }
 
 .welcome-text p {
@@ -1646,20 +1591,21 @@ tr:hover {
   -moz-box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
   box-shadow: 1px 1px 18px -1px rgba(0, 0, 0, 0.54);
   margin-top: 40px;
-  background-image: linear-gradient(to left bottom,
-      #f265b5,
-      #df75cb,
-      #c984dc,
-      #b291e6,
-      #9c9cea,
-      #8c98ed,
-      #7994f1,
-      #6191f4,
-      #477efb,
-      #316aff,
-      #2852ff,
-      #3333ff);
-  ;
+  background-image: linear-gradient(
+    to left bottom,
+    #f265b5,
+    #df75cb,
+    #c984dc,
+    #b291e6,
+    #9c9cea,
+    #8c98ed,
+    #7994f1,
+    #6191f4,
+    #477efb,
+    #316aff,
+    #2852ff,
+    #3333ff
+  );
 }
 
 .list-displayer {
@@ -1695,7 +1641,6 @@ h2 a {
 #logout-icon {
   width: 20px;
   height: 30px;
-
 }
 
 .logout {
@@ -1776,7 +1721,6 @@ h3 {
 }
 
 .dark-mode a {
-
   color: #272626 !important;
 }
 
@@ -1787,7 +1731,6 @@ h3 {
 .dark-mode label {
   color: #272626 !important;
 }
-
 
 .switch {
   position: fixed;
@@ -1826,7 +1769,7 @@ h3 {
 
 .slider2:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 26px;
   width: 26px;
   left: 4px;
@@ -1835,15 +1778,15 @@ h3 {
   transition: 0.4s;
 }
 
-input:checked+.slider2 {
+input:checked + .slider2 {
   background-color: #272727;
 }
 
-input:focus+.slider2 {
+input:focus + .slider2 {
   box-shadow: 0 0 1px #383838;
 }
 
-input:checked+.slider2:before {
+input:checked + .slider2:before {
   transform: translateX(26px);
 }
 
